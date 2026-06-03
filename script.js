@@ -257,12 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const stock = badgeRow.querySelector('.badge.stock');
         if (stock) stock.innerHTML = '✓ En stock';
 
-        if (p.oldPrice && !badgeRow.querySelector('.badge.promo')) {
-          const promoBadge = document.createElement('span');
-          promoBadge.className = 'badge promo';
-          promoBadge.textContent = '🔥 Oferta Día del Padre';
-          badgeRow.insertBefore(promoBadge, stock || null);
-        }
+        
       }
 
       if (p.oldPrice && !card.querySelector('.offer-ribbon')) {
