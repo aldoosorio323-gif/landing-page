@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Carrusel publicitario de escenarios de uso
   const promoTrack = document.getElementById('promoTrack');
   const promoDots = Array.from(document.querySelectorAll('#promoDots .promo-dot'));
   const promoPrev = document.querySelector('.promo-prev');
@@ -35,9 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalBack = document.getElementById('modalBack');
   const productCards = Array.from(document.querySelectorAll('.product-card'));
   const filterButtons = Array.from(document.querySelectorAll('.filter-btn'));
-  let touchStartX = 0;
-  let touchStartY = 0;
-  let touchStartTime = 0;
+
+  function lockBody() {
+    document.body.classList.add('modal-open');
+  }
+
+  function unlockBody() {
+    document.body.classList.remove('modal-open');
+  }
 
   function openProduct(id) {
     const p = PRODUCTS.find(x => x.id === id);
@@ -59,21 +63,26 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('modalWhatsApp').href = 'https://wa.me/51925789830?text=' + msg;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden','false');
-    document.body.classList.add('modal-open');
+    modal.scrollTop = 0;
+    lockBody();
   }
 
   function closeModal() {
     if (!modal) return;
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden','true');
-    document.body.classList.remove('modal-open');
+    unlockBody();
   }
 
   function filterProducts(filter) {
     productCards.forEach(card => {
       const p = PRODUCTS.find(x => x.id === card.dataset.id);
       if (!p) return;
-      const show = filter === 'todos' || p.brand === filter || filter === 'ofertas' && Boolean(p.oldPrice);
+      let show = false;
+      if (filter === 'todos') show = true;
+      if (filter === 'LG XBOOM') show = p.brand === 'LG XBOOM';
+      if (filter === 'JBL') show = p.brand === 'JBL';
+      if (filter === 'ofertas') show = Boolean(p.oldPrice);
       card.hidden = !show;
       card.style.display = show ? '' : 'none';
     });
@@ -90,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
     productCards.forEach(card => {
       const p = PRODUCTS.find(x => x.id === card.dataset.id);
       if (!p) return;
-
       const badgeRow = card.querySelector('.badge-row');
       if (badgeRow) {
         const stock = badgeRow.querySelector('.badge.stock');
@@ -102,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
           badgeRow.insertBefore(promoBadge, stock || null);
         }
       }
-
       const body = card.querySelector('.product-body');
       const title = body?.querySelector('h3');
       if (body && title && !body.querySelector('.quick-benefits')) {
@@ -111,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
         benefits.innerHTML = (p.benefits || []).slice(0, 3).map(item => `<li>✓ ${item}</li>`).join('');
         title.insertAdjacentElement('afterend', benefits);
       }
-
       const priceLine = card.querySelector('.price-line');
       if (!priceLine) return;
       if (p.oldPrice) {
@@ -121,10 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
         priceLine.classList.remove('promo-price-line');
         priceLine.innerHTML = `<strong>${p.price}</strong><span>Precio JOR STORE</span>`;
       }
-
       const btn = card.querySelector('.details-btn');
       if (btn) btn.textContent = p.oldPrice ? 'Ver oferta' : 'Comprar ahora';
-
       if (body && !body.querySelector('.urgency-line')) {
         const urgency = document.createElement('div');
         urgency.className = 'urgency-line';
@@ -140,11 +144,11 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
       activateFilterButton(btn);
     });
-    btn.addEventListener('touchend', e => {
+    btn.addEventListener('pointerup', e => {
       e.preventDefault();
       e.stopPropagation();
       activateFilterButton(btn);
-    }, { passive: false });
+    });
   });
 
   document.querySelectorAll('.product-card .details-btn').forEach(btn => {
@@ -154,12 +158,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = btn.closest('.product-card');
       if (card) openProduct(card.dataset.id);
     });
-    btn.addEventListener('touchend', e => {
+    btn.addEventListener('pointerup', e => {
       e.preventDefault();
       e.stopPropagation();
       const card = btn.closest('.product-card');
       if (card) openProduct(card.dataset.id);
-    }, { passive: false });
+    });
   });
 
   productCards.forEach(card => {
@@ -169,24 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.target.closest('.details-btn')) return;
       openProduct(card.dataset.id);
     });
-    card.addEventListener('touchstart', e => {
-      const t = e.changedTouches[0];
-      touchStartX = t.clientX;
-      touchStartY = t.clientY;
-      touchStartTime = Date.now();
-    }, { passive: true });
-    card.addEventListener('touchend', e => {
-      if (e.target.closest('.details-btn')) return;
-      const t = e.changedTouches[0];
-      const dx = Math.abs(t.clientX - touchStartX);
-      const dy = Math.abs(t.clientY - touchStartY);
-      const dt = Date.now() - touchStartTime;
-      const isTap = dx < 10 && dy < 10 && dt < 450;
-      if (isTap) {
-        e.preventDefault();
-        openProduct(card.dataset.id);
-      }
-    }, { passive: false });
     card.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
