@@ -19,105 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
   if(promoTrack && promoDots.length) setInterval(()=>setPromoSlide(promoIndex+1), 6500);
 
   const PRODUCTS = [
-    {
-      id: "lg-grab",
-      brand: "LG XBOOM",
-      category: "Portátil",
-      name: "LG XBOOM Grab",
-      price: "S/ 299",
-      short: "Parlante portátil resistente y ligero, diseñado para acompañarte en cualquier aventura con gran autonomía y resistencia.",
-      features: ["Potencia de 30W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H para mayor durabilidad", "Hasta 20 horas de batería", "Diseño compacto con correa integrada para fácil transporte"],
-      best: "playa, piscina, viajes, bicicleta y uso diario",
-      img: "assets/images/productos/lg-xboom-grab.png"
-    },
-    {
-      id: "lg-bounce",
-      brand: "LG XBOOM",
-      category: "Portátil",
-      name: "LG XBOOM Bounce",
-      price: "S/ 399",
-      short: "Más batería, más bajos y mayor resistencia para disfrutar la música durante todo el día.",
-      features: ["Potencia de 40W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H", "Hasta 30 horas de batería", "Graves potentes y sonido amplio"],
-      best: "reuniones, terrazas, camping y actividades al aire libre",
-      img: "assets/images/productos/lg-xboom-bounce.webp"
-    },
-    {
-      id: "lg-xg8t",
-      brand: "LG XBOOM",
-      category: "Portátil",
-      name: "LG XBOOM XG8T",
-      price: "S/ 725",
-      short: "Potencia, luces y resistencia extrema para llevar la fiesta a cualquier lugar.",
-      features: ["Potencia de 120W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H", "Luces LED RGB sincronizadas con la música", "Graves profundos y sonido potente"],
-      best: "fiestas, reuniones y usuarios que buscan potencia y efectos visuales",
-      img: "assets/images/productos/lg-xboom-xg8t.webp"
-    },
-    {
-      id: "lg-stage301",
-      brand: "LG XBOOM",
-      category: "Fiesta",
-      name: "LG XBOOM Stage 301",
-      price: "S/ 899",
-      short: "El parlante más versátil de LG XBOOM, perfecto para eventos, presentaciones y diversión en grupo.",
-      features: ["Potencia de 120W", "Entradas para micrófono y guitarra", "Función karaoke integrada", "Batería portátil y reemplazable", "Diseño ideal para eventos y entretenimiento"],
-      best: "karaoke, eventos, animación, músicos y fiestas",
-      img: "assets/images/productos/lg-xboom-stage-301.webp"
-    },
-    {
-      id: "jbl-go4",
-      brand: "JBL",
-      category: "Portátil",
-      name: "JBL Go 4",
-      price: "S/ 125",
-      short: "El JBL más pequeño y práctico, ideal para disfrutar música en cualquier momento y lugar.",
-      features: ["Diseño ultracompacto y ligero", "Certificación IP67 resistente al agua y polvo", "Sonido JBL Pro Sound con bajos mejorados", "Hasta 7 horas de batería", "Fácil de transportar a cualquier lugar"],
-      best: "estudiantes, oficina, habitación y uso personal",
-      img: "assets/images/productos/jbl-go-4.webp"
-    },
-    {
-      id: "jbl-grip",
-      brand: "JBL",
-      category: "Portátil",
-      name: "JBL Clip 5 (Grip)",
-      price: "S/ 249",
-      short: "Música siempre contigo gracias a su práctico diseño para colgar en mochilas, bicicletas o equipaje.",
-      features: ["Potencia de 7W", "Mosquetón integrado para colgarlo fácilmente", "Certificación IP67 resistente al agua y polvo", "Hasta 12 horas de batería", "Sonido JBL Pro Sound"],
-      best: "deportistas, viajeros y actividades al aire libre",
-      img: "assets/images/productos/jbl-grip.webp"
-    },
-    {
-      id: "jbl-flip7",
-      brand: "JBL",
-      category: "Portátil",
-      name: "JBL Flip 7",
-      price: "S/ 349",
-      short: "El equilibrio perfecto entre tamaño, potencia y resistencia, uno de los modelos más buscados de JBL.",
-      features: ["Potencia de 35W", "Sonido JBL Pro Sound con graves potentes", "Certificación IP68 resistente al agua y polvo", "Tecnología Auracast para conectar múltiples parlantes", "Diseño portátil y resistente"],
-      best: "playa, reuniones, viajes y uso diario",
-      img: "assets/images/productos/jbl-flip-7.webp"
-    },
-    {
-      id: "jbl-charge6",
-      brand: "JBL",
-      category: "Portátil",
-      name: "JBL Charge 6",
-      price: "S/ 515",
-      short: "Potencia, batería y carga para tus dispositivos en un solo equipo.",
-      features: ["Potencia de 45W", "Sonido potente con graves profundos", "Powerbank integrado para cargar celulares", "Certificación IP68 resistente al agua y polvo", "Hasta 24 horas de batería"],
-      best: "viajes largos, reuniones y usuarios que buscan autonomía y potencia",
-      img: "assets/images/productos/jbl-charge-6.webp"
-    },
-    {
-      id: "jbl-boombox4",
-      brand: "JBL",
-      category: "Fiesta",
-      name: "JBL Boombox 4",
-      price: "S/ 1 605",
-      short: "El máximo nivel de potencia portátil de JBL para quienes buscan el mejor sonido y la mayor presencia.",
-      features: ["Potencia de 180W", "Graves extremadamente profundos", "Certificación IP67 resistente al agua y polvo", "Batería de larga duración", "Sonido premium para espacios grandes y eventos"],
-      best: "fiestas, eventos, terrazas y clientes exigentes",
-      img: "assets/images/productos/jbl-boombox-4.webp"
-    }
+    { id: "lg-grab", brand: "LG XBOOM", category: "Portátil", name: "LG XBOOM Grab", price: "S/ 299", short: "Parlante portátil resistente y ligero, diseñado para acompañarte en cualquier aventura con gran autonomía y resistencia.", features: ["Potencia de 30W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H para mayor durabilidad", "Hasta 20 horas de batería", "Diseño compacto con correa integrada para fácil transporte"], best: "playa, piscina, viajes, bicicleta y uso diario", img: "assets/images/productos/lg-xboom-grab.png" },
+    { id: "lg-bounce", brand: "LG XBOOM", category: "Portátil", name: "LG XBOOM Bounce", price: "S/ 399", short: "Más batería, más bajos y mayor resistencia para disfrutar la música durante todo el día.", features: ["Potencia de 40W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H", "Hasta 30 horas de batería", "Graves potentes y sonido amplio"], best: "reuniones, terrazas, camping y actividades al aire libre", img: "assets/images/productos/lg-xboom-bounce.webp" },
+    { id: "lg-xg8t", brand: "LG XBOOM", category: "Portátil", name: "LG XBOOM XG8T", price: "S/ 725", short: "Potencia, luces y resistencia extrema para llevar la fiesta a cualquier lugar.", features: ["Potencia de 120W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H", "Luces LED RGB sincronizadas con la música", "Graves profundos y sonido potente"], best: "fiestas, reuniones y usuarios que buscan potencia y efectos visuales", img: "assets/images/productos/lg-xboom-xg8t.webp" },
+    { id: "lg-stage301", brand: "LG XBOOM", category: "Fiesta", name: "LG XBOOM Stage 301", price: "S/ 899", short: "El parlante más versátil de LG XBOOM, perfecto para eventos, presentaciones y diversión en grupo.", features: ["Potencia de 120W", "Entradas para micrófono y guitarra", "Función karaoke integrada", "Batería portátil y reemplazable", "Diseño ideal para eventos y entretenimiento"], best: "karaoke, eventos, animación, músicos y fiestas", img: "assets/images/productos/lg-xboom-stage-301.webp" },
+    { id: "jbl-go4", brand: "JBL", category: "Portátil", name: "JBL Go 4", price: "S/ 125", short: "El JBL más pequeño y práctico, ideal para disfrutar música en cualquier momento y lugar.", features: ["Diseño ultracompacto y ligero", "Certificación IP67 resistente al agua y polvo", "Sonido JBL Pro Sound con bajos mejorados", "Hasta 7 horas de batería", "Fácil de transportar a cualquier lugar"], best: "estudiantes, oficina, habitación y uso personal", img: "assets/images/productos/jbl-go-4.webp" },
+    { id: "jbl-grip", brand: "JBL", category: "Portátil", name: "JBL Clip 5 (Grip)", price: "S/ 249", short: "Música siempre contigo gracias a su práctico diseño para colgar en mochilas, bicicletas o equipaje.", features: ["Potencia de 7W", "Mosquetón integrado para colgarlo fácilmente", "Certificación IP67 resistente al agua y polvo", "Hasta 12 horas de batería", "Sonido JBL Pro Sound"], best: "deportistas, viajeros y actividades al aire libre", img: "assets/images/productos/jbl-grip.webp" },
+    { id: "jbl-flip7", brand: "JBL", category: "Portátil", name: "JBL Flip 7", price: "S/ 349", short: "El equilibrio perfecto entre tamaño, potencia y resistencia, uno de los modelos más buscados de JBL.", features: ["Potencia de 35W", "Sonido JBL Pro Sound con graves potentes", "Certificación IP68 resistente al agua y polvo", "Tecnología Auracast para conectar múltiples parlantes", "Diseño portátil y resistente"], best: "playa, reuniones, viajes y uso diario", img: "assets/images/productos/jbl-flip-7.webp" },
+    { id: "jbl-charge6", brand: "JBL", category: "Portátil", name: "JBL Charge 6", price: "S/ 515", short: "Potencia, batería y carga para tus dispositivos en un solo equipo.", features: ["Potencia de 45W", "Sonido potente con graves profundos", "Powerbank integrado para cargar celulares", "Certificación IP68 resistente al agua y polvo", "Hasta 24 horas de batería"], best: "viajes largos, reuniones y usuarios que buscan autonomía y potencia", img: "assets/images/productos/jbl-charge-6.webp" },
+    { id: "jbl-boombox4", brand: "JBL", category: "Fiesta", name: "JBL Boombox 4", price: "S/ 1 605", short: "El máximo nivel de potencia portátil de JBL para quienes buscan el mejor sonido y la mayor presencia.", features: ["Potencia de 180W", "Graves extremadamente profundos", "Certificación IP67 resistente al agua y polvo", "Batería de larga duración", "Sonido premium para espacios grandes y eventos"], best: "fiestas, eventos, terrazas y clientes exigentes", img: "assets/images/productos/jbl-boombox-4.webp" }
   ];
 
   const modal = document.getElementById('productModal');
@@ -125,6 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalBack = document.getElementById('modalBack');
   const productCards = Array.from(document.querySelectorAll('.product-card'));
   const filterButtons = Array.from(document.querySelectorAll('.filter-btn'));
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchStartTime = 0;
 
   function openProduct(id) {
     const p = PRODUCTS.find(x => x.id === id);
@@ -188,17 +101,39 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = btn.closest('.product-card');
       if (card) openProduct(card.dataset.id);
     });
-    btn.addEventListener('touchend', e => {
-      e.preventDefault();
-      e.stopPropagation();
-      const card = btn.closest('.product-card');
-      if (card) openProduct(card.dataset.id);
-    }, { passive: false });
   });
 
   productCards.forEach(card => {
-    card.removeAttribute('role');
-    card.removeAttribute('tabindex');
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('click', e => {
+      if (e.target.closest('.details-btn')) return;
+      openProduct(card.dataset.id);
+    });
+    card.addEventListener('touchstart', e => {
+      const t = e.changedTouches[0];
+      touchStartX = t.clientX;
+      touchStartY = t.clientY;
+      touchStartTime = Date.now();
+    }, { passive: true });
+    card.addEventListener('touchend', e => {
+      if (e.target.closest('.details-btn')) return;
+      const t = e.changedTouches[0];
+      const dx = Math.abs(t.clientX - touchStartX);
+      const dy = Math.abs(t.clientY - touchStartY);
+      const dt = Date.now() - touchStartTime;
+      const isTap = dx < 10 && dy < 10 && dt < 450;
+      if (isTap) {
+        e.preventDefault();
+        openProduct(card.dataset.id);
+      }
+    }, { passive: false });
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openProduct(card.dataset.id);
+      }
+    });
   });
 
   if (modalClose) modalClose.addEventListener('click', closeModal);
