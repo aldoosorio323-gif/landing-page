@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Carrusel publicitario de escenarios de uso
   const promoTrack = document.getElementById('promoTrack');
   const promoDots = Array.from(document.querySelectorAll('#promoDots .promo-dot'));
   const promoPrev = document.querySelector('.promo-prev');
@@ -33,6 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalClose = document.getElementById('modalClose');
   const modalBack = document.getElementById('modalBack');
   const productCards = Array.from(document.querySelectorAll('.product-card'));
+  const filterButtons = Array.from(document.querySelectorAll('.filter-btn'));
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchStartTime = 0;
 
   function openProduct(id) {
     const p = PRODUCTS.find(x => x.id === id);
@@ -46,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('modalBest').innerHTML = '<strong>Ideal para:</strong> ' + p.best;
     const modalPrice = document.getElementById('modalPrice');
     if (p.oldPrice) {
-      modalPrice.innerHTML = `<div class="modal-promo-price"><span class="modal-kicker">PROMO DÍA DEL PADRE</span><div class="modal-now-row"><span>Ahora</span><strong>${p.price}</strong></div><div class="modal-old-row"><span>Antes</span><del>${p.oldPrice}</del></div><small>${p.discount || 'Oferta especial'}</small></div><div class="modal-gift">🎁 Promo especial: incluye regalo por tu compra</div>`;
+      modalPrice.innerHTML = `<div class="modal-promo-price"><span class="modal-kicker">PROMO DÍA DEL PADRE</span><div class="modal-now-row"><span>Ahora</span><strong>${p.price}</strong></div><div class="modal-old-row"><span>Antes</span><del>${p.oldPrice}</del></div><small>${p.discount || 'Oferta especial'}</small></div>`;
     } else {
       modalPrice.innerHTML = `<strong>${p.price}</strong>`;
     }
@@ -54,9 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('modalWhatsApp').href = 'https://wa.me/51925789830?text=' + msg;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden','false');
-    modal.scrollTop = 0;
-    const card = modal.querySelector('.modal-card');
-    if (card) card.scrollTop = 0;
     document.body.classList.add('modal-open');
   }
 
@@ -67,10 +69,37 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.remove('modal-open');
   }
 
+  function filterProducts(filter) {function filterProducts(filter) {
+  productCards.forEach(card => {
+    const p = PRODUCTS.find(x => x.id === card.dataset.id);
+    if (!p) return;
+
+    let show = false;
+
+    if (filter === 'todos') show = true;
+    if (filter === 'LG XBOOM') show = p.brand === 'LG XBOOM';
+    if (filter === 'JBL') show = p.brand === 'JBL';
+    if (filter === 'ofertas') show = Boolean(p.oldPrice);
+
+    card.hidden = !show;
+    card.style.display = show ? '' : 'none';
+  });
+}
+
+}
+
+  function activateFilterButton(btn) {
+    if (!btn) return;
+    filterButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    filterProducts(btn.dataset.filter || 'todos');
+  }
+
   function updateProductCards() {
     productCards.forEach(card => {
       const p = PRODUCTS.find(x => x.id === card.dataset.id);
       if (!p) return;
+
       const badgeRow = card.querySelector('.badge-row');
       if (badgeRow) {
         const stock = badgeRow.querySelector('.badge.stock');
@@ -78,16 +107,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (p.oldPrice && !badgeRow.querySelector('.badge.promo')) {
           const promoBadge = document.createElement('span');
           promoBadge.className = 'badge promo';
-          promoBadge.textContent = '🔥 Oferta Día del Padre';
+          promoBadge.textContent = 'Día del Padre';
           badgeRow.insertBefore(promoBadge, stock || null);
         }
       }
-      if (p.oldPrice && !card.querySelector('.offer-ribbon')) {
-        const ribbon = document.createElement('div');
-        ribbon.className = 'offer-ribbon';
-        ribbon.textContent = '🔥 OFERTA DÍA DEL PADRE';
-        card.insertAdjacentElement('afterbegin', ribbon);
-      }
+
       const body = card.querySelector('.product-body');
       const title = body?.querySelector('h3');
       if (body && title && !body.querySelector('.quick-benefits')) {
@@ -96,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
         benefits.innerHTML = (p.benefits || []).slice(0, 3).map(item => `<li>✓ ${item}</li>`).join('');
         title.insertAdjacentElement('afterend', benefits);
       }
+
       const priceLine = card.querySelector('.price-line');
       if (!priceLine) return;
       if (p.oldPrice) {
@@ -105,8 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
         priceLine.classList.remove('promo-price-line');
         priceLine.innerHTML = `<strong>${p.price}</strong><span>Precio JOR STORE</span>`;
       }
+
       const btn = card.querySelector('.details-btn');
       if (btn) btn.textContent = p.oldPrice ? 'Ver oferta' : 'Comprar ahora';
+
       if (body && !body.querySelector('.urgency-line')) {
         const urgency = document.createElement('div');
         urgency.className = 'urgency-line';
@@ -116,17 +143,65 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  document.addEventListener('click', e => {
-    const btn = e.target.closest('.details-btn');
-    if (btn) {
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      e.stopPropagation();
+      activateFilterButton(btn);
+    });
+    btn.addEventListener('touchend', e => {
+      e.preventDefault();
+      e.stopPropagation();
+      activateFilterButton(btn);
+    }, { passive: false });
+  });
+
+  document.querySelectorAll('.product-card .details-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
       e.preventDefault();
       e.stopPropagation();
       const card = btn.closest('.product-card');
       if (card) openProduct(card.dataset.id);
-      return;
-    }
-    const card = e.target.closest('.product-card');
-    if (card) openProduct(card.dataset.id);
+    });
+    btn.addEventListener('touchend', e => {
+      e.preventDefault();
+      e.stopPropagation();
+      const card = btn.closest('.product-card');
+      if (card) openProduct(card.dataset.id);
+    }, { passive: false });
+  });
+
+  productCards.forEach(card => {
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('click', e => {
+      if (e.target.closest('.details-btn')) return;
+      openProduct(card.dataset.id);
+    });
+    card.addEventListener('touchstart', e => {
+      const t = e.changedTouches[0];
+      touchStartX = t.clientX;
+      touchStartY = t.clientY;
+      touchStartTime = Date.now();
+    }, { passive: true });
+    card.addEventListener('touchend', e => {
+      if (e.target.closest('.details-btn')) return;
+      const t = e.changedTouches[0];
+      const dx = Math.abs(t.clientX - touchStartX);
+      const dy = Math.abs(t.clientY - touchStartY);
+      const dt = Date.now() - touchStartTime;
+      const isTap = dx < 10 && dy < 10 && dt < 450;
+      if (isTap) {
+        e.preventDefault();
+        openProduct(card.dataset.id);
+      }
+    }, { passive: false });
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openProduct(card.dataset.id);
+      }
+    });
   });
 
   updateProductCards();
