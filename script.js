@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if(promoTrack && promoDots.length) setInterval(()=>setPromoSlide(promoIndex+1), 6500);
 
   const PRODUCTS = [
-    { id: "lg-grab", brand: "LG XBOOM", category: "Portátil", name: "LG XBOOM Grab", price: "S/ 269", oldPrice: "S/ 299", short: "Promo Día del Padre: parlante portátil resistente y ligero, diseñado para acompañarte en cualquier aventura con gran autonomía y resistencia.", features: ["Potencia de 30W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H para mayor durabilidad", "Hasta 20 horas de batería", "Diseño compacto con correa integrada para fácil transporte"], best: "playa, piscina, viajes, bicicleta y uso diario", img: "assets/images/productos/lg-xboom-grab.png" },
-    { id: "lg-bounce", brand: "LG XBOOM", category: "Portátil", name: "LG XBOOM Bounce", price: "S/ 379", oldPrice: "S/ 399", short: "Promo Día del Padre: más batería, más bajos y mayor resistencia para disfrutar la música durante todo el día.", features: ["Potencia de 40W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H", "Hasta 30 horas de batería", "Graves potentes y sonido amplio"], best: "reuniones, terrazas, camping y actividades al aire libre", img: "assets/images/productos/lg-xboom-bounce.webp" },
+    { id: "lg-grab", brand: "LG XBOOM", category: "Portátil", name: "LG XBOOM Grab", price: "S/ 269", oldPrice: "S/ 299", discount: "AHORRA S/ 30", short: "Promo Día del Padre: parlante portátil resistente y ligero, diseñado para acompañarte en cualquier aventura con gran autonomía y resistencia.", features: ["Potencia de 30W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H para mayor durabilidad", "Hasta 20 horas de batería", "Diseño compacto con correa integrada para fácil transporte"], best: "playa, piscina, viajes, bicicleta y uso diario", img: "assets/images/productos/lg-xboom-grab.png" },
+    { id: "lg-bounce", brand: "LG XBOOM", category: "Portátil", name: "LG XBOOM Bounce", price: "S/ 379", oldPrice: "S/ 399", discount: "AHORRA S/ 20", short: "Promo Día del Padre: más batería, más bajos y mayor resistencia para disfrutar la música durante todo el día.", features: ["Potencia de 40W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H", "Hasta 30 horas de batería", "Graves potentes y sonido amplio"], best: "reuniones, terrazas, camping y actividades al aire libre", img: "assets/images/productos/lg-xboom-bounce.webp" },
     { id: "lg-xg8t", brand: "LG XBOOM", category: "Portátil", name: "LG XBOOM XG8T", price: "S/ 725", short: "Potencia, luces y resistencia extrema para llevar la fiesta a cualquier lugar.", features: ["Potencia de 120W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H", "Luces LED RGB sincronizadas con la música", "Graves profundos y sonido potente"], best: "fiestas, reuniones y usuarios que buscan potencia y efectos visuales", img: "assets/images/productos/lg-xboom-xg8t.webp" },
     { id: "lg-stage301", brand: "LG XBOOM", category: "Fiesta", name: "LG XBOOM Stage 301", price: "S/ 899", short: "El parlante más versátil de LG XBOOM, perfecto para eventos, presentaciones y diversión en grupo.", features: ["Potencia de 120W", "Entradas para micrófono y guitarra", "Función karaoke integrada", "Batería portátil y reemplazable", "Diseño ideal para eventos y entretenimiento"], best: "karaoke, eventos, animación, músicos y fiestas", img: "assets/images/productos/lg-xboom-stage-301.webp" },
-    { id: "jbl-go4", brand: "JBL", category: "Portátil", name: "JBL Go 4", price: "S/ 129", oldPrice: "S/ 149", short: "Promo Día del Padre: el JBL más pequeño y práctico, ideal para disfrutar música en cualquier momento y lugar.", features: ["Diseño ultracompacto y ligero", "Certificación IP67 resistente al agua y polvo", "Sonido JBL Pro Sound con bajos mejorados", "Hasta 7 horas de batería", "Fácil de transportar a cualquier lugar"], best: "estudiantes, oficina, habitación y uso personal", img: "assets/images/productos/jbl-go-4.webp" },
+    { id: "jbl-go4", brand: "JBL", category: "Portátil", name: "JBL Go 4", price: "S/ 129", oldPrice: "S/ 149", discount: "AHORRA S/ 20", short: "Promo Día del Padre: el JBL más pequeño y práctico, ideal para disfrutar música en cualquier momento y lugar.", features: ["Diseño ultracompacto y ligero", "Certificación IP67 resistente al agua y polvo", "Sonido JBL Pro Sound con bajos mejorados", "Hasta 7 horas de batería", "Fácil de transportar a cualquier lugar"], best: "estudiantes, oficina, habitación y uso personal", img: "assets/images/productos/jbl-go-4.webp" },
     { id: "jbl-grip", brand: "JBL", category: "Portátil", name: "JBL Clip 5 (Grip)", price: "S/ 249", short: "Música siempre contigo gracias a su práctico diseño para colgar en mochilas, bicicletas o equipaje.", features: ["Potencia de 7W", "Mosquetón integrado para colgarlo fácilmente", "Certificación IP67 resistente al agua y polvo", "Hasta 12 horas de batería", "Sonido JBL Pro Sound"], best: "deportistas, viajeros y actividades al aire libre", img: "assets/images/productos/jbl-grip.webp" },
     { id: "jbl-flip7", brand: "JBL", category: "Portátil", name: "JBL Flip 7", price: "S/ 349", short: "El equilibrio perfecto entre tamaño, potencia y resistencia, uno de los modelos más buscados de JBL.", features: ["Potencia de 35W", "Sonido JBL Pro Sound con graves potentes", "Certificación IP68 resistente al agua y polvo", "Tecnología Auracast para conectar múltiples parlantes", "Diseño portátil y resistente"], best: "playa, reuniones, viajes y uso diario", img: "assets/images/productos/jbl-flip-7.webp" },
     { id: "jbl-charge6", brand: "JBL", category: "Portátil", name: "JBL Charge 6", price: "S/ 515", short: "Potencia, batería y carga para tus dispositivos en un solo equipo.", features: ["Potencia de 45W", "Sonido potente con graves profundos", "Powerbank integrado para cargar celulares", "Certificación IP68 resistente al agua y polvo", "Hasta 24 horas de batería"], best: "viajes largos, reuniones y usuarios que buscan autonomía y potencia", img: "assets/images/productos/jbl-charge-6.webp" },
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('modalFeatures').innerHTML = p.features.map(f => `<li>${f}</li>`).join('');
     document.getElementById('modalBest').innerHTML = '<strong>Ideal para:</strong> ' + p.best;
     const modalPrice = document.getElementById('modalPrice');
-    modalPrice.innerHTML = p.oldPrice ? `<span class="old-price">${p.oldPrice}</span> ${p.price} <small>Promo Día del Padre</small>` : p.price;
+    modalPrice.innerHTML = p.oldPrice ? `<div class="modal-promo-price"><span class="modal-old-price">${p.oldPrice}</span><strong>${p.price}</strong><small>${p.discount || 'PROMO DÍA DEL PADRE'}</small></div>` : p.price;
     const msg = encodeURIComponent('Hola JOR STORE, quiero información sobre ' + p.name + ' (' + p.price + ')');
     document.getElementById('modalWhatsApp').href = 'https://wa.me/51925789830?text=' + msg;
     modal.classList.add('open');
@@ -86,10 +86,14 @@ document.addEventListener('DOMContentLoaded', () => {
     productCards.forEach(card => {
       const p = PRODUCTS.find(x => x.id === card.dataset.id);
       if (!p) return;
-      const priceStrong = card.querySelector('.price-line strong');
-      const priceSpan = card.querySelector('.price-line span');
-      if (priceStrong) priceStrong.textContent = p.price;
-      if (priceSpan && p.oldPrice) priceSpan.textContent = `Antes ${p.oldPrice} · Día del Padre`;
+      const priceLine = card.querySelector('.price-line');
+      if (!priceLine) return;
+      if (p.oldPrice) {
+        priceLine.classList.add('promo-price-line');
+        priceLine.innerHTML = `<div class="promo-price-main"><span class="promo-kicker">PROMO DÍA DEL PADRE</span><strong>${p.price}</strong><span class="promo-old">Antes ${p.oldPrice}</span></div><div class="promo-save">${p.discount || 'OFERTA'}</div>`;
+      } else {
+        priceLine.classList.remove('promo-price-line');
+      }
     });
   }
 
