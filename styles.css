@@ -2928,3 +2928,25 @@ body.modal-open {
     margin-bottom: 16px !important;
   }
 }
+/* Cinta roja de oferta Día del Padre */
+#productos .product-card {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+#productos .offer-ribbon {
+  position: absolute !important;
+  top: 18px !important;
+  left: -48px !important;
+  z-index: 30 !important;
+  background: linear-gradient(135deg, #e3062b, #ff4f1f) !important;
+  color: #fff !important;
+  font-weight: 950 !important;
+  font-size: 11px !important;
+  letter-spacing: .7px !important;
+  text-transform: uppercase !important;
+  padding: 9px 54px !important;
+  transform: rotate(-18deg) !important;
+  box-shadow: 0 12px 24px rgba(227, 6, 43, .28) !important;
+  pointer-events: none !important;
+}
