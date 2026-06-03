@@ -1920,3 +1920,54 @@
     grid-template-columns: 1fr !important;
   }
 }
+/* Redes sociales flotantes laterales */
+.social-floating {
+  position: fixed !important;
+  right: 18px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  width: auto !important;
+}
+
+.social-floating a {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 16px !important;
+  background: #fff !important;
+  display: grid !important;
+  place-items: center !important;
+  box-shadow: 0 12px 28px rgba(0,0,0,.16) !important;
+  border: 1px solid rgba(0,0,0,.06) !important;
+  overflow: hidden !important;
+}
+
+.social-floating img {
+  width: 34px !important;
+  height: 34px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+@media (max-width: 760px) {
+  .social-floating {
+    right: 10px !important;
+    bottom: 88px !important;
+    top: auto !important;
+    transform: none !important;
+  }
+
+  .social-floating a {
+    width: 46px !important;
+    height: 46px !important;
+    border-radius: 14px !important;
+  }
+
+  .social-floating img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
