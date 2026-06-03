@@ -19,15 +19,105 @@ document.addEventListener('DOMContentLoaded', () => {
   if(promoTrack && promoDots.length) setInterval(()=>setPromoSlide(promoIndex+1), 6500);
 
   const PRODUCTS = [
-    { id: "lg-grab", brand: "LG XBOOM", category: "Portátil", name: "LG XBOOM Grab", price: "S/ 299", short: "Parlante portátil ideal para reuniones, paseos y uso diario.", features: ["Portátil", "Buen sonido", "Ideal para uso diario"], best: "portabilidad y confianza", img: "assets/images/productos/lg-xboom-grab.png" },
-    { id: "lg-bounce", brand: "LG XBOOM", category: "Portátil", name: "LG XBOOM Bounce", price: "S/ 399", short: "Buen equilibrio entre batería, tamaño y precio.", features: ["Buen equilibrio", "Uso diario", "Ideal para reuniones"], best: "batería y precio", img: "assets/images/productos/lg-xboom-bounce.webp" },
-    { id: "lg-xg8t", brand: "LG XBOOM", category: "Portátil", name: "LG XBOOM XG8T", price: "S/ 725", short: "Parlante de mayor potencia para reuniones y exteriores.", features: ["Mayor potencia", "Ideal para exteriores", "Sonido fuerte"], best: "portátil grande", img: "assets/images/productos/lg-xboom-xg8t.webp" },
-    { id: "lg-stage301", brand: "LG XBOOM", category: "Fiesta", name: "LG XBOOM Stage 301", price: "S/ 899", short: "Parlante tipo torre ideal para karaoke, reuniones y eventos.", features: ["Tipo torre", "Ideal para karaoke", "Eventos pequeños"], best: "eventos pequeños", img: "assets/images/productos/lg-xboom-stage-301.webp" },
-    { id: "jbl-go4", brand: "JBL", category: "Portátil", name: "JBL Go 4", price: "S/ 125", short: "Parlante compacto, fácil de llevar y perfecto como regalo.", features: ["Compacto", "Fácil de llevar", "Ideal como regalo"], best: "compra por impulso", img: "assets/images/productos/jbl-go-4.webp" },
-    { id: "jbl-grip", brand: "JBL", category: "Portátil", name: "JBL Grip", price: "S/ 249", short: "Modelo práctico para salidas, viajes y planes diarios.", features: ["Portátil", "Práctico", "Para viajes"], best: "portabilidad", img: "assets/images/productos/jbl-grip.webp" },
-    { id: "jbl-flip7", brand: "JBL", category: "Portátil", name: "JBL Flip 7", price: "S/ 349", short: "Parlante versátil para casa, reuniones y exteriores.", features: ["Versátil", "Buen diseño", "Uso en casa o exterior"], best: "modelo grande", img: "assets/images/productos/jbl-flip-7.webp" },
-    { id: "jbl-charge6", brand: "JBL", category: "Portátil", name: "JBL Charge 6", price: "S/ 515", short: "Parlante con batería superior para planes largos.", features: ["Batería superior", "Buen volumen", "Ideal para planes largos"], best: "batería superior", img: "assets/images/productos/jbl-charge-6.webp" },
-    { id: "jbl-boombox4", brand: "JBL", category: "Fiesta", name: "JBL Boombox 4", price: "S/ 1 605", short: "Modelo grande y potente para fiestas y sonido premium.", features: ["Alta potencia", "Sonido premium", "Ideal para fiestas"], best: "premium de JBL", img: "assets/images/productos/jbl-boombox-4.webp" }
+    {
+      id: "lg-grab",
+      brand: "LG XBOOM",
+      category: "Portátil",
+      name: "LG XBOOM Grab",
+      price: "S/ 299",
+      short: "Parlante portátil resistente y ligero, diseñado para acompañarte en cualquier aventura con gran autonomía y resistencia.",
+      features: ["Potencia de 30W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H para mayor durabilidad", "Hasta 20 horas de batería", "Diseño compacto con correa integrada para fácil transporte"],
+      best: "playa, piscina, viajes, bicicleta y uso diario",
+      img: "assets/images/productos/lg-xboom-grab.png"
+    },
+    {
+      id: "lg-bounce",
+      brand: "LG XBOOM",
+      category: "Portátil",
+      name: "LG XBOOM Bounce",
+      price: "S/ 399",
+      short: "Más batería, más bajos y mayor resistencia para disfrutar la música durante todo el día.",
+      features: ["Potencia de 40W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H", "Hasta 30 horas de batería", "Graves potentes y sonido amplio"],
+      best: "reuniones, terrazas, camping y actividades al aire libre",
+      img: "assets/images/productos/lg-xboom-bounce.webp"
+    },
+    {
+      id: "lg-xg8t",
+      brand: "LG XBOOM",
+      category: "Portátil",
+      name: "LG XBOOM XG8T",
+      price: "S/ 725",
+      short: "Potencia, luces y resistencia extrema para llevar la fiesta a cualquier lugar.",
+      features: ["Potencia de 120W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H", "Luces LED RGB sincronizadas con la música", "Graves profundos y sonido potente"],
+      best: "fiestas, reuniones y usuarios que buscan potencia y efectos visuales",
+      img: "assets/images/productos/lg-xboom-xg8t.webp"
+    },
+    {
+      id: "lg-stage301",
+      brand: "LG XBOOM",
+      category: "Fiesta",
+      name: "LG XBOOM Stage 301",
+      price: "S/ 899",
+      short: "El parlante más versátil de LG XBOOM, perfecto para eventos, presentaciones y diversión en grupo.",
+      features: ["Potencia de 120W", "Entradas para micrófono y guitarra", "Función karaoke integrada", "Batería portátil y reemplazable", "Diseño ideal para eventos y entretenimiento"],
+      best: "karaoke, eventos, animación, músicos y fiestas",
+      img: "assets/images/productos/lg-xboom-stage-301.webp"
+    },
+    {
+      id: "jbl-go4",
+      brand: "JBL",
+      category: "Portátil",
+      name: "JBL Go 4",
+      price: "S/ 125",
+      short: "El JBL más pequeño y práctico, ideal para disfrutar música en cualquier momento y lugar.",
+      features: ["Diseño ultracompacto y ligero", "Certificación IP67 resistente al agua y polvo", "Sonido JBL Pro Sound con bajos mejorados", "Hasta 7 horas de batería", "Fácil de transportar a cualquier lugar"],
+      best: "estudiantes, oficina, habitación y uso personal",
+      img: "assets/images/productos/jbl-go-4.webp"
+    },
+    {
+      id: "jbl-grip",
+      brand: "JBL",
+      category: "Portátil",
+      name: "JBL Clip 5 (Grip)",
+      price: "S/ 249",
+      short: "Música siempre contigo gracias a su práctico diseño para colgar en mochilas, bicicletas o equipaje.",
+      features: ["Potencia de 7W", "Mosquetón integrado para colgarlo fácilmente", "Certificación IP67 resistente al agua y polvo", "Hasta 12 horas de batería", "Sonido JBL Pro Sound"],
+      best: "deportistas, viajeros y actividades al aire libre",
+      img: "assets/images/productos/jbl-grip.webp"
+    },
+    {
+      id: "jbl-flip7",
+      brand: "JBL",
+      category: "Portátil",
+      name: "JBL Flip 7",
+      price: "S/ 349",
+      short: "El equilibrio perfecto entre tamaño, potencia y resistencia, uno de los modelos más buscados de JBL.",
+      features: ["Potencia de 35W", "Sonido JBL Pro Sound con graves potentes", "Certificación IP68 resistente al agua y polvo", "Tecnología Auracast para conectar múltiples parlantes", "Diseño portátil y resistente"],
+      best: "playa, reuniones, viajes y uso diario",
+      img: "assets/images/productos/jbl-flip-7.webp"
+    },
+    {
+      id: "jbl-charge6",
+      brand: "JBL",
+      category: "Portátil",
+      name: "JBL Charge 6",
+      price: "S/ 515",
+      short: "Potencia, batería y carga para tus dispositivos en un solo equipo.",
+      features: ["Potencia de 45W", "Sonido potente con graves profundos", "Powerbank integrado para cargar celulares", "Certificación IP68 resistente al agua y polvo", "Hasta 24 horas de batería"],
+      best: "viajes largos, reuniones y usuarios que buscan autonomía y potencia",
+      img: "assets/images/productos/jbl-charge-6.webp"
+    },
+    {
+      id: "jbl-boombox4",
+      brand: "JBL",
+      category: "Fiesta",
+      name: "JBL Boombox 4",
+      price: "S/ 1 605",
+      short: "El máximo nivel de potencia portátil de JBL para quienes buscan el mejor sonido y la mayor presencia.",
+      features: ["Potencia de 180W", "Graves extremadamente profundos", "Certificación IP67 resistente al agua y polvo", "Batería de larga duración", "Sonido premium para espacios grandes y eventos"],
+      best: "fiestas, eventos, terrazas y clientes exigentes",
+      img: "assets/images/productos/jbl-boombox-4.webp"
+    }
   ];
 
   const modal = document.getElementById('productModal');
