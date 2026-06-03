@@ -19,15 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
   if(promoTrack && promoDots.length) setInterval(()=>setPromoSlide(promoIndex+1), 6500);
 
   const PRODUCTS = [
-    { id: "lg-grab", brand: "LG XBOOM", category: "Portátil", name: "LG XBOOM Grab", price: "S/ 269", oldPrice: "S/ 299", discount: "AHORRA S/ 30", short: "Promo Día del Padre: parlante portátil resistente y ligero, diseñado para acompañarte en cualquier aventura con gran autonomía y resistencia.", features: ["Potencia de 30W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H para mayor durabilidad", "Hasta 20 horas de batería", "Diseño compacto con correa integrada para fácil transporte"], best: "playa, piscina, viajes, bicicleta y uso diario", img: "assets/images/productos/lg-xboom-grab.png" },
-    { id: "lg-bounce", brand: "LG XBOOM", category: "Portátil", name: "LG XBOOM Bounce", price: "S/ 379", oldPrice: "S/ 399", discount: "AHORRA S/ 20", short: "Promo Día del Padre: más batería, más bajos y mayor resistencia para disfrutar la música durante todo el día.", features: ["Potencia de 40W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H", "Hasta 30 horas de batería", "Graves potentes y sonido amplio"], best: "reuniones, terrazas, camping y actividades al aire libre", img: "assets/images/productos/lg-xboom-bounce.webp" },
-    { id: "lg-xg8t", brand: "LG XBOOM", category: "Portátil", name: "LG XBOOM XG8T", price: "S/ 725", short: "Potencia, luces y resistencia extrema para llevar la fiesta a cualquier lugar.", features: ["Potencia de 120W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H", "Luces LED RGB sincronizadas con la música", "Graves profundos y sonido potente"], best: "fiestas, reuniones y usuarios que buscan potencia y efectos visuales", img: "assets/images/productos/lg-xboom-xg8t.webp" },
-    { id: "lg-stage301", brand: "LG XBOOM", category: "Fiesta", name: "LG XBOOM Stage 301", price: "S/ 899", short: "El parlante más versátil de LG XBOOM, perfecto para eventos, presentaciones y diversión en grupo.", features: ["Potencia de 120W", "Entradas para micrófono y guitarra", "Función karaoke integrada", "Batería portátil y reemplazable", "Diseño ideal para eventos y entretenimiento"], best: "karaoke, eventos, animación, músicos y fiestas", img: "assets/images/productos/lg-xboom-stage-301.webp" },
-    { id: "jbl-go4", brand: "JBL", category: "Portátil", name: "JBL Go 4", price: "S/ 129", oldPrice: "S/ 149", discount: "AHORRA S/ 20", short: "Promo Día del Padre: el JBL más pequeño y práctico, ideal para disfrutar música en cualquier momento y lugar.", features: ["Diseño ultracompacto y ligero", "Certificación IP67 resistente al agua y polvo", "Sonido JBL Pro Sound con bajos mejorados", "Hasta 7 horas de batería", "Fácil de transportar a cualquier lugar"], best: "estudiantes, oficina, habitación y uso personal", img: "assets/images/productos/jbl-go-4.webp" },
-    { id: "jbl-grip", brand: "JBL", category: "Portátil", name: "JBL Clip 5 (Grip)", price: "S/ 249", short: "Música siempre contigo gracias a su práctico diseño para colgar en mochilas, bicicletas o equipaje.", features: ["Potencia de 7W", "Mosquetón integrado para colgarlo fácilmente", "Certificación IP67 resistente al agua y polvo", "Hasta 12 horas de batería", "Sonido JBL Pro Sound"], best: "deportistas, viajeros y actividades al aire libre", img: "assets/images/productos/jbl-grip.webp" },
-    { id: "jbl-flip7", brand: "JBL", category: "Portátil", name: "JBL Flip 7", price: "S/ 349", short: "El equilibrio perfecto entre tamaño, potencia y resistencia, uno de los modelos más buscados de JBL.", features: ["Potencia de 35W", "Sonido JBL Pro Sound con graves potentes", "Certificación IP68 resistente al agua y polvo", "Tecnología Auracast para conectar múltiples parlantes", "Diseño portátil y resistente"], best: "playa, reuniones, viajes y uso diario", img: "assets/images/productos/jbl-flip-7.webp" },
-    { id: "jbl-charge6", brand: "JBL", category: "Portátil", name: "JBL Charge 6", price: "S/ 515", short: "Potencia, batería y carga para tus dispositivos en un solo equipo.", features: ["Potencia de 45W", "Sonido potente con graves profundos", "Powerbank integrado para cargar celulares", "Certificación IP68 resistente al agua y polvo", "Hasta 24 horas de batería"], best: "viajes largos, reuniones y usuarios que buscan autonomía y potencia", img: "assets/images/productos/jbl-charge-6.webp" },
-    { id: "jbl-boombox4", brand: "JBL", category: "Fiesta", name: "JBL Boombox 4", price: "S/ 1 605", short: "El máximo nivel de potencia portátil de JBL para quienes buscan el mejor sonido y la mayor presencia.", features: ["Potencia de 180W", "Graves extremadamente profundos", "Certificación IP67 resistente al agua y polvo", "Batería de larga duración", "Sonido premium para espacios grandes y eventos"], best: "fiestas, eventos, terrazas y clientes exigentes", img: "assets/images/productos/jbl-boombox-4.webp" }
+    { id: "lg-grab", brand: "LG XBOOM", category: "Portátil", name: "LG XBOOM Grab", price: "S/ 269", oldPrice: "S/ 299", discount: "Ahorras S/30", urgency: "🎁 Incluye regalo por tu compra", benefits: ["30W de potencia", "IP67 agua y polvo", "Certificación militar"], short: "Promo Día del Padre: parlante portátil resistente y ligero, diseñado para acompañarte en cualquier aventura con gran autonomía y resistencia.", features: ["Potencia de 30W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H para mayor durabilidad", "Hasta 20 horas de batería", "Diseño compacto con correa integrada para fácil transporte"], best: "playa, piscina, viajes, bicicleta y uso diario", img: "assets/images/productos/lg-xboom-grab.png" },
+    { id: "lg-bounce", brand: "LG XBOOM", category: "Portátil", name: "LG XBOOM Bounce", price: "S/ 379", oldPrice: "S/ 399", discount: "Ahorras S/20", urgency: "🎁 Incluye regalo por tu compra", benefits: ["40W de potencia", "IP67 agua y polvo", "Hasta 30h de batería"], short: "Promo Día del Padre: más batería, más bajos y mayor resistencia para disfrutar la música durante todo el día.", features: ["Potencia de 40W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H", "Hasta 30 horas de batería", "Graves potentes y sonido amplio"], best: "reuniones, terrazas, camping y actividades al aire libre", img: "assets/images/productos/lg-xboom-bounce.webp" },
+    { id: "lg-xg8t", brand: "LG XBOOM", category: "Portátil", name: "LG XBOOM XG8T", price: "S/ 725", urgency: "⚠️ Stock limitado", benefits: ["120W de potencia", "Luces LED RGB", "IP67 resistente"], short: "Potencia, luces y resistencia extrema para llevar la fiesta a cualquier lugar.", features: ["Potencia de 120W", "Certificación IP67 resistente al agua y polvo", "Certificación militar MIL-STD-810H", "Luces LED RGB sincronizadas con la música", "Graves profundos y sonido potente"], best: "fiestas, reuniones y usuarios que buscan potencia y efectos visuales", img: "assets/images/productos/lg-xboom-xg8t.webp" },
+    { id: "lg-stage301", brand: "LG XBOOM", category: "Fiesta", name: "LG XBOOM Stage 301", price: "S/ 899", urgency: "⚠️ Stock limitado", benefits: ["120W de potencia", "Karaoke integrado", "Micrófono y guitarra"], short: "El parlante más versátil de LG XBOOM, perfecto para eventos, presentaciones y diversión en grupo.", features: ["Potencia de 120W", "Entradas para micrófono y guitarra", "Función karaoke integrada", "Batería portátil y reemplazable", "Diseño ideal para eventos y entretenimiento"], best: "karaoke, eventos, animación, músicos y fiestas", img: "assets/images/productos/lg-xboom-stage-301.webp" },
+    { id: "jbl-go4", brand: "JBL", category: "Portátil", name: "JBL Go 4", price: "S/ 129", oldPrice: "S/ 149", discount: "Ahorras S/20", urgency: "🎁 Incluye regalo por tu compra", benefits: ["JBL Pro Sound", "IP67 agua y polvo", "Hasta 7h de batería"], short: "Promo Día del Padre: el JBL más pequeño y práctico, ideal para disfrutar música en cualquier momento y lugar.", features: ["Diseño ultracompacto y ligero", "Certificación IP67 resistente al agua y polvo", "Sonido JBL Pro Sound con bajos mejorados", "Hasta 7 horas de batería", "Fácil de transportar a cualquier lugar"], best: "estudiantes, oficina, habitación y uso personal", img: "assets/images/productos/jbl-go-4.webp" },
+    { id: "jbl-grip", brand: "JBL", category: "Portátil", name: "JBL Clip 5 (Grip)", price: "S/ 249", urgency: "⚠️ Stock limitado", benefits: ["7W de potencia", "Mosquetón integrado", "IP67 resistente"], short: "Música siempre contigo gracias a su práctico diseño para colgar en mochilas, bicicletas o equipaje.", features: ["Potencia de 7W", "Mosquetón integrado para colgarlo fácilmente", "Certificación IP67 resistente al agua y polvo", "Hasta 12 horas de batería", "Sonido JBL Pro Sound"], best: "deportistas, viajeros y actividades al aire libre", img: "assets/images/productos/jbl-grip.webp" },
+    { id: "jbl-flip7", brand: "JBL", category: "Portátil", name: "JBL Flip 7", price: "S/ 349", urgency: "⚠️ Stock limitado", benefits: ["35W de potencia", "IP68 resistente", "Auracast"], short: "El equilibrio perfecto entre tamaño, potencia y resistencia, uno de los modelos más buscados de JBL.", features: ["Potencia de 35W", "Sonido JBL Pro Sound con graves potentes", "Certificación IP68 resistente al agua y polvo", "Tecnología Auracast para conectar múltiples parlantes", "Diseño portátil y resistente"], best: "playa, reuniones, viajes y uso diario", img: "assets/images/productos/jbl-flip-7.webp" },
+    { id: "jbl-charge6", brand: "JBL", category: "Portátil", name: "JBL Charge 6", price: "S/ 515", urgency: "⚠️ Stock limitado", benefits: ["45W de potencia", "Powerbank integrado", "Hasta 24h batería"], short: "Potencia, batería y carga para tus dispositivos en un solo equipo.", features: ["Potencia de 45W", "Sonido potente con graves profundos", "Powerbank integrado para cargar celulares", "Certificación IP68 resistente al agua y polvo", "Hasta 24 horas de batería"], best: "viajes largos, reuniones y usuarios que buscan autonomía y potencia", img: "assets/images/productos/jbl-charge-6.webp" },
+    { id: "jbl-boombox4", brand: "JBL", category: "Fiesta", name: "JBL Boombox 4", price: "S/ 1 605", urgency: "⚠️ Stock limitado", benefits: ["180W de potencia", "Graves profundos", "Sonido premium"], short: "El máximo nivel de potencia portátil de JBL para quienes buscan el mejor sonido y la mayor presencia.", features: ["Potencia de 180W", "Graves extremadamente profundos", "Certificación IP67 resistente al agua y polvo", "Batería de larga duración", "Sonido premium para espacios grandes y eventos"], best: "fiestas, eventos, terrazas y clientes exigentes", img: "assets/images/productos/jbl-boombox-4.webp" }
   ];
 
   const modal = document.getElementById('productModal');
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('modalFeatures').innerHTML = p.features.map(f => `<li>${f}</li>`).join('');
     document.getElementById('modalBest').innerHTML = '<strong>Ideal para:</strong> ' + p.best;
     const modalPrice = document.getElementById('modalPrice');
-    modalPrice.innerHTML = p.oldPrice ? `<div class="modal-promo-price"><span class="modal-old-price">${p.oldPrice}</span><strong>${p.price}</strong><small>${p.discount || 'PROMO DÍA DEL PADRE'}</small></div>` : p.price;
+    modalPrice.innerHTML = p.oldPrice ? `<div class="modal-promo-price"><span class="modal-kicker">PROMO DÍA DEL PADRE</span><strong>${p.price}</strong><span class="modal-old-price">Antes ${p.oldPrice}</span><small>${p.discount || 'Oferta especial'}</small></div>` : p.price;
     const msg = encodeURIComponent('Hola JOR STORE, quiero información sobre ' + p.name + ' (' + p.price + ')');
     document.getElementById('modalWhatsApp').href = 'https://wa.me/51925789830?text=' + msg;
     modal.classList.add('open');
@@ -82,17 +82,50 @@ document.addEventListener('DOMContentLoaded', () => {
     filterProducts(btn.dataset.filter || 'todos');
   }
 
-  function updatePromoPricesOnCards() {
+  function updateProductCards() {
     productCards.forEach(card => {
       const p = PRODUCTS.find(x => x.id === card.dataset.id);
       if (!p) return;
+
+      const badgeRow = card.querySelector('.badge-row');
+      if (badgeRow) {
+        const stock = badgeRow.querySelector('.badge.stock');
+        if (stock) stock.innerHTML = '✓ En stock';
+        if (p.oldPrice && !badgeRow.querySelector('.badge.promo')) {
+          const promoBadge = document.createElement('span');
+          promoBadge.className = 'badge promo';
+          promoBadge.textContent = 'Día del Padre';
+          badgeRow.insertBefore(promoBadge, stock || null);
+        }
+      }
+
+      const body = card.querySelector('.product-body');
+      const title = body?.querySelector('h3');
+      if (body && title && !body.querySelector('.quick-benefits')) {
+        const benefits = document.createElement('ul');
+        benefits.className = 'quick-benefits';
+        benefits.innerHTML = (p.benefits || []).slice(0, 3).map(item => `<li>✓ ${item}</li>`).join('');
+        title.insertAdjacentElement('afterend', benefits);
+      }
+
       const priceLine = card.querySelector('.price-line');
       if (!priceLine) return;
       if (p.oldPrice) {
         priceLine.classList.add('promo-price-line');
-        priceLine.innerHTML = `<div class="promo-price-main"><span class="promo-kicker">PROMO DÍA DEL PADRE</span><strong>${p.price}</strong><span class="promo-old">Antes ${p.oldPrice}</span></div><div class="promo-save">${p.discount || 'OFERTA'}</div>`;
+        priceLine.innerHTML = `<div class="promo-price-main"><span class="promo-kicker">PROMO DÍA DEL PADRE</span><div class="promo-now"><small>Ahora</small><strong>${p.price}</strong></div><div class="promo-before"><span>Antes</span><del>${p.oldPrice}</del></div><span class="promo-save">${p.discount || 'Oferta especial'}</span></div>`;
       } else {
         priceLine.classList.remove('promo-price-line');
+        priceLine.innerHTML = `<strong>${p.price}</strong><span>Precio JOR STORE</span>`;
+      }
+
+      const btn = card.querySelector('.details-btn');
+      if (btn) btn.textContent = p.oldPrice ? 'Ver oferta' : 'Comprar ahora';
+
+      if (body && !body.querySelector('.urgency-line')) {
+        const urgency = document.createElement('div');
+        urgency.className = 'urgency-line';
+        urgency.textContent = p.urgency || '⚠️ Stock limitado';
+        body.appendChild(urgency);
       }
     });
   }
@@ -152,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  updatePromoPricesOnCards();
+  updateProductCards();
   if (modalClose) modalClose.addEventListener('click', closeModal);
   if (modalBack) modalBack.addEventListener('click', closeModal);
   if (modal) modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
