@@ -59,21 +59,21 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('modalWhatsApp').href = 'https://wa.me/51925789830?text=' + msg;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden','false');
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('modal-open');
   }
 
   function closeModal() {
     if (!modal) return;
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden','true');
-    document.body.style.overflow = '';
+    document.body.classList.remove('modal-open');
   }
 
   function filterProducts(filter) {
     productCards.forEach(card => {
       const p = PRODUCTS.find(x => x.id === card.dataset.id);
       if (!p) return;
-      const show = filter === 'todos' || p.brand === filter || p.category === filter;
+      const show = filter === 'todos' || p.brand === filter || filter === 'ofertas' && Boolean(p.oldPrice);
       card.hidden = !show;
       card.style.display = show ? '' : 'none';
     });
