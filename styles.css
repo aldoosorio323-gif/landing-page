@@ -2655,3 +2655,276 @@
     max-width: 100% !important;
   }
 }
+/* ==================================================
+   FIX FINAL: filtros clicables y modal móvil scroll
+================================================== */
+
+.filters,
+.filter-btn {
+  position: relative !important;
+  z-index: 50 !important;
+  pointer-events: auto !important;
+  touch-action: manipulation !important;
+}
+
+.filter-btn {
+  cursor: pointer !important;
+  user-select: none !important;
+}
+
+/* Modal: permitir scroll interno real */
+#productModal.modal.open {
+  position: fixed !important;
+  inset: 0 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  align-items: flex-start !important;
+  padding: 18px 10px 90px !important;
+}
+
+#productModal.modal.open .modal-card {
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
+  margin: 0 auto !important;
+}
+
+#productModal.modal.open .modal-layout {
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+body.modal-open {
+  overflow: hidden !important;
+}
+
+/* En móvil, el modal debe apilar y dejar bajar hasta botones */
+@media (max-width: 720px) {
+  #productModal.modal.open {
+    display: block !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 14px 8px 110px !important;
+  }
+
+  #productModal.modal.open .modal-card {
+    width: min(96vw, 560px) !important;
+    max-width: 96vw !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    border-radius: 28px !important;
+  }
+
+  #productModal.modal.open .modal-layout {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  #productModal .modal-image {
+    min-height: 260px !important;
+    max-height: 320px !important;
+  }
+
+  #productModal .modal-image img {
+    max-height: 230px !important;
+    object-fit: contain !important;
+  }
+
+  #productModal .modal-info {
+    overflow: visible !important;
+    max-height: none !important;
+    padding-bottom: 28px !important;
+  }
+
+  #productModal .buy-row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    padding-bottom: 24px !important;
+  }
+
+  #productModal .wa-buy,
+  #productModal .back-products {
+    width: 100% !important;
+    min-height: 52px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+/* FIX DEFINITIVO MODAL MOVIL */
+@media (max-width: 760px) {
+  #productModal.modal.open {
+    display: block !important;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 12px 8px 120px !important;
+    align-items: unset !important;
+    justify-content: unset !important;
+  }
+
+  #productModal.modal.open .modal-card {
+    width: 96vw !important;
+    max-width: 96vw !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    margin: 0 auto 90px !important;
+    border-radius: 28px !important;
+  }
+
+  #productModal.modal.open .modal-layout {
+    display: block !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  #productModal.modal.open .modal-image {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    padding: 18px 10px !important;
+  }
+
+  #productModal.modal.open .modal-image img {
+    width: 100% !important;
+    max-height: 210px !important;
+    object-fit: contain !important;
+  }
+
+  #productModal.modal.open .modal-info {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 22px 24px 36px !important;
+  }
+
+  #productModal.modal.open #modalFeatures {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  #productModal.modal.open .buy-row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    padding-bottom: 30px !important;
+  }
+
+  #productModal.modal.open .wa-buy,
+  #productModal.modal.open .back-products {
+    width: 100% !important;
+    min-height: 54px !important;
+  }
+}
+/* ==================================================
+   FIX FINAL iPHONE: modal con scroll interno real
+================================================== */
+
+@media (max-width: 760px) {
+  body.modal-open {
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100% !important;
+  }
+
+  #productModal.modal.open {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    padding: 10px !important;
+  }
+
+  #productModal.modal.open .modal-card {
+    width: 96vw !important;
+    max-width: 96vw !important;
+    height: calc(100dvh - 24px) !important;
+    max-height: calc(100dvh - 24px) !important;
+    min-height: 0 !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior: contain !important;
+    margin: 0 auto !important;
+    border-radius: 28px !important;
+  }
+
+  #productModal.modal.open .modal-layout {
+    display: block !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  #productModal.modal.open .modal-image {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 18px 12px 8px !important;
+    border-radius: 24px 24px 0 0 !important;
+  }
+
+  #productModal.modal.open .modal-image img {
+    width: 100% !important;
+    max-height: 210px !important;
+    object-fit: contain !important;
+  }
+
+  #productModal.modal.open .modal-info {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 18px 22px 38px !important;
+  }
+
+  #productModal.modal.open .close {
+    position: sticky !important;
+    top: 10px !important;
+    float: right !important;
+    z-index: 20 !important;
+  }
+
+  #productModal.modal.open #modalFeatures {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  #productModal.modal.open .buy-row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    padding-bottom: 24px !important;
+  }
+
+  #productModal.modal.open .wa-buy,
+  #productModal.modal.open .back-products {
+    width: 100% !important;
+    min-height: 54px !important;
+  }
+
+  #productModal.modal.open .modal-price {
+    margin-bottom: 16px !important;
+  }
+}
