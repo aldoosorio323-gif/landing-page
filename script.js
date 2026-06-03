@@ -50,7 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('modalFeatures').innerHTML = p.features.map(f => `<li>${f}</li>`).join('');
     document.getElementById('modalBest').innerHTML = '<strong>Ideal para:</strong> ' + p.best;
     const modalPrice = document.getElementById('modalPrice');
-    modalPrice.innerHTML = p.oldPrice ? `<div class="modal-promo-price"><span class="modal-kicker">PROMO DÍA DEL PADRE</span><strong>${p.price}</strong><span class="modal-old-price">Antes ${p.oldPrice}</span><small>${p.discount || 'Oferta especial'}</small></div>` : p.price;
+    if (p.oldPrice) {
+      modalPrice.innerHTML = `<div class="modal-promo-price"><span class="modal-kicker">PROMO DÍA DEL PADRE</span><div class="modal-now-row"><span>Ahora</span><strong>${p.price}</strong></div><div class="modal-old-row"><span>Antes</span><del>${p.oldPrice}</del></div><small>${p.discount || 'Oferta especial'}</small></div>`;
+    } else {
+      modalPrice.innerHTML = `<strong>${p.price}</strong>`;
+    }
     const msg = encodeURIComponent('Hola JOR STORE, quiero información sobre ' + p.name + ' (' + p.price + ')');
     document.getElementById('modalWhatsApp').href = 'https://wa.me/51925789830?text=' + msg;
     modal.classList.add('open');
@@ -150,6 +154,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = btn.closest('.product-card');
       if (card) openProduct(card.dataset.id);
     });
+    btn.addEventListener('touchend', e => {
+      e.preventDefault();
+      e.stopPropagation();
+      const card = btn.closest('.product-card');
+      if (card) openProduct(card.dataset.id);
+    }, { passive: false });
   });
 
   productCards.forEach(card => {
