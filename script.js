@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('productModal');
   const modalClose = document.getElementById('modalClose');
   const modalBack = document.getElementById('modalBack');
-  const grid = document.getElementById('productGrid');
   const productCards = Array.from(document.querySelectorAll('.product-card'));
   const filterButtons = Array.from(document.querySelectorAll('.filter-btn'));
 
@@ -92,22 +91,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: false });
   });
 
-  if (grid) {
-    grid.addEventListener('click', e => {
-      const card = e.target.closest('.product-card');
+  document.querySelectorAll('.product-card .details-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      e.stopPropagation();
+      const card = btn.closest('.product-card');
       if (card) openProduct(card.dataset.id);
     });
-    grid.addEventListener('touchend', e => {
-      const card = e.target.closest('.product-card');
-      if (!card) return;
+    btn.addEventListener('touchend', e => {
       e.preventDefault();
-      openProduct(card.dataset.id);
+      e.stopPropagation();
+      const card = btn.closest('.product-card');
+      if (card) openProduct(card.dataset.id);
     }, { passive: false });
-    grid.addEventListener('keydown', e => {
-      const card = e.target.closest('.product-card');
-      if ((e.key === 'Enter' || e.key === ' ') && card) { e.preventDefault(); openProduct(card.dataset.id); }
-    });
-  }
+  });
+
+  productCards.forEach(card => {
+    card.removeAttribute('role');
+    card.removeAttribute('tabindex');
+  });
 
   if (modalClose) modalClose.addEventListener('click', closeModal);
   if (modalBack) modalBack.addEventListener('click', closeModal);
