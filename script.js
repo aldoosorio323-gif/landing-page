@@ -33,15 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalClose = document.getElementById('modalClose');
   const modalBack = document.getElementById('modalBack');
   const productCards = Array.from(document.querySelectorAll('.product-card'));
-  const filterButtons = Array.from(document.querySelectorAll('.filter-btn'));
-
-  function lockBody() {
-    document.body.classList.add('modal-open');
-  }
-
-  function unlockBody() {
-    document.body.classList.remove('modal-open');
-  }
+  const filtersWrap = document.querySelector('.filters');
 
   function openProduct(id) {
     const p = PRODUCTS.find(x => x.id === id);
@@ -64,33 +56,32 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.classList.add('open');
     modal.setAttribute('aria-hidden','false');
     modal.scrollTop = 0;
-    lockBody();
+    const card = modal.querySelector('.modal-card');
+    if (card) card.scrollTop = 0;
+    document.body.classList.add('modal-open');
   }
 
   function closeModal() {
     if (!modal) return;
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden','true');
-    unlockBody();
+    document.body.classList.remove('modal-open');
   }
 
   function filterProducts(filter) {
     productCards.forEach(card => {
       const p = PRODUCTS.find(x => x.id === card.dataset.id);
       if (!p) return;
-      let show = false;
-      if (filter === 'todos') show = true;
-      if (filter === 'LG XBOOM') show = p.brand === 'LG XBOOM';
-      if (filter === 'JBL') show = p.brand === 'JBL';
-      if (filter === 'ofertas') show = Boolean(p.oldPrice);
+      const show = filter === 'todos' || filter === p.brand || (filter === 'ofertas' && Boolean(p.oldPrice));
       card.hidden = !show;
+      card.classList.toggle('is-hidden', !show);
       card.style.display = show ? '' : 'none';
     });
   }
 
   function activateFilterButton(btn) {
     if (!btn) return;
-    filterButtons.forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     filterProducts(btn.dataset.filter || 'todos');
   }
@@ -138,47 +129,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', e => {
+  if (filtersWrap) {
+    filtersWrap.addEventListener('click', e => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
       e.preventDefault();
-      e.stopPropagation();
       activateFilterButton(btn);
     });
-    btn.addEventListener('pointerup', e => {
+    filtersWrap.addEventListener('touchend', e => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
       e.preventDefault();
-      e.stopPropagation();
       activateFilterButton(btn);
-    });
-  });
+    }, { passive: false });
+  }
 
-  document.querySelectorAll('.product-card .details-btn').forEach(btn => {
-    btn.addEventListener('click', e => {
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.details-btn');
+    if (btn) {
       e.preventDefault();
       e.stopPropagation();
       const card = btn.closest('.product-card');
       if (card) openProduct(card.dataset.id);
-    });
-    btn.addEventListener('pointerup', e => {
-      e.preventDefault();
-      e.stopPropagation();
-      const card = btn.closest('.product-card');
-      if (card) openProduct(card.dataset.id);
-    });
-  });
-
-  productCards.forEach(card => {
-    card.setAttribute('role', 'button');
-    card.setAttribute('tabindex', '0');
-    card.addEventListener('click', e => {
-      if (e.target.closest('.details-btn')) return;
-      openProduct(card.dataset.id);
-    });
-    card.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openProduct(card.dataset.id);
-      }
-    });
+      return;
+    }
+    const card = e.target.closest('.product-card');
+    if (card && !card.classList.contains('is-hidden')) openProduct(card.dataset.id);
   });
 
   updateProductCards();
