@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalClose = document.getElementById('modalClose');
   const modalBack = document.getElementById('modalBack');
   const productCards = Array.from(document.querySelectorAll('.product-card'));
-  const filtersWrap = document.querySelector('.filters');
 
   function openProduct(id) {
     const p = PRODUCTS.find(x => x.id === id);
@@ -47,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('modalBest').innerHTML = '<strong>Ideal para:</strong> ' + p.best;
     const modalPrice = document.getElementById('modalPrice');
     if (p.oldPrice) {
-      modalPrice.innerHTML = `<div class="modal-promo-price"><span class="modal-kicker">PROMO DÍA DEL PADRE</span><div class="modal-now-row"><span>Ahora</span><strong>${p.price}</strong></div><div class="modal-old-row"><span>Antes</span><del>${p.oldPrice}</del></div><small>${p.discount || 'Oferta especial'}</small></div>`;
+      modalPrice.innerHTML = `<div class="modal-promo-price"><span class="modal-kicker">PROMO DÍA DEL PADRE</span><div class="modal-now-row"><span>Ahora</span><strong>${p.price}</strong></div><div class="modal-old-row"><span>Antes</span><del>${p.oldPrice}</del></div><small>${p.discount || 'Oferta especial'}</small></div><div class="modal-gift">🎁 Promo especial: incluye regalo por tu compra</div>`;
     } else {
       modalPrice.innerHTML = `<strong>${p.price}</strong>`;
     }
@@ -68,24 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.remove('modal-open');
   }
 
-  function filterProducts(filter) {
-    productCards.forEach(card => {
-      const p = PRODUCTS.find(x => x.id === card.dataset.id);
-      if (!p) return;
-      const show = filter === 'todos' || filter === p.brand || (filter === 'ofertas' && Boolean(p.oldPrice));
-      card.hidden = !show;
-      card.classList.toggle('is-hidden', !show);
-      card.style.display = show ? '' : 'none';
-    });
-  }
-
-  function activateFilterButton(btn) {
-    if (!btn) return;
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    filterProducts(btn.dataset.filter || 'todos');
-  }
-
   function updateProductCards() {
     productCards.forEach(card => {
       const p = PRODUCTS.find(x => x.id === card.dataset.id);
@@ -97,9 +78,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (p.oldPrice && !badgeRow.querySelector('.badge.promo')) {
           const promoBadge = document.createElement('span');
           promoBadge.className = 'badge promo';
-          promoBadge.textContent = 'Día del Padre';
+          promoBadge.textContent = '🔥 Oferta Día del Padre';
           badgeRow.insertBefore(promoBadge, stock || null);
         }
+      }
+      if (p.oldPrice && !card.querySelector('.offer-ribbon')) {
+        const ribbon = document.createElement('div');
+        ribbon.className = 'offer-ribbon';
+        ribbon.textContent = '🔥 OFERTA DÍA DEL PADRE';
+        card.insertAdjacentElement('afterbegin', ribbon);
       }
       const body = card.querySelector('.product-body');
       const title = body?.querySelector('h3');
@@ -129,21 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (filtersWrap) {
-    filtersWrap.addEventListener('click', e => {
-      const btn = e.target.closest('.filter-btn');
-      if (!btn) return;
-      e.preventDefault();
-      activateFilterButton(btn);
-    });
-    filtersWrap.addEventListener('touchend', e => {
-      const btn = e.target.closest('.filter-btn');
-      if (!btn) return;
-      e.preventDefault();
-      activateFilterButton(btn);
-    }, { passive: false });
-  }
-
   document.addEventListener('click', e => {
     const btn = e.target.closest('.details-btn');
     if (btn) {
@@ -154,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     const card = e.target.closest('.product-card');
-    if (card && !card.classList.contains('is-hidden')) openProduct(card.dataset.id);
+    if (card) openProduct(card.dataset.id);
   });
 
   updateProductCards();
