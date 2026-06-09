@@ -3676,3 +3676,51 @@ body.modal-open{
     padding:4px 2px 10px!important;
   }
 }
+
+
+/* v40: Galería LG XBOOM Bounce
+   Ajuste para modelos horizontales anchos como Bounce. */
+#productModal .modal-main-image img[src*="lg-xboom-bounce"]{
+  max-width:calc(100% - 22px)!important;
+  max-height:420px!important;
+  object-fit:contain!important;
+}
+
+@media(max-width:620px){
+  #productModal .modal-main-image img[src*="lg-xboom-bounce"]{
+    max-height:255px!important;
+  }
+}
+
+
+/* v41: Imágenes de galería sin recuadro blanco interno.
+   Las fotos de producto deben ir con fondo transparente para que solo quede
+   el recuadro del modal y no otro cuadro dentro del modelo. */
+#productModal .modal-main-image,
+#productModal .gallery-stage,
+#productModal .modal-gallery-main{
+  background:
+    radial-gradient(circle at 50% 46%, rgba(0,0,0,.045), transparent 58%),
+    linear-gradient(180deg,#fbfbfb,#f5f6f8)!important;
+}
+
+#productModal .modal-main-image img,
+#productModal #modalImg{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+
+#productModal .gallery-thumb img{
+  background:transparent!important;
+}
+
+
+/* v42: Rebote/Bounce - limpieza fuerte de fondos claros
+   Las vistas de producto quedan transparentes para evitar cuadros crema o blancos internos. */
+#productModal .modal-main-image img[src*="lg-xboom-bounce/05-interior"],
+#productModal .gallery-thumb img[src*="lg-xboom-bounce/05-interior"]{
+  background:transparent!important;
+  box-shadow:none!important;
+  border:0!important;
+}

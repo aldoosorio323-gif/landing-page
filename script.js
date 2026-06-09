@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       discount: 'Ahorras S/20',
       urgency: '🎁 Incluye regalo por tu compra',
       benefits: ['40W de potencia', 'IP67 agua y polvo', 'Hasta 30h de batería'],
-      short: 'Promo Día del Padre: más batería, más bajos y mayor resistencia para disfrutar la música durante todo el día.',
+      short: 'Promo Día del Padre: más batería, más bajos y resistencia para reuniones, viajes y planes al aire libre.',
       features: [
         'Potencia de 40W',
         'Certificación IP67 resistente al agua y polvo',
@@ -65,9 +65,16 @@ document.addEventListener('DOMContentLoaded', () => {
         'Hasta 30 horas de batería',
         'Graves potentes y sonido amplio'
       ],
-      best: 'reuniones, terrazas, camping y actividades al aire libre',
-      img: 'assets/images/productos/lg-xboom-bounce.webp'
-    },
+      best: 'reuniones, terrazas, camping, viajes y actividades al aire libre',
+      img: 'assets/images/productos/lg-xboom-bounce.webp',
+      gallery: [
+        { src: 'assets/images/productos/lg-xboom-bounce/01-frontal.webp', label: 'Vista frontal' },
+        { src: 'assets/images/productos/lg-xboom-bounce/02-lateral.webp', label: 'Vista lateral' },
+        { src: 'assets/images/productos/lg-xboom-bounce/03-trasera.webp', label: 'Vista trasera' },
+        { src: 'assets/images/productos/lg-xboom-bounce/04-portabilidad.webp', label: 'Portabilidad' },
+        { src: 'assets/images/productos/lg-xboom-bounce/05-interior.webp', label: 'Interior' },
+        { src: 'assets/images/productos/lg-xboom-bounce/06-uso-exterior.webp', label: 'Uso exterior' }
+      ],},
     {
       id: 'lg-xg8t',
       brand: 'LG XBOOM',
