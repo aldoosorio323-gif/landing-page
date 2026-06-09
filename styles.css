@@ -4070,50 +4070,103 @@ body.modal-open{
     max-height:275px!important;
   }
 }
-/* Fix banners escenarios: evita que se descuadren */
-.scenario-card,
-.use-card,
-.banner-card,
-.usage-card {
+/* FIX FINAL: carrusel/banners de escenarios alineados */
+.scenarios,
+.use-cases,
+.banners-section,
+.scenario-section {
+  position: relative;
   overflow: hidden;
-}
-
-.scenario-card img,
-.use-card img,
-.banner-card img,
-.usage-card img,
-.scenario-banner img,
-.use-banner img {
-  width: 100%;
   max-width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  border-radius: inherit;
 }
 
+.scenario-slider,
+.use-slider,
+.banners-slider,
+.scenario-carousel,
+.use-carousel {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+  overflow: hidden !important;
+  border-radius: 24px;
+}
+
+.scenario-track,
+.use-track,
+.banners-track,
+.scenario-slides,
+.use-slides {
+  display: flex !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  transform: none;
+}
+
+.scenario-slide,
+.use-slide,
+.banner-slide,
 .scenario-card,
-.use-card,
-.banner-card,
-.usage-card,
-.scenario-banner,
-.use-banner {
-  max-width: 100%;
+.use-card {
+  min-width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+  overflow: hidden !important;
+  border-radius: 24px;
 }
 
-/* Si el banner es panorámico, lo mantiene proporcionado */
-.scenario-banner,
-.use-banner {
-  aspect-ratio: 16 / 9;
+.scenario-slide img,
+.use-slide img,
+.banner-slide img,
+.scenario-card img,
+.use-card img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: clamp(260px, 38vw, 520px) !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
+  border-radius: 24px;
 }
 
-.scenario-banner img,
-.use-banner img {
-  height: 100%;
-  object-fit: cover;
+/* Botones del carrusel encima del banner, no debajo */
+.scenario-prev,
+.scenario-next,
+.use-prev,
+.use-next,
+.banner-prev,
+.banner-next,
+.carousel-prev,
+.carousel-next {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 30 !important;
 }
 
-/* Evita que banners grandes empujen la página hacia los lados */
+.scenario-prev,
+.use-prev,
+.banner-prev,
+.carousel-prev {
+  left: 14px !important;
+}
+
+.scenario-next,
+.use-next,
+.banner-next,
+.carousel-next {
+  right: 14px !important;
+}
+
+/* Evita que el banner invada el catálogo */
+.catalog,
+.products-section,
+.products {
+  position: relative;
+  z-index: 2;
+}
+
 body {
   overflow-x: hidden;
 }
