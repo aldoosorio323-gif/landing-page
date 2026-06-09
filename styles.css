@@ -3926,3 +3926,147 @@ body.modal-open{
   #productModal .modal-main-image img[src*="jbl-go-4"],
   #productModal #modalImg[src*="jbl-go-4"]{max-height:265px!important}
 }
+
+
+/* v48: Galería JBL Grip */
+#productModal .modal-main-image img[src*="jbl-grip"],
+#productModal #modalImg[src*="jbl-grip"]{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  object-fit:contain!important;
+  max-width:calc(100% - 18px)!important;
+  max-height:455px!important;
+}
+
+#productModal .gallery-thumb img[src*="jbl-grip"]{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  object-fit:contain!important;
+}
+
+#productModal .modal-main-image img[src*="jbl-grip/06-uso-exterior"],
+#productModal #modalImg[src*="jbl-grip/06-uso-exterior"]{
+  width:100%!important;
+  max-width:100%!important;
+  max-height:430px!important;
+  border-radius:18px!important;
+  object-fit:contain!important;
+  background:#050505!important;
+}
+
+@media(max-width:620px){
+  #productModal .modal-main-image img[src*="jbl-grip"],
+  #productModal #modalImg[src*="jbl-grip"]{
+    max-height:285px!important;
+  }
+}
+
+
+/* v49: Galería JBL Flip 7 */
+#productModal .modal-main-image img[src*="jbl-flip-7"],
+#productModal #modalImg[src*="jbl-flip-7"]{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  object-fit:contain!important;
+  max-width:calc(100% - 18px)!important;
+  max-height:440px!important;
+}
+
+#productModal .gallery-thumb img[src*="jbl-flip-7"]{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  object-fit:contain!important;
+}
+
+#productModal .modal-main-image img[src*="jbl-flip-7/06-uso-exterior"],
+#productModal #modalImg[src*="jbl-flip-7/06-uso-exterior"]{
+  width:100%!important;
+  max-width:100%!important;
+  max-height:430px!important;
+  border-radius:18px!important;
+  object-fit:contain!important;
+  background:#050505!important;
+}
+
+@media(max-width:620px){
+  #productModal .modal-main-image img[src*="jbl-flip-7"],
+  #productModal #modalImg[src*="jbl-flip-7"]{
+    max-height:275px!important;
+  }
+}
+
+
+/* v50: Galería JBL Charge 6 */
+#productModal .modal-main-image img[src*="jbl-charge-6"],
+#productModal #modalImg[src*="jbl-charge-6"]{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  object-fit:contain!important;
+  max-width:calc(100% - 18px)!important;
+  max-height:440px!important;
+}
+
+#productModal .gallery-thumb img[src*="jbl-charge-6"]{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  object-fit:contain!important;
+}
+
+#productModal .modal-main-image img[src*="jbl-charge-6/06-uso-exterior"],
+#productModal #modalImg[src*="jbl-charge-6/06-uso-exterior"]{
+  width:100%!important;
+  max-width:100%!important;
+  max-height:430px!important;
+  border-radius:18px!important;
+  object-fit:contain!important;
+  background:#050505!important;
+}
+
+@media(max-width:620px){
+  #productModal .modal-main-image img[src*="jbl-charge-6"],
+  #productModal #modalImg[src*="jbl-charge-6"]{
+    max-height:275px!important;
+  }
+}
+
+
+/* v51: Galería JBL Boombox 4 */
+#productModal .modal-main-image img[src*="jbl-boombox-4"],
+#productModal #modalImg[src*="jbl-boombox-4"]{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  object-fit:contain!important;
+  max-width:calc(100% - 18px)!important;
+  max-height:440px!important;
+}
+
+#productModal .gallery-thumb img[src*="jbl-boombox-4"]{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  object-fit:contain!important;
+}
+
+#productModal .modal-main-image img[src*="jbl-boombox-4/06-uso-exterior"],
+#productModal #modalImg[src*="jbl-boombox-4/06-uso-exterior"]{
+  width:100%!important;
+  max-width:100%!important;
+  max-height:430px!important;
+  border-radius:18px!important;
+  object-fit:contain!important;
+  background:#050505!important;
+}
+
+@media(max-width:620px){
+  #productModal .modal-main-image img[src*="jbl-boombox-4"],
+  #productModal #modalImg[src*="jbl-boombox-4"]{
+    max-height:275px!important;
+  }
+}

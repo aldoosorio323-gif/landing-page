@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
       price: 'S/ 249',
       urgency: '⚠️ Stock limitado',
       benefits: ['7W de potencia', 'Mosquetón integrado', 'IP67 resistente'],
-      short: 'Música siempre contigo gracias a su práctico diseño para colgar en mochilas, bicicletas o equipaje.',
+      short: 'Parlante portátil con diseño de agarre, resistente y fácil de llevar para música en viajes, playa, piscina y aventuras.',
       features: [
         'Potencia de 7W',
         'Mosquetón integrado para colgarlo fácilmente',
@@ -187,9 +187,16 @@ document.addEventListener('DOMContentLoaded', () => {
         'Hasta 12 horas de batería',
         'Sonido JBL Pro Sound'
       ],
-      best: 'deportistas, viajeros y actividades al aire libre',
-      img: 'assets/images/productos/jbl-grip.webp'
-    },
+      best: 'viajes, trekking, playa, piscina, mochilas, bicicleta y actividades al aire libre',
+      img: 'assets/images/productos/jbl-grip.webp',
+      gallery: [
+        { src: 'assets/images/productos/jbl-grip/01-frontal.webp', label: 'Vista frontal' },
+        { src: 'assets/images/productos/jbl-grip/02-inferior.webp', label: 'Vista inferior' },
+        { src: 'assets/images/productos/jbl-grip/03-luces-led.webp', label: 'Luces LED' },
+        { src: 'assets/images/productos/jbl-grip/04-superior.webp', label: 'Vista superior' },
+        { src: 'assets/images/productos/jbl-grip/05-trasera.webp', label: 'Vista trasera' },
+        { src: 'assets/images/productos/jbl-grip/06-uso-exterior.webp', label: 'Uso exterior' }
+      ],},
     {
       id: 'jbl-flip7',
       brand: 'JBL',
@@ -198,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
       price: 'S/ 349',
       urgency: '⚠️ Stock limitado',
       benefits: ['35W de potencia', 'IP68 resistente', 'Auracast'],
-      short: 'El equilibrio perfecto entre tamaño, potencia y resistencia, uno de los modelos más buscados de JBL.',
+      short: 'Sonido potente, diseño portátil y resistencia para llevar música a la playa, piscina, viajes y reuniones.',
       features: [
         'Potencia de 35W',
         'Sonido JBL Pro Sound con graves potentes',
@@ -206,9 +213,16 @@ document.addEventListener('DOMContentLoaded', () => {
         'Tecnología Auracast para conectar múltiples parlantes',
         'Diseño portátil y resistente'
       ],
-      best: 'playa, reuniones, viajes y uso diario',
-      img: 'assets/images/productos/jbl-flip-7.webp'
-    },
+      best: 'playa, piscina, viajes, reuniones, deportes acuáticos y uso diario',
+      img: 'assets/images/productos/jbl-flip-7.webp',
+      gallery: [
+        { src: 'assets/images/productos/jbl-flip-7/01-frontal.webp', label: 'Vista frontal' },
+        { src: 'assets/images/productos/jbl-flip-7/02-lateral.webp', label: 'Vista lateral' },
+        { src: 'assets/images/productos/jbl-flip-7/03-superior.webp', label: 'Vista superior' },
+        { src: 'assets/images/productos/jbl-flip-7/04-trasera.webp', label: 'Vista trasera' },
+        { src: 'assets/images/productos/jbl-flip-7/05-accesorios.webp', label: 'Accesorios' },
+        { src: 'assets/images/productos/jbl-flip-7/06-uso-exterior.webp', label: 'Uso exterior' }
+      ],},
     {
       id: 'jbl-charge6',
       brand: 'JBL',
@@ -217,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
       price: 'S/ 515',
       urgency: '⚠️ Stock limitado',
       benefits: ['45W de potencia', 'Powerbank integrado', 'Hasta 24h batería'],
-      short: 'Potencia, batería y carga para tus dispositivos en un solo equipo.',
+      short: 'Sonido potente, batería de larga duración y asa resistente para llevar tu música a cualquier plan.',
       features: [
         'Potencia de 45W',
         'Sonido potente con graves profundos',
@@ -225,9 +239,16 @@ document.addEventListener('DOMContentLoaded', () => {
         'Certificación IP68 resistente al agua y polvo',
         'Hasta 24 horas de batería'
       ],
-      best: 'viajes largos, reuniones y usuarios que buscan autonomía y potencia',
-      img: 'assets/images/productos/jbl-charge-6.webp'
-    },
+      best: 'viajes largos, reuniones, playa, camping, terrazas y usuarios que buscan autonomía y potencia',
+      img: 'assets/images/productos/jbl-charge-6.webp',
+      gallery: [
+        { src: 'assets/images/productos/jbl-charge-6/01-frontal.webp', label: 'Vista frontal' },
+        { src: 'assets/images/productos/jbl-charge-6/02-portatil.webp', label: 'Portabilidad' },
+        { src: 'assets/images/productos/jbl-charge-6/03-superior.webp', label: 'Vista superior' },
+        { src: 'assets/images/productos/jbl-charge-6/04-trasera.webp', label: 'Vista trasera' },
+        { src: 'assets/images/productos/jbl-charge-6/05-accesorio.webp', label: 'Accesorio' },
+        { src: 'assets/images/productos/jbl-charge-6/06-uso-exterior.webp', label: 'Uso exterior' }
+      ],},
     {
       id: 'jbl-boombox4',
       brand: 'JBL',
@@ -236,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
       price: 'S/ 1 605',
       urgency: '⚠️ Stock limitado',
       benefits: ['180W de potencia', 'Graves profundos', 'Sonido premium'],
-      short: 'El máximo nivel de potencia portátil de JBL para quienes buscan el mejor sonido y la mayor presencia.',
+      short: 'Sonido masivo, graves profundos y presencia premium para fiestas, eventos, terrazas y aventuras al aire libre.',
       features: [
         'Potencia de 180W',
         'Graves extremadamente profundos',
@@ -244,9 +265,16 @@ document.addEventListener('DOMContentLoaded', () => {
         'Batería de larga duración',
         'Sonido premium para espacios grandes y eventos'
       ],
-      best: 'fiestas, eventos, terrazas y clientes exigentes',
-      img: 'assets/images/productos/jbl-boombox-4.webp'
-    }
+      best: 'fiestas, eventos, terrazas, camping, playa y clientes que buscan el sonido más potente',
+      img: 'assets/images/productos/jbl-boombox-4.webp',
+      gallery: [
+        { src: 'assets/images/productos/jbl-boombox-4/01-frontal.webp', label: 'Vista frontal' },
+        { src: 'assets/images/productos/jbl-boombox-4/02-lateral.webp', label: 'Vista lateral' },
+        { src: 'assets/images/productos/jbl-boombox-4/03-superior.webp', label: 'Vista superior' },
+        { src: 'assets/images/productos/jbl-boombox-4/04-trasera.webp', label: 'Vista trasera' },
+        { src: 'assets/images/productos/jbl-boombox-4/05-inferior.webp', label: 'Vista inferior' },
+        { src: 'assets/images/productos/jbl-boombox-4/06-uso-exterior.webp', label: 'Uso exterior' }
+      ],}
   ];
 
   const modal = document.getElementById('productModal');
