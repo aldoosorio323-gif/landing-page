@@ -4222,29 +4222,111 @@ body {
   }
 }
 
-/* FIX modal cerrar mobile */
+/* FIX UX mobile modal y carrusel */
 @media (max-width: 720px) {
+  /* Flechas del banner/carrusel bien centradas */
+  .promo-carousel-wrap {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .promo-arrow {
+    position: absolute !important;
+    top: calc(50% + 64px) !important;
+    transform: translateY(-50%) !important;
+    z-index: 20 !important;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 999px !important;
+    display: grid !important;
+    place-items: center !important;
+    background: #fff !important;
+    color: #111 !important;
+    border: 1px solid rgba(0,0,0,.12) !important;
+    box-shadow: 0 10px 24px rgba(0,0,0,.18) !important;
+  }
+
+  .promo-prev {
+    left: 14px !important;
+  }
+
+  .promo-next {
+    right: 14px !important;
+  }
+
+  .promo-next::before {
+    content: "›";
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 900;
+  }
+
+  .promo-prev {
+    font-size: 32px !important;
+    line-height: 1 !important;
+    font-weight: 900 !important;
+  }
+
+  /* Modal en celular */
+  .modal {
+    align-items: flex-start !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
   .modal-card {
     position: relative !important;
+    width: calc(100% - 22px) !important;
+    max-height: none !important;
+    margin: 12px auto 24px !important;
+    border-radius: 26px !important;
+    overflow: visible !important;
+  }
+
+  /* Barra superior del modal: modelo + X */
+  .modal-card::before {
+    content: attr(data-mobile-title);
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    display: block;
+    min-height: 62px;
+    padding: 18px 76px 14px 18px;
+    background: rgba(255,255,255,.96);
+    color: #111;
+    font-size: 18px;
+    font-weight: 950;
+    line-height: 1.1;
+    border-radius: 26px 26px 0 0;
+    box-shadow: 0 10px 24px rgba(0,0,0,.08);
+    backdrop-filter: blur(10px);
   }
 
   #modalClose,
   .modal-close,
   .close-modal {
     position: sticky !important;
-    top: 14px !important;
-    margin-left: auto !important;
-    margin-right: 12px !important;
-    transform: none !important;
-    z-index: 9999 !important;
-    width: 52px !important;
-    height: 52px !important;
-    min-width: 52px !important;
+    top: 10px !important;
+    float: right !important;
+    margin: -56px 14px 8px auto !important;
+    z-index: 10001 !important;
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
     border-radius: 999px !important;
     background: #111 !important;
     color: #fff !important;
     display: grid !important;
     place-items: center !important;
-    box-shadow: 0 14px 30px rgba(0,0,0,.28) !important;
+    box-shadow: 0 12px 28px rgba(0,0,0,.28) !important;
+  }
+
+  .modal-layout {
+    padding-top: 0 !important;
+  }
+
+  .modal-info h2,
+  #modalTitle {
+    margin-top: 12px !important;
   }
 }

@@ -290,6 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const modal = document.getElementById('productModal');
+  const modalCard = document.querySelector('.modal-card');
   const modalClose = document.getElementById('modalClose');
   const modalBack = document.getElementById('modalBack');
   const modalImg = document.getElementById('modalImg');
@@ -369,7 +370,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let activeProduct = null;
   let activeVariantIndex = 0;
-  let lastScrollBeforeModal = 0;
 
   function getActiveGallery(product) {
     if (product && Array.isArray(product.variants) && product.variants.length) {
@@ -501,8 +501,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   function openProduct(id) {
-    lastScrollBeforeModal = window.scrollY || window.pageYOffset || 0;
-    const p = PRODUCTS.find(product => product.id === id);
+        const p = PRODUCTS.find(product => product.id === id);
     if (!p || !modal) return;
 
     renderProductGallery(p);
@@ -544,9 +543,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!modal) return;
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
-    window.setTimeout(() => {
-      window.scrollTo({ top: lastScrollBeforeModal, behavior: 'auto' });
-    }, 0);
     document.body.classList.remove('modal-open');
   }
 
