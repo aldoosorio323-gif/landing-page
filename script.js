@@ -533,17 +533,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
-    modal.scrollTop = 0;
     const modalCard = modal.querySelector('.modal-card');
-    if (modalCard) modalCard.scrollTop = 0;
     document.body.classList.add('modal-open');
   }
 
   function closeModal() {
     if (!modal) return;
+    const y = window.scrollY || window.pageYOffset || 0;
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('modal-open');
+    requestAnimationFrame(() => {
+      window.scrollTo(0, y);
+    });
   }
 
   function updateProductCards() {
