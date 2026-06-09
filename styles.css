@@ -4221,3 +4221,30 @@ body {
     right: 18px;
   }
 }
+
+/* FIX modal cerrar mobile */
+@media (max-width: 720px) {
+  .modal-card {
+    position: relative !important;
+  }
+
+  #modalClose,
+  .modal-close,
+  .close-modal {
+    position: sticky !important;
+    top: 14px !important;
+    margin-left: auto !important;
+    margin-right: 12px !important;
+    transform: none !important;
+    z-index: 9999 !important;
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+    border-radius: 999px !important;
+    background: #111 !important;
+    color: #fff !important;
+    display: grid !important;
+    place-items: center !important;
+    box-shadow: 0 14px 30px rgba(0,0,0,.28) !important;
+  }
+}
