@@ -543,9 +543,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('modal-open');
-    requestAnimationFrame(() => {
-      window.scrollTo(0, y);
-    });
+    window.scrollTo(0, y);
   }
 
   function updateProductCards() {

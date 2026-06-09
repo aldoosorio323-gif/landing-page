@@ -4378,29 +4378,6 @@ body {
   }
 }
 
-/* FIX modal sin franja blanca */
-.modal-card {
-  overflow: hidden !important;
-}
-
-.modal-layout {
-  align-items: stretch !important;
-}
-
-.modal-image {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-}
-
-.modal-image > img,
-#modalImg {
-  margin-top: 0 !important;
-  display: block !important;
-}
-
 /* PC: elimina espacio superior dentro del panel de imagen */
 @media (min-width: 721px) {
   .modal-image {
@@ -4499,5 +4476,94 @@ body {
     display: grid !important;
     place-items: center !important;
     box-shadow: 0 14px 30px rgba(0,0,0,.28) !important;
+  }
+}
+
+/* Restaurar modal: X como antes y sin franja blanca */
+.modal-card {
+  position: relative;
+  overflow: hidden;
+}
+
+#modalClose,
+.modal-close,
+.close-modal {
+  position: absolute !important;
+  top: 24px !important;
+  right: 24px !important;
+  bottom: auto !important;
+  left: auto !important;
+  transform: none !important;
+  z-index: 50 !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 999px !important;
+  background: #111 !important;
+  color: #fff !important;
+  display: grid !important;
+  place-items: center !important;
+  box-shadow: 0 12px 28px rgba(0,0,0,.25) !important;
+}
+
+.modal-image {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.modal-image > img,
+#modalImg {
+  margin-top: 0 !important;
+}
+
+/* Mobile: mantener la X arriba, sin moverla al centro del modal */
+@media (max-width: 720px) {
+  .modal.open {
+    align-items: flex-start !important;
+    padding: 10px 8px 18px !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .modal-card {
+    width: calc(100vw - 16px) !important;
+    max-width: calc(100vw - 16px) !important;
+    margin: 0 auto 18px !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+  }
+
+  #modalClose,
+  .modal-close,
+  .close-modal {
+    top: 14px !important;
+    right: 14px !important;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+  }
+
+  .modal-layout {
+    display: block !important;
+    padding: 0 !important;
+  }
+
+  .modal-image {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #fff !important;
+  }
+
+  .modal-image > img,
+  #modalImg {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 350px !important;
+    object-fit: contain !important;
+    object-position: center top !important;
+    display: block !important;
+  }
+
+  .modal-info {
+    padding: 16px 20px 24px !important;
   }
 }
