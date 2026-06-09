@@ -37,7 +37,15 @@ document.addEventListener('DOMContentLoaded', () => {
         'Diseño compacto con correa integrada para fácil transporte'
       ],
       best: 'playa, piscina, viajes, bicicleta y uso diario',
-      img: 'assets/images/productos/lg-xboom-grab.png'
+      img: 'assets/images/productos/lg-xboom-grab.png',
+      gallery: [
+        { src: 'assets/images/productos/lg-xboom-grab/01-frontal.webp', label: 'Vista frontal' },
+        { src: 'assets/images/productos/lg-xboom-grab/02-lateral.webp', label: 'Vista lateral' },
+        { src: 'assets/images/productos/lg-xboom-grab/03-trasera.webp', label: 'Vista trasera' },
+        { src: 'assets/images/productos/lg-xboom-grab/04-portabilidad.webp', label: 'Portabilidad' },
+        { src: 'assets/images/productos/lg-xboom-grab/05-inferior.webp', label: 'Detalle lateral' },
+        { src: 'assets/images/productos/lg-xboom-grab/06-ambiental.webp', label: 'Uso exterior' }
+      ]
     },
     {
       id: 'lg-bounce',
@@ -200,14 +208,85 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('productModal');
   const modalClose = document.getElementById('modalClose');
   const modalBack = document.getElementById('modalBack');
+  const modalImg = document.getElementById('modalImg');
+  const modalThumbs = document.getElementById('modalThumbs');
+  const modalGalleryLabel = document.getElementById('modalGalleryLabel');
+  const modalMainImage = document.getElementById('modalMainImage');
+  const modalPrevImage = document.getElementById('modalPrevImage');
+  const modalNextImage = document.getElementById('modalNextImage');
   const productCards = Array.from(document.querySelectorAll('.product-card'));
+  let currentGallery = [];
+  let currentGalleryIndex = 0;
+  let currentGalleryProductName = '';
+  let touchStartX = 0;
+
+  function setGalleryImage(index) {
+    if (!modalImg || !currentGallery.length) return;
+
+    currentGalleryIndex = (index + currentGallery.length) % currentGallery.length;
+    const item = currentGallery[currentGalleryIndex];
+
+    modalImg.style.opacity = '0';
+    modalImg.style.transform = 'scale(.985)';
+
+    window.setTimeout(() => {
+      modalImg.src = item.src;
+      modalImg.alt = `${currentGalleryProductName} - ${item.label}`;
+      if (modalGalleryLabel) modalGalleryLabel.textContent = item.label;
+
+      if (modalThumbs) {
+        modalThumbs.querySelectorAll('.gallery-thumb').forEach((thumb, thumbIndex) => {
+          const isActive = thumbIndex === currentGalleryIndex;
+          thumb.classList.toggle('active', isActive);
+          thumb.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+      }
+
+      modalImg.style.opacity = '1';
+      modalImg.style.transform = 'scale(1)';
+    }, 90);
+  }
+
+  function renderProductGallery(product) {
+    const fallbackGallery = [{ src: product.img, label: 'Vista principal' }];
+    currentGallery = Array.isArray(product.gallery) && product.gallery.length ? product.gallery : fallbackGallery;
+    currentGalleryIndex = 0;
+    currentGalleryProductName = product.name;
+
+    if (modalThumbs) {
+      modalThumbs.innerHTML = currentGallery.map((item, index) => `
+        <button class="gallery-thumb${index === 0 ? ' active' : ''}" type="button" aria-label="Ver ${item.label}" aria-selected="${index === 0 ? 'true' : 'false'}">
+          <img src="${item.src}" alt="${item.label}" loading="lazy">
+          <span>${item.label}</span>
+        </button>
+      `).join('');
+
+      modalThumbs.querySelectorAll('.gallery-thumb').forEach((thumb, index) => {
+        thumb.addEventListener('click', event => {
+          event.preventDefault();
+          event.stopPropagation();
+          setGalleryImage(index);
+        });
+
+        thumb.addEventListener('mouseenter', () => {
+          if (window.matchMedia('(hover: hover)').matches) setGalleryImage(index);
+        });
+      });
+    }
+
+    currentGallery.slice(1).forEach(item => {
+      const preload = new Image();
+      preload.src = item.src;
+    });
+
+    setGalleryImage(0);
+  }
 
   function openProduct(id) {
     const p = PRODUCTS.find(product => product.id === id);
     if (!p || !modal) return;
 
-    document.getElementById('modalImg').src = p.img;
-    document.getElementById('modalImg').alt = p.name;
+    renderProductGallery(p);
     document.getElementById('modalBrand').textContent = `${p.brand} · ${p.category}`;
     document.getElementById('modalTitle').textContent = p.name;
     document.getElementById('modalDesc').textContent = p.short;
@@ -326,10 +405,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (modalClose) modalClose.addEventListener('click', closeModal);
   if (modalBack) modalBack.addEventListener('click', closeModal);
+
+  if (modalPrevImage) {
+    modalPrevImage.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      setGalleryImage(currentGalleryIndex - 1);
+    });
+  }
+
+  if (modalNextImage) {
+    modalNextImage.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      setGalleryImage(currentGalleryIndex + 1);
+    });
+  }
+
+  if (modalMainImage) {
+    modalMainImage.addEventListener('touchstart', event => {
+      touchStartX = event.changedTouches[0].clientX;
+    }, { passive: true });
+
+    modalMainImage.addEventListener('touchend', event => {
+      const touchEndX = event.changedTouches[0].clientX;
+      const distance = touchEndX - touchStartX;
+      if (Math.abs(distance) < 42) return;
+      setGalleryImage(distance > 0 ? currentGalleryIndex - 1 : currentGalleryIndex + 1);
+    }, { passive: true });
+  }
+
+  productCards.forEach(card => {
+    card.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openProduct(card.dataset.id);
+      }
+    });
+  });
+
   if (modal) modal.addEventListener('click', event => {
     if (event.target === modal) closeModal();
   });
+
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') closeModal();
+
+    if (!modal || !modal.classList.contains('open')) return;
+
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      setGalleryImage(currentGalleryIndex - 1);
+    }
+
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      setGalleryImage(currentGalleryIndex + 1);
+    }
   });
 });

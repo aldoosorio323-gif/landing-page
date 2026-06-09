@@ -228,9 +228,8 @@
     </div>
     <div class="about-premium-visual">
       <img alt="LG XBOOM y JBL visibles" src="assets/images/secciones/lg-xboom-jbl-visibles.jpeg">
-      <div class="about-visual-badge"><span></span> Modelos revisados y listos para entregar
-    </d
-  </div>
+      <div class="about-visual-badge"><span></span> Modelos revisados y listos para entregar</div>
+    </div>
 </section>
 <section id="contacto">
   <div class="section-head">
@@ -332,7 +331,16 @@
 <div aria-hidden="true" class="modal" id="productModal">
 <div aria-labelledby="modalTitle" aria-modal="true" class="modal-card" role="dialog">
 <div class="modal-layout">
-<div class="modal-image"><img alt="" id="modalImg" src=""/></div>
+<div class="modal-image modal-gallery">
+  <div class="modal-main-image" id="modalMainImage">
+    <button class="gallery-arrow gallery-prev" id="modalPrevImage" type="button" aria-label="Imagen anterior">‹</button>
+    <img alt="" id="modalImg" src=""/>
+    <button class="gallery-arrow gallery-next" id="modalNextImage" type="button" aria-label="Imagen siguiente">›</button>
+  </div>
+  <div class="modal-gallery-label" id="modalGalleryLabel">Vista del producto</div>
+  <div class="modal-thumbnails" id="modalThumbs" aria-label="Vistas previas del producto"></div>
+  <p class="modal-gallery-hint">En computadora puedes pasar el mouse o hacer clic. En celular toca una vista o desliza la imagen.</p>
+</div>
 <div class="modal-info"><button aria-label="Cerrar" class="close" id="modalClose" type="button">×</button><span class="brand" id="modalBrand"></span><h2 id="modalTitle"></h2><p class="desc" id="modalDesc"></p><ul id="modalFeatures"></ul><div class="bestfor" id="modalBest"></div><div class="modal-price" id="modalPrice"></div><div class="buy-row"><a class="wa-buy" href="#" id="modalWhatsApp" target="_blank">Asesórate y compra por WhatsApp</a><a class="back-products" href="#productos" id="modalBack">Volver al catálogo</a></div></div>
 </div>
 </div>
