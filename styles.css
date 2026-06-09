@@ -4899,3 +4899,106 @@ body .modal.open #modalClose {
     height: 48px !important;
   }
 }
+/* MODAL LOOK FINAL: igual al diseño estable anterior */
+body .modal.open {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 12px 18px !important;
+  overflow: auto !important;
+}
+
+body .modal.open .modal-card {
+  width: min(1180px, calc(100vw - 44px)) !important;
+  max-width: min(1180px, calc(100vw - 44px)) !important;
+  max-height: calc(100vh - 24px) !important;
+  overflow: auto !important;
+  border-radius: 24px !important;
+  background: #fff !important;
+  position: relative !important;
+}
+
+body .modal.open .modal-layout {
+  display: grid !important;
+  grid-template-columns: 1.22fr .78fr !important;
+  gap: 34px !important;
+  align-items: center !important;
+  padding: 26px 34px 26px !important;
+}
+
+body .modal.open .modal-image {
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+  height: auto !important;
+  background: #fff !important;
+}
+
+body .modal.open #modalImg {
+  display: block !important;
+  width: 100% !important;
+  max-height: 410px !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+body .modal.open .modal-info {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body .modal.open #modalClose {
+  position: absolute !important;
+  top: 22px !important;
+  right: 22px !important;
+  left: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  z-index: 99999 !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  border-radius: 999px !important;
+  border: 0 !important;
+  background: #111 !important;
+  color: #fff !important;
+  display: grid !important;
+  place-items: center !important;
+  box-shadow: 0 12px 28px rgba(0,0,0,.25) !important;
+}
+
+@media (max-width: 720px) {
+  body .modal.open {
+    align-items: flex-start !important;
+    padding: 8px !important;
+  }
+
+  body .modal.open .modal-card {
+    width: calc(100vw - 16px) !important;
+    max-width: calc(100vw - 16px) !important;
+    max-height: none !important;
+    margin: 0 auto 18px !important;
+    overflow: hidden !important;
+  }
+
+  body .modal.open .modal-layout {
+    display: block !important;
+    padding: 12px !important;
+  }
+
+  body .modal.open #modalImg {
+    max-height: 330px !important;
+  }
+
+  body .modal.open .modal-info {
+    padding: 14px 4px 8px !important;
+  }
+
+  body .modal.open #modalClose {
+    top: 14px !important;
+    right: 14px !important;
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
