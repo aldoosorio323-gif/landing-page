@@ -4671,7 +4671,8 @@ body {
     height: 48px !important;
   }
 }
-/* MODAL FINAL ESTABLE JOR STORE */
+
+/* MODAL FINAL SIN FRANJA SUPERIOR */
 body .modal.open {
   display: flex !important;
   align-items: center !important;
@@ -4695,13 +4696,14 @@ body .modal.open .modal-layout {
   grid-template-columns: 1.18fr .82fr !important;
   gap: 34px !important;
   align-items: center !important;
-  padding: 28px 34px 26px !important;
+  padding: 0 34px 26px !important;
 }
 
 body .modal.open .modal-image {
   padding: 0 !important;
   margin: 0 !important;
   min-height: 0 !important;
+  height: auto !important;
   background: #fff !important;
 }
 
@@ -4722,12 +4724,15 @@ body .modal.open .modal-info {
 
 body .modal.open #modalClose {
   position: absolute !important;
-  top: 22px !important;
-  right: 22px !important;
+  top: 18px !important;
+  right: 18px !important;
+  left: auto !important;
+  bottom: auto !important;
+  transform: none !important;
   z-index: 99999 !important;
   width: 44px !important;
   height: 44px !important;
-  border-radius: 50% !important;
+  border-radius: 999px !important;
   border: 0 !important;
   background: #111 !important;
   color: #fff !important;
@@ -4752,7 +4757,7 @@ body .modal.open #modalClose {
 
   body .modal.open .modal-layout {
     display: block !important;
-    padding: 12px !important;
+    padding: 0 12px 18px !important;
   }
 
   body .modal.open #modalImg {
@@ -4770,4 +4775,3 @@ body .modal.open #modalClose {
     height: 48px !important;
   }
 }
-
