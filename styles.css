@@ -4070,3 +4070,26 @@ body.modal-open{
     max-height:275px!important;
   }
 }
+/* Cinta campaña Día del Padre en todos los productos */
+.product-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card::before {
+  content: "🔥 OFERTA DÍA DEL PADRE";
+  position: absolute;
+  top: 18px;
+  left: -48px;
+  width: 210px;
+  padding: 8px 0;
+  background: linear-gradient(135deg, #ff1f1f, #ff4f1f);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: .7px;
+  text-align: center;
+  transform: rotate(-18deg);
+  z-index: 20;
+  box-shadow: 0 12px 24px rgba(255, 31, 31, .28);
+}
