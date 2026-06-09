@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
       discount: 'Ahorras S/20',
       urgency: '🎁 Incluye regalo por tu compra',
       benefits: ['JBL Pro Sound', 'IP67 agua y polvo', 'Hasta 7h de batería'],
-      short: 'Promo Día del Padre: el JBL más pequeño y práctico, ideal para disfrutar música en cualquier momento y lugar.',
+      short: 'Compacto, resistente y fácil de llevar. Disponible en colores para elegir el estilo que más va contigo.',
       features: [
         'Diseño ultracompacto y ligero',
         'Certificación IP67 resistente al agua y polvo',
@@ -145,9 +145,32 @@ document.addEventListener('DOMContentLoaded', () => {
         'Hasta 7 horas de batería',
         'Fácil de transportar a cualquier lugar'
       ],
-      best: 'estudiantes, oficina, habitación y uso personal',
-      img: 'assets/images/productos/jbl-go-4.webp'
-    },
+      best: 'uso diario, viajes, playa, piscina, mochila, oficina y regalos',
+      img: 'assets/images/productos/jbl-go-4.webp',
+      variants: [
+        {
+          id: 'negro',
+          label: 'Negro',
+          color: '#111111',
+          gallery: [
+            { src: 'assets/images/productos/jbl-go-4/negro/01-frontal.webp', label: 'Vista frontal' },
+            { src: 'assets/images/productos/jbl-go-4/negro/02-lateral.webp', label: 'Vista lateral' },
+            { src: 'assets/images/productos/jbl-go-4/negro/03-trasera.webp', label: 'Vista trasera' },
+            { src: 'assets/images/productos/jbl-go-4/negro/04-uso-exterior.webp', label: 'Uso exterior' }
+          ]
+        },
+        {
+          id: 'camuflado',
+          label: 'Camuflado',
+          color: '#58633b',
+          gallery: [
+            { src: 'assets/images/productos/jbl-go-4/camuflado/01-frontal.webp', label: 'Vista frontal' },
+            { src: 'assets/images/productos/jbl-go-4/camuflado/02-lateral.webp', label: 'Vista lateral' },
+            { src: 'assets/images/productos/jbl-go-4/camuflado/03-trasera.webp', label: 'Vista trasera' },
+            { src: 'assets/images/productos/jbl-go-4/camuflado/04-uso-exterior.webp', label: 'Uso exterior' }
+          ]
+        }
+      ],},
     {
       id: 'jbl-grip',
       brand: 'JBL',
@@ -303,6 +326,139 @@ document.addEventListener('DOMContentLoaded', () => {
     setGalleryImage(0);
   }
 
+
+  let activeProduct = null;
+  let activeVariantIndex = 0;
+
+  function getActiveGallery(product) {
+    if (product && Array.isArray(product.variants) && product.variants.length) {
+      return product.variants[activeVariantIndex]?.gallery || [];
+    }
+    return product?.gallery || [{ src: product?.img, label: 'Vista principal' }];
+  }
+
+  function getActiveVariant(product) {
+    if (product && Array.isArray(product.variants) && product.variants.length) {
+      return product.variants[activeVariantIndex];
+    }
+    return null;
+  }
+
+  function renderVariantSelector(product) {
+    const modalInfo = document.querySelector('.modal-info');
+    if (!modalInfo) return;
+
+    let selector = document.getElementById('modalVariantSelector');
+    if (!selector) {
+      selector = document.createElement('div');
+      selector.id = 'modalVariantSelector';
+      selector.className = 'modal-variant-selector';
+      const title = document.getElementById('modalTitle');
+      if (title) title.insertAdjacentElement('afterend', selector);
+    }
+
+    if (!product.variants || !product.variants.length) {
+      selector.innerHTML = '';
+      selector.hidden = true;
+      return;
+    }
+
+    selector.hidden = false;
+    selector.innerHTML = `
+      <span>Color disponible:</span>
+      <div class="variant-buttons">
+        ${product.variants.map((variant, index) => `
+          <button type="button" class="variant-btn ${index === activeVariantIndex ? 'active' : ''}" data-variant-index="${index}" style="--variant-color:${variant.color || '#111'}">
+            <i></i>${variant.label}
+          </button>
+        `).join('')}
+      </div>
+    `;
+
+    selector.querySelectorAll('.variant-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        activeVariantIndex = Number(button.dataset.variantIndex || 0);
+        renderVariantSelector(product);
+        renderProductGallery(product);
+        updateVariantWhatsApp(product);
+      });
+    });
+  }
+
+  function updateVariantWhatsApp(product) {
+    const wa = document.getElementById('modalWhatsApp');
+    if (!wa || !product) return;
+    const variant = getActiveVariant(product);
+    const colorText = variant ? ` color ${variant.label}` : '';
+    const msg = encodeURIComponent(`Hola JOR STORE, quiero información sobre ${product.name}${colorText} (${product.price})`);
+    wa.href = `https://wa.me/51925789830?text=${msg}`;
+  }
+
+  function renderProductGallery(product) {
+    const gallery = getActiveGallery(product);
+    const img = document.getElementById('modalImg');
+    if (!img || !gallery.length) return;
+
+    let galleryWrap = document.getElementById('modalGalleryWrap');
+    if (!galleryWrap) {
+      const modalImage = document.querySelector('.modal-image');
+      if (!modalImage) return;
+      modalImage.innerHTML = `
+        <button class="gallery-arrow gallery-prev" type="button" aria-label="Vista anterior">‹</button>
+        <img alt="" id="modalImg" src="">
+        <button class="gallery-arrow gallery-next" type="button" aria-label="Vista siguiente">›</button>
+        <span class="gallery-label" id="galleryLabel"></span>
+        <div class="modal-thumbnails" id="modalThumbnails"></div>
+        <p class="gallery-help">En computadora puedes pasar el mouse o hacer clic. En celular toca una vista o desliza la imagen.</p>
+      `;
+    }
+
+    const modalImg = document.getElementById('modalImg');
+    const label = document.getElementById('galleryLabel');
+    const thumbs = document.getElementById('modalThumbnails');
+    const prev = document.querySelector('.gallery-prev');
+    const next = document.querySelector('.gallery-next');
+    let galleryIndex = 0;
+
+    function setGalleryImage(index) {
+      galleryIndex = (index + gallery.length) % gallery.length;
+      const item = gallery[galleryIndex];
+      modalImg.src = item.src;
+      modalImg.alt = `${product.name} - ${item.label}`;
+      if (label) label.textContent = item.label || 'Vista del producto';
+      if (thumbs) {
+        thumbs.querySelectorAll('.gallery-thumb').forEach((thumb, idx) => thumb.classList.toggle('active', idx === galleryIndex));
+      }
+    }
+
+    if (thumbs) {
+      thumbs.innerHTML = gallery.map((item, index) => `
+        <button type="button" class="gallery-thumb ${index === 0 ? 'active' : ''}" data-gallery-index="${index}">
+          <img src="${item.src}" alt="${item.label}">
+          <span>${item.label}</span>
+        </button>
+      `).join('');
+
+      thumbs.querySelectorAll('.gallery-thumb').forEach(button => {
+        button.addEventListener('click', () => setGalleryImage(Number(button.dataset.galleryIndex || 0)));
+        button.addEventListener('mouseenter', () => setGalleryImage(Number(button.dataset.galleryIndex || 0)));
+      });
+    }
+
+    if (prev) prev.onclick = () => setGalleryImage(galleryIndex - 1);
+    if (next) next.onclick = () => setGalleryImage(galleryIndex + 1);
+
+    let startX = 0;
+    modalImg.ontouchstart = event => { startX = event.touches[0].clientX; };
+    modalImg.ontouchend = event => {
+      const diff = event.changedTouches[0].clientX - startX;
+      if (Math.abs(diff) > 45) setGalleryImage(galleryIndex + (diff < 0 ? 1 : -1));
+    };
+
+    setGalleryImage(0);
+  }
+
+
   function openProduct(id) {
     const p = PRODUCTS.find(product => product.id === id);
     if (!p || !modal) return;
@@ -329,8 +485,10 @@ document.addEventListener('DOMContentLoaded', () => {
       modalPrice.innerHTML = `<strong>${p.price}</strong>`;
     }
 
-    const msg = encodeURIComponent(`Hola JOR STORE, quiero información sobre ${p.name} (${p.price})`);
-    document.getElementById('modalWhatsApp').href = `https://wa.me/51925789830?text=${msg}`;
+    if (!p.variants || !p.variants.length) {
+      const msg = encodeURIComponent(`Hola JOR STORE, quiero información sobre ${p.name} (${p.price})`);
+      document.getElementById('modalWhatsApp').href = `https://wa.me/51925789830?text=${msg}`;
+    }
 
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
