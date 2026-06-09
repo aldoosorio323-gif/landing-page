@@ -4070,66 +4070,6 @@ body.modal-open{
     max-height:275px!important;
   }
 }
-/* FIX FINAL: carrusel/banners de escenarios alineados */
-.scenarios,
-.use-cases,
-.banners-section,
-.scenario-section {
-  position: relative;
-  overflow: hidden;
-  max-width: 100%;
-}
-
-.scenario-slider,
-.use-slider,
-.banners-slider,
-.scenario-carousel,
-.use-carousel {
-  position: relative !important;
-  width: 100% !important;
-  max-width: 1240px !important;
-  margin: 0 auto !important;
-  overflow: hidden !important;
-  border-radius: 24px;
-}
-
-.scenario-track,
-.use-track,
-.banners-track,
-.scenario-slides,
-.use-slides {
-  display: flex !important;
-  align-items: stretch !important;
-  width: 100% !important;
-  transform: none;
-}
-
-.scenario-slide,
-.use-slide,
-.banner-slide,
-.scenario-card,
-.use-card {
-  min-width: 100% !important;
-  max-width: 100% !important;
-  flex: 0 0 100% !important;
-  overflow: hidden !important;
-  border-radius: 24px;
-}
-
-.scenario-slide img,
-.use-slide img,
-.banner-slide img,
-.scenario-card img,
-.use-card img {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: clamp(260px, 38vw, 520px) !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-  display: block !important;
-  border-radius: 24px;
-}
-
 /* Botones del carrusel encima del banner, no debajo */
 .scenario-prev,
 .scenario-next,
@@ -4171,3 +4111,113 @@ body {
   overflow-x: hidden;
 }
 
+/* FIX carrusel de promociones / escenarios */
+.promo-carousel-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #f4f5f7;
+}
+
+.promo-carousel-wrap {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 28px 18px 42px;
+  overflow: hidden;
+}
+
+.promo-track {
+  display: flex;
+  width: 100%;
+  transition: transform .45s ease;
+  will-change: transform;
+}
+
+.promo-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 26px;
+  background: #111;
+}
+
+.promo-slide img {
+  width: 100%;
+  height: clamp(260px, 38vw, 520px);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 26px;
+}
+
+.promo-arrow {
+  position: absolute;
+  top: 56%;
+  transform: translateY(-50%);
+  z-index: 25;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.16);
+  background: #fff;
+  color: #111;
+  font-size: 30px;
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(0,0,0,.18);
+}
+
+.promo-prev {
+  left: 28px;
+}
+
+.promo-next {
+  right: 28px;
+}
+
+.promo-next::before {
+  content: "›";
+}
+
+.promo-nav {
+  position: relative;
+  z-index: 3;
+  margin-top: 14px;
+}
+
+#productos {
+  position: relative;
+  z-index: 2;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 720px) {
+  .promo-carousel-wrap {
+    padding: 22px 12px 34px;
+  }
+
+  .promo-slide img {
+    height: 260px;
+  }
+
+  .promo-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 26px;
+  }
+
+  .promo-prev {
+    left: 18px;
+  }
+
+  .promo-next {
+    right: 18px;
+  }
+}
