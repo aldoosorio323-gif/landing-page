@@ -539,11 +539,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeModal() {
     if (!modal) return;
-    const y = window.scrollY || window.pageYOffset || 0;
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('modal-open');
-    window.scrollTo(0, y);
   }
 
   function updateProductCards() {
