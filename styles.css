@@ -4327,7 +4327,7 @@ body {
   #modalTitle {
     margin-top: 12px !important;
   }
-}
+
 
 /* El nombre del producto queda arriba del contenido, sin barra blanca extra */
   #modalTitle {
@@ -4365,7 +4365,7 @@ body {
   .modal-card #modalClose {
     top: calc(355px + 185px) !important;
   }
-}
+
 
 @media (max-width: 420px) {
   .modal-image img,
