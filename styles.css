@@ -4863,3 +4863,27 @@ body .modal.open .modal-layout {
     object-position: center center !important;
   }
 }
+/* Quitar franja blanca superior del modal */
+body .modal.open .modal-card {
+  padding-top: 0 !important;
+}
+
+body .modal.open .modal-layout {
+  margin-top: 0 !important;
+  padding-top: 18px !important;
+}
+
+body .modal.open .modal-image {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+body .modal.open #modalImg {
+  margin-top: 0 !important;
+}
+
+/* Mantener la X arriba a la derecha */
+body .modal.open #modalClose {
+  top: 18px !important;
+  right: 18px !important;
+}
