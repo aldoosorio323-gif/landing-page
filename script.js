@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
       price: 'S/ 899',
       urgency: '⚠️ Stock limitado',
       benefits: ['120W de potencia', 'Karaoke integrado', 'Micrófono y guitarra'],
-      short: 'El parlante más versátil de LG XBOOM, perfecto para eventos, presentaciones y diversión en grupo.',
+      short: 'Parlante potente para fiestas, reuniones, karaoke y eventos donde necesitas más presencia, luces y sonido envolvente.',
       features: [
         'Potencia de 120W',
         'Entradas para micrófono y guitarra',
@@ -117,9 +117,16 @@ document.addEventListener('DOMContentLoaded', () => {
         'Batería portátil y reemplazable',
         'Diseño ideal para eventos y entretenimiento'
       ],
-      best: 'karaoke, eventos, animación, músicos y fiestas',
-      img: 'assets/images/productos/lg-xboom-stage-301.webp'
-    },
+      best: 'fiestas, karaoke, reuniones grandes, eventos y espacios donde necesitas más potencia',
+      img: 'assets/images/productos/lg-xboom-stage-301.webp',
+      gallery: [
+        { src: 'assets/images/productos/lg-xboom-stage-301/01-frontal.webp', label: 'Vista frontal' },
+        { src: 'assets/images/productos/lg-xboom-stage-301/02-luces-led.webp', label: 'Luces LED' },
+        { src: 'assets/images/productos/lg-xboom-stage-301/03-superior.webp', label: 'Vista superior' },
+        { src: 'assets/images/productos/lg-xboom-stage-301/04-conexiones.webp', label: 'Conexiones' },
+        { src: 'assets/images/productos/lg-xboom-stage-301/05-trasera.webp', label: 'Vista trasera' },
+        { src: 'assets/images/productos/lg-xboom-stage-301/06-uso-exterior.webp', label: 'Uso exterior' }
+      ],},
     {
       id: 'jbl-go4',
       brand: 'JBL',

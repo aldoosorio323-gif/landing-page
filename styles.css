@@ -3798,3 +3798,46 @@ body.modal-open{
     transform:scale(1)!important;
   }
 }
+
+
+/* v46: Galería LG XBOOM Stage 301
+   Fotos de producto limpias y centradas para formato cuadrado. */
+#productModal .modal-main-image img[src*="lg-xboom-stage-301"],
+#productModal #modalImg[src*="lg-xboom-stage-301"]{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  object-fit:contain!important;
+  max-width:calc(100% - 18px)!important;
+  max-height:450px!important;
+}
+
+#productModal .gallery-thumb img[src*="lg-xboom-stage-301"]{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  object-fit:contain!important;
+}
+
+/* La vista ambiental se mantiene completa porque contiene fondo real y beneficios. */
+#productModal .modal-main-image img[src*="lg-xboom-stage-301/06-uso-exterior"],
+#productModal #modalImg[src*="lg-xboom-stage-301/06-uso-exterior"]{
+  width:100%!important;
+  max-width:100%!important;
+  max-height:430px!important;
+  border-radius:18px!important;
+  object-fit:contain!important;
+  background:#050505!important;
+}
+
+@media(max-width:620px){
+  #productModal .modal-main-image img[src*="lg-xboom-stage-301"],
+  #productModal #modalImg[src*="lg-xboom-stage-301"]{
+    max-height:280px!important;
+  }
+
+  #productModal .modal-main-image img[src*="lg-xboom-stage-301/06-uso-exterior"],
+  #productModal #modalImg[src*="lg-xboom-stage-301/06-uso-exterior"]{
+    max-height:250px!important;
+  }
+}
