@@ -4532,50 +4532,6 @@ body {
   }
 }
 
-/* Modal estable restaurado */
-.modal-card {
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-#modalClose,
-.modal-close,
-.close-modal {
-  position: absolute !important;
-  top: 22px !important;
-  right: 22px !important;
-  left: auto !important;
-  bottom: auto !important;
-  transform: none !important;
-  z-index: 80 !important;
-  width: 44px !important;
-  height: 44px !important;
-  min-width: 44px !important;
-  border-radius: 999px !important;
-  background: #111 !important;
-  color: #fff !important;
-  display: grid !important;
-  place-items: center !important;
-  box-shadow: 0 12px 28px rgba(0,0,0,.25) !important;
-}
-
-.modal-layout {
-  align-items: stretch !important;
-}
-
-.modal-image {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  background: #fff !important;
-}
-
-.modal-image > img,
-#modalImg {
-  margin-top: 0 !important;
-  object-fit: contain !important;
-  object-position: center center !important;
-}
-
 /* Celular: mantener estructura normal, sin barra blanca artificial */
 @media (max-width: 720px) {
   .modal.open {
@@ -4613,6 +4569,99 @@ body {
 
   .modal-info {
     padding: 16px 20px 24px !important;
+  }
+
+  #modalClose,
+  .modal-close,
+  .close-modal {
+    top: 14px !important;
+    right: 14px !important;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+  }
+}
+
+/* Modal ajuste final visual */
+.modal.open {
+  align-items: center !important;
+}
+
+.modal-card {
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 24px !important;
+}
+
+#modalClose,
+.modal-close,
+.close-modal {
+  position: absolute !important;
+  top: 22px !important;
+  right: 22px !important;
+  left: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  z-index: 90 !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  border-radius: 999px !important;
+  background: #111 !important;
+  color: #fff !important;
+  display: grid !important;
+  place-items: center !important;
+  box-shadow: 0 12px 28px rgba(0,0,0,.25) !important;
+}
+
+.modal-layout {
+  align-items: center !important;
+  padding: 34px 26px 26px !important;
+}
+
+.modal-image {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: #fff !important;
+}
+
+.modal-image > img,
+#modalImg {
+  margin: 0 auto !important;
+  max-height: 420px !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  display: block !important;
+}
+
+@media (max-width: 720px) {
+  .modal.open {
+    align-items: flex-start !important;
+    padding: 10px 8px 18px !important;
+    overflow-y: auto !important;
+  }
+
+  .modal-card {
+    width: calc(100vw - 16px) !important;
+    max-width: calc(100vw - 16px) !important;
+    margin: 0 auto 18px !important;
+    border-radius: 24px !important;
+  }
+
+  .modal-layout {
+    display: block !important;
+    padding: 16px 14px 18px !important;
+  }
+
+  .modal-image > img,
+  #modalImg {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 350px !important;
+  }
+
+  .modal-info {
+    padding: 16px 6px 8px !important;
   }
 
   #modalClose,
