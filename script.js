@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
       price: 'S/ 725',
       urgency: '⚠️ Stock limitado',
       benefits: ['120W de potencia', 'Luces LED RGB', 'IP67 resistente'],
-      short: 'Potencia, luces y resistencia extrema para llevar la fiesta a cualquier lugar.',
+      short: 'Potencia, luces y resistencia para llevar música fuerte a reuniones, playa, viajes y planes al aire libre.',
       features: [
         'Potencia de 120W',
         'Certificación IP67 resistente al agua y polvo',
@@ -91,9 +91,16 @@ document.addEventListener('DOMContentLoaded', () => {
         'Luces LED RGB sincronizadas con la música',
         'Graves profundos y sonido potente'
       ],
-      best: 'fiestas, reuniones y usuarios que buscan potencia y efectos visuales',
-      img: 'assets/images/productos/lg-xboom-xg8t.webp'
-    },
+      best: 'fiestas, reuniones, playa, terrazas y usuarios que buscan potencia con luces',
+      img: 'assets/images/productos/lg-xboom-xg8t.webp',
+      gallery: [
+        { src: 'assets/images/productos/lg-xboom-xg8t/01-frontal.webp', label: 'Vista frontal' },
+        { src: 'assets/images/productos/lg-xboom-xg8t/02-inferior.webp', label: 'Vista inferior' },
+        { src: 'assets/images/productos/lg-xboom-xg8t/03-lateral.webp', label: 'Vista lateral' },
+        { src: 'assets/images/productos/lg-xboom-xg8t/04-superior.webp', label: 'Vista superior' },
+        { src: 'assets/images/productos/lg-xboom-xg8t/05-trasera.webp', label: 'Vista trasera' },
+        { src: 'assets/images/productos/lg-xboom-xg8t/06-uso-exterior.webp', label: 'Uso exterior' }
+      ],},
     {
       id: 'lg-stage301',
       brand: 'LG XBOOM',

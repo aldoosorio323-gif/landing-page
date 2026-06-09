@@ -3724,3 +3724,77 @@ body.modal-open{
   box-shadow:none!important;
   border:0!important;
 }
+
+
+/* v43: Galería LG XBOOM XG8T
+   Fotos de producto limpias con fondo transparente y ajuste para el asa superior. */
+#productModal .modal-main-image img[src*="lg-xboom-xg8t"],
+#productModal #modalImg[src*="lg-xboom-xg8t"]{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  object-fit:contain!important;
+  max-width:calc(100% - 22px)!important;
+  max-height:430px!important;
+}
+
+#productModal .gallery-thumb img[src*="lg-xboom-xg8t"]{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  object-fit:contain!important;
+}
+
+@media(min-width:981px){
+  #productModal .modal-main-image img[src*="lg-xboom-xg8t/03-lateral"],
+  #productModal .modal-main-image img[src*="lg-xboom-xg8t/04-superior"]{
+    max-height:455px!important;
+  }
+}
+
+@media(max-width:620px){
+  #productModal .modal-main-image img[src*="lg-xboom-xg8t"],
+  #productModal #modalImg[src*="lg-xboom-xg8t"]{
+    max-height:265px!important;
+  }
+}
+
+
+/* v44: LG XBOOM XG8T - vista lateral más cercana */
+#productModal .modal-main-image img[src*="lg-xboom-xg8t/03-lateral"],
+#productModal #modalImg[src*="lg-xboom-xg8t/03-lateral"]{
+  width:100%!important;
+  max-width:calc(100% - 12px)!important;
+  max-height:455px!important;
+  object-fit:contain!important;
+  transform:scale(1.08)!important;
+  transform-origin:center center!important;
+}
+
+@media(max-width:620px){
+  #productModal .modal-main-image img[src*="lg-xboom-xg8t/03-lateral"],
+  #productModal #modalImg[src*="lg-xboom-xg8t/03-lateral"]{
+    max-height:275px!important;
+    transform:scale(1.05)!important;
+  }
+}
+
+
+/* v45: LG XBOOM XG8T - reemplazo de vista lateral vertical */
+#productModal .modal-main-image img[src*="lg-xboom-xg8t/03-lateral"],
+#productModal #modalImg[src*="lg-xboom-xg8t/03-lateral"]{
+  width:100%!important;
+  max-width:calc(100% - 18px)!important;
+  max-height:455px!important;
+  object-fit:contain!important;
+  transform:scale(1.02)!important;
+  transform-origin:center center!important;
+}
+
+@media(max-width:620px){
+  #productModal .modal-main-image img[src*="lg-xboom-xg8t/03-lateral"],
+  #productModal #modalImg[src*="lg-xboom-xg8t/03-lateral"]{
+    max-height:285px!important;
+    transform:scale(1)!important;
+  }
+}
