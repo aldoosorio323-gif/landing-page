@@ -4796,3 +4796,70 @@ body .modal.open #modalClose {
     min-width: 48px !important;
   }
 }
+/* FIX SCROLL MODAL: evita franja blanca superior */
+body .modal.open {
+  overflow-y: auto !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  padding: 18px !important;
+}
+
+body .modal.open .modal-card {
+  overflow: hidden !important;
+  max-height: none !important;
+  margin: 0 auto !important;
+}
+
+body .modal.open .modal-layout {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+
+/* PC: mantiene el modal centrado visualmente */
+@media (min-width: 721px) {
+  body .modal.open {
+    align-items: center !important;
+  }
+
+  body .modal.open .modal-card {
+    width: min(1180px, calc(100vw - 44px)) !important;
+  }
+
+  body .modal.open .modal-layout {
+    display: grid !important;
+    grid-template-columns: 1.22fr .78fr !important;
+    gap: 34px !important;
+    align-items: center !important;
+  }
+}
+
+/* Celular */
+@media (max-width: 720px) {
+  body .modal.open {
+    padding: 8px !important;
+    align-items: flex-start !important;
+  }
+
+  body .modal.open .modal-card {
+    width: calc(100vw - 16px) !important;
+    max-width: calc(100vw - 16px) !important;
+    margin: 0 auto 18px !important;
+  }
+
+  body .modal.open .modal-layout {
+    display: block !important;
+    padding: 12px !important;
+  }
+
+  body .modal.open .modal-image {
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: 0 !important;
+  }
+
+  body .modal.open #modalImg {
+    max-height: 330px !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
