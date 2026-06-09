@@ -4070,4 +4070,51 @@ body.modal-open{
     max-height:275px!important;
   }
 }
+/* Fix banners escenarios: evita que se descuadren */
+.scenario-card,
+.use-card,
+.banner-card,
+.usage-card {
+  overflow: hidden;
+}
+
+.scenario-card img,
+.use-card img,
+.banner-card img,
+.usage-card img,
+.scenario-banner img,
+.use-banner img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.scenario-card,
+.use-card,
+.banner-card,
+.usage-card,
+.scenario-banner,
+.use-banner {
+  max-width: 100%;
+}
+
+/* Si el banner es panorámico, lo mantiene proporcionado */
+.scenario-banner,
+.use-banner {
+  aspect-ratio: 16 / 9;
+}
+
+.scenario-banner img,
+.use-banner img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Evita que banners grandes empujen la página hacia los lados */
+body {
+  overflow-x: hidden;
+}
 
