@@ -4070,6 +4070,7 @@ body.modal-open{
     max-height:275px!important;
   }
 }
+
 /* Cinta campaña Día del Padre en todos los productos */
 .product-card {
   position: relative;
@@ -4079,17 +4080,29 @@ body.modal-open{
 .product-card::before {
   content: "🔥 OFERTA DÍA DEL PADRE";
   position: absolute;
-  top: 18px;
-  left: -48px;
-  width: 210px;
-  padding: 8px 0;
+  top: 16px;
+  left: -36px;
+  width: 180px;
+  padding: 7px 0;
   background: linear-gradient(135deg, #ff1f1f, #ff4f1f);
   color: #fff;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 950;
-  letter-spacing: .7px;
+  letter-spacing: .55px;
   text-align: center;
-  transform: rotate(-18deg);
-  z-index: 20;
-  box-shadow: 0 12px 24px rgba(255, 31, 31, .28);
+  transform: rotate(-24deg);
+  transform-origin: center;
+  z-index: 8;
+  box-shadow: 0 10px 22px rgba(255, 31, 31, .24);
+  pointer-events: none;
+}
+
+@media (max-width: 620px) {
+  .product-card::before {
+    top: 13px;
+    left: -42px;
+    width: 175px;
+    font-size: 9px;
+    padding: 6px 0;
+  }
 }
