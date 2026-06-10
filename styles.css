@@ -4801,16 +4801,7 @@ body {
     z-index: 99999 !important;
   }
 }
-/* FIX SEGURO CELULAR: X junto al nombre y cierre sin desordenar modal */
-@media (max-width: 720px) {
-  #productModal .modal-info {
-    position: relative !important;
-    padding-top: 18px !important;
-  }
-
-  #productModal #modalBrand {
-    max-width: calc(100% - 62px) !important;
-   /* HOTFIX MODAL MOBILE JOR STORE */
+/* HOTFIX MODAL MOBILE JOR STORE */
 @media (max-width: 720px) {
   #productModal.modal.open {
     align-items: flex-start !important;
@@ -4943,3 +4934,4 @@ body {
     border-radius: 999px !important;
   }
 }
+
