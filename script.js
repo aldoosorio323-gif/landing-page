@@ -450,7 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <button class="gallery-arrow gallery-next" type="button" aria-label="Vista siguiente">›</button>
         <span class="gallery-label" id="galleryLabel"></span>
         <div class="modal-thumbnails" id="modalThumbnails"></div>
-        <p class="gallery-help">En computadora puedes pasar el mouse o hacer clic. En celular toca una vista o desliza la imagen.</p>
+        <p class="gallery-help"></p>
       `;
     }
 
