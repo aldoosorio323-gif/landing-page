@@ -4753,3 +4753,51 @@ body {
   bottom: auto !important;
   transform: none !important;
 }
+/* REVERT FIX MOBILE/SCROLL QUE CREO LA FRANJA SUPERIOR */
+@media (min-width: 721px) {
+  #productModal.modal.open {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 18px !important;
+    overflow: hidden !important;
+  }
+
+  #productModal .modal-card {
+    max-height: 92vh !important;
+    overflow: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #productModal .modal-layout {
+    display: grid !important;
+    grid-template-columns: 1.1fr .9fr !important;
+    gap: 34px !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 24px 28px !important;
+  }
+
+  #productModal .modal-image {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  #productModal .modal-info {
+    margin: 0 !important;
+    padding: 0 10px 0 0 !important;
+  }
+
+  #productModal #modalClose {
+    position: absolute !important;
+    top: 18px !important;
+    right: 18px !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    z-index: 99999 !important;
+  }
+}
