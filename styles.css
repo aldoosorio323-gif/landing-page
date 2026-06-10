@@ -4935,3 +4935,80 @@ body {
   }
 }
 
+
+/* Fix modal desktop: elimina franja blanca superior y compacta el detalle */
+.modal.open {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 16px !important;
+}
+
+.modal-card {
+  position: relative !important;
+  width: min(1180px, calc(100vw - 48px)) !important;
+  max-height: calc(100vh - 48px) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border-radius: 22px !important;
+  background: #fff !important;
+}
+
+.modal-layout {
+  display: grid !important;
+  grid-template-columns: 1.16fr .94fr !important;
+  gap: 34px !important;
+  align-items: center !important;
+  padding: 54px 38px 26px !important;
+  max-height: calc(100vh - 48px) !important;
+  overflow: auto !important;
+}
+
+.modal-info {
+  position: relative !important;
+  padding-top: 0 !important;
+}
+
+.close {
+  position: absolute !important;
+  top: 24px !important;
+  right: 58px !important;
+  z-index: 30 !important;
+}
+
+.modal-image,
+.modal-gallery {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.modal-main-image {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .modal.open {
+    align-items: flex-start !important;
+    padding: 10px !important;
+  }
+
+  .modal-card {
+    width: min(100%, calc(100vw - 20px)) !important;
+    max-height: calc(100vh - 20px) !important;
+    overflow: hidden !important;
+  }
+
+  .modal-layout {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    padding: 58px 16px 22px !important;
+    max-height: calc(100vh - 20px) !important;
+    overflow: auto !important;
+  }
+
+  .close {
+    top: 18px !important;
+    right: 22px !important;
+  }
+}
