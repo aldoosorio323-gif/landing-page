@@ -4671,3 +4671,34 @@ body {
     height: 48px !important;
   }
 }
+/* AJUSTE SEGURO: modal más compacto para reducir la franja superior */
+#productModal.modal.open {
+  padding: 10px 18px !important;
+}
+
+#productModal .modal-card {
+  max-height: calc(100vh - 20px) !important;
+  border-radius: 24px !important;
+}
+
+#productModal .modal-layout {
+  padding-top: 0 !important;
+}
+
+#productModal .modal-image {
+  padding-top: 12px !important;
+  padding-bottom: 18px !important;
+}
+
+#productModal .modal-info {
+  padding-top: 18px !important;
+}
+
+#productModal #modalImg {
+  max-height: 390px !important;
+}
+
+#productModal #modalClose {
+  top: 12px !important;
+  right: 16px !important;
+}
