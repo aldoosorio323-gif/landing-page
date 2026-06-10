@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
   const promoTrack = document.getElementById('promoTrack');
   const promoDots = Array.from(document.querySelectorAll('#promoDots .promo-dot'));
   const promoPrev = document.querySelector('.promo-prev');
@@ -21,20 +21,20 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'lg-grab',
       brand: 'LG XBOOM',
-      category: 'Portátil',
+      category: 'PortÃ¡til',
       name: 'LG XBOOM Grab',
       price: 'S/ 259',
       oldPrice: 'S/ 299',
       discount: 'Ahorras S/40',
-      urgency: '🔥 Oferta Día del Padre',
-      benefits: ['30W de potencia', 'IP67 agua y polvo', 'Certificación militar'],
-      short: 'Promo Día del Padre: parlante portátil resistente y ligero, diseñado para acompañarte en cualquier aventura con gran autonomía y resistencia.',
+      urgency: 'ðŸ”¥ Oferta DÃ­a del Padre',
+      benefits: ['30W de potencia', 'IP67 agua y polvo', 'CertificaciÃ³n militar'],
+      short: 'Promo DÃ­a del Padre: parlante portÃ¡til resistente y ligero, diseÃ±ado para acompaÃ±arte en cualquier aventura con gran autonomÃ­a y resistencia.',
       features: [
         'Potencia de 30W',
-        'Certificación IP67 resistente al agua y polvo',
-        'Certificación militar MIL-STD-810H para mayor durabilidad',
-        'Hasta 20 horas de batería',
-        'Diseño compacto con correa integrada para fácil transporte'
+        'CertificaciÃ³n IP67 resistente al agua y polvo',
+        'CertificaciÃ³n militar MIL-STD-810H para mayor durabilidad',
+        'Hasta 20 horas de baterÃ­a',
+        'DiseÃ±o compacto con correa integrada para fÃ¡cil transporte'
       ],
       best: 'playa, piscina, viajes, bicicleta y uso diario',
       img: 'assets/images/productos/lg-xboom-grab.png',
@@ -50,19 +50,19 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'lg-bounce',
       brand: 'LG XBOOM',
-      category: 'Portátil',
+      category: 'PortÃ¡til',
       name: 'LG XBOOM Bounce',
       price: 'S/ 379',
       oldPrice: 'S/ 399',
       discount: 'Ahorras S/20',
-      urgency: '🔥 Oferta Día del Padre',
-      benefits: ['40W de potencia', 'IP67 agua y polvo', 'Hasta 30h de batería'],
-      short: 'Promo Día del Padre: más batería, más bajos y resistencia para reuniones, viajes y planes al aire libre.',
+      urgency: 'ðŸ”¥ Oferta DÃ­a del Padre',
+      benefits: ['40W de potencia', 'IP67 agua y polvo', 'Hasta 30h de baterÃ­a'],
+      short: 'Promo DÃ­a del Padre: mÃ¡s baterÃ­a, mÃ¡s bajos y resistencia para reuniones, viajes y planes al aire libre.',
       features: [
         'Potencia de 40W',
-        'Certificación IP67 resistente al agua y polvo',
-        'Certificación militar MIL-STD-810H',
-        'Hasta 30 horas de batería',
+        'CertificaciÃ³n IP67 resistente al agua y polvo',
+        'CertificaciÃ³n militar MIL-STD-810H',
+        'Hasta 30 horas de baterÃ­a',
         'Graves potentes y sonido amplio'
       ],
       best: 'reuniones, terrazas, camping, viajes y actividades al aire libre',
@@ -78,19 +78,19 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'lg-xg8t',
       brand: 'LG XBOOM',
-      category: 'Portátil',
+      category: 'PortÃ¡til',
       name: 'LG XBOOM XG8T',
       price: 'S/ 699',
       discount: 'Ahorras S/26',
       oldPrice: 'S/ 725',
-      urgency: '🔥 Oferta Día del Padre',
+      urgency: 'ðŸ”¥ Oferta DÃ­a del Padre',
       benefits: ['120W de potencia', 'Luces LED RGB', 'IP67 resistente'],
-      short: 'Potencia, luces y resistencia para llevar música fuerte a reuniones, playa, viajes y planes al aire libre.',
+      short: 'Potencia, luces y resistencia para llevar mÃºsica fuerte a reuniones, playa, viajes y planes al aire libre.',
       features: [
         'Potencia de 120W',
-        'Certificación IP67 resistente al agua y polvo',
-        'Certificación militar MIL-STD-810H',
-        'Luces LED RGB sincronizadas con la música',
+        'CertificaciÃ³n IP67 resistente al agua y polvo',
+        'CertificaciÃ³n militar MIL-STD-810H',
+        'Luces LED RGB sincronizadas con la mÃºsica',
         'Graves profundos y sonido potente'
       ],
       best: 'fiestas, reuniones, playa, terrazas y usuarios que buscan potencia con luces',
@@ -111,17 +111,17 @@ document.addEventListener('DOMContentLoaded', () => {
       price: 'S/ 869',
       discount: 'Ahorras S/30',
       oldPrice: 'S/ 899',
-      urgency: '🔥 Oferta Día del Padre',
-      benefits: ['120W de potencia', 'Karaoke integrado', 'Micrófono y guitarra'],
-      short: 'Parlante potente para fiestas, reuniones, karaoke y eventos donde necesitas más presencia, luces y sonido envolvente.',
+      urgency: 'ðŸ”¥ Oferta DÃ­a del Padre',
+      benefits: ['120W de potencia', 'Karaoke integrado', 'MicrÃ³fono y guitarra'],
+      short: 'Parlante potente para fiestas, reuniones, karaoke y eventos donde necesitas mÃ¡s presencia, luces y sonido envolvente.',
       features: [
         'Potencia de 120W',
-        'Entradas para micrófono y guitarra',
-        'Función karaoke integrada',
-        'Batería portátil y reemplazable',
-        'Diseño ideal para eventos y entretenimiento'
+        'Entradas para micrÃ³fono y guitarra',
+        'FunciÃ³n karaoke integrada',
+        'BaterÃ­a portÃ¡til y reemplazable',
+        'DiseÃ±o ideal para eventos y entretenimiento'
       ],
-      best: 'fiestas, karaoke, reuniones grandes, eventos y espacios donde necesitas más potencia',
+      best: 'fiestas, karaoke, reuniones grandes, eventos y espacios donde necesitas mÃ¡s potencia',
       img: 'assets/images/productos/lg-xboom-stage-301.webp',
       gallery: [
         { src: 'assets/images/productos/lg-xboom-stage-301/01-frontal.webp', label: 'Vista frontal' },
@@ -134,20 +134,20 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'jbl-go4',
       brand: 'JBL',
-      category: 'Portátil',
+      category: 'PortÃ¡til',
       name: 'JBL Go 4',
       price: 'S/ 129',
       oldPrice: 'S/ 149',
       discount: 'Ahorras S/20',
-      urgency: '🔥 Oferta Día del Padre',
-      benefits: ['JBL Pro Sound', 'IP67 agua y polvo', 'Hasta 7h de batería'],
-      short: 'Compacto, resistente y fácil de llevar. Disponible en colores para elegir el estilo que más va contigo.',
+      urgency: 'ðŸ”¥ Oferta DÃ­a del Padre',
+      benefits: ['JBL Pro Sound', 'IP67 agua y polvo', 'Hasta 7h de baterÃ­a'],
+      short: 'Compacto, resistente y fÃ¡cil de llevar. Disponible en colores para elegir el estilo que mÃ¡s va contigo.',
       features: [
-        'Diseño ultracompacto y ligero',
-        'Certificación IP67 resistente al agua y polvo',
+        'DiseÃ±o ultracompacto y ligero',
+        'CertificaciÃ³n IP67 resistente al agua y polvo',
         'Sonido JBL Pro Sound con bajos mejorados',
-        'Hasta 7 horas de batería',
-        'Fácil de transportar a cualquier lugar'
+        'Hasta 7 horas de baterÃ­a',
+        'FÃ¡cil de transportar a cualquier lugar'
       ],
       best: 'uso diario, viajes, playa, piscina, mochila, oficina y regalos',
       img: 'assets/images/productos/jbl-go-4.webp',
@@ -178,19 +178,19 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'jbl-grip',
       brand: 'JBL',
-      category: 'Portátil',
+      category: 'PortÃ¡til',
       name: 'JBL Clip 5 (Grip)',
       price: 'S/ 209',
       discount: 'Ahorras S/40',
       oldPrice: 'S/ 249',
-      urgency: '🔥 Oferta Día del Padre',
-      benefits: ['7W de potencia', 'Mosquetón integrado', 'IP67 resistente'],
-      short: 'Parlante portátil con diseño de agarre, resistente y fácil de llevar para música en viajes, playa, piscina y aventuras.',
+      urgency: 'ðŸ”¥ Oferta DÃ­a del Padre',
+      benefits: ['7W de potencia', 'MosquetÃ³n integrado', 'IP67 resistente'],
+      short: 'Parlante portÃ¡til con diseÃ±o de agarre, resistente y fÃ¡cil de llevar para mÃºsica en viajes, playa, piscina y aventuras.',
       features: [
         'Potencia de 7W',
-        'Mosquetón integrado para colgarlo fácilmente',
-        'Certificación IP67 resistente al agua y polvo',
-        'Hasta 12 horas de batería',
+        'MosquetÃ³n integrado para colgarlo fÃ¡cilmente',
+        'CertificaciÃ³n IP67 resistente al agua y polvo',
+        'Hasta 12 horas de baterÃ­a',
         'Sonido JBL Pro Sound'
       ],
       best: 'viajes, trekking, playa, piscina, mochilas, bicicleta y actividades al aire libre',
@@ -206,22 +206,22 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'jbl-flip7',
       brand: 'JBL',
-      category: 'Portátil',
+      category: 'PortÃ¡til',
       name: 'JBL Flip 7',
       price: 'S/ 339',
       discount: 'Ahorras S/60',
       oldPrice: 'S/ 399',
-      urgency: '🔥 Oferta Día del Padre',
+      urgency: 'ðŸ”¥ Oferta DÃ­a del Padre',
       benefits: ['35W de potencia', 'IP68 resistente', 'Auracast'],
-      short: 'Sonido potente, diseño portátil y resistencia para llevar música a la playa, piscina, viajes y reuniones.',
+      short: 'Sonido potente, diseÃ±o portÃ¡til y resistencia para llevar mÃºsica a la playa, piscina, viajes y reuniones.',
       features: [
         'Potencia de 35W',
         'Sonido JBL Pro Sound con graves potentes',
-        'Certificación IP68 resistente al agua y polvo',
-        'Tecnología Auracast para conectar múltiples parlantes',
-        'Diseño portátil y resistente'
+        'CertificaciÃ³n IP68 resistente al agua y polvo',
+        'TecnologÃ­a Auracast para conectar mÃºltiples parlantes',
+        'DiseÃ±o portÃ¡til y resistente'
       ],
-      best: 'playa, piscina, viajes, reuniones, deportes acuáticos y uso diario',
+      best: 'playa, piscina, viajes, reuniones, deportes acuÃ¡ticos y uso diario',
       img: 'assets/images/productos/jbl-flip-7.webp',
       gallery: [
         { src: 'assets/images/productos/jbl-flip-7/01-frontal.webp', label: 'Vista frontal' },
@@ -234,22 +234,22 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'jbl-charge6',
       brand: 'JBL',
-      category: 'Portátil',
+      category: 'PortÃ¡til',
       name: 'JBL Charge 6',
       price: 'S/ 489',
       discount: 'Ahorras S/60',
       oldPrice: 'S/ 549',
-      urgency: '🔥 Oferta Día del Padre',
-      benefits: ['45W de potencia', 'Powerbank integrado', 'Hasta 24h batería'],
-      short: 'Sonido potente, batería de larga duración y asa resistente para llevar tu música a cualquier plan.',
+      urgency: 'ðŸ”¥ Oferta DÃ­a del Padre',
+      benefits: ['45W de potencia', 'Powerbank integrado', 'Hasta 24h baterÃ­a'],
+      short: 'Sonido potente, baterÃ­a de larga duraciÃ³n y asa resistente para llevar tu mÃºsica a cualquier plan.',
       features: [
         'Potencia de 45W',
         'Sonido potente con graves profundos',
         'Powerbank integrado para cargar celulares',
-        'Certificación IP68 resistente al agua y polvo',
-        'Hasta 24 horas de batería'
+        'CertificaciÃ³n IP68 resistente al agua y polvo',
+        'Hasta 24 horas de baterÃ­a'
       ],
-      best: 'viajes largos, reuniones, playa, camping, terrazas y usuarios que buscan autonomía y potencia',
+      best: 'viajes largos, reuniones, playa, camping, terrazas y usuarios que buscan autonomÃ­a y potencia',
       img: 'assets/images/productos/jbl-charge-6.webp',
       gallery: [
         { src: 'assets/images/productos/jbl-charge-6/01-frontal.webp', label: 'Vista frontal' },
@@ -267,17 +267,17 @@ document.addEventListener('DOMContentLoaded', () => {
       price: 'S/ 1515',
       discount: 'Ahorras S/90',
       oldPrice: 'S/ 1605',
-      urgency: '🔥 Oferta Día del Padre',
+      urgency: 'ðŸ”¥ Oferta DÃ­a del Padre',
       benefits: ['180W de potencia', 'Graves profundos', 'Sonido premium'],
       short: 'Sonido masivo, graves profundos y presencia premium para fiestas, eventos, terrazas y aventuras al aire libre.',
       features: [
         'Potencia de 180W',
         'Graves extremadamente profundos',
-        'Certificación IP67 resistente al agua y polvo',
-        'Batería de larga duración',
+        'CertificaciÃ³n IP67 resistente al agua y polvo',
+        'BaterÃ­a de larga duraciÃ³n',
         'Sonido premium para espacios grandes y eventos'
       ],
-      best: 'fiestas, eventos, terrazas, camping, playa y clientes que buscan el sonido más potente',
+      best: 'fiestas, eventos, terrazas, camping, playa y clientes que buscan el sonido mÃ¡s potente',
       img: 'assets/images/productos/jbl-boombox-4.webp',
       gallery: [
         { src: 'assets/images/productos/jbl-boombox-4/01-frontal.webp', label: 'Vista frontal' },
@@ -431,81 +431,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!wa || !product) return;
     const variant = getActiveVariant(product);
     const colorText = variant ? ` color ${variant.label}` : '';
-    const msg = encodeURIComponent(`Hola JOR STORE, quiero información sobre ${product.name}${colorText} (${product.price})`);
+    const msg = encodeURIComponent(`Hola JOR STORE, quiero informaciÃ³n sobre ${product.name}${colorText} (${product.price})`);
     wa.href = `https://wa.me/51925789830?text=${msg}`;
   }
-
-  function renderProductGallery(product) {
-    const gallery = getActiveGallery(product);
-    const img = document.getElementById('modalImg');
-    if (!img || !gallery.length) return;
-
-    let galleryWrap = document.getElementById('modalGalleryWrap');
-    if (!galleryWrap) {
-      const modalImage = document.querySelector('.modal-image');
-      if (!modalImage) return;
-      modalImage.innerHTML = `
-        <button class="gallery-arrow gallery-prev" type="button" aria-label="Vista anterior">‹</button>
-        <img alt="" id="modalImg" src="">
-        <button class="gallery-arrow gallery-next" type="button" aria-label="Vista siguiente">›</button>
-        <span class="gallery-label" id="galleryLabel"></span>
-        <div class="modal-thumbnails" id="modalThumbnails"></div>
-        <p class="gallery-help"></p>
-      `;
-    }
-
-    const modalImg = document.getElementById('modalImg');
-    const label = document.getElementById('galleryLabel');
-    const thumbs = document.getElementById('modalThumbnails');
-    const prev = document.querySelector('.gallery-prev');
-    const next = document.querySelector('.gallery-next');
-    let galleryIndex = 0;
-
-    function setGalleryImage(index) {
-      galleryIndex = (index + gallery.length) % gallery.length;
-      const item = gallery[galleryIndex];
-      modalImg.src = item.src;
-      modalImg.alt = `${product.name} - ${item.label}`;
-      if (label) label.textContent = item.label || 'Vista del producto';
-      if (thumbs) {
-        thumbs.querySelectorAll('.gallery-thumb').forEach((thumb, idx) => thumb.classList.toggle('active', idx === galleryIndex));
-      }
-    }
-
-    if (thumbs) {
-      thumbs.innerHTML = gallery.map((item, index) => `
-        <button type="button" class="gallery-thumb ${index === 0 ? 'active' : ''}" data-gallery-index="${index}">
-          <img src="${item.src}" alt="${item.label}">
-          <span>${item.label}</span>
-        </button>
-      `).join('');
-
-      thumbs.querySelectorAll('.gallery-thumb').forEach(button => {
-        button.addEventListener('click', () => setGalleryImage(Number(button.dataset.galleryIndex || 0)));
-        button.addEventListener('mouseenter', () => setGalleryImage(Number(button.dataset.galleryIndex || 0)));
-      });
-    }
-
-    if (prev) prev.onclick = () => setGalleryImage(galleryIndex - 1);
-    if (next) next.onclick = () => setGalleryImage(galleryIndex + 1);
-
-    let startX = 0;
-    modalImg.ontouchstart = event => { startX = event.touches[0].clientX; };
-    modalImg.ontouchend = event => {
-      const diff = event.changedTouches[0].clientX - startX;
-      if (Math.abs(diff) > 45) setGalleryImage(galleryIndex + (diff < 0 ? 1 : -1));
-    };
-
-    setGalleryImage(0);
-  }
-
 
   function openProduct(id) {
         const p = PRODUCTS.find(product => product.id === id);
     if (!p || !modal) return;
 
     renderProductGallery(p);
-    document.getElementById('modalBrand').textContent = `${p.brand} · ${p.category}`;
+    document.getElementById('modalBrand').textContent = `${p.brand} Â· ${p.category}`;
     document.getElementById('modalTitle').textContent = p.name;
     document.getElementById('modalDesc').textContent = p.short;
     document.getElementById('modalFeatures').innerHTML = p.features.map(feature => `<li>${feature}</li>`).join('');
@@ -515,19 +450,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (p.oldPrice) {
       modalPrice.innerHTML = `
         <div class="modal-promo-price">
-          <span class="modal-kicker">PROMO DÍA DEL PADRE</span>
+          <span class="modal-kicker">PROMO DÃA DEL PADRE</span>
           <div class="modal-now-row"><span>Ahora</span><strong>${p.price}</strong></div>
           <div class="modal-old-row"><span>Antes</span><del>${p.oldPrice}</del></div>
           <small>${p.discount}</small>
         </div>
-        <div class="modal-gift">🎁 Promo especial: incluye regalo por tu compra</div>
+        <div class="modal-gift">ðŸŽ Promo especial: incluye regalo por tu compra</div>
       `;
     } else {
       modalPrice.innerHTML = `<strong>${p.price}</strong>`;
     }
 
     if (!p.variants || !p.variants.length) {
-      const msg = encodeURIComponent(`Hola JOR STORE, quiero información sobre ${p.name} (${p.price})`);
+      const msg = encodeURIComponent(`Hola JOR STORE, quiero informaciÃ³n sobre ${p.name} (${p.price})`);
       document.getElementById('modalWhatsApp').href = `https://wa.me/51925789830?text=${msg}`;
     }
 
@@ -551,7 +486,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const badgeRow = card.querySelector('.badge-row');
       if (badgeRow) {
         const stock = badgeRow.querySelector('.badge.stock');
-        if (stock) stock.innerHTML = '✓ En stock';
+        if (stock) stock.innerHTML = 'âœ“ En stock';
 
         
       }
@@ -559,7 +494,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (p.oldPrice && !card.querySelector('.offer-ribbon')) {
         const ribbon = document.createElement('div');
         ribbon.className = 'offer-ribbon';
-        ribbon.textContent = '🔥 Oferta Día del Padre';
+        ribbon.textContent = 'ðŸ”¥ Oferta DÃ­a del Padre';
         card.insertAdjacentElement('afterbegin', ribbon);
       }
 
@@ -569,7 +504,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (body && title && !body.querySelector('.quick-benefits')) {
         const benefits = document.createElement('ul');
         benefits.className = 'quick-benefits';
-        benefits.innerHTML = (p.benefits || []).slice(0, 3).map(item => `<li>✓ ${item}</li>`).join('');
+        benefits.innerHTML = (p.benefits || []).slice(0, 3).map(item => `<li>âœ“ ${item}</li>`).join('');
         title.insertAdjacentElement('afterend', benefits);
       }
 
@@ -579,7 +514,7 @@ document.addEventListener('DOMContentLoaded', () => {
           priceLine.classList.add('promo-price-line');
           priceLine.innerHTML = `
             <div class="promo-price-main">
-              <span class="promo-kicker">PROMO DÍA DEL PADRE</span>
+              <span class="promo-kicker">PROMO DÃA DEL PADRE</span>
               <div class="promo-now"><small>Ahora</small><strong>${p.price}</strong></div>
               <div class="promo-before"><span>Antes</span><del>${p.oldPrice}</del></div>
               <span class="promo-save">${p.discount}</span>
@@ -597,7 +532,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (body && !body.querySelector('.urgency-line')) {
         const urgency = document.createElement('div');
         urgency.className = 'urgency-line';
-        urgency.textContent = p.urgency || '⚠️ Stock limitado';
+        urgency.textContent = p.urgency || 'âš ï¸ Stock limitado';
         body.appendChild(urgency);
       }
     });
@@ -684,3 +619,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
