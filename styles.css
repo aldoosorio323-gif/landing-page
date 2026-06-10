@@ -4765,7 +4765,7 @@ body {
 
   #productModal .modal-card {
     max-height: 92vh !important;
-    overflow: auto !important;
+    overflow: hidden !important;
     margin: 0 !important;
     padding: 0 !important;
   }
@@ -4776,7 +4776,7 @@ body {
     gap: 34px !important;
     align-items: center !important;
     margin: 0 !important;
-    padding: 24px 28px !important;
+    padding: 0 28px 24px !important;
   }
 
   #productModal .modal-image {
@@ -4935,80 +4935,148 @@ body {
   }
 }
 
-
-/* Fix modal desktop: elimina franja blanca superior y compacta el detalle */
-.modal.open {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 16px !important;
-}
-
-.modal-card {
-  position: relative !important;
-  width: min(1180px, calc(100vw - 48px)) !important;
-  max-height: calc(100vh - 48px) !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  border-radius: 22px !important;
-  background: #fff !important;
-}
-
-.modal-layout {
-  display: grid !important;
-  grid-template-columns: 1.16fr .94fr !important;
-  gap: 34px !important;
-  align-items: center !important;
-  padding: 54px 38px 26px !important;
-  max-height: calc(100vh - 48px) !important;
-  overflow: auto !important;
-}
-
-.modal-info {
-  position: relative !important;
-  padding-top: 0 !important;
-}
-
-.close {
-  position: absolute !important;
-  top: 24px !important;
-  right: 58px !important;
-  z-index: 30 !important;
-}
-
-.modal-image,
-.modal-gallery {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-.modal-main-image {
-  margin-top: 0 !important;
-}
-
-@media (max-width: 900px) {
-  .modal.open {
-    align-items: flex-start !important;
-    padding: 10px !important;
+/* Fix definitivo: elimina banda/franja superior blanca del modal */
+@media (min-width: 721px) {
+  #productModal .modal-card::before,
+  #productModal .modal-card::after,
+  #productModal .modal-layout::before,
+  #productModal .modal-layout::after {
+    display: none !important;
+    content: none !important;
   }
 
-  .modal-card {
-    width: min(100%, calc(100vw - 20px)) !important;
-    max-height: calc(100vh - 20px) !important;
+  #productModal .modal-card {
+    background: #fff !important;
     overflow: hidden !important;
   }
 
-  .modal-layout {
-    grid-template-columns: 1fr !important;
-    gap: 18px !important;
-    padding: 58px 16px 22px !important;
-    max-height: calc(100vh - 20px) !important;
-    overflow: auto !important;
+  #productModal .modal-layout {
+    background: #fff !important;
+    transform: translateY(-72px);
+    margin-bottom: -72px !important;
   }
 
-  .close {
+  #productModal #modalClose {
     top: 18px !important;
     right: 22px !important;
   }
+}
+/* Pulido final modal desktop: bordes redondeados y X alineada */
+@media (min-width: 721px) {
+  #productModal .modal-card {
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, .32) !important;
+  }
+
+  #productModal .modal-layout {
+    transform: translateY(-56px) !important;
+    margin-bottom: -56px !important;
+    padding: 32px 30px 30px !important;
+  }
+
+  #productModal #modalClose,
+  #productModal .close {
+    position: absolute !important;
+    top: 18px !important;
+    right: 28px !important;
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    border-radius: 999px !important;
+    z-index: 99999 !important;
+  }
+}
+/* Pulido visual final del modal: bordes y botón cerrar */
+@media (min-width: 721px) {
+  #productModal .modal-card {
+    border-radius: 28px !important;
+    overflow: hidden !important;
+  }
+
+  #productModal .modal-layout {
+    border-radius: inherit !important;
+  }
+
+  #productModal #modalClose,
+  #productModal .close {
+    position: absolute !important;
+    top: 24px !important;
+    right: 32px !important;
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    border-radius: 999px !important;
+    z-index: 99999 !important;
+    transform: none !important;
+  }
+}
+/* Posición final de la X dentro del borde derecho del modal */
+@media (min-width: 721px) {
+  #productModal .modal-card {
+    position: relative !important;
+    border-radius: 28px !important;
+    overflow: hidden !important;
+  }
+
+  #productModal #modalClose,
+  #productModal .close {
+    position: absolute !important;
+    top: 30px !important;
+    right: 30px !important;
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    border-radius: 999px !important;
+    z-index: 999999 !important;
+    transform: none !important;
+  }
+}
+/* Fix final: posicionar X del modal dentro del borde superior derecho */
+body #productModal.modal.open .modal-card #modalClose.close {
+  position: absolute !important;
+  top: 26px !important;
+  right: 26px !important;
+  left: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  width: 46px !important;
+  height: 46px !important;
+  min-width: 46px !important;
+  border-radius: 999px !important;
+  z-index: 999999 !important;
+}
+/* Fix real: la X no depende de .modal-info */
+@media (min-width: 721px) {
+  body.modal-open #productModal #modalClose.close {
+    position: fixed !important;
+    top: 24px !important;
+    right: 56px !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    border-radius: 999px !important;
+    z-index: 9999999 !important;
+  }
+}
+/* X del modal alineada al borde visual derecho */
+#productModal .modal-card {
+  position: relative !important;
+}
+
+#productModal .modal-card > #modalClose.close {
+  position: absolute !important;
+  top: 22px !important;
+  left: calc(100% - 72px) !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  width: 46px !important;
+  height: 46px !important;
+  min-width: 46px !important;
+  border-radius: 999px !important;
+  z-index: 999999 !important;
 }
