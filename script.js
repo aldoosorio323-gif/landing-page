@@ -533,7 +533,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
-    const modalCard = modal.querySelector('.modal-card');
     document.body.classList.add('modal-open');
   }
 
