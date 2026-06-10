@@ -4801,3 +4801,29 @@ body {
     z-index: 99999 !important;
   }
 }
+/* FIX SEGURO CELULAR: X junto al nombre y cierre sin desordenar modal */
+@media (max-width: 720px) {
+  #productModal .modal-info {
+    position: relative !important;
+    padding-top: 18px !important;
+  }
+
+  #productModal #modalBrand {
+    max-width: calc(100% - 62px) !important;
+    margin-right: 58px !important;
+  }
+
+  #productModal #modalClose {
+    position: absolute !important;
+    top: 14px !important;
+    right: 14px !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    z-index: 99999 !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    border-radius: 999px !important;
+  }
+}

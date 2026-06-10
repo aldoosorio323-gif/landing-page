@@ -621,7 +621,10 @@ document.addEventListener('DOMContentLoaded', () => {
   updateProductCards();
 
   if (modalClose) modalClose.addEventListener('click', closeModal);
-  if (modalBack) modalBack.addEventListener('click', closeModal);
+  if (modalBack) modalBack.addEventListener('click', event => {
+  event.preventDefault();
+  closeModal();
+});
 
   if (modalPrevImage) {
     modalPrevImage.addEventListener('click', event => {
