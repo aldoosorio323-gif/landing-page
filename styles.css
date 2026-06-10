@@ -4702,3 +4702,54 @@ body {
   top: 12px !important;
   right: 16px !important;
 }
+/* ELIMINA FRANJA BLANCA SUPERIOR DEL MODAL ACTUAL */
+#productModal.modal.open {
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px 18px !important;
+}
+
+#productModal .modal-card {
+  max-height: calc(100vh - 20px) !important;
+  overflow: hidden !important;
+}
+
+#productModal .modal-layout {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  align-items: stretch !important;
+}
+
+#productModal .modal-image {
+  padding-top: 0 !important;
+  margin-top: -80px !important;
+  min-height: 0 !important;
+}
+
+/* Baja solo la galería interna para compensar el margen negativo */
+#productModal .modal-gallery,
+#productModal .product-gallery,
+#productModal .gallery-main,
+#productModal .gallery-view,
+#productModal .modal-gallery-wrap {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Mantiene imagen y miniaturas visibles */
+#productModal #modalImg {
+  max-height: 420px !important;
+  object-fit: contain !important;
+}
+
+#productModal .modal-info {
+  padding-top: 18px !important;
+}
+
+/* X arriba derecha, no sobre el precio */
+#productModal #modalClose {
+  top: 18px !important;
+  right: 18px !important;
+  bottom: auto !important;
+  transform: none !important;
+}
