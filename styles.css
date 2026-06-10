@@ -4702,7 +4702,7 @@ body {
   top: 12px !important;
   right: 16px !important;
 }
-/* ELIMINA FRANJA BLANCA SUPERIOR DEL MODAL ACTUAL */
+
 #productModal.modal.open {
   align-items: center !important;
   justify-content: center !important;
@@ -4810,76 +4810,67 @@ body {
 
   #productModal #modalBrand {
     max-width: calc(100% - 62px) !important;
-    margin-right: 58px !important;
-  }
-
-  #productModal #modalClose {
-    position: absolute !important;
-    top: 14px !important;
-    right: 14px !important;
-    left: auto !important;
-    bottom: auto !important;
-    transform: none !important;
-    z-index: 99999 !important;
-    width: 44px !important;
-    height: 44px !important;
-    min-width: 44px !important;
-    border-radius: 999px !important;
-  }
-}
-/* FIX MOBILE MODAL: X junto al nombre + miniaturas deslizables */
+   /* HOTFIX MODAL MOBILE JOR STORE */
 @media (max-width: 720px) {
   #productModal.modal.open {
     align-items: flex-start !important;
+    justify-content: center !important;
     padding: 8px !important;
     overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
   }
 
   #productModal .modal-card {
     width: calc(100vw - 16px) !important;
     max-width: calc(100vw - 16px) !important;
     max-height: none !important;
-    overflow: visible !important;
+    overflow: hidden !important;
     border-radius: 24px !important;
+    margin: 0 auto 18px !important;
   }
 
   #productModal .modal-layout {
-    display: block !important;
-  }
-
-  #productModal .modal-info {
-    position: relative !important;
-    padding: 16px 12px 18px !important;
-  }
-
-  #productModal #modalBrand {
-    display: inline-flex !important;
-    max-width: calc(100% - 58px) !important;
-    margin-right: 58px !important;
-  }
-
-  #productModal #modalClose,
-  #productModal .close {
-    position: absolute !important;
-    top: 14px !important;
-    right: 12px !important;
-    left: auto !important;
-    bottom: auto !important;
-    transform: none !important;
-    z-index: 99999 !important;
-    width: 44px !important;
-    height: 44px !important;
-    min-width: 44px !important;
-    border-radius: 999px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    padding: 0 !important;
   }
 
   #productModal .modal-image {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
     overflow: hidden !important;
+    padding: 0 0 10px !important;
+    margin: 0 !important;
   }
 
-  #productModal #modalThumbs,
-  #productModal .modal-thumbs,
-  #productModal .gallery-thumbs {
+  #productModal #modalImg {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 340px !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+  }
+
+  #productModal .gallery-arrow {
+    top: 34% !important;
+    z-index: 30 !important;
+  }
+
+  #productModal .gallery-label {
+    display: block !important;
+    text-align: center !important;
+    font-size: 22px !important;
+    line-height: 1.1 !important;
+    margin: 10px 0 12px !important;
+  }
+
+  #productModal #modalThumbnails,
+  #productModal .modal-thumbnails {
     display: flex !important;
     flex-wrap: nowrap !important;
     gap: 10px !important;
@@ -4888,28 +4879,29 @@ body {
     overflow-x: auto !important;
     overflow-y: hidden !important;
     -webkit-overflow-scrolling: touch !important;
-    scroll-snap-type: x mandatory !important;
-    padding: 0 12px 10px !important;
-    margin: 0 auto !important;
+    scroll-snap-type: x proximity !important;
+    padding: 0 12px 12px !important;
+    margin: 0 !important;
+    touch-action: pan-x !important;
+    overscroll-behavior-x: contain !important;
   }
 
-  #productModal #modalThumbs::-webkit-scrollbar,
-  #productModal .modal-thumbs::-webkit-scrollbar,
-  #productModal .gallery-thumbs::-webkit-scrollbar {
+  #productModal #modalThumbnails::-webkit-scrollbar,
+  #productModal .modal-thumbnails::-webkit-scrollbar {
     display: none !important;
   }
 
   #productModal .gallery-thumb {
-    flex: 0 0 88px !important;
-    width: 88px !important;
-    min-width: 88px !important;
-    max-width: 88px !important;
+    flex: 0 0 92px !important;
+    width: 92px !important;
+    min-width: 92px !important;
+    max-width: 92px !important;
     scroll-snap-align: start !important;
   }
 
   #productModal .gallery-thumb img {
     width: 100% !important;
-    height: 54px !important;
+    height: 58px !important;
     object-fit: contain !important;
   }
 
@@ -4919,5 +4911,35 @@ body {
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
+  }
+
+  #productModal .modal-info {
+    order: 2 !important;
+    position: relative !important;
+    padding: 16px 12px 18px !important;
+    margin: 0 !important;
+  }
+
+  #productModal #modalBrand {
+    display: inline-flex !important;
+    align-items: center !important;
+    max-width: calc(100% - 58px) !important;
+    margin-right: 58px !important;
+    margin-bottom: 12px !important;
+  }
+
+  #productModal #modalClose,
+  #productModal .close {
+    position: absolute !important;
+    top: 16px !important;
+    right: 12px !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    z-index: 99999 !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    border-radius: 999px !important;
   }
 }
