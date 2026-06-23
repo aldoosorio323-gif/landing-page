@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   const finalProducts = [
-    { id: 'lg-grab', name: 'LG XBOOM Grab', price: 'S/ 299' },
-    { id: 'lg-bounce', name: 'LG XBOOM Bounce', price: 'S/ 399' },
-    { id: 'lg-xg8t', name: 'LG XBOOM XG8T', price: 'S/ 725' },
-    { id: 'lg-stage301', name: 'LG XBOOM Stage 301', price: 'S/ 899' },
-    { id: 'jbl-go4', name: 'JBL Go 4', price: 'S/ 149' },
-    { id: 'jbl-grip', name: 'JBL Clip 5 (Grip)', price: 'S/ 249' },
-    { id: 'jbl-flip7', name: 'JBL Flip 7', price: 'S/ 399' },
-    { id: 'jbl-charge6', name: 'JBL Charge 6', price: 'S/ 549' },
-    { id: 'jbl-boombox4', name: 'JBL Boombox 4', price: 'S/ 1605' }
+    { id: 'lg-grab', name: 'LG XBOOM Grab', price: 'S/ 275' },
+    { id: 'lg-bounce', name: 'LG XBOOM Bounce', price: 'S/ 389' },
+    { id: 'lg-xg8t', name: 'LG XBOOM XG8T', price: 'S/ 830' },
+    { id: 'lg-stage301', name: 'LG XBOOM Stage 301', price: 'S/ 950' },
+    { id: 'jbl-go4', name: 'JBL Go 4', price: 'S/ 129' },
+    { id: 'jbl-grip', name: 'JBL Clip 5 (Grip)', price: 'S/ 199' },
+    { id: 'jbl-flip7', name: 'JBL Flip 7', price: 'S/ 349' },
+    { id: 'jbl-charge6', name: 'JBL Charge 6', price: 'S/ 499' },
+    { id: 'jbl-boombox4', name: 'JBL Boombox 4', price: 'S/ 1499' }
   ];
 
   const priceById = Object.fromEntries(finalProducts.map(product => [product.id, product.price]));
