@@ -69,19 +69,29 @@ document.addEventListener('DOMContentLoaded', () => {
     updateWhatsAppLink(product);
   }
 
-  applyFinalCardPrices();
-  applyFinalModalPrice();
-
-  const observer = new MutationObserver(() => {
+  function applyFinalCampaignState() {
     applyFinalCardPrices();
     applyFinalModalPrice();
+  }
+
+  let observer;
+
+  function startObserver() {
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      characterData: true,
+      attributes: true,
+      attributeFilter: ['class', 'aria-hidden']
+    });
+  }
+
+  observer = new MutationObserver(() => {
+    observer.disconnect();
+    applyFinalCampaignState();
+    startObserver();
   });
 
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true,
-    characterData: true,
-    attributes: true,
-    attributeFilter: ['class', 'aria-hidden']
-  });
+  applyFinalCampaignState();
+  startObserver();
 });
