@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const finalProducts = [
     { id: 'lg-grab', name: 'LG XBOOM Grab', price: 'S/ 275' },
     { id: 'lg-bounce', name: 'LG XBOOM Bounce', price: 'S/ 389' },
-    { id: 'lg-xg8t', name: 'LG XBOOM XG8T', price: 'S/ 830' },
-    { id: 'lg-stage301', name: 'LG XBOOM Stage 301', price: 'S/ 950' },
+    { id: 'lg-xg8t', name: 'LG XBOOM XG8T', price: 'S/ 760' },
+    { id: 'lg-stage301', name: 'LG XBOOM Stage 301', price: 'S/ 889' },
     { id: 'jbl-go4', name: 'JBL Go 4', price: 'S/ 129' },
     { id: 'jbl-grip', name: 'JBL Clip 5 (Grip)', price: 'S/ 199' },
     { id: 'jbl-flip7', name: 'JBL Flip 7', price: 'S/ 349' },
