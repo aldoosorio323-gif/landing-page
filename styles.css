@@ -5080,3 +5080,133 @@ body #productModal.modal.open .modal-card #modalClose.close {
   border-radius: 999px !important;
   z-index: 999999 !important;
 }
+/* v37: banner principal responsive y menos alto */
+.hero-sales-banner {
+  min-height: auto !important;
+  max-height: 620px !important;
+  overflow: hidden !important;
+  background: #030507 !important;
+}
+
+.hero-sales-img {
+  width: 100% !important;
+  height: clamp(320px, 36vw, 560px) !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
+}
+
+.hero-sales-content {
+  left: clamp(18px, 4vw, 64px) !important;
+  top: clamp(20px, 4vw, 58px) !important;
+  width: min(620px, 46vw) !important;
+}
+
+.hero-sales-content h1 {
+  font-size: clamp(34px, 5vw, 78px) !important;
+  line-height: .92 !important;
+}
+
+.hero-catalog-btn {
+  min-height: 48px !important;
+  padding: 13px clamp(18px, 2vw, 28px) !important;
+  font-size: clamp(14px, 1vw, 17px) !important;
+}
+
+@media (max-width: 900px) {
+  .hero-sales-img {
+    height: clamp(280px, 48vw, 430px) !important;
+    object-position: center center !important;
+  }
+
+  .hero-sales-content {
+    width: min(520px, 58vw) !important;
+    top: 24px !important;
+  }
+
+  .hero-sales-content h1 {
+    font-size: clamp(30px, 7vw, 54px) !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-sales-img {
+    height: 300px !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .hero-sales-content {
+    left: 14px !important;
+    top: 16px !important;
+    width: 72vw !important;
+    max-width: 310px !important;
+  }
+
+  .hero-sales-kicker {
+    display: none !important;
+  }
+
+  .hero-sales-content h1 {
+    font-size: 28px !important;
+    line-height: .95 !important;
+  }
+
+  .hero-catalog-btn {
+    margin-top: 10px !important;
+    min-height: 38px !important;
+    padding: 9px 12px !important;
+    font-size: 11px !important;
+    border-radius: 12px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-sales-img {
+    height: 270px !important;
+  }
+
+  .hero-sales-content h1 {
+    font-size: 25px !important;
+  }
+}
+/* v38: banner principal completo sin recorte */
+.hero-sales-banner {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  background: #030507 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.hero-sales-banner::before {
+  display: none !important;
+}
+
+.hero-sales-img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  min-height: 0 !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  display: block !important;
+  background: #030507 !important;
+}
+
+/* Oculta el texto/botón HTML porque el banner ya trae diseño propio */
+.hero-sales-content {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .hero-sales-img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
