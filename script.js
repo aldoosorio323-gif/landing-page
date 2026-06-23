@@ -3,11 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const promoDots = Array.from(document.querySelectorAll('#promoDots .promo-dot'));
   const promoPrev = document.querySelector('.promo-prev');
   const promoNext = document.querySelector('.promo-next');
+  const promoSlides = Array.from(document.querySelectorAll('#promoTrack .promo-slide'));
+  const promoCount = promoDots.length || promoSlides.length;
   let promoIndex = 0;
 
   function setPromoSlide(i) {
-    if (!promoTrack || !promoDots.length) return;
-    promoIndex = (i + promoDots.length) % promoDots.length;
+    if (!promoTrack || !promoCount) return;
+    promoIndex = (i + promoCount) % promoCount;
     promoTrack.style.transform = `translateX(-${promoIndex * 100}%)`;
     promoDots.forEach((dot, index) => dot.classList.toggle('active', index === promoIndex));
   }
@@ -15,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   promoDots.forEach((dot, index) => dot.addEventListener('click', () => setPromoSlide(index)));
   if (promoPrev) promoPrev.addEventListener('click', () => setPromoSlide(promoIndex - 1));
   if (promoNext) promoNext.addEventListener('click', () => setPromoSlide(promoIndex + 1));
-  if (promoTrack && promoDots.length) setInterval(() => setPromoSlide(promoIndex + 1), 6500);
+  if (promoTrack && promoCount) setInterval(() => setPromoSlide(promoIndex + 1), 6500);
 
   const PRODUCTS = [
     {
@@ -23,12 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
       brand: 'LG XBOOM',
       category: 'Portátil',
       name: 'LG XBOOM Grab',
-      price: 'S/ 259',
-      oldPrice: 'S/ 299',
-      discount: 'Ahorras S/40',
-      urgency: '🔥 Oferta Día del Padre',
+      price: 'S/ 275',
       benefits: ['30W de potencia', 'IP67 agua y polvo', 'Certificación militar'],
-      short: 'Promo Día del Padre: parlante portátil resistente y ligero, diseñado para acompañarte en cualquier aventura con gran autonomía y resistencia.',
+      short: 'Parlante portátil resistente y ligero, diseñado para acompañarte en cualquier aventura con gran autonomía y resistencia.',
       features: [
         'Potencia de 30W',
         'Certificación IP67 resistente al agua y polvo',
@@ -52,12 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
       brand: 'LG XBOOM',
       category: 'Portátil',
       name: 'LG XBOOM Bounce',
-      price: 'S/ 379',
-      oldPrice: 'S/ 399',
-      discount: 'Ahorras S/20',
-      urgency: '🔥 Oferta Día del Padre',
+      price: 'S/ 389',
       benefits: ['40W de potencia', 'IP67 agua y polvo', 'Hasta 30h de batería'],
-      short: 'Promo Día del Padre: más batería, más bajos y resistencia para reuniones, viajes y planes al aire libre.',
+      short: 'Más batería, más bajos y resistencia para reuniones, viajes y planes al aire libre.',
       features: [
         'Potencia de 40W',
         'Certificación IP67 resistente al agua y polvo',
@@ -74,16 +70,14 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'assets/images/productos/lg-xboom-bounce/04-portabilidad.webp', label: 'Portabilidad' },
         { src: 'assets/images/productos/lg-xboom-bounce/05-interior.webp', label: 'Interior' },
         { src: 'assets/images/productos/lg-xboom-bounce/06-uso-exterior.webp', label: 'Uso exterior' }
-      ],},
+      ]
+    },
     {
       id: 'lg-xg8t',
       brand: 'LG XBOOM',
       category: 'Portátil',
       name: 'LG XBOOM XG8T',
-      price: 'S/ 699',
-      discount: 'Ahorras S/26',
-      oldPrice: 'S/ 725',
-      urgency: '🔥 Oferta Día del Padre',
+      price: 'S/ 830',
       benefits: ['120W de potencia', 'Luces LED RGB', 'IP67 resistente'],
       short: 'Potencia, luces y resistencia para llevar música fuerte a reuniones, playa, viajes y planes al aire libre.',
       features: [
@@ -102,16 +96,14 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'assets/images/productos/lg-xboom-xg8t/04-superior.webp', label: 'Vista superior' },
         { src: 'assets/images/productos/lg-xboom-xg8t/05-trasera.webp', label: 'Vista trasera' },
         { src: 'assets/images/productos/lg-xboom-xg8t/06-uso-exterior.webp', label: 'Uso exterior' }
-      ],},
+      ]
+    },
     {
       id: 'lg-stage301',
       brand: 'LG XBOOM',
       category: 'Fiesta',
       name: 'LG XBOOM Stage 301',
-      price: 'S/ 869',
-      discount: 'Ahorras S/30',
-      oldPrice: 'S/ 899',
-      urgency: '🔥 Oferta Día del Padre',
+      price: 'S/ 950',
       benefits: ['120W de potencia', 'Karaoke integrado', 'Micrófono y guitarra'],
       short: 'Parlante potente para fiestas, reuniones, karaoke y eventos donde necesitas más presencia, luces y sonido envolvente.',
       features: [
@@ -130,16 +122,14 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'assets/images/productos/lg-xboom-stage-301/04-conexiones.webp', label: 'Conexiones' },
         { src: 'assets/images/productos/lg-xboom-stage-301/05-trasera.webp', label: 'Vista trasera' },
         { src: 'assets/images/productos/lg-xboom-stage-301/06-uso-exterior.webp', label: 'Uso exterior' }
-      ],},
+      ]
+    },
     {
       id: 'jbl-go4',
       brand: 'JBL',
       category: 'Portátil',
       name: 'JBL Go 4',
       price: 'S/ 129',
-      oldPrice: 'S/ 149',
-      discount: 'Ahorras S/20',
-      urgency: '🔥 Oferta Día del Padre',
       benefits: ['JBL Pro Sound', 'IP67 agua y polvo', 'Hasta 7h de batería'],
       short: 'Compacto, resistente y fácil de llevar. Disponible en colores para elegir el estilo que más va contigo.',
       features: [
@@ -174,16 +164,14 @@ document.addEventListener('DOMContentLoaded', () => {
             { src: 'assets/images/productos/jbl-go-4/camuflado/04-uso-exterior.webp', label: 'Uso exterior' }
           ]
         }
-      ],},
+      ]
+    },
     {
       id: 'jbl-grip',
       brand: 'JBL',
       category: 'Portátil',
       name: 'JBL Clip 5 (Grip)',
-      price: 'S/ 209',
-      discount: 'Ahorras S/40',
-      oldPrice: 'S/ 249',
-      urgency: '🔥 Oferta Día del Padre',
+      price: 'S/ 199',
       benefits: ['7W de potencia', 'Mosquetón integrado', 'IP67 resistente'],
       short: 'Parlante portátil con diseño de agarre, resistente y fácil de llevar para música en viajes, playa, piscina y aventuras.',
       features: [
@@ -202,16 +190,14 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'assets/images/productos/jbl-grip/04-superior.webp', label: 'Vista superior' },
         { src: 'assets/images/productos/jbl-grip/05-trasera.webp', label: 'Vista trasera' },
         { src: 'assets/images/productos/jbl-grip/06-uso-exterior.webp', label: 'Uso exterior' }
-      ],},
+      ]
+    },
     {
       id: 'jbl-flip7',
       brand: 'JBL',
       category: 'Portátil',
       name: 'JBL Flip 7',
-      price: 'S/ 339',
-      discount: 'Ahorras S/60',
-      oldPrice: 'S/ 399',
-      urgency: '🔥 Oferta Día del Padre',
+      price: 'S/ 349',
       benefits: ['35W de potencia', 'IP68 resistente', 'Auracast'],
       short: 'Sonido potente, diseño portátil y resistencia para llevar música a la playa, piscina, viajes y reuniones.',
       features: [
@@ -230,16 +216,14 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'assets/images/productos/jbl-flip-7/04-trasera.webp', label: 'Vista trasera' },
         { src: 'assets/images/productos/jbl-flip-7/05-accesorios.webp', label: 'Accesorios' },
         { src: 'assets/images/productos/jbl-flip-7/06-uso-exterior.webp', label: 'Uso exterior' }
-      ],},
+      ]
+    },
     {
       id: 'jbl-charge6',
       brand: 'JBL',
       category: 'Portátil',
       name: 'JBL Charge 6',
-      price: 'S/ 489',
-      discount: 'Ahorras S/60',
-      oldPrice: 'S/ 549',
-      urgency: '🔥 Oferta Día del Padre',
+      price: 'S/ 499',
       benefits: ['45W de potencia', 'Powerbank integrado', 'Hasta 24h batería'],
       short: 'Sonido potente, batería de larga duración y asa resistente para llevar tu música a cualquier plan.',
       features: [
@@ -258,16 +242,14 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'assets/images/productos/jbl-charge-6/04-trasera.webp', label: 'Vista trasera' },
         { src: 'assets/images/productos/jbl-charge-6/05-accesorio.webp', label: 'Accesorio' },
         { src: 'assets/images/productos/jbl-charge-6/06-uso-exterior.webp', label: 'Uso exterior' }
-      ],},
+      ]
+    },
     {
       id: 'jbl-boombox4',
       brand: 'JBL',
       category: 'Fiesta',
       name: 'JBL Boombox 4',
-      price: 'S/ 1515',
-      discount: 'Ahorras S/90',
-      oldPrice: 'S/ 1605',
-      urgency: '🔥 Oferta Día del Padre',
+      price: 'S/ 1499',
       benefits: ['180W de potencia', 'Graves profundos', 'Sonido premium'],
       short: 'Sonido masivo, graves profundos y presencia premium para fiestas, eventos, terrazas y aventuras al aire libre.',
       features: [
@@ -286,11 +268,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'assets/images/productos/jbl-boombox-4/04-trasera.webp', label: 'Vista trasera' },
         { src: 'assets/images/productos/jbl-boombox-4/05-inferior.webp', label: 'Vista inferior' },
         { src: 'assets/images/productos/jbl-boombox-4/06-uso-exterior.webp', label: 'Uso exterior' }
-      ],}
+      ]
+    }
   ];
 
   const modal = document.getElementById('productModal');
-  const modalCard = document.querySelector('.modal-card');
   const modalClose = document.getElementById('modalClose');
   const modalBack = document.getElementById('modalBack');
   const modalImg = document.getElementById('modalImg');
@@ -300,25 +282,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalPrevImage = document.getElementById('modalPrevImage');
   const modalNextImage = document.getElementById('modalNextImage');
   const productCards = Array.from(document.querySelectorAll('.product-card'));
+
   let currentGallery = [];
   let currentGalleryIndex = 0;
   let currentGalleryProductName = '';
   let touchStartX = 0;
+  let activeVariantIndex = 0;
+
+  function getActiveVariant(product) {
+    if (product && Array.isArray(product.variants) && product.variants.length) {
+      return product.variants[activeVariantIndex] || product.variants[0];
+    }
+    return null;
+  }
+
+  function getActiveGallery(product) {
+    const variant = getActiveVariant(product);
+    if (variant && Array.isArray(variant.gallery) && variant.gallery.length) return variant.gallery;
+    if (product && Array.isArray(product.gallery) && product.gallery.length) return product.gallery;
+    return [{ src: product?.img || '', label: 'Vista principal' }];
+  }
 
   function setGalleryImage(index) {
     if (!modalImg || !currentGallery.length) return;
-
     currentGalleryIndex = (index + currentGallery.length) % currentGallery.length;
     const item = currentGallery[currentGalleryIndex];
-
     modalImg.style.opacity = '0';
     modalImg.style.transform = 'scale(.985)';
-
     window.setTimeout(() => {
       modalImg.src = item.src;
       modalImg.alt = `${currentGalleryProductName} - ${item.label}`;
       if (modalGalleryLabel) modalGalleryLabel.textContent = item.label;
-
       if (modalThumbs) {
         modalThumbs.querySelectorAll('.gallery-thumb').forEach((thumb, thumbIndex) => {
           const isActive = thumbIndex === currentGalleryIndex;
@@ -326,15 +320,22 @@ document.addEventListener('DOMContentLoaded', () => {
           thumb.setAttribute('aria-selected', isActive ? 'true' : 'false');
         });
       }
-
       modalImg.style.opacity = '1';
       modalImg.style.transform = 'scale(1)';
     }, 90);
   }
 
+  function updateWhatsAppLink(product) {
+    const wa = document.getElementById('modalWhatsApp');
+    if (!wa || !product) return;
+    const variant = getActiveVariant(product);
+    const colorText = variant ? ` color ${variant.label}` : '';
+    const msg = encodeURIComponent(`Hola JOR STORE, quiero información sobre ${product.name}${colorText} (${product.price})`);
+    wa.href = `https://wa.me/51925789830?text=${msg}`;
+  }
+
   function renderProductGallery(product) {
-    const fallbackGallery = [{ src: product.img, label: 'Vista principal' }];
-    currentGallery = Array.isArray(product.gallery) && product.gallery.length ? product.gallery : fallbackGallery;
+    currentGallery = getActiveGallery(product);
     currentGalleryIndex = 0;
     currentGalleryProductName = product.name;
 
@@ -352,10 +353,6 @@ document.addEventListener('DOMContentLoaded', () => {
           event.stopPropagation();
           setGalleryImage(index);
         });
-
-        thumb.addEventListener('mouseenter', () => {
-          if (window.matchMedia('(hover: hover)').matches) setGalleryImage(index);
-        });
       });
     }
 
@@ -365,24 +362,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     setGalleryImage(0);
-  }
-
-
-  let activeProduct = null;
-  let activeVariantIndex = 0;
-
-  function getActiveGallery(product) {
-    if (product && Array.isArray(product.variants) && product.variants.length) {
-      return product.variants[activeVariantIndex]?.gallery || [];
-    }
-    return product?.gallery || [{ src: product?.img, label: 'Vista principal' }];
-  }
-
-  function getActiveVariant(product) {
-    if (product && Array.isArray(product.variants) && product.variants.length) {
-      return product.variants[activeVariantIndex];
-    }
-    return null;
   }
 
   function renderVariantSelector(product) {
@@ -421,50 +400,26 @@ document.addEventListener('DOMContentLoaded', () => {
         activeVariantIndex = Number(button.dataset.variantIndex || 0);
         renderVariantSelector(product);
         renderProductGallery(product);
-        updateVariantWhatsApp(product);
+        updateWhatsAppLink(product);
       });
     });
   }
 
-  function updateVariantWhatsApp(product) {
-    const wa = document.getElementById('modalWhatsApp');
-    if (!wa || !product) return;
-    const variant = getActiveVariant(product);
-    const colorText = variant ? ` color ${variant.label}` : '';
-    const msg = encodeURIComponent(`Hola JOR STORE, quiero información sobre ${product.name}${colorText} (${product.price})`);
-    wa.href = `https://wa.me/51925789830?text=${msg}`;
-  }
-
   function openProduct(id) {
-        const p = PRODUCTS.find(product => product.id === id);
-    if (!p || !modal) return;
+    const product = PRODUCTS.find(item => item.id === id);
+    if (!product || !modal) return;
 
-    renderProductGallery(p);
-    document.getElementById('modalBrand').textContent = `${p.brand} · ${p.category}`;
-    document.getElementById('modalTitle').textContent = p.name;
-    document.getElementById('modalDesc').textContent = p.short;
-    document.getElementById('modalFeatures').innerHTML = p.features.map(feature => `<li>${feature}</li>`).join('');
-    document.getElementById('modalBest').innerHTML = `<strong>Ideal para:</strong> ${p.best}`;
+    activeVariantIndex = 0;
+    renderProductGallery(product);
+    renderVariantSelector(product);
 
-    const modalPrice = document.getElementById('modalPrice');
-    if (p.oldPrice) {
-      modalPrice.innerHTML = `
-        <div class="modal-promo-price">
-          <span class="modal-kicker">PROMO DÍA DEL PADRE</span>
-          <div class="modal-now-row"><span>Ahora</span><strong>${p.price}</strong></div>
-          <div class="modal-old-row"><span>Antes</span><del>${p.oldPrice}</del></div>
-          <small>${p.discount}</small>
-        </div>
-        <div class="modal-gift">🎁 Promo especial: incluye regalo por tu compra</div>
-      `;
-    } else {
-      modalPrice.innerHTML = `<strong>${p.price}</strong>`;
-    }
-
-    if (!p.variants || !p.variants.length) {
-      const msg = encodeURIComponent(`Hola JOR STORE, quiero información sobre ${p.name} (${p.price})`);
-      document.getElementById('modalWhatsApp').href = `https://wa.me/51925789830?text=${msg}`;
-    }
+    document.getElementById('modalBrand').textContent = `${product.brand} · ${product.category}`;
+    document.getElementById('modalTitle').textContent = product.name;
+    document.getElementById('modalDesc').textContent = product.short;
+    document.getElementById('modalFeatures').innerHTML = product.features.map(feature => `<li>${feature}</li>`).join('');
+    document.getElementById('modalBest').innerHTML = `<strong>Ideal para:</strong> ${product.best}`;
+    document.getElementById('modalPrice').innerHTML = `<strong>${product.price}</strong>`;
+    updateWhatsAppLink(product);
 
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
@@ -480,67 +435,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateProductCards() {
     productCards.forEach(card => {
-      const p = PRODUCTS.find(product => product.id === card.dataset.id);
-      if (!p) return;
+      const product = PRODUCTS.find(item => item.id === card.dataset.id);
+      if (!product) return;
 
-      const badgeRow = card.querySelector('.badge-row');
-      if (badgeRow) {
-        const stock = badgeRow.querySelector('.badge.stock');
-        if (stock) stock.innerHTML = '✓ En stock';
+      card.querySelector('.offer-ribbon')?.remove();
+      card.querySelector('.urgency-line')?.remove();
 
-        
-      }
-
-      if (p.oldPrice && !card.querySelector('.offer-ribbon')) {
-        const ribbon = document.createElement('div');
-        ribbon.className = 'offer-ribbon';
-        ribbon.textContent = '🔥 Oferta Día del Padre';
-        card.insertAdjacentElement('afterbegin', ribbon);
-      }
+      const stock = card.querySelector('.badge.stock');
+      if (stock) stock.innerHTML = '✓ En stock';
 
       const body = card.querySelector('.product-body');
       const title = body?.querySelector('h3');
-
       if (body && title && !body.querySelector('.quick-benefits')) {
         const benefits = document.createElement('ul');
         benefits.className = 'quick-benefits';
-        benefits.innerHTML = (p.benefits || []).slice(0, 3).map(item => `<li>✓ ${item}</li>`).join('');
+        benefits.innerHTML = (product.benefits || []).slice(0, 3).map(item => `<li>✓ ${item}</li>`).join('');
         title.insertAdjacentElement('afterend', benefits);
       }
 
       const priceLine = card.querySelector('.price-line');
       if (priceLine) {
-        if (p.oldPrice) {
-          priceLine.classList.add('promo-price-line');
-          priceLine.innerHTML = `
-            <div class="promo-price-main">
-              <span class="promo-kicker">PROMO DÍA DEL PADRE</span>
-              <div class="promo-now"><small>Ahora</small><strong>${p.price}</strong></div>
-              <div class="promo-before"><span>Antes</span><del>${p.oldPrice}</del></div>
-              <span class="promo-save">${p.discount}</span>
-            </div>
-          `;
-        } else {
-          priceLine.classList.remove('promo-price-line');
-          priceLine.innerHTML = `<strong>${p.price}</strong><span>Precio JOR STORE</span>`;
-        }
+        priceLine.classList.remove('promo-price-line');
+        priceLine.innerHTML = `<strong>${product.price}</strong><span>Precio JOR STORE</span>`;
       }
 
-      const btn = card.querySelector('.details-btn');
-      if (btn) btn.textContent = p.oldPrice ? 'Ver oferta' : 'Comprar ahora';
-
-      if (body && !body.querySelector('.urgency-line')) {
-        const urgency = document.createElement('div');
-        urgency.className = 'urgency-line';
-        urgency.textContent = p.urgency || '⚠️ Stock limitado';
-        body.appendChild(urgency);
-      }
+      const button = card.querySelector('.details-btn');
+      if (button) button.textContent = 'Ver detalles';
     });
   }
 
   document.addEventListener('click', event => {
     const button = event.target.closest('.details-btn');
-
     if (button) {
       event.preventDefault();
       event.stopPropagation();
@@ -557,9 +482,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (modalClose) modalClose.addEventListener('click', closeModal);
   if (modalBack) modalBack.addEventListener('click', event => {
-  event.preventDefault();
-  closeModal();
-});
+    event.preventDefault();
+    closeModal();
+  });
 
   if (modalPrevImage) {
     modalPrevImage.addEventListener('click', event => {
@@ -605,7 +530,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') closeModal();
-
     if (!modal || !modal.classList.contains('open')) return;
 
     if (event.key === 'ArrowLeft') {
