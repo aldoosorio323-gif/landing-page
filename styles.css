@@ -5210,3 +5210,283 @@ body #productModal.modal.open .modal-card #modalClose.close {
     object-fit: contain !important;
   }
 }
+/* ==================================================
+   FIX MODAL MOBILE - JOR STORE
+   Corrige barra blanca superior, botón X y orden visual
+================================================== */
+
+body.modal-open .social-floating,
+body.modal-open .floating-wa {
+  display: none !important;
+}
+
+#productModal .modal-card {
+  position: relative !important;
+}
+
+#productModal .close {
+  position: absolute !important;
+  top: 14px !important;
+  right: 14px !important;
+  z-index: 9999 !important;
+  float: none !important;
+  margin: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  width: 46px !important;
+  height: 46px !important;
+  border-radius: 50% !important;
+  background: #111 !important;
+  color: #fff !important;
+  box-shadow: 0 14px 30px rgba(0,0,0,.25) !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+
+/* Color disponible encima de la marca */
+#productModal .modal-variant-selector {
+  margin: 0 0 14px !important;
+}
+
+@media (max-width: 760px) {
+  body.modal-open {
+    overflow: hidden !important;
+    position: static !important;
+    width: 100% !important;
+  }
+
+  #productModal.modal.open {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 10px 8px 90px !important;
+    background: rgba(0,0,0,.72) !important;
+  }
+
+  #productModal.modal.open .modal-card {
+    position: relative !important;
+    width: 96vw !important;
+    max-width: 96vw !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    margin: 0 auto 80px !important;
+    border-radius: 26px !important;
+    background: #fff !important;
+  }
+
+  #productModal.modal.open .close {
+    position: absolute !important;
+    top: 12px !important;
+    right: 12px !important;
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 22px !important;
+  }
+
+  #productModal.modal.open .modal-layout {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  #productModal.modal.open .modal-image {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 58px 12px 14px !important;
+    border-radius: 26px 26px 0 0 !important;
+    background: #fff !important;
+  }
+
+  #productModal.modal.open .modal-main-image {
+    border-radius: 22px !important;
+    background: linear-gradient(180deg, #fff, #fafafa) !important;
+  }
+
+  #productModal.modal.open .modal-image img {
+    width: 100% !important;
+    max-height: 300px !important;
+    object-fit: contain !important;
+  }
+
+  #productModal.modal.open .modal-info {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 22px 22px 36px !important;
+  }
+
+  #productModal .modal-variant-selector {
+    margin: 0 0 16px !important;
+  }
+
+  #productModal #modalBrand {
+    margin-bottom: 14px !important;
+  }
+
+  #productModal #modalTitle {
+    margin-top: 0 !important;
+    font-size: 34px !important;
+    line-height: 1.04 !important;
+  }
+
+  #productModal.modal.open .buy-row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    padding-bottom: 24px !important;
+  }
+
+  #productModal.modal.open .wa-buy,
+  #productModal.modal.open .back-products {
+    width: 100% !important;
+    min-height: 54px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+/* ==================================================
+   FIX DEFINITIVO MODAL MOBILE - JOR STORE
+   Quita barra blanca superior y fija la X de cierre
+================================================== */
+
+@media (max-width: 760px) {
+  body.modal-open {
+    overflow: hidden !important;
+    position: static !important;
+    width: 100% !important;
+  }
+
+  body.modal-open .social-floating,
+  body.modal-open .floating-wa {
+    display: none !important;
+  }
+
+  #productModal.modal.open {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    display: block !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 8px 8px 90px !important;
+    background: rgba(0,0,0,.72) !important;
+  }
+
+  #productModal.modal.open .modal-card {
+    position: relative !important;
+    width: 96vw !important;
+    max-width: 96vw !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    margin: 0 auto 80px !important;
+    border-radius: 26px !important;
+    background: #fff !important;
+  }
+
+  #productModal.modal.open .close {
+    position: fixed !important;
+    top: calc(env(safe-area-inset-top) + 12px) !important;
+    right: 16px !important;
+    z-index: 99999 !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    border: 0 !important;
+    background: #111 !important;
+    color: #fff !important;
+    display: grid !important;
+    place-items: center !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    box-shadow: 0 14px 30px rgba(0,0,0,.30) !important;
+    float: none !important;
+    margin: 0 !important;
+    pointer-events: auto !important;
+  }
+
+  #productModal.modal.open .modal-layout {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  #productModal.modal.open .modal-image,
+  #productModal.modal.open .modal-image.modal-gallery {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 12px 12px 14px !important;
+    border-radius: 26px 26px 0 0 !important;
+    background: #fff !important;
+  }
+
+  #productModal.modal.open .modal-main-image {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 22px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    background: linear-gradient(180deg, #fff, #fafafa) !important;
+  }
+
+  #productModal.modal.open .modal-main-image img#modalImg,
+  #productModal.modal.open #modalImg {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    padding: 10px !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    display: block !important;
+    background: transparent !important;
+  }
+
+  #productModal.modal.open .modal-gallery-label {
+    margin-top: 12px !important;
+  }
+
+  #productModal.modal.open .modal-thumbnails {
+    margin-top: 12px !important;
+    padding-bottom: 8px !important;
+  }
+
+  #productModal.modal.open .modal-info {
+    padding: 22px 22px 36px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  #productModal .modal-variant-selector {
+    margin: 0 0 16px !important;
+  }
+}

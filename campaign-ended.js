@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const finalProducts = [
+    { id: 'lg-mini', name: 'LG XBOOM Mini', price: 'S/ 169', },
+    { id: 'lg-rock', name: 'LG XBOOM Rock', price: 'S/ 199' },
     { id: 'lg-grab', name: 'LG XBOOM Grab', price: 'S/ 275' },
     { id: 'lg-bounce', name: 'LG XBOOM Bounce', price: 'S/ 389' },
     { id: 'lg-xg8t', name: 'LG XBOOM XG8T', price: 'S/ 760' },

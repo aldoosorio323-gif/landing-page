@@ -20,6 +20,81 @@ document.addEventListener('DOMContentLoaded', () => {
   if (promoTrack && promoCount) setInterval(() => setPromoSlide(promoIndex + 1), 6500);
 
   const PRODUCTS = [
+      {
+  id: 'lg-mini',
+  brand: 'LG XBOOM',
+  category: 'Portátil',
+  name: 'LG XBOOM Mini',
+  price: 'S/ 169',
+  benefits: ['5W de potencia', 'IP67 agua y polvo', 'Hasta 10h de batería'],
+  short: 'Sonido premium en formato mini. Pequeño, moderno y fácil de llevar, con sonido Signature xboom by will.i.am para el uso diario.',
+  features: [
+    'Sonido claro y balanceado de 5W',
+    'Diseño compacto y portátil',
+    'Resistencia IP67 al agua y polvo',
+    'Hasta 10 horas de reproducción',
+    'AI Sound para mejorar música y voz',
+    'Correa práctica para colgarlo fácilmente',
+    'Bluetooth 5.4, Auracast y Party Link',
+    'USB-C Audio para laptop o tablet'
+  ],
+  best: 'habitación, escritorio, cocina, baño, piscina, estudio y viajes',
+  img: 'assets/images/productos/lg-xboom-mini.png',
+  gallery: [
+  { src: 'assets/images/productos/lg-xboom-mini/01-frontal.png', label: 'Vista frontal' },
+  { src: 'assets/images/productos/lg-xboom-mini/02-correa.webp', label: 'Detalle de correa' },
+  { src: 'assets/images/productos/lg-xboom-mini/03-lateral.webp', label: 'Vista lateral' },
+  { src: 'assets/images/productos/lg-xboom-mini/04-trasera.webp', label: 'Vista trasera' }
+]
+},
+{
+  id: 'lg-rock',
+  brand: 'LG XBOOM',
+  category: 'Portátil',
+  name: 'LG XBOOM Rock',
+  price: 'S/ 199',
+  cta: 'Quiero el XBOOM Rock',
+  benefits: ['6W de potencia', 'IP67 agua y polvo', 'Hasta 10h de batería'],
+  short: 'Sonido resistente para tus aventuras. Compacto, potente y preparado para playa, camping, rutas o viajes con sonido Signature xboom by will.i.am.',
+  features: [
+    'Sonido potente de 6W',
+    'Resistencia IP67 al agua y polvo',
+    'Durabilidad Military Standard 810H',
+    'Hasta 10 horas de reproducción',
+    'AI Sound para mejorar música y voz',
+    'Correa all-mount para sujetarlo fácilmente',
+    'Bluetooth 5.4, Auracast y Party Link',
+    'USB-C Audio para conexión directa'
+  ],
+  best: 'playa, camping, bicicleta, caminatas, viajes y uso al aire libre',
+  img: 'assets/images/productos/lg-xboom-rock-rojo.png',
+  variants: [
+  {
+    id: 'rojo',
+    label: 'Rojo',
+    color: '#e52520',
+    gallery: [
+      { src: 'assets/images/productos/lg-xboom-rock/rojo/01-frontal.png', label: 'Vista frontal' },
+      { src: 'assets/images/productos/lg-xboom-rock/rojo/02-frontal-detalle.webp', label: 'Detalle frontal' },
+      { src: 'assets/images/productos/lg-xboom-rock/rojo/03-lateral.webp', label: 'Vista lateral' },
+      { src: 'assets/images/productos/lg-xboom-rock/rojo/04-trasera.webp', label: 'Vista trasera' },
+      { src: 'assets/images/productos/lg-xboom-rock/rojo/05-uso-exterior.png', label: 'Uso exterior' }
+    ]
+  },
+  {
+    id: 'negro',
+    label: 'Negro',
+    color: '#111111',
+    gallery: [
+      { src: 'assets/images/productos/lg-xboom-rock/negro/01-frontal.png', label: 'Vista frontal' },
+      { src: 'assets/images/productos/lg-xboom-rock/negro/02-frontal-detalle.webp', label: 'Detalle frontal' },
+      { src: 'assets/images/productos/lg-xboom-rock/negro/03-lateral.webp', label: 'Vista lateral' },
+      { src: 'assets/images/productos/lg-xboom-rock/negro/04-trasera.webp', label: 'Vista trasera' },
+      { src: 'assets/images/productos/lg-xboom-rock/negro/05-uso-exterior.png', label: 'Uso exterior' }
+    ]
+  }
+]
+},
     {
       id: 'lg-grab',
       brand: 'LG XBOOM',
@@ -170,15 +245,15 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'jbl-grip',
       brand: 'JBL',
       category: 'Portátil',
-      name: 'JBL Clip 5 (Grip)',
+      name: 'JBL GRIP',
       price: 'S/ 199',
-      benefits: ['7W de potencia', 'Mosquetón integrado', 'IP67 resistente'],
+      benefits: ['16W de potencia', 'Mosquetón integrado', 'IP68 resistente'],
       short: 'Parlante portátil con diseño de agarre, resistente y fácil de llevar para música en viajes, playa, piscina y aventuras.',
       features: [
-        'Potencia de 7W',
+        'Potencia de 16W',
         'Mosquetón integrado para colgarlo fácilmente',
-        'Certificación IP67 resistente al agua y polvo',
-        'Hasta 12 horas de batería',
+        'Certificación IP68 resistente al agua y polvo',
+        'Hasta 14 horas de batería',
         'Sonido JBL Pro Sound'
       ],
       best: 'viajes, trekking, playa, piscina, mochilas, bicicleta y actividades al aire libre',
@@ -369,13 +444,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!modalInfo) return;
 
     let selector = document.getElementById('modalVariantSelector');
-    if (!selector) {
-      selector = document.createElement('div');
-      selector.id = 'modalVariantSelector';
-      selector.className = 'modal-variant-selector';
-      const title = document.getElementById('modalTitle');
-      if (title) title.insertAdjacentElement('afterend', selector);
-    }
+
+if (!selector) {
+  selector = document.createElement('div');
+  selector.id = 'modalVariantSelector';
+  selector.className = 'modal-variant-selector';
+}
+
+const brand = document.getElementById('modalBrand');
+
+if (brand) {
+  brand.insertAdjacentElement('beforebegin', selector);
+} else {
+  modalInfo.prepend(selector);
+}
 
     if (!product.variants || !product.variants.length) {
       selector.innerHTML = '';
