@@ -159,19 +159,25 @@ body.modal-open .floating-wa {
 
   #productModal .modal-image,
   #productModal .modal-image.modal-gallery {
-    display: grid !important;
-    grid-template-rows: minmax(220px, 42vh) auto auto auto !important;
-    gap: 10px !important;
-    padding: 12px !important;
+    display: block !important;
+    padding: 8px 10px 10px !important;
     border-radius: 22px 22px 0 0 !important;
-    background: linear-gradient(180deg,#f7f8fb 0%,#ffffff 100%) !important;
+    background: #fff !important;
+    overflow-x: hidden !important;
   }
 
   #productModal .modal-main-image {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
     min-height: 0 !important;
-    height: 100% !important;
-    max-height: 42vh !important;
+    height: clamp(260px, 44vh, 380px) !important;
+    max-height: none !important;
+    margin: 0 !important;
     border-radius: 18px !important;
+    overflow: hidden !important;
   }
 
   #productModal .modal-main-image img#modalImg,
@@ -183,8 +189,25 @@ body.modal-open .floating-wa {
     max-height: 100% !important;
     object-fit: contain !important;
     object-position: center center !important;
-    padding: 8px !important;
+    padding: 6px !important;
     margin: 0 auto !important;
+  }
+
+  #productModal .gallery-arrow {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  #productModal .gallery-prev {
+    left: 10px !important;
+  }
+
+  #productModal .gallery-next {
+    right: 10px !important;
+  }
+
+  #productModal .modal-gallery-label {
+    margin: 10px 0 0 !important;
   }
 
   #productModal .modal-thumbnails {
@@ -194,6 +217,7 @@ body.modal-open .floating-wa {
     overflow-y: hidden !important;
     -webkit-overflow-scrolling: touch !important;
     overscroll-behavior-x: contain !important;
+    margin-top: 10px !important;
     padding: 2px 0 8px !important;
   }
 
@@ -242,6 +266,38 @@ body.modal-open .floating-wa {
     height: 46px !important;
     min-width: 46px !important;
     z-index: 30 !important;
+  }
+}
+
+#promociones .promo-carousel-wrap {
+  position: relative !important;
+}
+
+#promociones .promo-arrow {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+#promociones .promo-prev {
+  left: 18px !important;
+}
+
+#promociones .promo-next {
+  right: 18px !important;
+}
+
+@media (max-width: 760px) {
+  #promociones .promo-arrow {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  #promociones .promo-prev {
+    left: 10px !important;
+  }
+
+  #promociones .promo-next {
+    right: 10px !important;
   }
 }
 
