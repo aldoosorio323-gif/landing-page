@@ -364,6 +364,21 @@ document.addEventListener('DOMContentLoaded', () => {
   let touchStartX = 0;
   let activeVariantIndex = 0;
 
+  function resetModalScroll() {
+    window.requestAnimationFrame(() => {
+      const modalCard = document.querySelector('.modal-card');
+      if (modal) modal.scrollTop = 0;
+      if (modalCard) modalCard.scrollTop = 0;
+      if (modalThumbs) modalThumbs.scrollLeft = 0;
+    });
+  }
+
+  function resetThumbnailScroll() {
+    window.requestAnimationFrame(() => {
+      if (modalThumbs) modalThumbs.scrollLeft = 0;
+    });
+  }
+
   function getActiveVariant(product) {
     if (product && Array.isArray(product.variants) && product.variants.length) {
       return product.variants[activeVariantIndex] || product.variants[0];
@@ -483,6 +498,7 @@ if (brand) {
         renderVariantSelector(product);
         renderProductGallery(product);
         updateWhatsAppLink(product);
+        resetThumbnailScroll();
       });
     });
   }
@@ -506,6 +522,7 @@ if (brand) {
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
+    resetModalScroll();
   }
 
   function closeModal() {
