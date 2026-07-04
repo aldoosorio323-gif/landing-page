@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.head.appendChild(modalFixStyles);
 
   const finalProducts = [
+    { id: 'lg-buds-lite', name: 'LG xboom Buds Lite', price: 'S/ 169' },
     { id: 'lg-mini', name: 'LG XBOOM Mini', price: 'S/ 169', },
     { id: 'lg-rock', name: 'LG XBOOM Rock', price: 'S/ 199' },
     { id: 'lg-grab', name: 'LG XBOOM Grab', price: 'S/ 275' },
@@ -15,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: 'jbl-grip', name: 'JBL Clip 5 (Grip)', price: 'S/ 199' },
     { id: 'jbl-flip7', name: 'JBL Flip 7', price: 'S/ 349' },
     { id: 'jbl-charge6', name: 'JBL Charge 6', price: 'S/ 499' },
-    { id: 'jbl-boombox4', name: 'JBL Boombox 4', price: 'S/ 1499' }
+    { id: 'jbl-xtreme5', name: 'JBL Xtreme 5', price: 'S/ 1169' },
+   { id: 'jbl-boombox4', name: 'JBL Boombox 4', price: 'S/ 1499' }
   ];
 
   const priceById = Object.fromEntries(finalProducts.map(product => [product.id, product.price]));

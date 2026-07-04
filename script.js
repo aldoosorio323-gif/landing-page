@@ -20,6 +20,59 @@ document.addEventListener('DOMContentLoaded', () => {
   if (promoTrack && promoCount) setInterval(() => setPromoSlide(promoIndex + 1), 6500);
 
   const PRODUCTS = [
+    {
+  id: 'lg-buds-lite',
+  brand: 'LG XBOOM',
+  category: 'Audífonos',
+  name: 'LG xboom Buds Lite',
+  price: 'S/ 169',
+  benefits: ['Mild ANC', 'Bluetooth 5.4', 'Hasta 35h con estuche'],
+  short: 'Audífonos inalámbricos ligeros para el día a día, con drivers de grafeno, Bluetooth 5.4, cancelación Mild ANC y hasta 35 horas de autonomía con el estuche. Ideales para música, llamadas, estudio, oficina y movilidad diaria.',
+  features: [
+    'Drivers ligeros de grafeno para mayor claridad',
+    'Cancelación Mild ANC para reducir ruido ambiental',
+    'Bluetooth 5.4 con conexión moderna y estable',
+    'Conexión multipunto para alternar entre dispositivos compatibles',
+    'Fast Pair para emparejamiento rápido',
+    'Hasta 11.5 horas de reproducción por carga',
+    'Hasta 35 horas de autonomía con el estuche',
+    'Cuatro presets de ecualización ajustables',
+    'Diseño ligero para uso diario',
+    'Ideales para música, llamadas, estudio, oficina y movilidad diaria'
+  ],
+  best: 'estudio, oficina, llamadas, caminatas, gimnasio ligero, viajes y uso diario',
+  img: 'assets/images/productos/lg-buds-lite/negro/previa buds negro.avif',
+  variants: [
+    {
+      id: 'negro',
+      label: 'Negro',
+      color: '#111111',
+      gallery: [
+        { src: 'assets/images/productos/lg-buds-lite/negro/previa buds negro.avif', label: 'Vista previa' },
+        { src: 'assets/images/productos/lg-buds-lite/negro/frontal negro.jpeg', label: 'Vista frontal' },
+        { src: 'assets/images/productos/lg-buds-lite/negro/lateral buds negro.avif', label: 'Vista lateral' },
+        { src: 'assets/images/productos/lg-buds-lite/negro/buds negro.avif', label: 'Audífonos' },
+        { src: 'assets/images/productos/lg-buds-lite/negro/audifonos negro.avif', label: 'Detalle de audífonos' },
+        { src: 'assets/images/productos/lg-buds-lite/negro/audifonos negro 1.avif', label: 'Otra vista' },
+        { src: 'assets/images/productos/lg-buds-lite/negro/caja buds negro.avif', label: 'Empaquetado' }
+      ]
+    },
+    {
+      id: 'blanco',
+      label: 'Blanco',
+      color: '#f2f2f2',
+      gallery: [
+        { src: 'assets/images/productos/lg-buds-lite/blanco/previa buds blanco.webp', label: 'Vista previa' },
+        { src: 'assets/images/productos/lg-buds-lite/blanco/frontal blanco.avif', label: 'Vista frontal' },
+        { src: 'assets/images/productos/lg-buds-lite/blanco/lateral blanco.webp', label: 'Vista lateral' },
+        { src: 'assets/images/productos/lg-buds-lite/blanco/superior blanco.avif', label: 'Vista superior' },
+        { src: 'assets/images/productos/lg-buds-lite/blanco/muestra buds blanco.webp', label: 'Muestra del producto' },
+        { src: 'assets/images/productos/lg-buds-lite/blanco/audifonos blancos.webp', label: 'Audífonos' },
+        { src: 'assets/images/productos/lg-buds-lite/blanco/audifonos 2 blanco.webp', label: 'Otra vista' }
+      ]
+    }
+  ]
+},
       {
   id: 'lg-mini',
   brand: 'LG XBOOM',
@@ -320,31 +373,105 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      id: 'jbl-boombox4',
-      brand: 'JBL',
-      category: 'Fiesta',
-      name: 'JBL Boombox 4',
-      price: 'S/ 1499',
-      benefits: ['180W de potencia', 'Graves profundos', 'Sonido premium'],
-      short: 'Sonido masivo, graves profundos y presencia premium para fiestas, eventos, terrazas y aventuras al aire libre.',
-      features: [
-        'Potencia de 180W',
-        'Graves extremadamente profundos',
-        'Certificación IP67 resistente al agua y polvo',
-        'Batería de larga duración',
-        'Sonido premium para espacios grandes y eventos'
-      ],
-      best: 'fiestas, eventos, terrazas, camping, playa y clientes que buscan el sonido más potente',
-      img: 'assets/images/productos/jbl-boombox-4.webp',
+  id: 'jbl-xtreme5',
+  brand: 'JBL',
+  category: 'Portátil premium',
+  name: 'JBL Xtreme 5',
+  price: 'S/ 1169',
+  benefits: ['Hasta 130W de potencia', 'IP68 agua y polvo', 'Hasta 24h de batería'],
+  short: 'Parlante portátil premium con potencia para exteriores, bajos profundos, luces personalizables y resistencia IP68. Ideal para reuniones grandes, playa, piscina, terrazas y fiestas donde necesitas sonido fuerte y presencia.',
+  features: [
+    'Hasta 130W de potencia conectado a corriente',
+    'Hasta 90W de potencia usando batería',
+    'Sonido potente con graves profundos y mayor claridad',
+    'Certificación IP68 resistente al agua y polvo',
+    'Diseño robusto y resistente para exteriores',
+    'Hasta 24 horas de reproducción',
+    'Hasta 28 horas con PlayTime Boost',
+    'Bluetooth 6.0 y Auracast para conexión con parlantes compatibles',
+    'Luces laterales personalizables desde JBL Portable app',
+    'Ecualizador personalizable desde la app JBL Portable',
+    'Audio por USB-C compatible',
+    'Función powerbank para cargar tu celular',
+    'Correa de transporte para llevarlo con mayor comodidad'
+  ],
+  best: 'fiestas, reuniones grandes, playa, piscina, terrazas, viajes y exteriores donde necesitas potencia',
+  img: 'assets/images/productos/jbl-xtreme-5/negro/01-vista-previa-negro.png',
+  variants: [
+    {
+      id: 'negro',
+      label: 'Negro',
+      color: '#111111',
       gallery: [
-        { src: 'assets/images/productos/jbl-boombox-4/01-frontal.webp', label: 'Vista frontal' },
-        { src: 'assets/images/productos/jbl-boombox-4/02-lateral.webp', label: 'Vista lateral' },
-        { src: 'assets/images/productos/jbl-boombox-4/03-superior.webp', label: 'Vista superior' },
-        { src: 'assets/images/productos/jbl-boombox-4/04-trasera.webp', label: 'Vista trasera' },
-        { src: 'assets/images/productos/jbl-boombox-4/05-inferior.webp', label: 'Vista inferior' },
-        { src: 'assets/images/productos/jbl-boombox-4/06-uso-exterior.webp', label: 'Uso exterior' }
+        { src: 'assets/images/productos/jbl-xtreme-5/negro/01-vista-previa-negro.png', label: 'Vista previa' },
+        { src: 'assets/images/productos/jbl-xtreme-5/negro/02-frontal-negro.png', label: 'Vista frontal' },
+        { src: 'assets/images/productos/jbl-xtreme-5/negro/03-lateral-negro.png', label: 'Vista lateral' },
+        { src: 'assets/images/productos/jbl-xtreme-5/negro/04-superior-negro.png', label: 'Vista superior' },
+        { src: 'assets/images/productos/jbl-xtreme-5/negro/05-trasera-negro.png', label: 'Vista trasera' },
+        { src: 'assets/images/productos/jbl-xtreme-5/negro/06-correa-negro.png', label: 'Correa' },
+        { src: 'assets/images/productos/jbl-xtreme-5/negro/07-trasera-bateria-negro.png', label: 'Trasera y batería' }
+      ]
+    },
+    {
+      id: 'azul',
+      label: 'Azul',
+      color: '#1f5eff',
+      gallery: [
+        { src: 'assets/images/productos/jbl-xtreme-5/azul/01-vista-previa-azul.png', label: 'Vista previa' },
+        { src: 'assets/images/productos/jbl-xtreme-5/azul/02-frontal-azul.png', label: 'Vista frontal' },
+        { src: 'assets/images/productos/jbl-xtreme-5/azul/03-lateral-azul.png', label: 'Vista lateral' },
+        { src: 'assets/images/productos/jbl-xtreme-5/azul/04-superior-azul.png', label: 'Vista superior' },
+        { src: 'assets/images/productos/jbl-xtreme-5/azul/05-trasera-azul.png', label: 'Vista trasera' },
+        { src: 'assets/images/productos/jbl-xtreme-5/azul/06-correa-azul.png', label: 'Correa' },
+        { src: 'assets/images/productos/jbl-xtreme-5/azul/07-trasera-bateria-azul.png', label: 'Trasera y batería' }
+      ]
+    },
+    {
+      id: 'camuflado',
+      label: 'Camuflado',
+      color: '#5d6542',
+      gallery: [
+        { src: 'assets/images/productos/jbl-xtreme-5/camuflado/01-vista-previa-camuflado.png', label: 'Vista previa' },
+        { src: 'assets/images/productos/jbl-xtreme-5/camuflado/02-frontal-camuflado.png', label: 'Vista frontal' },
+        { src: 'assets/images/productos/jbl-xtreme-5/camuflado/03-lateral-camuflado.png', label: 'Vista lateral' },
+        { src: 'assets/images/productos/jbl-xtreme-5/camuflado/04-superior-camuflado.png', label: 'Vista superior' },
+        { src: 'assets/images/productos/jbl-xtreme-5/camuflado/05-trasera-camuflado.png', label: 'Vista trasera' },
+        { src: 'assets/images/productos/jbl-xtreme-5/camuflado/06-correa-camuflado.png', label: 'Correa' },
+        { src: 'assets/images/productos/jbl-xtreme-5/camuflado/07-trasera-bateria-camuflado.png', label: 'Trasera y batería' }
       ]
     }
+  ]
+},
+    {
+  id: 'jbl-boombox4',
+  brand: 'JBL',
+  category: 'Fiesta',
+  name: 'JBL Boombox 4',
+  price: 'S/ 1499',
+  benefits: ['Sonido potente JBL', 'IP68 agua y polvo', 'Hasta 34 horas de batería'],
+  short: 'Parlante portátil de alta potencia para fiestas, reuniones grandes, playa, piscina y exteriores. Sonido JBL potente, graves profundos, batería de larga duración y diseño resistente para llevar la música a otro nivel.',
+  features: [
+    'Sonido JBL potente para fiestas y exteriores',
+    'Graves profundos con gran presencia',
+    'Certificación IP68 resistente al agua y polvo',
+    'Hasta 34 horas de reproduccion',
+    'Diseño robusto y portátil con asa integrada',
+    'Ideal para reuniones grandes, playa, piscina y terrazas',
+    'Conectividad Bluetooth para uso diario',
+    'Construcción resistente para uso al aire libre'
+  ],
+  best: 'fiestas, reuniones grandes, playa, piscina, terrazas, viajes y usuarios que buscan máxima potencia',
+  img: 'assets/images/productos/jbl-boombox-4/01-vista-previa.png',
+  gallery: [
+    { src: 'assets/images/productos/jbl-boombox-4/01-vista-previa.png', label: 'Vista previa' },
+    { src: 'assets/images/productos/jbl-boombox-4/01-frontal.png', label: 'Vista frontal' },
+    { src: 'assets/images/productos/jbl-boombox-4/03-lateral.png', label: 'Vista lateral' },
+    { src: 'assets/images/productos/jbl-boombox-4/04-trasera.png', label: 'Vista trasera' },
+    { src: 'assets/images/productos/jbl-boombox-4/05-superior.png', label: 'Vista superior' },
+    { src: 'assets/images/productos/jbl-boombox-4/06-inferior.png', label: 'Vista inferior' },
+    { src: 'assets/images/productos/jbl-boombox-4/07-empaquetado.png', label: 'Empaquetado' }
+  ]
+}
   ];
 
   const modal = document.getElementById('productModal');
