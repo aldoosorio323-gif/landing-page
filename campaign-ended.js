@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const modalFixStyles = document.createElement('link');
+  modalFixStyles.rel = 'stylesheet';
+  modalFixStyles.href = 'modal-mobile-fix.css?v=20260704-scroll-2';
+  document.head.appendChild(modalFixStyles);
+
   const finalProducts = [
     { id: 'lg-mini', name: 'LG XBOOM Mini', price: 'S/ 169', },
     { id: 'lg-rock', name: 'LG XBOOM Rock', price: 'S/ 199' },
