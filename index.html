@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="es">
 <head>
@@ -6,6 +6,7 @@
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <title>JOR STORE | Parlantes LG XBOOM y JBL originales</title>
 <meta content="Landing page de JOR STORE para vender parlantes LG XBOOM y JBL con asesoría por WhatsApp." name="description"/>
+<link rel="icon" type="image/jpeg" href="assets/images/logos/logo-jor-store.jpeg">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -33,7 +34,7 @@
   <div class="hero-sales-content">
     <p class="hero-sales-kicker">JOR STORE · PARLANTES ORIGINALES</p>
     <h1>El sonido<br><span>que te falta</span></h1>
-    <a class="hero-catalog-btn" href="#catalogo" aria-label="Ver catálogo de parlantes">Ver catálogo de parlantes</a>
+    <a class="hero-catalog-btn" href="#catalogo" aria-label="Ver catálogo de productos">Ver catálogo de productos</a>
   </div>
 </section>
 <section class="promo-carousel-section" id="promociones">
@@ -102,7 +103,13 @@
 <span id="catalogo" class="catalog-anchor" aria-hidden="true"></span>
 <section id="productos">
 
- <div class="section-head"><p class="eyebrow">Catálogo interactivo</p><h2>Elige tu parlante ideal</h2></div>
+ <div class="section-head"><p class="eyebrow">Catálogo interactivo</p><h2>Elige tu equipo ideal</h2></div>
+<div class="catalog-brand-filter" role="group" aria-label="Filtrar catálogo por marca">
+  <button class="brand-filter-btn all active" type="button" data-brand-filter="all" aria-pressed="true">Todos</button>
+  <button class="brand-filter-btn lg" type="button" data-brand-filter="LG XBOOM" aria-pressed="false">LG XBOOM</button>
+  <button class="brand-filter-btn jbl" type="button" data-brand-filter="JBL" aria-pressed="false">JBL</button>
+</div>
+<p class="catalog-filter-status" id="catalogFilterStatus" aria-live="polite">Mostrando 13 productos disponibles.</p>
 <div class="product-grid" id="productGrid">
   <article aria-label="Ver detalles de LG xboom Buds Lite" class="product-card" data-id="lg-buds-lite" role="button" tabindex="0">
   <div class="badge-row"><span class="badge brand">LG XBOOM</span><span class="badge stock">En stock</span></div>
@@ -236,7 +243,7 @@
       <h2>Parlantes originales, asesoría honesta y compra segura</h2>
       <p>En JOR STORE te ayudamos a elegir el parlante ideal según tu uso: casa, reuniones, playa, viajes o eventos. Trabajamos con modelos revisados, listos para entregar y con orientación personalizada antes de tu compra.</p>
       <div class="about-cta-row">
-        <a class="about-catalog-btn" href="#catalogo">Ver catálogo de parlantes</a>
+        <a class="about-catalog-btn" href="#catalogo">Ver catálogo de productos</a>
         <span class="about-mini-trust">Atención directa por WhatsApp</span>
       </div>
       <div class="about-trust-grid">
@@ -266,6 +273,80 @@
       <img alt="LG XBOOM y JBL visibles" src="assets/images/secciones/lg-xboom-jbl-visibles.jpeg">
       <div class="about-visual-badge"><span></span> Modelos revisados y listos para entregar</div>
     </div>
+</section>
+<section id="clientes-reales" class="real-clients-section" aria-labelledby="clientes-reales-title">
+  <div class="real-clients-inner">
+    <div class="section-head real-clients-head">
+      <p class="eyebrow">Clientes reales</p>
+      <h2 id="clientes-reales-title">Personas que ya confiaron en JOR STORE</h2>
+      <p>Entregas reales, asesoría directa y productos originales listos para disfrutar en casa, reuniones, viajes o eventos.</p>
+    </div>
+
+    <div class="real-carousel-stack">
+      <article class="real-carousel" data-real-carousel aria-labelledby="real-carousel-entregas">
+        <div class="real-carousel-top">
+          <h3 id="real-carousel-entregas">Entregas reales</h3>
+          <p>Clientes atendidos por JOR STORE y entregas coordinadas en Lima.</p>
+        </div>
+        <div class="real-carousel-frame">
+          <button class="real-carousel-arrow real-carousel-prev" type="button" aria-label="Ver fotos anteriores de entregas reales">‹</button>
+          <div class="real-carousel-track" tabindex="0" aria-label="Galería de entregas reales">
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/1.jpeg" alt="Entrega real de JOR STORE 1" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/2.jpeg" alt="Entrega real de JOR STORE 2" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/3.jpeg" alt="Entrega real de JOR STORE 3" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/4.jpeg" alt="Entrega real de JOR STORE 4" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/5.jpeg" alt="Entrega real de JOR STORE 5" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/6.jpeg" alt="Entrega real de JOR STORE 6" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/7.jpeg" alt="Entrega real de JOR STORE 7" loading="lazy" decoding="async"></figure>
+          </div>
+          <button class="real-carousel-arrow real-carousel-next" type="button" aria-label="Ver más fotos de entregas reales">›</button>
+        </div>
+        <div class="real-carousel-dots" aria-label="Progreso de entregas reales"></div>
+      </article>
+
+      <article class="real-carousel" data-real-carousel aria-labelledby="real-carousel-experiencia">
+        <div class="real-carousel-top">
+          <h3 id="real-carousel-experiencia">Experiencia de compra</h3>
+          <p>Asesoría directa, coordinación simple y atención por WhatsApp.</p>
+        </div>
+        <div class="real-carousel-frame">
+          <button class="real-carousel-arrow real-carousel-prev" type="button" aria-label="Ver fotos anteriores de experiencia de compra">‹</button>
+          <div class="real-carousel-track" tabindex="0" aria-label="Galería de experiencia de compra">
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/8.jpeg" alt="Experiencia de compra en JOR STORE 1" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/9.jpeg" alt="Experiencia de compra en JOR STORE 2" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/10.jpeg" alt="Experiencia de compra en JOR STORE 3" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/11.jpeg" alt="Experiencia de compra en JOR STORE 4" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/12.jpeg" alt="Experiencia de compra en JOR STORE 5" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/13.jpeg" alt="Experiencia de compra en JOR STORE 6" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/14.jpeg" alt="Experiencia de compra en JOR STORE 7" loading="lazy" decoding="async"></figure>
+          </div>
+          <button class="real-carousel-arrow real-carousel-next" type="button" aria-label="Ver más fotos de experiencia de compra">›</button>
+        </div>
+        <div class="real-carousel-dots" aria-label="Progreso de experiencia de compra"></div>
+      </article>
+
+      <article class="real-carousel" data-real-carousel aria-labelledby="real-carousel-accion">
+        <div class="real-carousel-top">
+          <h3 id="real-carousel-accion">Parlantes en acción</h3>
+          <p>Momentos reales con productos originales listos para disfrutar.</p>
+        </div>
+        <div class="real-carousel-frame">
+          <button class="real-carousel-arrow real-carousel-prev" type="button" aria-label="Ver fotos anteriores de parlantes en acción">‹</button>
+          <div class="real-carousel-track" tabindex="0" aria-label="Galería de parlantes en acción">
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/15.jpeg" alt="Cliente real de JOR STORE 1" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/16.jpeg" alt="Cliente real de JOR STORE 2" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/17.jpeg" alt="Cliente real de JOR STORE 3" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/18.jpeg" alt="Cliente real de JOR STORE 4" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/19.jpeg" alt="Cliente real de JOR STORE 5" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/20.jpeg" alt="Cliente real de JOR STORE 6" loading="lazy" decoding="async"></figure>
+          <figure class="real-client-card"><img src="assets/images/Clientes%20reales/21.jpeg" alt="Cliente real de JOR STORE 7" loading="lazy" decoding="async"></figure>
+          </div>
+          <button class="real-carousel-arrow real-carousel-next" type="button" aria-label="Ver más fotos de parlantes en acción">›</button>
+        </div>
+        <div class="real-carousel-dots" aria-label="Progreso de parlantes en acción"></div>
+      </article>
+    </div>
+  </div>
 </section>
 <section id="contacto">
   <div class="section-head">
@@ -387,3 +468,5 @@
   <script src="campaign-ended.js?v=20260704-modal-scroll"></script>
 </body>
 </html>
+
+

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
   const promoTrack = document.getElementById('promoTrack');
   const promoDots = Array.from(document.querySelectorAll('#promoDots .promo-dot'));
   const promoPrev = document.querySelector('.promo-prev');
@@ -18,6 +18,114 @@ document.addEventListener('DOMContentLoaded', () => {
   if (promoPrev) promoPrev.addEventListener('click', () => setPromoSlide(promoIndex - 1));
   if (promoNext) promoNext.addEventListener('click', () => setPromoSlide(promoIndex + 1));
   if (promoTrack && promoCount) setInterval(() => setPromoSlide(promoIndex + 1), 6500);
+
+  function initRealClientCarousels() {
+    document.querySelectorAll('[data-real-carousel]').forEach(carousel => {
+      const track = carousel.querySelector('.real-carousel-track');
+      const cards = Array.from(carousel.querySelectorAll('.real-client-card'));
+      const prev = carousel.querySelector('.real-carousel-prev');
+      const next = carousel.querySelector('.real-carousel-next');
+      const dotsWrap = carousel.querySelector('.real-carousel-dots');
+      let scrollFrame = 0;
+      let pagePositions = [];
+
+      if (!track || !cards.length) return;
+
+      function buildPages() {
+        const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+        const firstCard = cards[0];
+        const cardWidth = firstCard ? firstCard.getBoundingClientRect().width : track.clientWidth;
+        const styles = window.getComputedStyle(track);
+        const gap = parseFloat(styles.columnGap || styles.gap || '0') || 0;
+        const step = Math.max(1, cardWidth + gap);
+        const visibleCards = Math.max(1, Math.floor((track.clientWidth + gap + 2) / step));
+        const pageCount = Math.max(1, Math.ceil(cards.length / visibleCards));
+
+        pagePositions = Array.from({ length: pageCount }, (_, index) => {
+          const cardIndex = Math.min(cards.length - 1, index * visibleCards);
+          return Math.min(maxScroll, Math.round(cards[cardIndex].offsetLeft - track.offsetLeft));
+        }).filter((position, index, positions) => index === 0 || Math.abs(position - positions[index - 1]) > 4);
+
+        const finalPageStart = Math.max(0, cards.length - visibleCards);
+        const finalPosition = Math.min(maxScroll, Math.round(cards[finalPageStart].offsetLeft - track.offsetLeft));
+        if (Math.abs(finalPosition - pagePositions[pagePositions.length - 1]) > 4) {
+          pagePositions.push(finalPosition);
+        }
+        pagePositions = [...new Set(pagePositions.map(position => Math.min(maxScroll, Math.max(0, Math.round(position)))) )];
+
+        if (dotsWrap) {
+          dotsWrap.innerHTML = pagePositions.map((_, index) => (
+            `<button class="real-carousel-dot${index === 0 ? ' active' : ''}" type="button" aria-label="Ver página ${index + 1}"></button>`
+          )).join('');
+          dotsWrap.querySelectorAll('.real-carousel-dot').forEach((dot, index) => {
+            dot.addEventListener('click', () => scrollToPage(index));
+          });
+        }
+
+        updateControls();
+      }
+
+      function getActivePageIndex() {
+        if (!pagePositions.length) return 0;
+        return pagePositions.reduce((bestIndex, position, index) => (
+          Math.abs(track.scrollLeft - position) < Math.abs(track.scrollLeft - pagePositions[bestIndex]) ? index : bestIndex
+        ), 0);
+      }
+
+      function updateControls() {
+        const activeIndex = getActivePageIndex();
+        const isStart = activeIndex <= 0;
+        const isEnd = activeIndex >= pagePositions.length - 1;
+
+        if (prev) {
+          prev.disabled = isStart;
+          prev.setAttribute('aria-disabled', isStart ? 'true' : 'false');
+        }
+
+        if (next) {
+          next.disabled = isEnd;
+          next.setAttribute('aria-disabled', isEnd ? 'true' : 'false');
+        }
+
+        if (dotsWrap) {
+          dotsWrap.querySelectorAll('.real-carousel-dot').forEach((dot, index) => {
+            dot.classList.toggle('active', index === activeIndex);
+          });
+        }
+      }
+
+      function scrollToPage(index) {
+        if (!pagePositions.length) buildPages();
+        const nextIndex = Math.min(Math.max(index, 0), pagePositions.length - 1);
+        track.scrollTo({ left: pagePositions[nextIndex], behavior: 'smooth' });
+      }
+
+      function movePage(direction) {
+        scrollToPage(getActivePageIndex() + direction);
+      }
+
+      if (prev) prev.addEventListener('click', () => movePage(-1));
+      if (next) next.addEventListener('click', () => movePage(1));
+
+      track.addEventListener('keydown', event => {
+        if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+        event.preventDefault();
+        movePage(event.key === 'ArrowRight' ? 1 : -1);
+      });
+
+      track.addEventListener('scroll', () => {
+        window.cancelAnimationFrame(scrollFrame);
+        scrollFrame = window.requestAnimationFrame(updateControls);
+      }, { passive: true });
+
+      window.addEventListener('resize', () => {
+        window.cancelAnimationFrame(scrollFrame);
+        scrollFrame = window.requestAnimationFrame(buildPages);
+      });
+
+      buildPages();
+    });
+  }
 
   const PRODUCTS = [
     {
@@ -441,8 +549,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     }
   ]
-},
-    {
+},    {
   id: 'jbl-boombox4',
   brand: 'JBL',
   category: 'Fiesta',
@@ -484,6 +591,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalPrevImage = document.getElementById('modalPrevImage');
   const modalNextImage = document.getElementById('modalNextImage');
   const productCards = Array.from(document.querySelectorAll('.product-card'));
+  const brandFilterButtons = Array.from(document.querySelectorAll('[data-brand-filter]'));
+  const catalogFilterStatus = document.getElementById('catalogFilterStatus');
 
   let currentGallery = [];
   let currentGalleryIndex = 0;
@@ -690,6 +799,36 @@ if (brand) {
     });
   }
 
+  function applyBrandFilter(brand) {
+    const selectedBrand = brand || 'all';
+    let visibleCount = 0;
+
+    productCards.forEach(card => {
+      const product = PRODUCTS.find(item => item.id === card.dataset.id);
+      if (!product) return;
+      const isVisible = selectedBrand === 'all' || product.brand === selectedBrand;
+      card.dataset.brand = product.brand;
+      card.hidden = !isVisible;
+      card.classList.toggle('is-filtered-out', !isVisible);
+      card.setAttribute('aria-hidden', isVisible ? 'false' : 'true');
+      if (isVisible) visibleCount += 1;
+    });
+
+    brandFilterButtons.forEach(button => {
+      const isActive = button.dataset.brandFilter === selectedBrand;
+      button.classList.toggle('active', isActive);
+      button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+
+    if (catalogFilterStatus) {
+      if (selectedBrand === 'all') {
+        catalogFilterStatus.textContent = `Mostrando ${visibleCount} productos disponibles.`;
+      } else {
+        catalogFilterStatus.textContent = `Mostrando ${visibleCount} productos ${selectedBrand}.`;
+      }
+    }
+  }
+
   document.addEventListener('click', event => {
     const button = event.target.closest('.details-btn');
     if (button) {
@@ -704,7 +843,18 @@ if (brand) {
     if (card) openProduct(card.dataset.id);
   });
 
+  brandFilterButtons.forEach(button => {
+    button.addEventListener('click', () => applyBrandFilter(button.dataset.brandFilter));
+    button.addEventListener('keydown', event => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      applyBrandFilter(button.dataset.brandFilter);
+    });
+  });
+
+  initRealClientCarousels();
   updateProductCards();
+  applyBrandFilter('all');
 
   if (modalClose) modalClose.addEventListener('click', closeModal);
   if (modalBack) modalBack.addEventListener('click', event => {
@@ -769,3 +919,9 @@ if (brand) {
     }
   });
 });
+
+
+
+
+
+
