@@ -1,4 +1,18 @@
 ﻿document.addEventListener('DOMContentLoaded', () => {
+  const WHATSAPP_NUMBER = '51925789830';
+  const PROMO_CAMPAIGN = {
+    code: 'JORPE',
+    campaign: 'Fiestas Patrias Perú',
+    productId: 'jbl-go4',
+    productName: 'JBL Go 4',
+    normalPrice: 'S/ 129',
+    promoPrice: 'S/ 119',
+    discount: 'S/ 10',
+    expiresAt: '2026-07-31T23:59:59-05:00',
+    expiresText: 'Válido hasta el 31 de julio',
+    unlimitedDuringCampaign: true
+  };
+
   const promoTrack = document.getElementById('promoTrack');
   const promoDots = Array.from(document.querySelectorAll('#promoDots .promo-dot'));
   const promoPrev = document.querySelector('.promo-prev');
@@ -593,10 +607,26 @@
   const productCards = Array.from(document.querySelectorAll('.product-card'));
   const brandFilterButtons = Array.from(document.querySelectorAll('[data-brand-filter]'));
   const catalogFilterStatus = document.getElementById('catalogFilterStatus');
+  const promoCodeForm = document.getElementById('promoCodeForm');
+  const promoCodeInput = document.getElementById('promoCodeInput');
+  const promoCodeFeedback = document.getElementById('promoCodeFeedback');
+  const promoModal = document.getElementById('promoProductModal');
+  const promoModalClose = document.getElementById('promoModalClose');
+  const promoModalBack = document.getElementById('promoModalBack');
+  const promoModalImg = document.getElementById('promoModalImg');
+  const promoModalThumbs = document.getElementById('promoModalThumbs');
+  const promoModalGalleryLabel = document.getElementById('promoModalGalleryLabel');
+  const promoModalMainImage = document.getElementById('promoModalMainImage');
+  const promoModalPrevImage = document.getElementById('promoModalPrevImage');
+  const promoModalNextImage = document.getElementById('promoModalNextImage');
+  const promoModalWhatsApp = document.getElementById('promoModalWhatsApp');
 
   let currentGallery = [];
   let currentGalleryIndex = 0;
   let currentGalleryProductName = '';
+  let promoGallery = [];
+  let promoGalleryIndex = 0;
+  let promoTouchStartX = 0;
   let touchStartX = 0;
   let activeVariantIndex = 0;
 
@@ -624,6 +654,13 @@
 
   function getActiveGallery(product) {
     const variant = getActiveVariant(product);
+    if (variant && Array.isArray(variant.gallery) && variant.gallery.length) return variant.gallery;
+    if (product && Array.isArray(product.gallery) && product.gallery.length) return product.gallery;
+    return [{ src: product?.img || '', label: 'Vista principal' }];
+  }
+
+  function getDefaultProductGallery(product) {
+    const variant = product?.variants?.[0];
     if (variant && Array.isArray(variant.gallery) && variant.gallery.length) return variant.gallery;
     if (product && Array.isArray(product.gallery) && product.gallery.length) return product.gallery;
     return [{ src: product?.img || '', label: 'Vista principal' }];
@@ -657,7 +694,128 @@
     const variant = getActiveVariant(product);
     const colorText = variant ? ` color ${variant.label}` : '';
     const msg = encodeURIComponent(`Hola JOR STORE, quiero información sobre ${product.name}${colorText} (${product.price})`);
-    wa.href = `https://wa.me/51925789830?text=${msg}`;
+    wa.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+  }
+
+  function normalizePromoCode(value) {
+    return String(value || '').trim().toUpperCase();
+  }
+
+  function isPromoExpired(campaign = PROMO_CAMPAIGN) {
+    return Date.now() > new Date(campaign.expiresAt).getTime();
+  }
+
+  function buildPromoWhatsAppUrl(campaign = PROMO_CAMPAIGN) {
+    const msg = `Hola JOR STORE, quiero comprar el ${campaign.productName} usando el código promocional ${campaign.code}. Precio promocional: ${campaign.promoPrice}. Promoción Fiestas Patrias válida hasta el 31 de julio.`;
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+  }
+
+  function setPromoFeedback(type, message) {
+    if (!promoCodeFeedback) return;
+    promoCodeFeedback.textContent = message;
+    promoCodeFeedback.className = `promo-code-feedback ${type ? `is-${type}` : ''}`.trim();
+  }
+
+  function setPromoGalleryImage(index) {
+    if (!promoModalImg || !promoGallery.length) return;
+    promoGalleryIndex = (index + promoGallery.length) % promoGallery.length;
+    const item = promoGallery[promoGalleryIndex];
+    promoModalImg.style.opacity = '0';
+    promoModalImg.style.transform = 'scale(.985)';
+    window.setTimeout(() => {
+      promoModalImg.src = item.src;
+      promoModalImg.alt = `${PROMO_CAMPAIGN.productName} - ${item.label}`;
+      if (promoModalGalleryLabel) promoModalGalleryLabel.textContent = item.label;
+      if (promoModalThumbs) {
+        promoModalThumbs.querySelectorAll('.gallery-thumb').forEach((thumb, thumbIndex) => {
+          const isActive = thumbIndex === promoGalleryIndex;
+          thumb.classList.toggle('active', isActive);
+          thumb.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+      }
+      promoModalImg.style.opacity = '1';
+      promoModalImg.style.transform = 'scale(1)';
+    }, 90);
+  }
+
+  function renderPromoGallery(product) {
+    promoGallery = getDefaultProductGallery(product);
+    promoGalleryIndex = 0;
+
+    if (promoModalThumbs) {
+      promoModalThumbs.innerHTML = promoGallery.map((item, index) => `
+        <button class="gallery-thumb${index === 0 ? ' active' : ''}" type="button" aria-label="Ver ${item.label}" aria-selected="${index === 0 ? 'true' : 'false'}">
+          <img src="${item.src}" alt="${item.label}" loading="lazy">
+          <span>${item.label}</span>
+        </button>
+      `).join('');
+
+      promoModalThumbs.querySelectorAll('.gallery-thumb').forEach((thumb, index) => {
+        thumb.addEventListener('click', event => {
+          event.preventDefault();
+          event.stopPropagation();
+          setPromoGalleryImage(index);
+        });
+      });
+    }
+
+    promoGallery.slice(1).forEach(item => {
+      const preload = new Image();
+      preload.src = item.src;
+    });
+
+    setPromoGalleryImage(0);
+  }
+
+  function openPromoModal(campaign = PROMO_CAMPAIGN) {
+    const product = PRODUCTS.find(item => item.id === campaign.productId);
+    if (!promoModal || !product) return;
+
+    renderPromoGallery(product);
+    if (promoModalWhatsApp) promoModalWhatsApp.href = buildPromoWhatsAppUrl(campaign);
+
+    promoModal.classList.add('open');
+    promoModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    window.requestAnimationFrame(() => {
+      promoModal.scrollTop = 0;
+      promoModal.querySelector('.promo-modal-card')?.scrollTo({ top: 0, left: 0 });
+      promoModalClose?.focus();
+    });
+  }
+
+  function closePromoModal() {
+    if (!promoModal) return;
+    promoModal.classList.remove('open');
+    promoModal.setAttribute('aria-hidden', 'true');
+    if (!modal || !modal.classList.contains('open')) document.body.classList.remove('modal-open');
+  }
+
+  function initPromoCodeCampaign() {
+    if (!promoCodeForm || !promoCodeInput) return;
+
+    promoCodeInput.addEventListener('input', () => {
+      if (promoCodeFeedback) setPromoFeedback('', '');
+    });
+
+    promoCodeForm.addEventListener('submit', event => {
+      event.preventDefault();
+      const enteredCode = normalizePromoCode(promoCodeInput.value);
+      promoCodeInput.value = enteredCode;
+
+      if (enteredCode !== PROMO_CAMPAIGN.code) {
+        setPromoFeedback('error', 'Código inválido. Revisa que esté escrito correctamente e inténtalo otra vez.');
+        return;
+      }
+
+      if (isPromoExpired(PROMO_CAMPAIGN)) {
+        setPromoFeedback('expired', 'Esta promoción ya venció. La campaña fue válida hasta el 31 de julio a las 23:59, hora Perú.');
+        return;
+      }
+
+      setPromoFeedback('success', 'Código aplicado. Tu promoción exclusiva está lista.');
+      openPromoModal(PROMO_CAMPAIGN);
+    });
   }
 
   function renderProductGallery(product) {
@@ -765,7 +923,7 @@ if (brand) {
     if (!modal) return;
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('modal-open');
+    if (!promoModal || !promoModal.classList.contains('open')) document.body.classList.remove('modal-open');
   }
 
   function updateProductCards() {
@@ -853,6 +1011,7 @@ if (brand) {
   });
 
   initRealClientCarousels();
+  initPromoCodeCampaign();
   updateProductCards();
   applyBrandFilter('all');
 
@@ -861,6 +1020,8 @@ if (brand) {
     event.preventDefault();
     closeModal();
   });
+  if (promoModalClose) promoModalClose.addEventListener('click', closePromoModal);
+  if (promoModalBack) promoModalBack.addEventListener('click', closePromoModal);
 
   if (modalPrevImage) {
     modalPrevImage.addEventListener('click', event => {
@@ -878,6 +1039,22 @@ if (brand) {
     });
   }
 
+  if (promoModalPrevImage) {
+    promoModalPrevImage.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      setPromoGalleryImage(promoGalleryIndex - 1);
+    });
+  }
+
+  if (promoModalNextImage) {
+    promoModalNextImage.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      setPromoGalleryImage(promoGalleryIndex + 1);
+    });
+  }
+
   if (modalMainImage) {
     modalMainImage.addEventListener('touchstart', event => {
       touchStartX = event.changedTouches[0].clientX;
@@ -888,6 +1065,19 @@ if (brand) {
       const distance = touchEndX - touchStartX;
       if (Math.abs(distance) < 42) return;
       setGalleryImage(distance > 0 ? currentGalleryIndex - 1 : currentGalleryIndex + 1);
+    }, { passive: true });
+  }
+
+  if (promoModalMainImage) {
+    promoModalMainImage.addEventListener('touchstart', event => {
+      promoTouchStartX = event.changedTouches[0].clientX;
+    }, { passive: true });
+
+    promoModalMainImage.addEventListener('touchend', event => {
+      const touchEndX = event.changedTouches[0].clientX;
+      const distance = touchEndX - promoTouchStartX;
+      if (Math.abs(distance) < 42) return;
+      setPromoGalleryImage(distance > 0 ? promoGalleryIndex - 1 : promoGalleryIndex + 1);
     }, { passive: true });
   }
 
@@ -904,8 +1094,33 @@ if (brand) {
     if (event.target === modal) closeModal();
   });
 
+  if (promoModal) promoModal.addEventListener('click', event => {
+    if (event.target === promoModal) closePromoModal();
+  });
+
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') closeModal();
+    const isPromoModalOpen = promoModal?.classList.contains('open');
+    const isProductModalOpen = modal?.classList.contains('open');
+
+    if (event.key === 'Escape') {
+      if (isPromoModalOpen) closePromoModal();
+      if (isProductModalOpen) closeModal();
+      return;
+    }
+
+    if (isPromoModalOpen) {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        setPromoGalleryImage(promoGalleryIndex - 1);
+      }
+
+      if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        setPromoGalleryImage(promoGalleryIndex + 1);
+      }
+      return;
+    }
+
     if (!modal || !modal.classList.contains('open')) return;
 
     if (event.key === 'ArrowLeft') {
