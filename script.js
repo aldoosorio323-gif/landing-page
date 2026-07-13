@@ -5,9 +5,9 @@
     campaign: 'Fiestas Patrias Perú',
     productId: 'jbl-go4',
     productName: 'JBL Go 4',
-    normalPrice: 'S/ 129',
+    normalPrice: 'S/ 159',
     promoPrice: 'S/ 119',
-    discount: 'S/ 10',
+    discount: 'S/ 40',
     expiresAt: '2026-07-31T23:59:59-05:00',
     expiresText: 'Válido hasta el 31 de julio',
     unlimitedDuringCampaign: true
@@ -379,7 +379,7 @@
       brand: 'JBL',
       category: 'Portátil',
       name: 'JBL Go 4',
-      price: 'S/ 129',
+      price: 'S/ 159',
       benefits: ['JBL Pro Sound', 'IP67 agua y polvo', 'Hasta 7h de batería'],
       short: 'Compacto, resistente y fácil de llevar. Disponible en colores para elegir el estilo que más va contigo.',
       features: [
@@ -421,7 +421,7 @@
       brand: 'JBL',
       category: 'Portátil',
       name: 'JBL GRIP',
-      price: 'S/ 199',
+      price: 'S/ 250',
       benefits: ['16W de potencia', 'Mosquetón integrado', 'IP68 resistente'],
       short: 'Parlante portátil con diseño de agarre, resistente y fácil de llevar para música en viajes, playa, piscina y aventuras.',
       features: [

@@ -1,0 +1,452 @@
+{"kind":"deck","id":"pr/jc4awu","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"","type":"master","placeholders":[{"name":"slideNumber","type":"slideNumber","textPreview":"null"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"DEFAULT"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout2.xml","name":"MASTER","placeholders":[{"name":"slideNumber","type":"slideNumber","textPreview":"1002"}]}
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"Modelo IS–LM y políticas macroeconómicas","textShapes":5}
+{"kind":"shape","id":"sh/547294r6","slide":1,"name":"Shape 0","bbox":[0,0,1279.97,720]}
+{"kind":"shape","id":"sh/k3yl0zql","slide":1,"name":"Shape 1","bbox":[0,0,1279.97,11.52]}
+{"kind":"textbox","id":"sh/7qp4be9c","slide":1,"name":"Text 2","text":"Modelo IS–LM y políticas macroeconómicas","textPreview":"Modelo IS–LM y políticas macroeconómicas","textChars":40,"textLines":1,"bbox":[72,192,931.2,69.12]}
+{"kind":"textbox","id":"sh/65g3298r","slide":1,"name":"Text 3","text":"Caso 1: equilibrio IS–LM y desplazamientos  |  Caso 2: Perú durante la pandemia","textPreview":"Caso 1: equilibrio IS–LM y desplazamientos  |  Caso 2: Perú durante la pandemia","textChars":79,"textLines":1,"bbox":[74.88,276.48,1046.4,33.6]}
+{"kind":"textbox","id":"sh/ts7md4r2","slide":1,"name":"Text 4","text":"Presentación formal paso a paso para evaluación de Macroeconomía","textPreview":"Presentación formal paso a paso para evaluación de Macroeconomía","textChars":64,"textLines":1,"bbox":[74.88,321.6,921.6,28.8]}
+{"kind":"shape","id":"sh/sryl4zqx","slide":1,"name":"Shape 5","bbox":[1099.2,72,120,120]}
+{"kind":"shape","id":"sh/fu94fe98","slide":1,"name":"Shape 6","bbox":[979.2,547.2,144,-201.6]}
+{"kind":"shape","id":"sh/utg3698n","slide":1,"name":"Shape 7","bbox":[988.8,528,182.4,0]}
+{"kind":"shape","id":"sh/wn6dc7eh","slide":1,"name":"Shape 8","bbox":[988.8,528,0,-187.2]}
+{"kind":"textbox","id":"sh/hofulsf2","slide":1,"name":"Text 9","text":"Elaborado con base en los enunciados del ejercicio y fuentes oficiales BCRP, INEI y MEF.","textPreview":"Elaborado con base en los enunciados del ejercicio y fuentes oficiales BCRP, INEI y MEF.","textChars":88,"textLines":1,"bbox":[62.4,681.6,1084.8,17.28]}
+{"kind":"textbox","id":"sh/ozmd8r65","slide":1,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"notes","id":"nt/y90nupkv","slide":1,"text":""}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"Ruta de la presentación","textShapes":15}
+{"kind":"textbox","id":"sh/9072xkry","slide":2,"name":"Text 0","text":"Ruta de la presentación","textPreview":"Ruta de la presentación","textChars":23,"textLines":1,"bbox":[62.4,30.72,883.2,43.2]}
+{"kind":"textbox","id":"sh/ozy1ofad","slide":2,"name":"Text 1","text":"Cada caso se resuelve como en un examen: concepto, álgebra, interpretación económica y conclusión.","textPreview":"Cada caso se resuelve como en un examen: concepto, álgebra, interpretación económica y conclusión.","textChars":98,"textLines":1,"bbox":[63.36,78.72,1084.8,26.88]}
+{"kind":"shape","id":"sh/b29kza94","slide":2,"name":"Shape 2","bbox":[62.4,112.32,168,23.04]}
+{"kind":"textbox","id":"sh/a10jqpsj","slide":2,"name":"Text 3","text":"ESTRUCTURA","textPreview":"ESTRUCTURA","textChars":10,"textLines":1,"bbox":[70.08,115.2,151.68,15.36]}
+{"kind":"shape","id":"sh/x4r21kru","slide":2,"name":"Shape 4","bbox":[76.8,168,355.2,115.2]}
+{"kind":"shape","id":"sh/w3i1sfa9","slide":2,"name":"Shape 5","bbox":[76.8,168,7.68,115.2]}
+{"kind":"textbox","id":"sh/r65knqtk","slide":2,"name":"Text 6","text":"1. Fundamento teórico","textPreview":"1. Fundamento teórico","textChars":21,"textLines":1,"bbox":[96,182.4,321.6,24]}
+{"kind":"textbox","id":"sh/q5wjelsz","slide":2,"name":"Text 7","text":"Qué significan IS, LM, tasa de interés, ingreso, demanda agregada y equilibrio simultáneo.","textPreview":"Qué significan IS, LM, tasa de interés, ingreso, demanda agregada y equilibrio simultáneo.","textChars":90,"textLines":1,"bbox":[96,214.08,321.6,57.6]}
+{"kind":"shape","id":"sh/ove9o7yd","slide":2,"name":"Shape 8","bbox":[460.8,168,355.2,115.2]}
+{"kind":"shape","id":"sh/9wnqhczy","slide":2,"name":"Shape 9","bbox":[460.8,168,7.68,115.2]}
+{"kind":"textbox","id":"sh/mtwrmxg7","slide":2,"name":"Text 10","text":"2. Caso 1","textPreview":"2. Caso 1","textChars":9,"textLines":1,"bbox":[480,182.4,321.6,24]}
+{"kind":"textbox","id":"sh/nu58f2hs","slide":2,"name":"Text 11","text":"Resolución algebraica del equilibrio inicial, política monetaria expansiva y contracción fiscal.","textPreview":"Resolución algebraica del equilibrio inicial, política monetaria expansiva y contracción fiscal.","textChars":96,"textLines":1,"bbox":[480,214.08,321.6,57.6]}
+{"kind":"shape","id":"sh/wjy9sry9","slide":2,"name":"Shape 12","bbox":[844.8,168,355.2,115.2]}
+{"kind":"shape","id":"sh/xk7qlczu","slide":2,"name":"Shape 13","bbox":[844.8,168,7.68,115.2]}
+{"kind":"textbox","id":"sh/ahwrqhgj","slide":2,"name":"Text 14","text":"3. Caso 2","textPreview":"3. Caso 2","textChars":9,"textLines":1,"bbox":[864,182.4,321.6,24]}
+{"kind":"textbox","id":"sh/bip8jmho","slide":2,"name":"Text 15","text":"Perú 2020–2022: pandemia, BCRP, política fiscal, crowding out y evaluación macroeconómica.","textPreview":"Perú 2020–2022: pandemia, BCRP, política fiscal, crowding out y evaluación macroeconómica.","textChars":90,"textLines":1,"bbox":[864,214.08,321.6,57.6]}
+{"kind":"shape","id":"sh/cnupgny5","slide":2,"name":"Shape 16","bbox":[100.8,422.4,201.02,65.28]}
+{"kind":"textbox","id":"sh/do3q9szq","slide":2,"name":"Text 17","text":"Problema","textPreview":"Problema","textChars":8,"textLines":1,"bbox":[106.56,430.08,189.5,50.88]}
+{"kind":"shape","id":"sh/t8byxkn2","slide":2,"name":"Shape 18","bbox":[304.7,455.04,14.4,0]}
+{"kind":"shape","id":"sh/s72xofmh","slide":2,"name":"Shape 19","bbox":[322.94,422.4,201.02,65.28]}
+{"kind":"textbox","id":"sh/76twva5c","slide":2,"name":"Text 20","text":"Modelo","textPreview":"Modelo","textChars":6,"textLines":1,"bbox":[328.7,430.08,189.5,50.88]}
+{"kind":"shape","id":"sh/65kfmpor","slide":2,"name":"Shape 21","bbox":[526.85,455.04,14.4,0]}
+{"kind":"shape","id":"sh/hcvy14ne","slide":2,"name":"Shape 22","bbox":[545.09,422.4,201.02,65.28]}
+{"kind":"textbox","id":"sh/gbmxszmt","slide":2,"name":"Text 23","text":"Cálculo","textPreview":"Cálculo","textChars":7,"textLines":1,"bbox":[550.85,430.08,189.5,50.88]}
+{"kind":"shape","id":"sh/fadgzu58","slide":2,"name":"Shape 24","bbox":[748.99,455.04,14.4,0]}
+{"kind":"shape","id":"sh/u94fqp4n","slide":2,"name":"Shape 25","bbox":[767.23,422.4,201.02,65.28]}
+{"kind":"textbox","id":"sh/p0vy54na","slide":2,"name":"Text 26","text":"Gráfica","textPreview":"Gráfica","textChars":7,"textLines":1,"bbox":[772.99,430.08,189.5,50.88]}
+{"kind":"shape","id":"sh/4zmxwzmp","slide":2,"name":"Shape 27","bbox":[971.14,455.04,14.4,0]}
+{"kind":"shape","id":"sh/mlgvq147","slide":2,"name":"Shape 28","bbox":[989.38,422.4,201.02,65.28]}
+{"kind":"textbox","id":"sh/nmpcj6ls","slide":2,"name":"Text 29","text":"Conclusión","textPreview":"Conclusión","textChars":10,"textLines":1,"bbox":[995.14,430.08,189.5,50.88]}
+{"kind":"textbox","id":"sh/onydsbmd","slide":2,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"notes","id":"nt/hwbqtkby","slide":2,"text":""}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"Base teórica: ¿qué es IS y qué es LM?","textShapes":11}
+{"kind":"textbox","id":"sh/cza94vmx","slide":3,"name":"Text 0","text":"Base teórica: ¿qué es IS y qué es LM?","textPreview":"Base teórica: ¿qué es IS y qué es LM?","textChars":37,"textLines":1,"bbox":[62.4,30.72,883.2,43.2]}
+{"kind":"textbox","id":"sh/d0jax03i","slide":3,"name":"Text 1","text":"El modelo IS–LM explica el equilibrio conjunto del mercado de bienes y del mercado monetario.","textPreview":"El modelo IS–LM explica el equilibrio conjunto del mercado de bienes y del mercado monetario.","textChars":93,"textLines":1,"bbox":[63.36,78.72,1084.8,26.88]}
+{"kind":"shape","id":"sh/298ryl4v","slide":3,"name":"Shape 2","bbox":[62.4,112.32,168,23.04]}
+{"kind":"textbox","id":"sh/3ah8rqlg","slide":3,"name":"Text 3","text":"TEORÍA","textPreview":"TEORÍA","textChars":6,"textLines":1,"bbox":[70.08,115.2,151.68,15.36]}
+{"kind":"shape","id":"sh/obq90bml","slide":3,"name":"Shape 4","bbox":[72,148.8,532.8,196.8]}
+{"kind":"shape","id":"sh/pcjqtg36","slide":3,"name":"Shape 5","bbox":[72,148.8,7.68,196.8]}
+{"kind":"textbox","id":"sh/m5cra54z","slide":3,"name":"Text 6","text":"Curva IS: mercado de bienes","textPreview":"Curva IS: mercado de bienes","textChars":27,"textLines":1,"bbox":[91.2,163.2,499.2,24]}
+{"kind":"textbox","id":"sh/n6ls3alk","slide":3,"name":"Text 7","text":"Muestra combinaciones de Y e i donde la producción demandada coincide con la producción ofrecida. Tiene pendiente negativa: si i sube, la inversión privada baja y el ingreso disminuye.","textPreview":"Muestra combinaciones de Y e i donde la producción demandada coincide con la producción ofrecida. Tiene pendiente negativa: si i sube, la...","textChars":184,"textLines":1,"bbox":[91.2,194.88,499.2,139.2]}
+{"kind":"shape","id":"sh/n2l4fq98","slide":3,"name":"Shape 8","bbox":[672,148.8,532.8,196.8]}
+{"kind":"shape","id":"sh/m1c3mlsn","slide":3,"name":"Shape 9","bbox":[672,148.8,7.68,196.8]}
+{"kind":"textbox","id":"sh/943mhgre","slide":3,"name":"Text 10","text":"Curva LM: mercado de dinero","textPreview":"Curva LM: mercado de dinero","textChars":27,"textLines":1,"bbox":[691.2,163.2,499.2,24]}
+{"kind":"textbox","id":"sh/83ulovat","slide":3,"name":"Text 11","text":"Muestra combinaciones de Y e i donde la oferta real de dinero se iguala con la demanda de dinero. Tiene pendiente positiva: si Y sube, aumentan las transacciones y tiende a subir i.","textPreview":"Muestra combinaciones de Y e i donde la oferta real de dinero se iguala con la demanda de dinero. Tiene pendiente positiva: si Y sube, au...","textChars":181,"textLines":1,"bbox":[691.2,194.88,499.2,139.2]}
+{"kind":"shape","id":"sh/v6l4jq94","slide":3,"name":"Shape 12","bbox":[100.8,398.4,316.8,52.8]}
+{"kind":"textbox","id":"sh/a5c3ql8z","slide":3,"name":"Text 13","text":"IS:  Y = C + I + G + XN","textPreview":"IS:  Y = C + I + G + XN","textChars":23,"textLines":1,"bbox":[112.32,406.08,293.76,41.28]}
+{"kind":"shape","id":"sh/x8nml0ra","slide":3,"name":"Shape 14","bbox":[777.6,398.4,316.8,52.8]}
+{"kind":"textbox","id":"sh/w7ulsvqp","slide":3,"name":"Text 15","text":"LM:  M/P = L(Y,i)","textPreview":"LM:  M/P = L(Y,i)","textChars":17,"textLines":1,"bbox":[789.12,406.08,293.76,41.28]}
+{"kind":"shape","id":"sh/ja54na9g","slide":3,"name":"Shape 16","bbox":[436.8,424.32,331.2,0]}
+{"kind":"textbox","id":"sh/i9w3u58v","slide":3,"name":"Text 17","text":"Equilibrio IS–LM = punto donde ambos mercados se equilibran al mismo tiempo","textPreview":"Equilibrio IS–LM = punto donde ambos mercados se equilibran al mismo tiempo","textChars":75,"textLines":1,"bbox":[211.2,513.6,854.4,28.8]}
+{"kind":"textbox","id":"sh/re9g7yxo","slide":3,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"notes","id":"nt/ofy9wn61","slide":3,"text":""}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"Caso 1: planteamiento del equilibrio inicial","textShapes":9}
+{"kind":"textbox","id":"sh/1cj2d8b6","slide":4,"name":"Text 0","text":"Caso 1: planteamiento del equilibrio inicial","textPreview":"Caso 1: planteamiento del equilibrio inicial","textChars":44,"textLines":1,"bbox":[62.4,30.72,883.2,43.2]}
+{"kind":"textbox","id":"sh/0ba143al","slide":4,"name":"Text 1","text":"Se igualan indirectamente las dos ecuaciones: una define Y y la otra define i.","textPreview":"Se igualan indirectamente las dos ecuaciones: una define Y y la otra define i.","textChars":78,"textLines":1,"bbox":[63.36,78.72,1084.8,26.88]}
+{"kind":"shape","id":"sh/rm1k7yt4","slide":4,"name":"Shape 2","bbox":[62.4,112.32,168,23.04]}
+{"kind":"textbox","id":"sh/ql8jytsj","slide":4,"name":"Text 3","text":"CASO 1","textPreview":"CASO 1","textChars":6,"textLines":1,"bbox":[70.08,115.2,151.68,15.36]}
+{"kind":"shape","id":"sh/doj29oba","slide":4,"name":"Shape 4","bbox":[86.4,148.8,336,62.4]}
+{"kind":"textbox","id":"sh/sna103ap","slide":4,"name":"Text 5","text":"IS:  Y = 2200 − 80i","textPreview":"IS:  Y = 2200 − 80i","textChars":19,"textLines":1,"bbox":[97.92,156.48,312.96,50.88]}
+{"kind":"shape","id":"sh/3ihk3et8","slide":4,"name":"Shape 6","bbox":[86.4,230.4,336,62.4]}
+{"kind":"textbox","id":"sh/ih8ju9sn","slide":4,"name":"Text 7","text":"LM:  i = 0.005Y − 4","textPreview":"LM:  i = 0.005Y − 4","textChars":19,"textLines":1,"bbox":[97.92,238.08,312.96,50.88]}
+{"kind":"shape","id":"sh/kbm987y5","slide":4,"name":"Shape 8","bbox":[86.4,345.6,336,120]}
+{"kind":"shape","id":"sh/5cva1cfq","slide":4,"name":"Shape 9","bbox":[86.4,345.6,7.68,120]}
+{"kind":"textbox","id":"sh/i94r6xgz","slide":4,"name":"Text 10","text":"Interpretación","textPreview":"Interpretación","textChars":14,"textLines":1,"bbox":[105.6,360,302.4,24]}
+{"kind":"textbox","id":"sh/jadsz2xk","slide":4,"name":"Text 11","text":"El equilibrio se encuentra reemplazando i de la LM dentro de la IS, porque ambas deben cumplirse simultáneamente.","textPreview":"El equilibrio se encuentra reemplazando i de la LM dentro de la IS, porque ambas deben cumplirse simultáneamente.","textChars":113,"textLines":1,"bbox":[105.6,391.68,302.4,62.4]}
+{"kind":"textbox","id":"sh/x8vaxsfe","slide":4,"name":"Text 12","text":"Enunciado del caso 1.","textPreview":"Enunciado del caso 1.","textChars":21,"textLines":1,"bbox":[62.4,681.6,1084.8,17.28]}
+{"kind":"textbox","id":"sh/gv29g7q5","slide":4,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"image","id":"im/w7u9kj25","slide":4,"name":"Image 0","bbox":[499.2,129.6,648,456]}
+{"kind":"notes","id":"nt/jyx0ra1s","slide":4,"text":""}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"Caso 1: resolución algebraica paso a paso","textShapes":10}
+{"kind":"textbox","id":"sh/dgbulwnm","slide":5,"name":"Text 0","text":"Caso 1: resolución algebraica paso a paso","textPreview":"Caso 1: resolución algebraica paso a paso","textChars":41,"textLines":1,"bbox":[62.4,30.72,883.2,43.2]}
+{"kind":"textbox","id":"sh/cf2tcr61","slide":5,"name":"Text 1","text":"Despejamos primero el ingreso de equilibrio y luego reemplazamos para hallar la tasa de interés.","textPreview":"Despejamos primero el ingreso de equilibrio y luego reemplazamos para hallar la tasa de interés.","textChars":96,"textLines":1,"bbox":[63.36,78.72,1084.8,26.88]}
+{"kind":"shape","id":"sh/z2tcnm5s","slide":5,"name":"Shape 2","bbox":[62.4,112.32,168,23.04]}
+{"kind":"textbox","id":"sh/yhkbe1o7","slide":5,"name":"Text 3","text":"ÁLGEBRA","textPreview":"ÁLGEBRA","textChars":7,"textLines":1,"bbox":[70.08,115.2,151.68,15.36]}
+{"kind":"shape","id":"sh/l4bupwny","slide":5,"name":"Shape 4","bbox":[91.2,148.8,1084.8,55.68]}
+{"kind":"textbox","id":"sh/032tgr6d","slide":5,"name":"Text 5","text":"1) Sustituir LM en IS:   Y = 2200 − 80(0.005Y − 4)","textPreview":"1) Sustituir LM en IS:   Y = 2200 − 80(0.005Y − 4)","textChars":50,"textLines":1,"bbox":[102.72,156.48,1061.76,44.16]}
+{"kind":"shape","id":"sh/n6dcr65o","slide":5,"name":"Shape 6","bbox":[91.2,225.6,1084.8,55.68]}
+{"kind":"textbox","id":"sh/m5kbi1oj","slide":5,"name":"Text 7","text":"2) Distribuir:   Y = 2200 − 0.4Y + 320","textPreview":"2) Distribuir:   Y = 2200 − 0.4Y + 320","textChars":38,"textLines":1,"bbox":[102.72,233.28,1061.76,44.16]}
+{"kind":"shape","id":"sh/w32dkbuh","slide":5,"name":"Shape 8","bbox":[91.2,302.4,1084.8,55.68]}
+{"kind":"textbox","id":"sh/x4vedgvm","slide":5,"name":"Text 9","text":"3) Agrupar:   Y = 2520 − 0.4Y  ⇒  1.4Y = 2520","textPreview":"3) Agrupar:   Y = 2520 − 0.4Y  ⇒  1.4Y = 2520","textChars":45,"textLines":1,"bbox":[102.72,310.08,1061.76,44.16]}
+{"kind":"shape","id":"sh/ahkvi1cb","slide":5,"name":"Shape 10","bbox":[91.2,379.2,518.4,72]}
+{"kind":"textbox","id":"sh/v2twb6dw","slide":5,"name":"Text 11","text":"4) Resultado:   Y* = 2520 / 1.4 = 1800","textPreview":"4) Resultado:   Y* = 2520 / 1.4 = 1800","textChars":38,"textLines":1,"bbox":[102.72,386.88,495.36,60.48]}
+{"kind":"shape","id":"sh/k7mxovud","slide":5,"name":"Shape 12","bbox":[657.6,379.2,518.4,72]}
+{"kind":"textbox","id":"sh/58vehgvy","slide":5,"name":"Text 13","text":"5) Tasa:   i* = 0.005(1800) − 4 = 5%","textPreview":"5) Tasa:   i* = 0.005(1800) − 4 = 5%","textChars":36,"textLines":1,"bbox":[669.12,386.88,495.36,60.48]}
+{"kind":"textbox","id":"sh/i54fmlc7","slide":5,"name":"Text 14","text":"Equilibrio inicial:  E₀ = (Y = 1800, i = 5%)","textPreview":"Equilibrio inicial:  E₀ = (Y = 1800, i = 5%)","textChars":44,"textLines":1,"bbox":[153.6,532.8,979.2,38.4]}
+{"kind":"textbox","id":"sh/4ji5kbid","slide":5,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"notes","id":"nt/i107q5of","slide":5,"text":""}
+{"kind":"slide","id":"sl/x8f69ofe","slide":6,"title":"Caso 1: política monetaria expansiva por reducción del encaje","textShapes":14}
+{"kind":"textbox","id":"sh/yhg7epsj","slide":6,"name":"Text 0","text":"Caso 1: política monetaria expansiva por reducción del encaje","textPreview":"Caso 1: política monetaria expansiva por reducción del encaje","textChars":61,"textLines":1,"bbox":[62.4,30.72,883.2,43.2]}
+{"kind":"textbox","id":"sh/zi98nu94","slide":6,"name":"Text 1","text":"Una menor tasa de encaje aumenta la liquidez y desplaza la curva LM hacia la derecha.","textPreview":"Una menor tasa de encaje aumenta la liquidez y desplaza la curva LM hacia la derecha.","textChars":85,"textLines":1,"bbox":[63.36,78.72,1084.8,26.88]}
+{"kind":"shape","id":"sh/87ipkzal","slide":6,"name":"Shape 2","bbox":[62.4,112.32,168,23.04]}
+{"kind":"textbox","id":"sh/98rqt4r6","slide":6,"name":"Text 3","text":"POLÍTICA MONETARIA","textPreview":"POLÍTICA MONETARIA","textChars":18,"textLines":1,"bbox":[70.08,115.2,151.68,15.36]}
+{"kind":"shape","id":"sh/7m98ru9g","slide":6,"name":"Shape 4","bbox":[672,158.4,86.78,65.28]}
+{"kind":"textbox","id":"sh/oryp8fah","slide":6,"name":"Text 5","text":"Encaje ↓","textPreview":"Encaje ↓","textChars":8,"textLines":1,"bbox":[677.76,166.08,75.26,50.88]}
+{"kind":"shape","id":"sh/pc76hkr2","slide":6,"name":"Shape 6","bbox":[761.66,191.04,14.4,0]}
+{"kind":"shape","id":"sh/h4bupgn6","slide":6,"name":"Shape 7","bbox":[779.9,158.4,86.78,65.28]}
+{"kind":"textbox","id":"sh/w32twb6l","slide":6,"name":"Text 8","text":"Liquidez ↑","textPreview":"Liquidez ↑","textChars":10,"textLines":1,"bbox":[785.66,166.08,75.26,50.88]}
+{"kind":"shape","id":"sh/v2tcn650","slide":6,"name":"Shape 9","bbox":[869.57,191.04,14.4,0]}
+{"kind":"shape","id":"sh/u1kbu1ov","slide":6,"name":"Shape 10","bbox":[887.81,158.4,86.78,65.28]}
+{"kind":"textbox","id":"sh/5svutgni","slide":6,"name":"Text 11","text":"LM →","textPreview":"LM →","textChars":4,"textLines":1,"bbox":[893.57,166.08,75.26,50.88]}
+{"kind":"shape","id":"sh/47mt0b6x","slide":6,"name":"Shape 12","bbox":[977.47,191.04,14.4,0]}
+{"kind":"shape","id":"sh/j6dcr65c","slide":6,"name":"Shape 13","bbox":[995.71,158.4,86.78,65.28]}
+{"kind":"textbox","id":"sh/i54bylor","slide":6,"name":"Text 14","text":"i ↓","textPreview":"i ↓","textChars":3,"textLines":1,"bbox":[1001.47,166.08,75.26,50.88]}
+{"kind":"shape","id":"sh/twfux0ne","slide":6,"name":"Shape 15","bbox":[1085.38,191.04,14.4,0]}
+{"kind":"shape","id":"sh/svmt4v6t","slide":6,"name":"Shape 16","bbox":[1103.62,158.4,86.78,65.28]}
+{"kind":"textbox","id":"sh/cbe5g3ih","slide":6,"name":"Text 17","text":"I privada ↑","textPreview":"I privada ↑","textChars":11,"textLines":1,"bbox":[1109.38,166.08,75.26,50.88]}
+{"kind":"shape","id":"sh/dcnm98zm","slide":6,"name":"Shape 18","bbox":[672,292.8,513.6,110.4]}
+{"kind":"shape","id":"sh/qpwnet0b","slide":6,"name":"Shape 19","bbox":[672,292.8,7.68,110.4]}
+{"kind":"textbox","id":"sh/bq547yhw","slide":6,"name":"Text 20","text":"Lectura económica","textPreview":"Lectura económica","textChars":17,"textLines":1,"bbox":[691.2,307.2,480,24]}
+{"kind":"textbox","id":"sh/0fy5k3id","slide":6,"name":"Text 21","text":"Los bancos tienen más fondos prestables. El crédito se abarata, cae la tasa de interés y aumenta la inversión privada.","textPreview":"Los bancos tienen más fondos prestables. El crédito se abarata, cae la tasa de interés y aumenta la inversión privada.","textChars":118,"textLines":1,"bbox":[691.2,338.88,480,52.8]}
+{"kind":"shape","id":"sh/lg76d8zy","slide":6,"name":"Shape 22","bbox":[672,436.8,513.6,110.4]}
+{"kind":"shape","id":"sh/ydgnit07","slide":6,"name":"Shape 23","bbox":[672,436.8,7.68,110.4]}
+{"kind":"textbox","id":"sh/zep4byhs","slide":6,"name":"Text 24","text":"Efecto final","textPreview":"Efecto final","textChars":12,"textLines":1,"bbox":[691.2,451.2,480,24]}
+{"kind":"textbox","id":"sh/gju58ji9","slide":6,"name":"Text 25","text":"La demanda agregada aumenta y, por multiplicador keynesiano, el ingreso de equilibrio tiende a crecer.","textPreview":"La demanda agregada aumenta y, por multiplicador keynesiano, el ingreso de equilibrio tiende a crecer.","textChars":102,"textLines":1,"bbox":[691.2,482.88,480,52.8]}
+{"kind":"textbox","id":"sh/1k3mhozu","slide":6,"name":"Text 26","text":"Sin nueva ecuación LM no se puede calcular un nuevo equilibrio exacto; se analiza dirección del cambio.","textPreview":"Sin nueva ecuación LM no se puede calcular un nuevo equilibrio exacto; se analiza dirección del cambio.","textChars":103,"textLines":1,"bbox":[62.4,681.6,1084.8,17.28]}
+{"kind":"textbox","id":"sh/idk7ehkr","slide":6,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"image","id":"im/6l0nax83","slide":6,"name":"Image 0","bbox":[81.6,144,556.8,441.6]}
+{"kind":"notes","id":"nt/x8f69ofe","slide":6,"text":""}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":7,"title":"Caso 1: política fiscal contractiva","textShapes":8}
+{"kind":"textbox","id":"sh/cb2tkvap","slide":7,"name":"Text 0","text":"Caso 1: política fiscal contractiva","textPreview":"Caso 1: política fiscal contractiva","textChars":35,"textLines":1,"bbox":[62.4,30.72,883.2,43.2]}
+{"kind":"textbox","id":"sh/dcbud0ra","slide":7,"name":"Text 1","text":"Al reducirse la inversión pública, la curva IS se desplaza hacia la izquierda.","textPreview":"Al reducirse la inversión pública, la curva IS se desplaza hacia la izquierda.","textChars":78,"textLines":1,"bbox":[63.36,78.72,1084.8,26.88]}
+{"kind":"shape","id":"sh/ydkbm5sv","slide":7,"name":"Shape 2","bbox":[62.4,112.32,168,23.04]}
+{"kind":"textbox","id":"sh/zedcfa9g","slide":7,"name":"Text 3","text":"POLÍTICA FISCAL","textPreview":"POLÍTICA FISCAL","textChars":15,"textLines":1,"bbox":[70.08,115.2,151.68,15.36]}
+{"kind":"shape","id":"sh/kzmdova1","slide":7,"name":"Shape 4","bbox":[91.2,139.2,336,57.6]}
+{"kind":"textbox","id":"sh/l0vuh0rm","slide":7,"name":"Text 5","text":"IS₀:  Y = 2200 − 80i","textPreview":"IS₀:  Y = 2200 − 80i","textChars":20,"textLines":1,"bbox":[102.72,146.88,312.96,46.08]}
+{"kind":"shape","id":"sh/eh0ba1sr","slide":7,"name":"Shape 6","bbox":[91.2,211.2,336,57.6]}
+{"kind":"textbox","id":"sh/fi9c369c","slide":7,"name":"Text 7","text":"IS₁:  Y = 1950 − 80i","textPreview":"IS₁:  Y = 1950 − 80i","textChars":20,"textLines":1,"bbox":[102.72,218.88,312.96,46.08]}
+{"kind":"shape","id":"sh/baxkjqlk","slide":7,"name":"Shape 8","bbox":[91.2,295.68,340.8,129.6]}
+{"kind":"shape","id":"sh/a9ojq5kz","slide":7,"name":"Shape 9","bbox":[91.2,295.68,7.68,129.6]}
+{"kind":"textbox","id":"sh/xcz2l03q","slide":7,"name":"Text 10","text":"Cambio autónomo","textPreview":"Cambio autónomo","textChars":15,"textLines":1,"bbox":[110.4,310.08,307.2,24]}
+{"kind":"textbox","id":"sh/cbq1sv25","slide":7,"name":"Text 11","text":"El intercepto cae de 2200 a 1950. La demanda autónoma disminuye en 250 unidades.","textPreview":"El intercepto cae de 2200 a 1950. La demanda autónoma disminuye en 250 unidades.","textChars":80,"textLines":1,"bbox":[110.4,341.76,307.2,72]}
+{"kind":"textbox","id":"sh/r2dkrq5g","slide":7,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"image","id":"im/3ydory5k","slide":7,"name":"Image 0","bbox":[489.6,122.88,657.6,462.72]}
+{"kind":"notes","id":"nt/gnmp4jqx","slide":7,"text":""}
+{"kind":"slide","id":"sl/fu1gfa1s","slide":8,"title":"Caso 1: nuevo equilibrio con IS contractiva","textShapes":20}
+{"kind":"textbox","id":"sh/18byd4zy","slide":8,"name":"Text 0","text":"Caso 1: nuevo equilibrio con IS contractiva","textPreview":"Caso 1: nuevo equilibrio con IS contractiva","textChars":43,"textLines":1,"bbox":[62.4,30.72,883.2,43.2]}
+{"kind":"textbox","id":"sh/g72x4zyd","slide":8,"name":"Text 1","text":"Se mantiene la misma LM y se reemplaza nuevamente.","textPreview":"Se mantiene la misma LM y se reemplaza nuevamente.","textChars":50,"textLines":1,"bbox":[63.36,78.72,1084.8,26.88]}
+{"kind":"shape","id":"sh/ri9g7uhw","slide":8,"name":"Shape 2","bbox":[62.4,112.32,168,23.04]}
+{"kind":"textbox","id":"sh/6h0fypgb","slide":8,"name":"Text 3","text":"CÁLCULO","textPreview":"CÁLCULO","textChars":7,"textLines":1,"bbox":[70.08,115.2,151.68,15.36]}
+{"kind":"shape","id":"sh/tkby9kzm","slide":8,"name":"Shape 4","bbox":[91.2,144,1084.8,55.68]}
+{"kind":"textbox","id":"sh/sjix0zy1","slide":8,"name":"Text 5","text":"Y = 1950 − 80(0.005Y − 4)","textPreview":"Y = 1950 − 80(0.005Y − 4)","textChars":25,"textLines":1,"bbox":[102.72,151.68,1061.76,44.16]}
+{"kind":"shape","id":"sh/je9g3ahk","slide":8,"name":"Shape 6","bbox":[91.2,220.8,1084.8,55.68]}
+{"kind":"textbox","id":"sh/id0fu50z","slide":8,"name":"Text 7","text":"Y = 1950 − 0.4Y + 320 = 2270 − 0.4Y","textPreview":"Y = 1950 − 0.4Y + 320 = 2270 − 0.4Y","textChars":35,"textLines":1,"bbox":[102.72,228.48,1061.76,44.16]}
+{"kind":"shape","id":"sh/o7ydoret","slide":8,"name":"Shape 8","bbox":[91.2,297.6,523.2,69.12]}
+{"kind":"textbox","id":"sh/98rehwve","slide":8,"name":"Text 9","text":"1.4Y = 2270  ⇒  Y₁* = 1621.43","textPreview":"1.4Y = 2270  ⇒  Y₁* = 1621.43","textChars":29,"textLines":1,"bbox":[102.72,305.28,500.16,57.6]}
+{"kind":"shape","id":"sh/m5gvmhwn","slide":8,"name":"Shape 10","bbox":[657.6,297.6,523.2,69.12]}
+{"kind":"textbox","id":"sh/n6pwfmd8","slide":8,"name":"Text 11","text":"i₁* = 0.005(1621.43) − 4 = 4.11%","textPreview":"i₁* = 0.005(1621.43) − 4 = 4.11%","textChars":32,"textLines":1,"bbox":[669.12,305.28,500.16,57.6]}
+{"kind":"shape","id":"sh/0jydkreh","slide":8,"name":"Shape 12","bbox":[192,436.8,230.4,40.32]}
+{"kind":"textbox","id":"sh/1k7edwv2","slide":8,"name":"Text 13","text":"Variable","textPreview":"Variable","textChars":8,"textLines":1,"bbox":[197.76,443.52,218.88,28.8]}
+{"kind":"shape","id":"sh/ehgvihwr","slide":8,"name":"Shape 14","bbox":[422.4,436.8,201.6,40.32]}
+{"kind":"textbox","id":"sh/zipwbmdc","slide":8,"name":"Text 15","text":"Inicial","textPreview":"Inicial","textChars":7,"textLines":1,"bbox":[428.16,443.52,190.08,28.8]}
+{"kind":"shape","id":"sh/kfixwbe1","slide":8,"name":"Shape 16","bbox":[624,436.8,201.6,40.32]}
+{"kind":"textbox","id":"sh/lgbepgvm","slide":8,"name":"Text 17","text":"Nuevo","textPreview":"Nuevo","textChars":5,"textLines":1,"bbox":[629.76,443.52,190.08,28.8]}
+{"kind":"shape","id":"sh/tw7e9gnq","slide":8,"name":"Shape 18","bbox":[825.6,436.8,268.8,40.32]}
+{"kind":"textbox","id":"sh/svydgb65","slide":8,"name":"Text 19","text":"Efecto","textPreview":"Efecto","textChars":6,"textLines":1,"bbox":[831.36,443.52,257.28,28.8]}
+{"kind":"shape","id":"sh/7u5w765k","slide":8,"name":"Shape 20","bbox":[192,477.12,230.4,40.32]}
+{"kind":"textbox","id":"sh/6twve1oz","slide":8,"name":"Text 21","text":"Ingreso Y","textPreview":"Ingreso Y","textChars":9,"textLines":1,"bbox":[197.76,483.84,218.88,28.8]}
+{"kind":"shape","id":"sh/5sne5wne","slide":8,"name":"Shape 22","bbox":[422.4,477.12,201.6,40.32]}
+{"kind":"textbox","id":"sh/kredcr6t","slide":8,"name":"Text 23","text":"1800","textPreview":"1800","textChars":4,"textLines":1,"bbox":[428.16,483.84,190.08,28.8]}
+{"kind":"shape","id":"sh/jq5w365o","slide":8,"name":"Shape 24","bbox":[624,477.12,201.6,40.32]}
+{"kind":"textbox","id":"sh/i5wva1o3","slide":8,"name":"Text 25","text":"1621.43","textPreview":"1621.43","textChars":7,"textLines":1,"bbox":[629.76,483.84,190.08,28.8]}
+{"kind":"shape","id":"sh/x4ne1wni","slide":8,"name":"Shape 26","bbox":[825.6,477.12,268.8,40.32]}
+{"kind":"textbox","id":"sh/w3ed8r6x","slide":8,"name":"Text 27","text":"Disminuye","textPreview":"Disminuye","textChars":9,"textLines":1,"bbox":[831.36,483.84,257.28,28.8]}
+{"kind":"shape","id":"sh/m9sb2x4v","slide":8,"name":"Shape 28","bbox":[192,517.44,230.4,40.32]}
+{"kind":"textbox","id":"sh/na1sb2lg","slide":8,"name":"Text 29","text":"Tasa i","textPreview":"Tasa i","textChars":6,"textLines":1,"bbox":[197.76,524.16,218.88,28.8]}
+{"kind":"shape","id":"sh/8bat47ml","slide":8,"name":"Shape 30","bbox":[422.4,517.44,201.6,40.32]}
+{"kind":"textbox","id":"sh/9w3uds36","slide":8,"name":"Text 31","text":"5.00%","textPreview":"5.00%","textChars":5,"textLines":1,"bbox":[428.16,524.16,190.08,28.8]}
+{"kind":"shape","id":"sh/y5sbed4j","slide":8,"name":"Shape 32","bbox":[624,517.44,201.6,40.32]}
+{"kind":"textbox","id":"sh/z61s7il4","slide":8,"name":"Text 33","text":"4.11%","textPreview":"4.11%","textChars":5,"textLines":1,"bbox":[629.76,524.16,190.08,28.8]}
+{"kind":"shape","id":"sh/07atgnmp","slide":8,"name":"Shape 34","bbox":[825.6,517.44,268.8,40.32]}
+{"kind":"textbox","id":"sh/l8ja9s3a","slide":8,"name":"Text 35","text":"Disminuye","textPreview":"Disminuye","textChars":9,"textLines":1,"bbox":[831.36,524.16,257.28,28.8]}
+{"kind":"textbox","id":"sh/q18bad4n","slide":8,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"notes","id":"nt/fu1gfa1s","slide":8,"text":""}
+{"kind":"slide","id":"sl/udsvah03","slide":9,"title":"Caso 1: conclusión económica","textShapes":12}
+{"kind":"textbox","id":"sh/1cfmhgne","slide":9,"name":"Text 0","text":"Caso 1: conclusión económica","textPreview":"Caso 1: conclusión económica","textChars":28,"textLines":1,"bbox":[62.4,30.72,883.2,43.2]}
+{"kind":"textbox","id":"sh/0b65obm9","slide":9,"name":"Text 1","text":"La matemática y la intuición económica deben coincidir.","textPreview":"La matemática y la intuición económica deben coincidir.","textChars":55,"textLines":1,"bbox":[63.36,78.72,1084.8,26.88]}
+{"kind":"shape","id":"sh/nex4jq5k","slide":9,"name":"Shape 2","bbox":[62.4,112.32,168,23.04]}
+{"kind":"textbox","id":"sh/mdonql4z","slide":9,"name":"Text 3","text":"CIERRE CASO 1","textPreview":"CIERRE CASO 1","textChars":13,"textLines":1,"bbox":[70.08,115.2,151.68,15.36]}
+{"kind":"shape","id":"sh/9gzml0nq","slide":9,"name":"Shape 4","bbox":[81.6,148.8,364.8,129.6]}
+{"kind":"shape","id":"sh/ofq5svm5","slide":9,"name":"Shape 5","bbox":[81.6,148.8,7.68,129.6]}
+{"kind":"textbox","id":"sh/bih4na5w","slide":9,"name":"Text 6","text":"Monetaria expansiva","textPreview":"Monetaria expansiva","textChars":19,"textLines":1,"bbox":[100.8,163.2,331.2,24]}
+{"kind":"textbox","id":"sh/ah8nu54b","slide":9,"name":"Text 7","text":"Encaje ↓ ⇒ liquidez ↑ ⇒ LM derecha ⇒ i ↓ ⇒ inversión privada ↑ ⇒ Y ↑.","textPreview":"Encaje ↓ ⇒ liquidez ↑ ⇒ LM derecha ⇒ i ↓ ⇒ inversión privada ↑ ⇒ Y ↑.","textChars":69,"textLines":1,"bbox":[100.8,194.88,331.2,72]}
+{"kind":"shape","id":"sh/oza1gfyh","slide":9,"name":"Shape 8","bbox":[470.4,148.8,364.8,129.6]}
+{"kind":"shape","id":"sh/p0ji9kf2","slide":9,"name":"Shape 9","bbox":[470.4,148.8,7.68,129.6]}
+{"kind":"textbox","id":"sh/2xsjepgb","slide":9,"name":"Text 10","text":"Fiscal contractiva","textPreview":"Fiscal contractiva","textChars":18,"textLines":1,"bbox":[489.6,163.2,331.2,24]}
+{"kind":"textbox","id":"sh/3y107axw","slide":9,"name":"Text 11","text":"Inversión pública ↓ ⇒ IS izquierda ⇒ demanda agregada ↓ ⇒ Y ↓.","textPreview":"Inversión pública ↓ ⇒ IS izquierda ⇒ demanda agregada ↓ ⇒ Y ↓.","textChars":62,"textLines":1,"bbox":[489.6,194.88,331.2,72]}
+{"kind":"shape","id":"sh/cnu1kzyd","slide":9,"name":"Shape 12","bbox":[859.2,148.8,331.2,129.6]}
+{"kind":"shape","id":"sh/do3id4fy","slide":9,"name":"Shape 13","bbox":[859.2,148.8,7.68,129.6]}
+{"kind":"textbox","id":"sh/qlcjipgn","slide":9,"name":"Text 14","text":"Empleo","textPreview":"Empleo","textChars":6,"textLines":1,"bbox":[878.4,163.2,297.6,24]}
+{"kind":"textbox","id":"sh/bml0buxs","slide":9,"name":"Text 15","text":"Si la producción cae, las empresas requieren menos trabajo. El empleo tiende a disminuir.","textPreview":"Si la producción cae, las empresas requieren menos trabajo. El empleo tiende a disminuir.","textChars":89,"textLines":1,"bbox":[878.4,194.88,297.6,72]}
+{"kind":"textbox","id":"sh/0ru1ozyp","slide":9,"name":"Text 16","text":"Frase de examen:","textPreview":"Frase de examen:","textChars":16,"textLines":1,"bbox":[110.4,355.2,220.8,28.8]}
+{"kind":"textbox","id":"sh/lsn2h4fa","slide":9,"name":"Text 17","text":"“El desplazamiento de la IS hacia la izquierda reduce el ingreso; la tasa de interés también cae porque la menor actividad reduce la demanda de dinero.”","textPreview":"“El desplazamiento de la IS hacia la izquierda reduce el ingreso; la tasa de interés también cae porque la menor actividad reduce la dema...","textChars":152,"textLines":1,"bbox":[110.4,395.52,1056,72]}
+{"kind":"textbox","id":"sh/wba1cjqp","slide":9,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"notes","id":"nt/udsvah03","slide":9,"text":""}
+{"kind":"slide","id":"sl/m90b6t0r","slide":10,"title":"Caso 2: choque macroeconómico de la pandemia","textShapes":10}
+{"kind":"textbox","id":"sh/xc3mho32","slide":10,"name":"Text 0","text":"Caso 2: choque macroeconómico de la pandemia","textPreview":"Caso 2: choque macroeconómico de la pandemia","textChars":44,"textLines":1,"bbox":[62.4,30.72,883.2,43.2]}
+{"kind":"textbox","id":"sh/cbu58j2h","slide":10,"name":"Text 1","text":"La economía peruana recibió un choque simultáneo de oferta y demanda.","textPreview":"La economía peruana recibió un choque simultáneo de oferta y demanda.","textChars":69,"textLines":1,"bbox":[63.36,78.72,1084.8,26.88]}
+{"kind":"shape","id":"sh/zelojyl8","slide":10,"name":"Shape 2","bbox":[62.4,112.32,168,23.04]}
+{"kind":"textbox","id":"sh/ydcnatkn","slide":10,"name":"Text 3","text":"CASO 2","textPreview":"CASO 2","textChars":6,"textLines":1,"bbox":[70.08,115.2,151.68,15.36]}
+{"kind":"shape","id":"sh/l036l83y","slide":10,"name":"Shape 4","bbox":[76.8,139.2,441.6,201.6]}
+{"kind":"shape","id":"sh/kzu5c32t","slide":10,"name":"Shape 5","bbox":[76.8,139.2,7.68,201.6]}
+{"kind":"textbox","id":"sh/725onyl4","slide":10,"name":"Text 6","text":"Mecanismo de la crisis","textPreview":"Mecanismo de la crisis","textChars":22,"textLines":1,"bbox":[96,153.6,408,24]}
+{"kind":"textbox","id":"sh/m1cnetkj","slide":10,"name":"Text 7","text":"Cuarentenas y restricciones redujeron producción, comercio, turismo, empleo e inversión. La demanda privada se contrajo y muchas empresas enfrentaron problemas de liquidez.","textPreview":"Cuarentenas y restricciones redujeron producción, comercio, turismo, empleo e inversión. La demanda privada se contrajo y muchas empresas...","textChars":172,"textLines":1,"bbox":[96,185.28,408,144]}
+{"kind":"textbox","id":"sh/s7yt4b21","slide":10,"name":"Text 8","text":"Variación real del PBI peruano","textPreview":"Variación real del PBI peruano","textChars":30,"textLines":1,"bbox":[580.8,144,518.4,28.8]}
+{"kind":"shape","id":"sh/q5gb21kb","slide":10,"name":"Shape 9","bbox":[76.8,427.2,441.6,129.6]}
+{"kind":"shape","id":"sh/r6pcv6lw","slide":10,"name":"Shape 10","bbox":[76.8,427.2,7.68,129.6]}
+{"kind":"textbox","id":"sh/0bit8b2d","slide":10,"name":"Text 11","text":"Lectura","textPreview":"Lectura","textChars":7,"textLines":1,"bbox":[96,441.6,408,24]}
+{"kind":"textbox","id":"sh/1cru1g3y","slide":10,"name":"Text 12","text":"2020 fue recesión profunda; 2021 fue rebote con efecto base; 2022 mostró normalización del crecimiento.","textPreview":"2020 fue recesión profunda; 2021 fue rebote con efecto base; 2022 mostró normalización del crecimiento.","textChars":103,"textLines":1,"bbox":[96,473.28,408,72]}
+{"kind":"textbox","id":"sh/e9gb61k7","slide":10,"name":"Text 13","text":"Fuente: INEI, cuentas nacionales anuales.","textPreview":"Fuente: INEI, cuentas nacionales anuales.","textChars":41,"textLines":1,"bbox":[62.4,681.6,1084.8,17.28]}
+{"kind":"textbox","id":"sh/kjytkvup","slide":10,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"image","id":"im/w76tsvq5","slide":10,"name":"Image 0","bbox":[590.4,201.6,480,254.4]}
+{"kind":"notes","id":"nt/m90b6t0r","slide":10,"text":""}
+{"kind":"slide","id":"sl/jetc3ut0","slide":11,"title":"Caso 2: política monetaria del BCRP","textShapes":12}
+{"kind":"textbox","id":"sh/xcryxg7y","slide":11,"name":"Text 0","text":"Caso 2: política monetaria del BCRP","textPreview":"Caso 2: política monetaria del BCRP","textChars":35,"textLines":1,"bbox":[62.4,30.72,883.2,43.2]}
+{"kind":"textbox","id":"sh/wbih4b6d","slide":11,"name":"Text 1","text":"Durante la emergencia sanitaria, el BCRP aplicó una política monetaria expansiva.","textPreview":"Durante la emergencia sanitaria, el BCRP aplicó una política monetaria expansiva.","textChars":81,"textLines":1,"bbox":[63.36,78.72,1084.8,26.88]}
+{"kind":"shape","id":"sh/n69grmpw","slide":11,"name":"Shape 2","bbox":[62.4,112.32,168,23.04]}
+{"kind":"textbox","id":"sh/250zy18b","slide":11,"name":"Text 3","text":"BCRP","textPreview":"BCRP","textChars":4,"textLines":1,"bbox":[70.08,115.2,151.68,15.36]}
+{"kind":"textbox","id":"sh/98rytw72","slide":11,"name":"Text 4","text":"Tasa de referencia del BCRP","textPreview":"Tasa de referencia del BCRP","textChars":27,"textLines":1,"bbox":[81.6,148.8,528,28.8]}
+{"kind":"shape","id":"sh/72t03qp0","slide":11,"name":"Shape 5","bbox":[696,145.92,475.2,96]}
+{"kind":"shape","id":"sh/61kzalof","slide":11,"name":"Shape 6","bbox":[696,145.92,7.68,96]}
+{"kind":"textbox","id":"sh/ofqtgnyt","slide":11,"name":"Text 7","text":"Decisión clave","textPreview":"Decisión clave","textChars":14,"textLines":1,"bbox":[715.2,160.32,441.6,24]}
+{"kind":"textbox","id":"sh/9gza9sze","slide":11,"name":"Text 8","text":"La tasa bajó de 2.25% a 0.25% entre febrero y abril de 2020.","textPreview":"La tasa bajó de 2.25% a 0.25% entre febrero y abril de 2020.","textChars":60,"textLines":1,"bbox":[715.2,192,441.6,38.4]}
+{"kind":"shape","id":"sh/mdobedg3","slide":11,"name":"Shape 9","bbox":[696,273.6,475.2,120]}
+{"kind":"shape","id":"sh/nehs7iho","slide":11,"name":"Shape 10","bbox":[696,273.6,7.68,120]}
+{"kind":"textbox","id":"sh/0b6tc3yx","slide":11,"name":"Text 11","text":"Objetivo","textPreview":"Objetivo","textChars":8,"textLines":1,"bbox":[715.2,288,441.6,24]}
+{"kind":"textbox","id":"sh/1cfa58zi","slide":11,"name":"Text 12","text":"Abaratar el crédito, sostener liquidez, evitar ruptura de la cadena de pagos y reducir la profundidad de la recesión.","textPreview":"Abaratar el crédito, sostener liquidez, evitar ruptura de la cadena de pagos y reducir la profundidad de la recesión.","textChars":117,"textLines":1,"bbox":[715.2,319.68,441.6,62.4]}
+{"kind":"shape","id":"sh/epobatgr","slide":11,"name":"Shape 13","bbox":[696,427.2,475.2,115.2]}
+{"kind":"shape","id":"sh/zaxs3yhc","slide":11,"name":"Shape 14","bbox":[696,427.2,7.68,115.2]}
+{"kind":"textbox","id":"sh/cn6t83y1","slide":11,"name":"Text 15","text":"Desde 2021","textPreview":"Desde 2021","textChars":10,"textLines":1,"bbox":[715.2,441.6,441.6,24]}
+{"kind":"textbox","id":"sh/dofa18z6","slide":11,"name":"Text 16","text":"Luego el BCRP elevó tasas para enfrentar la inflación, retirando gradualmente el estímulo.","textPreview":"Luego el BCRP elevó tasas para enfrentar la inflación, retirando gradualmente el estímulo.","textChars":90,"textLines":1,"bbox":[715.2,473.28,441.6,57.6]}
+{"kind":"textbox","id":"sh/tsnip0ny","slide":11,"name":"Text 17","text":"Fuente: BCRP, serie mensual de tasa de referencia de política monetaria.","textPreview":"Fuente: BCRP, serie mensual de tasa de referencia de política monetaria.","textChars":72,"textLines":1,"bbox":[62.4,681.6,1084.8,17.28]}
+{"kind":"textbox","id":"sh/k3uhcb6h","slide":11,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"image","id":"im/sj29szm9","slide":11,"name":"Image 0","bbox":[91.2,187.2,542.4,254.4]}
+{"kind":"notes","id":"nt/jetc3ut0","slide":11,"text":""}
+{"kind":"slide","id":"sl/8f2psfyx","slide":12,"title":"Caso 2: medidas extraordinarias de liquidez","textShapes":17}
+{"kind":"textbox","id":"sh/1gbm9s3a","slide":12,"name":"Text 0","text":"Caso 2: medidas extraordinarias de liquidez","textPreview":"Caso 2: medidas extraordinarias de liquidez","textChars":43,"textLines":1,"bbox":[62.4,30.72,883.2,43.2]}
+{"kind":"textbox","id":"sh/0f2lgnmp","slide":12,"name":"Text 1","text":"La tasa baja fue acompañada por instrumentos no convencionales.","textPreview":"La tasa baja fue acompañada por instrumentos no convencionales.","textChars":63,"textLines":1,"bbox":[63.36,78.72,1084.8,26.88]}
+{"kind":"shape","id":"sh/ra943il8","slide":12,"name":"Shape 2","bbox":[62.4,112.32,168,23.04]}
+{"kind":"textbox","id":"sh/q903ad4n","slide":12,"name":"Text 3","text":"INSTRUMENTOS","textPreview":"INSTRUMENTOS","textChars":12,"textLines":1,"bbox":[70.08,115.2,151.68,15.36]}
+{"kind":"shape","id":"sh/dcbm583y","slide":12,"name":"Shape 4","bbox":[81.6,148.8,204.86,65.28]}
+{"kind":"textbox","id":"sh/sb2lcnmd","slide":12,"name":"Text 5","text":"BCRP","textPreview":"BCRP","textChars":4,"textLines":1,"bbox":[87.36,156.48,193.34,50.88]}
+{"kind":"shape","id":"sh/b6d4f2lc","slide":12,"name":"Shape 6","bbox":[289.34,181.44,14.4,0]}
+{"kind":"shape","id":"sh/a543mx4r","slide":12,"name":"Shape 7","bbox":[307.58,148.8,204.86,65.28]}
+{"kind":"textbox","id":"sh/wvupgz6t","slide":12,"name":"Text 8","text":"Liquidez al sistema financiero","textPreview":"Liquidez al sistema financiero","textChars":30,"textLines":1,"bbox":[313.34,156.48,193.34,50.88]}
+{"kind":"shape","id":"sh/xw3q94ne","slide":12,"name":"Shape 9","bbox":[515.33,181.44,14.4,0]}
+{"kind":"shape","id":"sh/atc7epon","slide":12,"name":"Shape 10","bbox":[533.57,148.8,204.86,65.28]}
+{"kind":"textbox","id":"sh/bulo7u58","slide":12,"name":"Text 11","text":"Bancos y cajas","textPreview":"Bancos y cajas","textChars":14,"textLines":1,"bbox":[539.33,156.48,193.34,50.88]}
+{"kind":"shape","id":"sh/orapcf6h","slide":12,"name":"Shape 12","bbox":[741.31,181.44,14.4,0]}
+{"kind":"shape","id":"sh/9sj65kn2","slide":12,"name":"Shape 13","bbox":[759.55,148.8,204.86,65.28]}
+{"kind":"textbox","id":"sh/mps7a5or","slide":12,"name":"Text 14","text":"Crédito empresarial","textPreview":"Crédito empresarial","textChars":19,"textLines":1,"bbox":[765.31,156.48,193.34,50.88]}
+{"kind":"shape","id":"sh/nq1o3a5w","slide":12,"name":"Shape 15","bbox":[967.3,181.44,14.4,0]}
+{"kind":"shape","id":"sh/0nap8f6l","slide":12,"name":"Shape 16","bbox":[985.54,148.8,204.86,65.28]}
+{"kind":"textbox","id":"sh/1oj61kn6","slide":12,"name":"Text 17","text":"Cadena de pagos","textPreview":"Cadena de pagos","textChars":15,"textLines":1,"bbox":[991.3,156.48,193.34,50.88]}
+{"kind":"shape","id":"sh/hkbm5wzu","slide":12,"name":"Shape 18","bbox":[105.6,292.8,340.8,139.2]}
+{"kind":"shape","id":"sh/gj25cry9","slide":12,"name":"Shape 19","bbox":[105.6,292.8,7.68,139.2]}
+{"kind":"textbox","id":"sh/fit436ho","slide":12,"name":"Text 20","text":"Operaciones de reporte","textPreview":"Operaciones de reporte","textChars":22,"textLines":1,"bbox":[124.8,307.2,307.2,24]}
+{"kind":"textbox","id":"sh/uh0na1g3","slide":12,"name":"Text 21","text":"El BCRP entregó liquidez temporal a entidades financieras usando activos o carteras como garantía.","textPreview":"El BCRP entregó liquidez temporal a entidades financieras usando activos o carteras como garantía.","textChars":98,"textLines":1,"bbox":[124.8,338.88,307.2,81.6]}
+{"kind":"shape","id":"sh/tgrm1wzy","slide":12,"name":"Shape 22","bbox":[470.4,292.8,340.8,139.2]}
+{"kind":"shape","id":"sh/sfi58ryd","slide":12,"name":"Shape 23","bbox":[470.4,292.8,7.68,139.2]}
+{"kind":"textbox","id":"sh/7u94zmhs","slide":12,"name":"Text 24","text":"Encajes y liquidez","textPreview":"Encajes y liquidez","textChars":18,"textLines":1,"bbox":[489.6,307.2,307.2,24]}
+{"kind":"textbox","id":"sh/6t0n6hg7","slide":12,"name":"Text 25","text":"La flexibilización monetaria aumentó recursos prestables y ayudó a sostener el flujo de crédito.","textPreview":"La flexibilización monetaria aumentó recursos prestables y ayudó a sostener el flujo de crédito.","textChars":96,"textLines":1,"bbox":[489.6,338.88,307.2,81.6]}
+{"kind":"shape","id":"sh/dcv6dgz2","slide":12,"name":"Shape 26","bbox":[835.2,292.8,340.8,139.2]}
+{"kind":"shape","id":"sh/cbm5kbyh","slide":12,"name":"Shape 27","bbox":[835.2,292.8,7.68,139.2]}
+{"kind":"textbox","id":"sh/alwbitsn","slide":12,"name":"Text 28","text":"Reactiva Perú","textPreview":"Reactiva Perú","textChars":13,"textLines":1,"bbox":[854.4,307.2,307.2,24]}
+{"kind":"textbox","id":"sh/bm5sryt8","slide":12,"name":"Text 29","text":"Garantía estatal + liquidez del BCRP permitieron créditos de capital de trabajo a empresas.","textPreview":"Garantía estatal + liquidez del BCRP permitieron créditos de capital de trabajo a empresas.","textChars":91,"textLines":1,"bbox":[854.4,338.88,307.2,81.6]}
+{"kind":"textbox","id":"sh/wnetkjat","slide":12,"name":"Text 30","text":"Resultado central: el crédito no se congeló; se protegió la liquidez empresarial.","textPreview":"Resultado central: el crédito no se congeló; se protegió la liquidez empresarial.","textChars":81,"textLines":1,"bbox":[115.2,513.6,1036.8,38.4]}
+{"kind":"textbox","id":"sh/xonutobe","slide":12,"name":"Text 31","text":"Fuente: BCRP, publicaciones sobre Reactiva Perú y medidas de liquidez.","textPreview":"Fuente: BCRP, publicaciones sobre Reactiva Perú y medidas de liquidez.","textChars":70,"textLines":1,"bbox":[62.4,681.6,1084.8,17.28]}
+{"kind":"textbox","id":"sh/mhcbe9sr","slide":12,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"notes","id":"nt/8f2psfyx","slide":12,"text":""}
+{"kind":"slide","id":"sl/hgzapcr6","slide":13,"title":"Caso 2: efectos de la política monetaria expansiva","textShapes":15}
+{"kind":"textbox","id":"sh/q50nydsj","slide":13,"name":"Text 0","text":"Caso 2: efectos de la política monetaria expansiva","textPreview":"Caso 2: efectos de la política monetaria expansiva","textChars":50,"textLines":1,"bbox":[62.4,30.72,883.2,43.2]}
+{"kind":"textbox","id":"sh/bq9orito","slide":13,"name":"Text 1","text":"El canal monetario actuó sobre inversión, consumo y crédito empresarial.","textPreview":"El canal monetario actuó sobre inversión, consumo y crédito empresarial.","textChars":72,"textLines":1,"bbox":[63.36,78.72,1084.8,26.88]}
+{"kind":"shape","id":"sh/o3i5w3ad","slide":13,"name":"Shape 2","bbox":[62.4,112.32,168,23.04]}
+{"kind":"textbox","id":"sh/p4r6p8by","slide":13,"name":"Text 3","text":"EFECTOS","textPreview":"EFECTOS","textChars":7,"textLines":1,"bbox":[70.08,115.2,151.68,15.36]}
+{"kind":"shape","id":"sh/21gnuts7","slide":13,"name":"Shape 4","bbox":[86.4,144,345.6,158.4]}
+{"kind":"shape","id":"sh/32ponyts","slide":13,"name":"Shape 5","bbox":[86.4,144,7.68,158.4]}
+{"kind":"textbox","id":"sh/gzy5s3a1","slide":13,"name":"Text 6","text":"Inversión privada","textPreview":"Inversión privada","textChars":17,"textLines":1,"bbox":[105.6,158.4,312,24]}
+{"kind":"textbox","id":"sh/1076lobm","slide":13,"name":"Text 7","text":"Tasas menores reducen costo de financiamiento. En 2020 la incertidumbre dominó, pero la política evitó una caída mayor y facilitó la recuperación.","textPreview":"Tasas menores reducen costo de financiamiento. En 2020 la incertidumbre dominó, pero la política evitó una caída mayor y facilitó la recu...","textChars":146,"textLines":1,"bbox":[105.6,190.08,312,100.8]}
+{"kind":"shape","id":"sh/hcfy9k3u","slide":13,"name":"Shape 8","bbox":[465.6,144,345.6,158.4]}
+{"kind":"shape","id":"sh/gb6x0zm9","slide":13,"name":"Shape 9","bbox":[465.6,144,7.68,158.4]}
+{"kind":"textbox","id":"sh/vaxg7ulo","slide":13,"name":"Text 10","text":"Consumo de hogares","textPreview":"Consumo de hogares","textChars":18,"textLines":1,"bbox":[484.8,158.4,312,24]}
+{"kind":"textbox","id":"sh/u9ofyp43","slide":13,"name":"Text 11","text":"Crédito más barato y bonos ayudaron a amortiguar la caída. Sin embargo, empleo e ingresos reducidos afectaron el consumo.","textPreview":"Crédito más barato y bonos ayudaron a amortiguar la caída. Sin embargo, empleo e ingresos reducidos afectaron el consumo.","textChars":121,"textLines":1,"bbox":[484.8,190.08,312,100.8]}
+{"kind":"shape","id":"sh/t8fy5k3i","slide":13,"name":"Shape 12","bbox":[844.8,144,345.6,158.4]}
+{"kind":"shape","id":"sh/876xwfmx","slide":13,"name":"Shape 13","bbox":[844.8,144,7.68,158.4]}
+{"kind":"textbox","id":"sh/7mdg3als","slide":13,"name":"Text 14","text":"Crédito empresarial","textPreview":"Crédito empresarial","textChars":19,"textLines":1,"bbox":[864,158.4,312,24]}
+{"kind":"textbox","id":"sh/6l4fu547","slide":13,"name":"Text 15","text":"Reactiva Perú y repos permitieron financiar capital de trabajo, pagos a proveedores y continuidad operativa.","textPreview":"Reactiva Perú y repos permitieron financiar capital de trabajo, pagos a proveedores y continuidad operativa.","textChars":108,"textLines":1,"bbox":[864,190.08,312,100.8]}
+{"kind":"shape","id":"sh/lkvy103m","slide":13,"name":"Shape 16","bbox":[105.6,412.8,200.06,65.28]}
+{"kind":"textbox","id":"sh/kjmxsfm1","slide":13,"name":"Text 17","text":"i ↓","textPreview":"i ↓","textChars":3,"textLines":1,"bbox":[111.36,420.48,188.54,50.88]}
+{"kind":"shape","id":"sh/cnqh8fux","slide":13,"name":"Shape 18","bbox":[308.54,445.44,14.4,0]}
+{"kind":"shape","id":"sh/xozyhkbi","slide":13,"name":"Shape 19","bbox":[326.78,412.8,200.06,65.28]}
+{"kind":"textbox","id":"sh/q18f65cr","slide":13,"name":"Text 20","text":"Crédito ↑","textPreview":"Crédito ↑","textChars":9,"textLines":1,"bbox":[332.54,420.48,188.54,50.88]}
+{"kind":"shape","id":"sh/bmhgfatc","slide":13,"name":"Shape 21","bbox":[529.73,445.44,14.4,0]}
+{"kind":"shape","id":"sh/oz6x4vul","slide":13,"name":"Shape 22","bbox":[547.97,412.8,200.06,65.28]}
+{"kind":"textbox","id":"sh/p0zyd0b6","slide":13,"name":"Text 23","text":"I y C ↑","textPreview":"I y C ↑","textChars":7,"textLines":1,"bbox":[553.73,420.48,188.54,50.88]}
+{"kind":"shape","id":"sh/2xof2lcv","slide":13,"name":"Shape 24","bbox":[750.91,445.44,14.4,0]}
+{"kind":"shape","id":"sh/3yxgbqdg","slide":13,"name":"Shape 25","bbox":[769.15,412.8,200.06,65.28]}
+{"kind":"textbox","id":"sh/8vahgzu5","slide":13,"name":"Text 26","text":"DA ↑","textPreview":"DA ↑","textChars":4,"textLines":1,"bbox":[774.91,420.48,188.54,50.88]}
+{"kind":"shape","id":"sh/9wjyp4bq","slide":13,"name":"Shape 27","bbox":[972.1,445.44,14.4,0]}
+{"kind":"shape","id":"sh/jqlkfyds","slide":13,"name":"Shape 28","bbox":[990.34,412.8,200.06,65.28]}
+{"kind":"textbox","id":"sh/ipcjmtw7","slide":13,"name":"Text 29","text":"Y ↑","textPreview":"Y ↑","textChars":3,"textLines":1,"bbox":[996.1,420.48,188.54,50.88]}
+{"kind":"textbox","id":"sh/5cn2h8vy","slide":13,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"notes","id":"nt/hgzapcr6","slide":13,"text":""}
+{"kind":"slide","id":"sl/6lsnupw7","slide":14,"title":"Caso 2: política fiscal durante 2020–2022","textShapes":13}
+{"kind":"textbox","id":"sh/xc7eds76","slide":14,"name":"Text 0","text":"Caso 2: política fiscal durante 2020–2022","textPreview":"Caso 2: política fiscal durante 2020–2022","textChars":41,"textLines":1,"bbox":[62.4,30.72,883.2,43.2]}
+{"kind":"textbox","id":"sh/wbydknq1","slide":14,"name":"Text 1","text":"El Gobierno utilizó política fiscal expansiva de emergencia y luego inició consolidación gradual.","textPreview":"El Gobierno utilizó política fiscal expansiva de emergencia y luego inició consolidación gradual.","textChars":97,"textLines":1,"bbox":[63.36,78.72,1084.8,26.88]}
+{"kind":"shape","id":"sh/jepwf2pc","slide":14,"name":"Shape 2","bbox":[62.4,112.32,168,23.04]}
+{"kind":"textbox","id":"sh/idgvmx8r","slide":14,"name":"Text 3","text":"POLÍTICA FISCAL","textPreview":"POLÍTICA FISCAL","textChars":15,"textLines":1,"bbox":[70.08,115.2,151.68,15.36]}
+{"kind":"shape","id":"sh/5grehs7i","slide":14,"name":"Shape 4","bbox":[76.8,142.08,340.8,124.8]}
+{"kind":"shape","id":"sh/kfidonqx","slide":14,"name":"Shape 5","bbox":[76.8,142.08,7.68,124.8]}
+{"kind":"textbox","id":"sh/zi5c3y98","slide":14,"name":"Text 6","text":"2020: expansión fuerte","textPreview":"2020: expansión fuerte","textChars":22,"textLines":1,"bbox":[96,156.48,307.2,24]}
+{"kind":"textbox","id":"sh/ehwvat8n","slide":14,"name":"Text 7","text":"Bonos a hogares, gasto sanitario, apoyo empresarial, garantías y mayor déficit fiscal.","textPreview":"Bonos a hogares, gasto sanitario, apoyo empresarial, garantías y mayor déficit fiscal.","textChars":86,"textLines":1,"bbox":[96,188.16,307.2,67.2]}
+{"kind":"shape","id":"sh/c3e1gjyd","slide":14,"name":"Shape 8","bbox":[470.4,142.08,340.8,124.8]}
+{"kind":"shape","id":"sh/x4ni9ofy","slide":14,"name":"Shape 9","bbox":[470.4,142.08,7.68,124.8]}
+{"kind":"textbox","id":"sh/a1wze9g7","slide":14,"name":"Text 10","text":"2021: recuperación","textPreview":"2021: recuperación","textChars":18,"textLines":1,"bbox":[489.6,156.48,307.2,24]}
+{"kind":"textbox","id":"sh/b2507exs","slide":14,"name":"Text 11","text":"Reapertura, continuidad de apoyos y recuperación de ingresos fiscales.","textPreview":"Reapertura, continuidad de apoyos y recuperación de ingresos fiscales.","textChars":70,"textLines":1,"bbox":[489.6,188.16,307.2,67.2]}
+{"kind":"shape","id":"sh/kre1k3y9","slide":14,"name":"Shape 12","bbox":[864,142.08,340.8,124.8]}
+{"kind":"shape","id":"sh/ls7idofu","slide":14,"name":"Shape 13","bbox":[864,142.08,7.68,124.8]}
+{"kind":"textbox","id":"sh/y5wjitgj","slide":14,"name":"Text 14","text":"2022: normalización","textPreview":"2022: normalización","textChars":19,"textLines":1,"bbox":[883.2,156.48,307.2,24]}
+{"kind":"textbox","id":"sh/z650byxo","slide":14,"name":"Text 15","text":"Menor gasto extraordinario y reducción del déficit con crecimiento más moderado.","textPreview":"Menor gasto extraordinario y reducción del déficit con crecimiento más moderado.","textChars":80,"textLines":1,"bbox":[883.2,188.16,307.2,67.2]}
+{"kind":"shape","id":"sh/0buh8zy5","slide":14,"name":"Shape 16","bbox":[96,336,1084.8,72]}
+{"kind":"textbox","id":"sh/1w3i14fq","slide":14,"name":"Text 17","text":"Política fiscal expansiva:  G ↑  y transferencias ↑  ⇒  IS se desplaza a la derecha","textPreview":"Política fiscal expansiva:  G ↑  y transferencias ↑  ⇒  IS se desplaza a la derecha","textChars":83,"textLines":1,"bbox":[107.52,343.68,1061.76,60.48]}
+{"kind":"textbox","id":"sh/hsvy50re","slide":14,"name":"Text 18","text":"Déficit fiscal como % del PBI: 2020 ≈ 8.9%; 2021 ≈ 2.5–2.6%; 2022 ≈ 1.7%.","textPreview":"Déficit fiscal como % del PBI: 2020 ≈ 8.9%; 2021 ≈ 2.5–2.6%; 2022 ≈ 1.7%.","textChars":73,"textLines":1,"bbox":[110.4,494.4,1056,30.72]}
+{"kind":"textbox","id":"sh/grmxwvqt","slide":14,"name":"Text 19","text":"Fuentes: MEF y BCRP, reportes fiscales 2020–2022.","textPreview":"Fuentes: MEF y BCRP, reportes fiscales 2020–2022.","textChars":49,"textLines":1,"bbox":[62.4,681.6,1084.8,17.28]}
+{"kind":"textbox","id":"sh/4vmh0vq5","slide":14,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"notes","id":"nt/6lsnupw7","slide":14,"text":""}
+{"kind":"slide","id":"sl/vaxsvy10","slide":15,"title":"Caso 2: ¿hubo crowding out?","textShapes":12}
+{"kind":"textbox","id":"sh/547mhg3m","slide":15,"name":"Text 0","text":"Caso 2: ¿hubo crowding out?","textPreview":"Caso 2: ¿hubo crowding out?","textChars":27,"textLines":1,"bbox":[62.4,30.72,883.2,43.2]}
+{"kind":"textbox","id":"sh/k3y5ov21","slide":15,"name":"Text 1","text":"La evidencia apunta a crowding out nulo o muy reducido durante la emergencia.","textPreview":"La evidencia apunta a crowding out nulo o muy reducido durante la emergencia.","textChars":77,"textLines":1,"bbox":[63.36,78.72,1084.8,26.88]}
+{"kind":"shape","id":"sh/76p4jqls","slide":15,"name":"Shape 2","bbox":[62.4,112.32,168,23.04]}
+{"kind":"textbox","id":"sh/65gnqlk7","slide":15,"name":"Text 3","text":"CROWDING OUT","textPreview":"CROWDING OUT","textChars":12,"textLines":1,"bbox":[70.08,115.2,151.68,15.36]}
+{"kind":"shape","id":"sh/t87ml0ji","slide":15,"name":"Shape 4","bbox":[72,139.2,326.4,139.2]}
+{"kind":"shape","id":"sh/s7y5sv2x","slide":15,"name":"Shape 5","bbox":[72,139.2,7.68,139.2]}
+{"kind":"textbox","id":"sh/na5476l8","slide":15,"name":"Text 6","text":"Crowding out total","textPreview":"Crowding out total","textChars":18,"textLines":1,"bbox":[91.2,153.6,292.8,24]}
+{"kind":"textbox","id":"sh/m9c3e1kn","slide":15,"name":"Text 7","text":"El gasto público desplaza completamente inversión privada. No corresponde al caso peruano 2020.","textPreview":"El gasto público desplaza completamente inversión privada. No corresponde al caso peruano 2020.","textChars":95,"textLines":1,"bbox":[91.2,185.28,292.8,81.6]}
+{"kind":"shape","id":"sh/wrm9kvep","slide":15,"name":"Shape 8","bbox":[475.2,139.2,326.4,139.2]}
+{"kind":"shape","id":"sh/hsvat0fa","slide":15,"name":"Shape 9","bbox":[475.2,139.2,7.68,139.2]}
+{"kind":"textbox","id":"sh/upkrilwj","slide":15,"name":"Text 10","text":"Crowding out parcial","textPreview":"Crowding out parcial","textChars":20,"textLines":1,"bbox":[494.4,153.6,292.8,24]}
+{"kind":"textbox","id":"sh/vqdsrqx4","slide":15,"name":"Text 11","text":"Parte de la inversión privada cae por mayores tasas. Puede ser riesgo posterior, no el canal dominante.","textPreview":"Parte de la inversión privada cae por mayores tasas. Puede ser riesgo posterior, no el canal dominante.","textChars":103,"textLines":1,"bbox":[494.4,185.28,292.8,81.6]}
+{"kind":"shape","id":"sh/4vm9ovel","slide":15,"name":"Shape 12","bbox":[878.4,139.2,326.4,139.2]}
+{"kind":"shape","id":"sh/5wvax0f6","slide":15,"name":"Shape 13","bbox":[878.4,139.2,7.68,139.2]}
+{"kind":"textbox","id":"sh/it4rm5wv","slide":15,"name":"Text 14","text":"Crowding out nulo","textPreview":"Crowding out nulo","textChars":17,"textLines":1,"bbox":[897.6,153.6,292.8,24]}
+{"kind":"textbox","id":"sh/judsvqxg","slide":15,"name":"Text 15","text":"No hay desplazamiento relevante: tasas bajas, liquidez alta y capacidad ociosa.","textPreview":"No hay desplazamiento relevante: tasas bajas, liquidez alta y capacidad ociosa.","textChars":79,"textLines":1,"bbox":[897.6,185.28,292.8,81.6]}
+{"kind":"shape","id":"sh/l0bqlgf2","slide":15,"name":"Shape 16","bbox":[672,345.6,508.8,182.4]}
+{"kind":"shape","id":"sh/1kjyt83e","slide":15,"name":"Shape 17","bbox":[672,345.6,7.68,182.4]}
+{"kind":"textbox","id":"sh/gjax03m9","slide":15,"name":"Text 18","text":"Justificación","textPreview":"Justificación","textChars":13,"textLines":1,"bbox":[691.2,360,475.2,24]}
+{"kind":"textbox","id":"sh/fi1grylo","slide":15,"name":"Text 19","text":"La expansión fiscal desplazó IS a la derecha, pero el BCRP desplazó LM a la derecha con liquidez y tasa baja. Por eso el gasto público no presionó al alza la tasa de interés en la fase crítica.","textPreview":"La expansión fiscal desplazó IS a la derecha, pero el BCRP desplazó LM a la derecha con liquidez y tasa baja. Por eso el gasto público no...","textChars":193,"textLines":1,"bbox":[691.2,391.68,475.2,124.8]}
+{"kind":"textbox","id":"sh/o7ah4nm5","slide":15,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"image","id":"im/gve5crul","slide":15,"name":"Image 0","bbox":[96,326.4,499.2,249.6]}
+{"kind":"notes","id":"nt/vaxsvy10","slide":15,"text":""}
+{"kind":"slide","id":"sl/gny5sjyp","slide":16,"title":"Caso 2: evaluación macroeconómica 2020–2022","textShapes":23}
+{"kind":"textbox","id":"sh/8z2h8bq1","slide":16,"name":"Text 0","text":"Caso 2: evaluación macroeconómica 2020–2022","textPreview":"Caso 2: evaluación macroeconómica 2020–2022","textChars":43,"textLines":1,"bbox":[62.4,30.72,883.2,43.2]}
+{"kind":"textbox","id":"sh/9kby1g7m","slide":16,"name":"Text 1","text":"Sí puede afirmarse que hubo política económica anticíclica.","textPreview":"Sí puede afirmarse que hubo política económica anticíclica.","textChars":59,"textLines":1,"bbox":[63.36,78.72,1084.8,26.88]}
+{"kind":"shape","id":"sh/ytkf2h8j","slide":16,"name":"Shape 2","bbox":[62.4,112.32,168,23.04]}
+{"kind":"textbox","id":"sh/zutgvm94","slide":16,"name":"Text 3","text":"EVALUACIÓN","textPreview":"EVALUACIÓN","textChars":10,"textLines":1,"bbox":[70.08,115.2,151.68,15.36]}
+{"kind":"shape","id":"sh/kv2h4rqp","slide":16,"name":"Shape 4","bbox":[91.2,136.32,1099.2,72]}
+{"kind":"textbox","id":"sh/lwbyxwra","slide":16,"name":"Text 5","text":"Recesión: PBI ↓, empleo ↓, consumo ↓, inversión ↓  ⇒  Estado responde con G ↑, liquidez ↑ e i ↓","textPreview":"Recesión: PBI ↓, empleo ↓, consumo ↓, inversión ↓  ⇒  Estado responde con G ↑, liquidez ↑ e i ↓","textChars":95,"textLines":1,"bbox":[102.72,144,1076.16,60.48]}
+{"kind":"shape","id":"sh/ip4zel83","slide":16,"name":"Shape 6","bbox":[96,244.8,201.6,49.92]}
+{"kind":"textbox","id":"sh/3qdg7qpo","slide":16,"name":"Text 7","text":"Variable","textPreview":"Variable","textChars":8,"textLines":1,"bbox":[101.76,251.52,190.08,38.4]}
+{"kind":"shape","id":"sh/fm1gzq5o","slide":16,"name":"Shape 8","bbox":[297.6,244.8,412.8,49.92]}
+{"kind":"textbox","id":"sh/e1sf65o3","slide":16,"name":"Text 9","text":"Efecto 2020","textPreview":"Efecto 2020","textChars":11,"textLines":1,"bbox":[303.36,251.52,401.28,38.4]}
+{"kind":"shape","id":"sh/1ojy10ne","slide":16,"name":"Shape 10","bbox":[710.4,244.8,470.4,49.92]}
+{"kind":"textbox","id":"sh/gnax8v6t","slide":16,"name":"Text 11","text":"Evolución 2021–2022","textPreview":"Evolución 2021–2022","textChars":19,"textLines":1,"bbox":[716.16,251.52,458.88,38.4]}
+{"kind":"shape","id":"sh/nqlg3a5k","slide":16,"name":"Shape 12","bbox":[96,294.72,201.6,49.92]}
+{"kind":"textbox","id":"sh/2pcfa5oz","slide":16,"name":"Text 13","text":"PBI","textPreview":"PBI","textChars":3,"textLines":1,"bbox":[101.76,301.44,190.08,38.4]}
+{"kind":"shape","id":"sh/ps3y5knq","slide":16,"name":"Shape 14","bbox":[297.6,294.72,412.8,49.92]}
+{"kind":"textbox","id":"sh/oruhcf65","slide":16,"name":"Text 15","text":"Caída profunda por paralización","textPreview":"Caída profunda por paralización","textChars":31,"textLines":1,"bbox":[303.36,301.44,401.28,38.4]}
+{"kind":"shape","id":"sh/bulg7u5g","slide":16,"name":"Shape 16","bbox":[710.4,294.72,470.4,49.92]}
+{"kind":"textbox","id":"sh/atczepob","slide":16,"name":"Text 17","text":"Rebote fuerte y luego normalización","textPreview":"Rebote fuerte y luego normalización","textChars":35,"textLines":1,"bbox":[716.16,301.44,458.88,38.4]}
+{"kind":"shape","id":"sh/mpgj6t8j","slide":16,"name":"Shape 18","bbox":[96,344.64,201.6,49.92]}
+{"kind":"textbox","id":"sh/7qp0zepo","slide":16,"name":"Text 19","text":"Empleo","textPreview":"Empleo","textChars":6,"textLines":1,"bbox":[101.76,351.36,190.08,38.4]}
+{"kind":"shape","id":"sh/8by18jq9","slide":16,"name":"Shape 20","bbox":[297.6,344.64,412.8,49.92]}
+{"kind":"textbox","id":"sh/9c7i1o7u","slide":16,"name":"Text 21","text":"Pérdida de puestos e ingresos","textPreview":"Pérdida de puestos e ingresos","textChars":29,"textLines":1,"bbox":[303.36,351.36,401.28,38.4]}
+{"kind":"shape","id":"sh/ylwj2987","slide":16,"name":"Shape 22","bbox":[710.4,344.64,470.4,49.92]}
+{"kind":"textbox","id":"sh/zm50veps","slide":16,"name":"Text 23","text":"Recuperación gradual, con informalidad","textPreview":"Recuperación gradual, con informalidad","textChars":38,"textLines":1,"bbox":[716.16,351.36,458.88,38.4]}
+{"kind":"shape","id":"sh/kne14jqd","slide":16,"name":"Shape 24","bbox":[96,394.56,201.6,49.92]}
+{"kind":"textbox","id":"sh/lo7ixo7y","slide":16,"name":"Text 25","text":"Inversión","textPreview":"Inversión","textChars":9,"textLines":1,"bbox":[101.76,401.28,190.08,38.4]}
+{"kind":"shape","id":"sh/ih0jedob","slide":16,"name":"Shape 26","bbox":[297.6,394.56,412.8,49.92]}
+{"kind":"textbox","id":"sh/ji9k7ypw","slide":16,"name":"Text 27","text":"Se contrajo por incertidumbre","textPreview":"Se contrajo por incertidumbre","textChars":29,"textLines":1,"bbox":[303.36,401.28,401.28,38.4]}
+{"kind":"shape","id":"sh/tcbmdcre","slide":16,"name":"Shape 28","bbox":[710.4,394.56,470.4,49.92]}
+{"kind":"textbox","id":"sh/sb2l47at","slide":16,"name":"Text 29","text":"Recuperó dinamismo parcial","textPreview":"Recuperó dinamismo parcial","textChars":26,"textLines":1,"bbox":[716.16,401.28,458.88,38.4]}
+{"kind":"shape","id":"sh/rat4b298","slide":16,"name":"Shape 30","bbox":[96,444.48,201.6,49.92]}
+{"kind":"textbox","id":"sh/69k32xsn","slide":16,"name":"Text 31","text":"Consumo","textPreview":"Consumo","textChars":7,"textLines":1,"bbox":[101.76,451.2,190.08,38.4]}
+{"kind":"shape","id":"sh/58bm9sr2","slide":16,"name":"Shape 32","bbox":[297.6,444.48,412.8,49.92]}
+{"kind":"textbox","id":"sh/47il0nah","slide":16,"name":"Text 33","text":"Cayó por menor ingreso disponible","textPreview":"Cayó por menor ingreso disponible","textChars":33,"textLines":1,"bbox":[303.36,451.2,401.28,38.4]}
+{"kind":"shape","id":"sh/j6947i9w","slide":16,"name":"Shape 34","bbox":[710.4,444.48,470.4,49.92]}
+{"kind":"textbox","id":"sh/i503ydsr","slide":16,"name":"Text 35","text":"Se recuperó con reapertura y empleo","textPreview":"Se recuperó con reapertura y empleo","textChars":35,"textLines":1,"bbox":[716.16,451.2,458.88,38.4]}
+{"kind":"shape","id":"sh/p4vmlwrm","slide":16,"name":"Shape 36","bbox":[96,494.4,201.6,49.92]}
+{"kind":"textbox","id":"sh/o3m5crq1","slide":16,"name":"Text 37","text":"Inflación","textPreview":"Inflación","textChars":9,"textLines":1,"bbox":[101.76,501.12,190.08,38.4]}
+{"kind":"shape","id":"sh/wnadcrqh","slide":16,"name":"Shape 38","bbox":[297.6,494.4,412.8,49.92]}
+{"kind":"textbox","id":"sh/xoju5wr2","slide":16,"name":"Text 39","text":"Inicialmente contenida","textPreview":"Inicialmente contenida","textChars":22,"textLines":1,"bbox":[303.36,501.12,401.28,38.4]}
+{"kind":"shape","id":"sh/alsbahsb","slide":16,"name":"Shape 40","bbox":[710.4,494.4,470.4,49.92]}
+{"kind":"textbox","id":"sh/vm1c3m9w","slide":16,"name":"Text 41","text":"Subió en 2021–2022; BCRP elevó tasa","textPreview":"Subió en 2021–2022; BCRP elevó tasa","textChars":35,"textLines":1,"bbox":[716.16,501.12,458.88,38.4]}
+{"kind":"textbox","id":"sh/kbudgrqt","slide":16,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"notes","id":"nt/gny5sjyp","slide":16,"text":""}
+{"kind":"slide","id":"sl/14bup87q","slide":17,"title":"Conclusión general de los dos casos","textShapes":14}
+{"kind":"textbox","id":"sh/1c7e50ni","slide":17,"name":"Text 0","text":"Conclusión general de los dos casos","textPreview":"Conclusión general de los dos casos","textChars":35,"textLines":1,"bbox":[62.4,30.72,883.2,43.2]}
+{"kind":"textbox","id":"sh/gbedwfmx","slide":17,"name":"Text 1","text":"El análisis combina cálculo, gráficos e interpretación macroeconómica.","textPreview":"El análisis combina cálculo, gráficos e interpretación macroeconómica.","textChars":70,"textLines":1,"bbox":[63.36,78.72,1084.8,26.88]}
+{"kind":"shape","id":"sh/rm5czq50","slide":17,"name":"Shape 2","bbox":[62.4,112.32,168,23.04]}
+{"kind":"textbox","id":"sh/6lwvql4v","slide":17,"name":"Text 3","text":"CONCLUSIÓN","textPreview":"CONCLUSIÓN","textChars":10,"textLines":1,"bbox":[70.08,115.2,151.68,15.36]}
+{"kind":"shape","id":"sh/t8ne10n6","slide":17,"name":"Shape 4","bbox":[81.6,148.8,532.8,120]}
+{"kind":"shape","id":"sh/snedsvml","slide":17,"name":"Shape 5","bbox":[81.6,148.8,7.68,120]}
+{"kind":"textbox","id":"sh/jilcvq54","slide":17,"name":"Text 6","text":"Caso 1","textPreview":"Caso 1","textChars":6,"textLines":1,"bbox":[100.8,163.2,499.2,24]}
+{"kind":"textbox","id":"sh/ihcvml4j","slide":17,"name":"Text 7","text":"El equilibrio inicial es Y = 1800 e i = 5%. Una LM expansiva eleva Y y reduce i. Una IS contractiva reduce Y y también baja i.","textPreview":"El equilibrio inicial es Y = 1800 e i = 5%. Una LM expansiva eleva Y y reduce i. Una IS contractiva reduce Y y también baja i.","textChars":126,"textLines":1,"bbox":[100.8,194.88,499.2,62.4]}
+{"kind":"shape","id":"sh/4by9or6l","slide":17,"name":"Shape 8","bbox":[667.2,148.8,532.8,120]}
+{"kind":"shape","id":"sh/pc7qhwn6","slide":17,"name":"Shape 9","bbox":[667.2,148.8,7.68,120]}
+{"kind":"textbox","id":"sh/29grm1of","slide":17,"name":"Text 10","text":"Caso 2","textPreview":"Caso 2","textChars":6,"textLines":1,"bbox":[686.4,163.2,499.2,24]}
+{"kind":"textbox","id":"sh/3ap8fm50","slide":17,"name":"Text 11","text":"Perú aplicó política monetaria y fiscal expansiva frente a la recesión pandémica; luego retiró estímulo ante la inflación.","textPreview":"Perú aplicó política monetaria y fiscal expansiva frente a la recesión pandémica; luego retiró estímulo ante la inflación.","textChars":122,"textLines":1,"bbox":[686.4,194.88,499.2,62.4]}
+{"kind":"shape","id":"sh/gnepkr69","slide":17,"name":"Shape 12","bbox":[110.4,408,199.1,65.28]}
+{"kind":"textbox","id":"sh/honqdwnu","slide":17,"name":"Text 13","text":"Modelo","textPreview":"Modelo","textChars":6,"textLines":1,"bbox":[116.16,415.68,187.58,50.88]}
+{"kind":"shape","id":"sh/ulw7ihoj","slide":17,"name":"Shape 14","bbox":[312.38,440.64,14.4,0]}
+{"kind":"shape","id":"sh/fm58bm54","slide":17,"name":"Shape 15","bbox":[330.62,408,199.1,65.28]}
+{"kind":"textbox","id":"sh/0ji9wb6t","slide":17,"name":"Text 16","text":"Política","textPreview":"Política","textChars":8,"textLines":1,"bbox":[336.38,415.68,187.58,50.88]}
+{"kind":"shape","id":"sh/14rqpgne","slide":17,"name":"Shape 17","bbox":[532.61,440.64,14.4,0]}
+{"kind":"shape","id":"sh/90nq9gfi","slide":17,"name":"Shape 18","bbox":[550.85,408,199.1,65.28]}
+{"kind":"textbox","id":"sh/8ze9gbyx","slide":17,"name":"Text 19","text":"Mercado afectado","textPreview":"Mercado afectado","textChars":16,"textLines":1,"bbox":[556.61,415.68,187.58,50.88]}
+{"kind":"shape","id":"sh/ny5876xc","slide":17,"name":"Shape 20","bbox":[752.83,440.64,14.4,0]}
+{"kind":"shape","id":"sh/mxw7e1gr","slide":17,"name":"Shape 21","bbox":[771.07,408,199.1,65.28]}
+{"kind":"textbox","id":"sh/lwnq5gf6","slide":17,"name":"Text 22","text":"Curva desplazada","textPreview":"Curva desplazada","textChars":16,"textLines":1,"bbox":[776.83,415.68,187.58,50.88]}
+{"kind":"shape","id":"sh/0vepcbyl","slide":17,"name":"Shape 23","bbox":[973.06,440.64,14.4,0]}
+{"kind":"shape","id":"sh/zul836xg","slide":17,"name":"Shape 24","bbox":[991.3,408,199.1,65.28]}
+{"kind":"textbox","id":"sh/ytc7a1gv","slide":17,"name":"Text 25","text":"Resultado macro","textPreview":"Resultado macro","textChars":15,"textLines":1,"bbox":[997.06,415.68,187.58,50.88]}
+{"kind":"textbox","id":"sh/d83q1wfa","slide":17,"name":"Text 26","text":"Idea final: una buena respuesta no solo calcula; explica el mecanismo económico detrás de cada resultado.","textPreview":"Idea final: una buena respuesta no solo calcula; explica el mecanismo económico detrás de cada resultado.","textChars":105,"textLines":1,"bbox":[105.6,552,1070.4,36.48]}
+{"kind":"textbox","id":"sh/c7up8ryp","slide":17,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"notes","id":"nt/14bup87q","slide":17,"text":""}
+{"kind":"slide","id":"sl/y5wne50z","slide":18,"title":"Fuentes y datos utilizados","textShapes":6}
+{"kind":"textbox","id":"sh/wrelszu9","slide":18,"name":"Text 0","text":"Fuentes y datos utilizados","textPreview":"Fuentes y datos utilizados","textChars":26,"textLines":1,"bbox":[62.4,30.72,883.2,43.2]}
+{"kind":"textbox","id":"sh/hsn2l4bu","slide":18,"name":"Text 1","text":"Referencias institucionales que sustentan el caso peruano (2020–2022).","textPreview":"Referencias institucionales que sustentan el caso peruano (2020–2022).","textChars":70,"textLines":1,"bbox":[63.36,78.72,1084.8,26.88]}
+{"kind":"shape","id":"sh/itw3upcf","slide":18,"name":"Shape 2","bbox":[62.4,112.32,168,23.04]}
+{"kind":"textbox","id":"sh/je5knut0","slide":18,"name":"Text 3","text":"FUENTES","textPreview":"FUENTES","textChars":7,"textLines":1,"bbox":[70.08,115.2,151.68,15.36]}
+{"kind":"textbox","id":"sh/4felwzu5","slide":18,"name":"Text 4","text":"BCRP — Series estadísticas: tasa de referencia de política monetaria.\nBCRP — Publicaciones y notas: liquidez extraordinaria y Reactiva Perú.\nINEI — Cuentas nacionales: evolución del PBI, consumo e inversión.\nMEF — Reportes fiscales: déficit y medidas del Plan Económico frente a la COVID-19.","textPreview":"BCRP — Series estadísticas: tasa de referencia de política monetaria. | BCRP — Publicaciones y notas: liquidez extraordinaria y Reactiva ...","textChars":291,"textLines":4,"bbox":[96,153.6,1075.2,216]}
+{"kind":"textbox","id":"sh/5gnmp4bq","slide":18,"name":"Text 5","text":"Datos de control: tasa BCRP de 2,25 % (feb. 2020) a 0,25 % (abr. 2020–jul. 2021); PBI real: −10,9 % (2020), +13,4 % (2021) y +2,7 % (2022).","textPreview":"Datos de control: tasa BCRP de 2,25 % (feb. 2020) a 0,25 % (abr. 2020–jul. 2021); PBI real: −10,9 % (2020), +13,4 % (2021) y +2,7 % (2022).","textChars":139,"textLines":1,"bbox":[96,417.6,1075.2,84.48]}
+{"kind":"textbox","id":"sh/v2xovu9o","slide":18,"name":"Slide Number Placeholder 0","placeholder":"slideNumber","text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1176,679.68,83.99,31.5]}
+{"kind":"notes","id":"nt/y5wne50z","slide":18,"text":""}
