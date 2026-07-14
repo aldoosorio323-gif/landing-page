@@ -1,17 +1,11 @@
 ﻿document.addEventListener('DOMContentLoaded', () => {
   const WHATSAPP_NUMBER = '51925789830';
-  const PROMO_CAMPAIGN = {
-    code: 'JORPE',
-    campaign: 'Fiestas Patrias Perú',
-    productId: 'jbl-go4',
-    productName: 'JBL Go 4',
-    normalPrice: 'S/ 159',
-    promoPrice: 'S/ 119',
-    discount: 'S/ 40',
-    expiresAt: '2026-07-31T23:59:59-05:00',
-    expiresText: 'Válido hasta el 31 de julio',
-    unlimitedDuringCampaign: true
-  };
+  const PROMO_CODE = 'JORPE';
+  const PROMOTIONAL_PRICES_JORPE = Object.freeze({
+    'jbl-go4': 119,
+    'lg-grab': null,
+    'lg-bounce': null
+  });
 
   const promoTrack = document.getElementById('promoTrack');
   const promoDots = Array.from(document.querySelectorAll('#promoDots .promo-dot'));
@@ -379,7 +373,7 @@
       brand: 'JBL',
       category: 'Portátil',
       name: 'JBL Go 4',
-      price: 'S/ 159',
+      price: 'S/ 129',
       benefits: ['JBL Pro Sound', 'IP67 agua y polvo', 'Hasta 7h de batería'],
       short: 'Compacto, resistente y fácil de llevar. Disponible en colores para elegir el estilo que más va contigo.',
       features: [
@@ -595,6 +589,22 @@
 }
   ];
 
+  const promotionalProducts = Object.freeze(
+    ['jbl-go4', 'lg-grab', 'lg-bounce'].map(id => {
+      const product = PRODUCTS.find(item => item.id === id);
+      return Object.freeze({
+        id: product.id,
+        name: product.name,
+        brand: product.brand,
+        normalPrice: Number(product.price.replace(/[^0-9]/g, '')),
+        promoPrice: PROMOTIONAL_PRICES_JORPE[id],
+        images: getDefaultProductGallery(product),
+        description: product.short,
+        features: product.features
+      });
+    })
+  );
+
   const modal = document.getElementById('productModal');
   const modalClose = document.getElementById('modalClose');
   const modalBack = document.getElementById('modalBack');
@@ -620,6 +630,7 @@
   const promoModalPrevImage = document.getElementById('promoModalPrevImage');
   const promoModalNextImage = document.getElementById('promoModalNextImage');
   const promoModalWhatsApp = document.getElementById('promoModalWhatsApp');
+  const promoProductSelector = document.getElementById('promoProductSelector');
 
   let currentGallery = [];
   let currentGalleryIndex = 0;
@@ -629,6 +640,8 @@
   let promoTouchStartX = 0;
   let touchStartX = 0;
   let activeVariantIndex = 0;
+  let activePromoProductId = 'jbl-go4';
+  let promoModalTrigger = null;
 
   function resetModalScroll() {
     window.requestAnimationFrame(() => {
@@ -701,12 +714,8 @@
     return String(value || '').trim().toUpperCase();
   }
 
-  function isPromoExpired(campaign = PROMO_CAMPAIGN) {
-    return Date.now() > new Date(campaign.expiresAt).getTime();
-  }
-
-  function buildPromoWhatsAppUrl(campaign = PROMO_CAMPAIGN) {
-    const msg = `Hola JOR STORE, quiero comprar el ${campaign.productName} usando el código promocional ${campaign.code}. Precio promocional: ${campaign.promoPrice}. Promoción Fiestas Patrias válida hasta el 31 de julio.`;
+  function buildPromoWhatsAppUrl(product) {
+    const msg = `Hola JOR STORE, quiero comprar el ${product.name} con el código promocional ${PROMO_CODE}.`;
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
   }
 
@@ -724,7 +733,8 @@
     promoModalImg.style.transform = 'scale(.985)';
     window.setTimeout(() => {
       promoModalImg.src = item.src;
-      promoModalImg.alt = `${PROMO_CAMPAIGN.productName} - ${item.label}`;
+      const product = promotionalProducts.find(item => item.id === activePromoProductId);
+      promoModalImg.alt = `${product?.name || 'Producto promocional'} - ${item.label}`;
       if (promoModalGalleryLabel) promoModalGalleryLabel.textContent = item.label;
       if (promoModalThumbs) {
         promoModalThumbs.querySelectorAll('.gallery-thumb').forEach((thumb, thumbIndex) => {
@@ -767,13 +777,57 @@
     setPromoGalleryImage(0);
   }
 
-  function openPromoModal(campaign = PROMO_CAMPAIGN) {
-    const product = PRODUCTS.find(item => item.id === campaign.productId);
+  function renderPromoSelector() {
+    if (!promoProductSelector) return;
+    promoProductSelector.innerHTML = promotionalProducts.map(product => `
+      <button class="promo-product-option" id="promo-option-${product.id}" type="button" role="tab" data-promo-product="${product.id}" aria-controls="promoModalContent" aria-selected="${product.id === activePromoProductId ? 'true' : 'false'}" tabindex="${product.id === activePromoProductId ? '0' : '-1'}">
+        <img src="${product.images[0].src}" alt="" loading="lazy">
+        <span>${product.name}</span>
+      </button>
+    `).join('');
+  }
+
+  function updatePromoSelectorState() {
+    promoProductSelector?.querySelectorAll('[role="tab"]').forEach(button => {
+      const active = button.dataset.promoProduct === activePromoProductId;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-selected', active ? 'true' : 'false');
+      button.tabIndex = active ? 0 : -1;
+    });
+  }
+
+  function renderPromoProduct(productId) {
+    const product = promotionalProducts.find(item => item.id === productId);
+    if (!product) return;
+    activePromoProductId = product.id;
+    updatePromoSelectorState();
+    renderPromoGallery(product);
+
+    document.getElementById('promoModalBrand').textContent = product.brand;
+    document.getElementById('promoModalTitle').textContent = product.name;
+    document.getElementById('promoModalDescription').textContent = product.description;
+    document.getElementById('promoModalFeatures').innerHTML = product.features.map(feature => `<li>${feature}</li>`).join('');
+    document.getElementById('promoModalNormalPrice').textContent = `S/ ${product.normalPrice}`;
+
+    const hasPromoPrice = product.promoPrice !== null;
+    document.getElementById('promoModalPromoPrice').textContent = hasPromoPrice ? `S/ ${product.promoPrice}` : 'Por confirmar';
+    document.getElementById('promoModalSavings').textContent = hasPromoPrice
+      ? `Ahorro: S/ ${product.normalPrice - product.promoPrice}`
+      : 'El precio promocional todavía requiere confirmación.';
+    document.getElementById('promoModalDetails').classList.toggle('promo-price-pending', !hasPromoPrice);
+
+    if (promoModalWhatsApp) {
+      promoModalWhatsApp.href = buildPromoWhatsAppUrl(product);
+      promoModalWhatsApp.textContent = hasPromoPrice ? `Comprar ${product.name} con JORPE` : `Consultar oferta de ${product.name}`;
+    }
+  }
+
+  function openPromoModal() {
+    const product = promotionalProducts.find(item => item.id === activePromoProductId);
     if (!promoModal || !product) return;
 
-    renderPromoGallery(product);
-    if (promoModalWhatsApp) promoModalWhatsApp.href = buildPromoWhatsAppUrl(campaign);
-
+    promoModalTrigger = promoCodeInput;
+    renderPromoProduct(product.id);
     promoModal.classList.add('open');
     promoModal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
@@ -789,10 +843,15 @@
     promoModal.classList.remove('open');
     promoModal.setAttribute('aria-hidden', 'true');
     if (!modal || !modal.classList.contains('open')) document.body.classList.remove('modal-open');
+    (promoModalTrigger || promoCodeInput)?.focus();
+    window.requestAnimationFrame(() => (promoModalTrigger || promoCodeInput)?.focus());
   }
 
   function initPromoCodeCampaign() {
     if (!promoCodeForm || !promoCodeInput) return;
+
+    renderPromoSelector();
+    renderPromoProduct(activePromoProductId);
 
     promoCodeInput.addEventListener('input', () => {
       if (promoCodeFeedback) setPromoFeedback('', '');
@@ -801,20 +860,17 @@
     promoCodeForm.addEventListener('submit', event => {
       event.preventDefault();
       const enteredCode = normalizePromoCode(promoCodeInput.value);
-      promoCodeInput.value = enteredCode;
 
-      if (enteredCode !== PROMO_CAMPAIGN.code) {
+      if (enteredCode !== PROMO_CODE) {
         setPromoFeedback('error', 'Código inválido. Revisa que esté escrito correctamente e inténtalo otra vez.');
+        promoCodeInput.setAttribute('aria-invalid', 'true');
+        promoCodeInput.focus();
         return;
       }
 
-      if (isPromoExpired(PROMO_CAMPAIGN)) {
-        setPromoFeedback('expired', 'Esta promoción ya venció. La campaña fue válida hasta el 31 de julio a las 23:59, hora Perú.');
-        return;
-      }
-
+      promoCodeInput.setAttribute('aria-invalid', 'false');
       setPromoFeedback('success', 'Código aplicado. Tu promoción exclusiva está lista.');
-      openPromoModal(PROMO_CAMPAIGN);
+      openPromoModal();
     });
   }
 
@@ -1023,6 +1079,27 @@ if (brand) {
   if (promoModalClose) promoModalClose.addEventListener('click', closePromoModal);
   if (promoModalBack) promoModalBack.addEventListener('click', closePromoModal);
 
+  if (promoProductSelector) {
+    promoProductSelector.addEventListener('click', event => {
+      const option = event.target.closest('[data-promo-product]');
+      if (option) renderPromoProduct(option.dataset.promoProduct);
+    });
+
+    promoProductSelector.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      const options = Array.from(promoProductSelector.querySelectorAll('[role="tab"]'));
+      const currentIndex = options.indexOf(document.activeElement);
+      if (currentIndex < 0) return;
+      event.preventDefault();
+      let nextIndex = event.key === 'Home' ? 0 : event.key === 'End' ? options.length - 1 : currentIndex;
+      if (event.key === 'ArrowLeft') nextIndex = (currentIndex - 1 + options.length) % options.length;
+      if (event.key === 'ArrowRight') nextIndex = (currentIndex + 1) % options.length;
+      const option = options[nextIndex];
+      renderPromoProduct(option.dataset.promoProduct);
+      option.focus();
+    });
+  }
+
   if (modalPrevImage) {
     modalPrevImage.addEventListener('click', event => {
       event.preventDefault();
@@ -1109,6 +1186,23 @@ if (brand) {
     }
 
     if (isPromoModalOpen) {
+      if (event.key === 'Tab') {
+        const card = promoModal?.querySelector('.promo-modal-card');
+        const focusable = card ? Array.from(card.querySelectorAll('button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])')).filter(element => !element.hidden && element.offsetParent !== null) : [];
+        if (focusable.length) {
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
+        }
+        return;
+      }
+
       if (event.key === 'ArrowLeft') {
         event.preventDefault();
         setPromoGalleryImage(promoGalleryIndex - 1);

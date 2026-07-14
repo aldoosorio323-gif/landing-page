@@ -1369,135 +1369,6 @@
     }
   
 
-    /* v36: banner principal con más brillo, contraste y glow premium */
-    .hero-sales-banner{
-      position:relative!important;
-      width:100%!important;
-      max-width:100vw!important;
-      overflow:hidden!important;
-      background:#030507!important;
-      color:#fff!important;
-      isolation:isolate!important;
-      margin:0!important;
-    }
-    .hero-sales-banner::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      z-index:1;
-      pointer-events:none;
-      background:
-        radial-gradient(circle at 20% 24%,rgba(255,142,24,.20),transparent 28%),
-        radial-gradient(circle at 76% 34%,rgba(8,119,255,.18),transparent 31%),
-        linear-gradient(90deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.06) 38%,rgba(0,0,0,.01) 66%,rgba(0,0,0,.08) 100%),
-        linear-gradient(180deg,rgba(0,0,0,.06) 0%,rgba(0,0,0,0) 42%,rgba(0,0,0,.08) 100%);
-    }
-    .hero-sales-img{
-      display:block!important;
-      width:100%!important;
-      height:auto!important;
-      max-width:100%!important;
-      object-fit:contain!important;
-      background:#030507!important;
-      filter:brightness(1.08) contrast(1.06) saturate(1.10)!important;
-    }
-    .hero-sales-content{
-      position:absolute;
-      z-index:2;
-      left:clamp(18px,4vw,72px);
-      top:clamp(24px,5vw,84px);
-      width:min(720px,48vw);
-      max-width:calc(100vw - 36px);
-      color:#fff;
-      pointer-events:none;
-    }
-    .hero-sales-kicker{
-      margin:0 0 clamp(8px,1.2vw,14px);
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 12px;
-      border-radius:999px;
-      background:rgba(0,0,0,.38);
-      border:1px solid rgba(255,255,255,.20);
-      color:#f4f7ff;
-      font-size:clamp(10px,.9vw,13px);
-      font-weight:950;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      backdrop-filter:blur(8px);
-      box-shadow:0 0 22px rgba(8,119,255,.18);
-    }
-    .hero-sales-content h1{
-      margin:0;
-      color:#fff;
-      font-size:clamp(42px,6vw,104px);
-      line-height:.90;
-      letter-spacing:-.055em;
-      font-weight:1000;
-      text-transform:uppercase;
-      text-shadow:0 5px 28px rgba(0,0,0,.78), 0 0 30px rgba(8,119,255,.28);
-    }
-    .hero-sales-content h1 span{
-      display:block;
-      color:#ff9a16;
-      text-shadow:0 4px 24px rgba(0,0,0,.85),0 0 34px rgba(255,105,18,.62);
-    }
-    .hero-catalog-btn{
-      pointer-events:auto;
-      margin-top:clamp(15px,2.4vw,32px);
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      min-height:56px;
-      padding:17px clamp(22px,2.5vw,34px);
-      border-radius:18px;
-      color:#fff!important;
-      text-decoration:none!important;
-      font-size:clamp(15px,1.18vw,19px);
-      font-weight:1000;
-      letter-spacing:-.01em;
-      background:
-        linear-gradient(135deg,rgba(255,103,22,.96) 0%,rgba(255,143,16,.92) 35%,rgba(5,105,255,.94) 100%);
-      border:1px solid rgba(255,255,255,.30);
-      box-shadow:
-        0 16px 38px rgba(0,0,0,.36),
-        0 0 34px rgba(255,103,22,.45),
-        0 0 42px rgba(5,105,255,.42),
-        inset 0 1px 0 rgba(255,255,255,.34);
-      transition:transform .22s ease, box-shadow .22s ease, filter .22s ease;
-      position:relative;
-      overflow:hidden;
-    }
-    .hero-catalog-btn::before{
-      content:"";
-      position:absolute;
-      inset:-2px;
-      background:linear-gradient(110deg,transparent 0%,rgba(255,255,255,.40) 45%,transparent 62%);
-      transform:translateX(-120%);
-      transition:transform .7s ease;
-    }
-    .hero-catalog-btn::after{
-      content:"→";
-      position:relative;
-      font-size:1.15em;
-      line-height:1;
-    }
-    .hero-catalog-btn:hover{
-      transform:translateY(-2px);
-      filter:saturate(1.08);
-      box-shadow:
-        0 20px 44px rgba(0,0,0,.42),
-        0 0 42px rgba(255,103,22,.55),
-        0 0 54px rgba(5,105,255,.50),
-        inset 0 1px 0 rgba(255,255,255,.42);
-    }
-    .hero-catalog-btn:hover::before{transform:translateX(120%);}
-    .hero-catalog-btn:focus-visible{
-      outline:3px solid rgba(255,255,255,.86);
-      outline-offset:4px;
-    }
     .catalog-anchor{
       display:block;
       position:relative;
@@ -1507,54 +1378,7 @@
       overflow:hidden;
     }
     @media(max-width:760px){
-      .hero-sales-banner::before{
-        background:
-          radial-gradient(circle at 22% 22%,rgba(255,142,24,.16),transparent 32%),
-          radial-gradient(circle at 82% 36%,rgba(8,119,255,.16),transparent 36%),
-          linear-gradient(90deg,rgba(0,0,0,.26) 0%,rgba(0,0,0,.07) 62%,rgba(0,0,0,.02) 100%);
-      }
-      .hero-sales-content{
-        left:14px;
-        top:14px;
-        width:76vw;
-        max-width:320px;
-      }
-      .hero-sales-kicker{
-        font-size:8px;
-        padding:5px 8px;
-        margin-bottom:6px;
-        letter-spacing:.10em;
-      }
-      .hero-sales-content h1{
-        font-size:clamp(26px,10.2vw,42px);
-        line-height:.92;
-        letter-spacing:-.045em;
-      }
-      .hero-catalog-btn{
-        min-height:40px;
-        margin-top:9px;
-        padding:10px 13px;
-        border-radius:13px;
-        font-size:12px;
-        gap:6px;
-        box-shadow:
-          0 10px 24px rgba(0,0,0,.34),
-          0 0 22px rgba(255,103,22,.36),
-          0 0 24px rgba(5,105,255,.35),
-          inset 0 1px 0 rgba(255,255,255,.30);
-      }
       .catalog-anchor{top:-72px;}
-    }
-    @media(max-width:420px){
-      .hero-sales-content{
-        left:10px;
-        top:10px;
-        width:82vw;
-        max-width:300px;
-      }
-      .hero-sales-kicker{display:none;}
-      .hero-sales-content h1{font-size:28px;}
-      .hero-catalog-btn{font-size:11px;min-height:36px;padding:9px 11px;margin-top:7px;}
     }
 
       /* v34: catálogo limpio: solo nombre del modelo debajo de imagen, sin tags ni viñetas; JOR STORE negro; Stage 301 S/ 899. */
@@ -5080,136 +4904,6 @@ body #productModal.modal.open .modal-card #modalClose.close {
   border-radius: 999px !important;
   z-index: 999999 !important;
 }
-/* v37: banner principal responsive y menos alto */
-.hero-sales-banner {
-  min-height: auto !important;
-  max-height: 620px !important;
-  overflow: hidden !important;
-  background: #030507 !important;
-}
-
-.hero-sales-img {
-  width: 100% !important;
-  height: clamp(320px, 36vw, 560px) !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-  display: block !important;
-}
-
-.hero-sales-content {
-  left: clamp(18px, 4vw, 64px) !important;
-  top: clamp(20px, 4vw, 58px) !important;
-  width: min(620px, 46vw) !important;
-}
-
-.hero-sales-content h1 {
-  font-size: clamp(34px, 5vw, 78px) !important;
-  line-height: .92 !important;
-}
-
-.hero-catalog-btn {
-  min-height: 48px !important;
-  padding: 13px clamp(18px, 2vw, 28px) !important;
-  font-size: clamp(14px, 1vw, 17px) !important;
-}
-
-@media (max-width: 900px) {
-  .hero-sales-img {
-    height: clamp(280px, 48vw, 430px) !important;
-    object-position: center center !important;
-  }
-
-  .hero-sales-content {
-    width: min(520px, 58vw) !important;
-    top: 24px !important;
-  }
-
-  .hero-sales-content h1 {
-    font-size: clamp(30px, 7vw, 54px) !important;
-  }
-}
-
-@media (max-width: 620px) {
-  .hero-sales-img {
-    height: 300px !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-
-  .hero-sales-content {
-    left: 14px !important;
-    top: 16px !important;
-    width: 72vw !important;
-    max-width: 310px !important;
-  }
-
-  .hero-sales-kicker {
-    display: none !important;
-  }
-
-  .hero-sales-content h1 {
-    font-size: 28px !important;
-    line-height: .95 !important;
-  }
-
-  .hero-catalog-btn {
-    margin-top: 10px !important;
-    min-height: 38px !important;
-    padding: 9px 12px !important;
-    font-size: 11px !important;
-    border-radius: 12px !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .hero-sales-img {
-    height: 270px !important;
-  }
-
-  .hero-sales-content h1 {
-    font-size: 25px !important;
-  }
-}
-/* v38: banner principal completo sin recorte */
-.hero-sales-banner {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
-  max-height: none !important;
-  min-height: 0 !important;
-  overflow: visible !important;
-  background: #030507 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.hero-sales-banner::before {
-  display: none !important;
-}
-
-.hero-sales-img {
-  width: 100% !important;
-  height: auto !important;
-  max-height: none !important;
-  min-height: 0 !important;
-  object-fit: contain !important;
-  object-position: center center !important;
-  display: block !important;
-  background: #030507 !important;
-}
-
-/* Oculta el texto/botón HTML porque el banner ya trae diseño propio */
-.hero-sales-content {
-  display: none !important;
-}
-
-@media (max-width: 768px) {
-  .hero-sales-img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-  }
-}
 /* ==================================================
    FIX MODAL MOBILE - JOR STORE
    Corrige barra blanca superior, botón X y orden visual
@@ -5491,27 +5185,7 @@ body.modal-open .floating-wa {
   }
 }
 
-/* Final responsive polish: hero frame and scenario carousel controls */
-.hero-sales-banner {
-  width: min(calc(100% - 24px), 1600px) !important;
-  max-width: 1600px !important;
-  margin: 14px auto 0 !important;
-  border-radius: clamp(18px, 2.4vw, 34px) !important;
-  border: 1px solid rgba(255,255,255,.14) !important;
-  box-shadow:
-    0 24px 70px rgba(0,0,0,.24),
-    0 8px 24px rgba(8,119,255,.10),
-    inset 0 1px 0 rgba(255,255,255,.12) !important;
-  overflow: hidden !important;
-}
-
-.hero-sales-img {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
-  object-fit: contain !important;
-  display: block !important;
-}
+/* Final responsive polish: scenario carousel controls */
 
 #promociones .promo-carousel.clean-image-carousel {
   position: relative !important;
@@ -5546,12 +5220,6 @@ body.modal-open .floating-wa {
 }
 
 @media (max-width: 760px) {
-  .hero-sales-banner {
-    width: calc(100% - 12px) !important;
-    margin: 8px auto 0 !important;
-    border-radius: 16px !important;
-  }
-
   #promociones .promo-carousel.clean-image-carousel .promo-prev {
     left: 10px !important;
   }
@@ -7049,6 +6717,98 @@ html body div#productModal.modal.open div.modal-card > button#modalClose.close {
   #codigo-promocional .promo-price-box {
     grid-template-columns: 1fr !important;
   }
+}
+
+/* JORPE: selector accesible y contenido promocional compartido. */
+.promo-next::before { content: none !important; }
+
+#promoProductModal .promo-modal-layout {
+  display: block !important;
+  padding: clamp(18px, 3vw, 34px) !important;
+}
+
+#promoProductModal .promo-product-selector {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+#promoProductModal .promo-product-option {
+  min-width: 0;
+  min-height: 78px;
+  padding: 9px 12px;
+  border: 2px solid rgba(119, 68, 43, .16);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,.82);
+  color: #321d14;
+  font: inherit;
+  font-weight: 900;
+  text-align: left;
+  cursor: pointer;
+}
+
+#promoProductModal .promo-product-option.active,
+#promoProductModal .promo-product-option[aria-selected="true"] {
+  border-color: #b31c1c;
+  background: rgba(255,244,229,.98);
+  box-shadow: 0 0 0 3px rgba(179,28,28,.1);
+}
+
+#promoProductModal .promo-product-option:focus-visible {
+  outline: 3px solid rgba(8,119,255,.3);
+  outline-offset: 2px;
+}
+
+#promoProductModal .promo-product-option img {
+  flex: 0 0 58px;
+  width: 58px;
+  height: 52px;
+  object-fit: contain;
+}
+
+#promoProductModal .promo-modal-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(340px, .92fr);
+  gap: 28px;
+  min-width: 0;
+}
+
+#promoProductModal .promo-modal-features {
+  margin: 0 0 16px;
+  padding-left: 20px;
+  color: #553927;
+  line-height: 1.55;
+}
+
+#promoProductModal .promo-modal-features li::marker { color: #b31c1c; }
+
+#promoProductModal .promo-price-pending .promo-modal-offer strong,
+#promoProductModal .promo-price-pending #promoModalSavings { color: #805c00 !important; }
+
+@media (max-width: 980px) {
+  #promoProductModal .promo-modal-content { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  #promoProductModal .promo-product-selector {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  #promoProductModal .promo-product-option {
+    flex: 0 0 170px;
+  }
+
+  #promoProductModal .promo-modal-content { gap: 18px; }
+  #promoProductModal .promo-modal-info { padding: 0 4px 8px !important; }
+  #promoProductModal .promo-modal-close { position: fixed !important; top: calc(env(safe-area-inset-top) + 12px) !important; right: 14px !important; z-index: 100000 !important; }
 }
 
 /* Promo JORPE final: section placement, clean background, and exclusive modal. */

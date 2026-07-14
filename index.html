@@ -7,7 +7,7 @@
 <title>JOR STORE | Parlantes LG XBOOM y JBL originales</title>
 <meta content="Landing page de JOR STORE para vender parlantes LG XBOOM y JBL con asesoría por WhatsApp." name="description"/>
 <link rel="icon" type="image/jpeg" href="assets/images/logos/logo-jor-store.jpeg">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=20260714-jorpe-products">
 </head>
 <body>
 <div class="topbar">
@@ -29,14 +29,6 @@
 </nav>
 </header>
 <main id="inicio">
-<section class="hero-sales-banner" aria-label="Banner principal JOR STORE">
-<img class="hero-sales-img" src="assets/images/hero/banner-principal.webp.png" alt="Banner principal JOR STORE">
-  <div class="hero-sales-content">
-    <p class="hero-sales-kicker">JOR STORE · PARLANTES ORIGINALES</p>
-    <h1>El sonido<br><span>que te falta</span></h1>
-    <a class="hero-catalog-btn" href="#catalogo" aria-label="Ver catálogo de productos">Ver catálogo de productos</a>
-  </div>
-</section>
 <section class="promo-carousel-section" id="promociones">
 <div class="promo-carousel-wrap">
 <div class="promo-head promo-head-clean">
@@ -77,7 +69,7 @@
   <img alt="JBL Boombox 4" loading="lazy" src="assets/images/escenarios/jbl-boombox-4.webp">
 </div>
 </div>
-<button aria-label="Siguiente" class="promo-arrow promo-next" type="button"></button>
+<button aria-label="Siguiente" class="promo-arrow promo-next" type="button">&#8250;</button>
 <div class="promo-nav" id="promoDots">
 <button aria-label="Ver escenario 1: JBL Go 4" class="promo-dot active" type="button"></button>
 <button aria-label="Ver escenario 2: JBL Grip" class="promo-dot" type="button"></button>
@@ -105,8 +97,8 @@
   <div class="promo-code-shell">
     <div class="promo-code-copy">
       <p class="eyebrow">CÓDIGO PROMOCIONAL</p>
-      <h2 id="promo-code-title">Desbloquea tu oferta de Fiestas Patrias</h2>
-      <p>Ingresa tu código y accede a una promoción exclusiva.</p>
+      <h2 id="promo-code-title">Desbloquea ofertas JBL y LG XBOOM</h2>
+      <p>Ingresa tu código y desbloquea ofertas exclusivas en productos seleccionados JBL y LG XBOOM.</p>
       <form class="promo-code-form" id="promoCodeForm" novalidate>
         <label class="sr-only" for="promoCodeInput">Código promocional</label>
         <input id="promoCodeInput" name="promo-code" type="text" inputmode="text" autocomplete="off" placeholder="ESCRIBE TU CÓDIGO" aria-describedby="promoCodeFeedback">
@@ -203,7 +195,7 @@
 <img alt="JBL Go 4" src="assets/images/productos/jbl-go-4.webp">
 <div class="product-body">
 <h3>JBL Go 4</h3>
-<div class="price-line"><strong>S/ 159</strong><span>Precio JOR STORE</span></div>
+<div class="price-line"><strong>S/ 129</strong><span>Precio JOR STORE</span></div>
 <button class="details-btn" type="button">Ver detalles</button>
 </div>
 </article>
@@ -486,30 +478,31 @@
 <div aria-labelledby="promoModalTitle" aria-modal="true" class="promo-modal-card" role="dialog">
 <button aria-label="Cerrar promoción" class="promo-modal-close" id="promoModalClose" type="button">×</button>
 <div class="promo-modal-layout">
+<div class="promo-product-selector" id="promoProductSelector" role="tablist" aria-label="Productos promocionales"></div>
+<div class="promo-modal-content" id="promoModalContent" role="tabpanel" tabindex="0">
 <div class="promo-modal-gallery">
   <div class="promo-modal-main-image" id="promoModalMainImage">
     <button class="gallery-arrow gallery-prev" id="promoModalPrevImage" type="button" aria-label="Imagen anterior">‹</button>
-    <img alt="JBL Go 4 promoción Fiestas Patrias" id="promoModalImg" src="assets/images/productos/jbl-go-4.webp">
+    <img alt="" id="promoModalImg" src="">
     <button class="gallery-arrow gallery-next" id="promoModalNextImage" type="button" aria-label="Imagen siguiente">›</button>
   </div>
   <div class="modal-gallery-label" id="promoModalGalleryLabel">Vista del producto</div>
-  <div class="modal-thumbnails" id="promoModalThumbs" aria-label="Vistas previas del JBL Go 4"></div>
+  <div class="modal-thumbnails" id="promoModalThumbs" aria-label="Vistas previas del producto"></div>
 </div>
 <div class="promo-modal-info">
-  <span class="promo-modal-badge">Promo Fiestas Patrias Perú</span>
-  <h2 id="promoModalTitle">JBL Go 4</h2>
-  <p class="promo-modal-copy">Celebra julio con música en todos tus planes.</p>
+  <span class="promo-modal-badge" id="promoModalBrand"></span>
+  <h2 id="promoModalTitle"></h2>
+  <p class="promo-modal-copy" id="promoModalDescription"></p>
+  <ul class="promo-modal-features" id="promoModalFeatures"></ul>
   <div class="promo-modal-price-box">
-    <div class="promo-modal-normal"><span>Precio normal</span><del>S/ 159</del></div>
-    <div class="promo-modal-offer"><span>Precio promocional</span><strong>S/ 119</strong></div>
+    <div class="promo-modal-normal"><span>Precio normal</span><del id="promoModalNormalPrice"></del></div>
+    <div class="promo-modal-offer"><span>Precio promocional</span><strong id="promoModalPromoPrice"></strong></div>
   </div>
-  <div class="promo-modal-details">
-    <p><strong>Descuento:</strong> S/ 40</p>
-    <p>Válido hasta el 31 de julio</p>
-    <p>Uso ilimitado durante todo julio</p>
+  <div class="promo-modal-details" id="promoModalDetails">
+    <p id="promoModalSavings"></p>
   </div>
   <div class="promo-modal-actions">
-    <a class="promo-modal-wa" href="#" id="promoModalWhatsApp" target="_blank" rel="noopener">Comprar con código JORPE</a>
+    <a class="promo-modal-wa" href="#" id="promoModalWhatsApp" target="_blank" rel="noopener noreferrer"></a>
     <button class="promo-modal-back" id="promoModalBack" type="button">Volver</button>
   </div>
 </div>
@@ -517,8 +510,8 @@
 </div>
 </div>
 
-  <script src="script.js?v=20260704-modal-scroll"></script>
-  <script src="campaign-ended.js?v=20260704-modal-scroll"></script>
+  <script src="script.js?v=20260714-jorpe-products"></script>
+  <script src="campaign-ended.js?v=20260714-jorpe-products"></script>
 </body>
 </html>
 
