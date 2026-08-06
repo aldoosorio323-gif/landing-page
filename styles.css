@@ -1075,15 +1075,6 @@
       object-fit:cover!important;
       display:block!important;
     }
-    #promoTrack .promo-slide:nth-child(1) img{object-position:28% center!important;}
-    #promoTrack .promo-slide:nth-child(2) img{object-position:34% center!important;}
-    #promoTrack .promo-slide:nth-child(3) img{object-position:68% center!important;}
-    #promoTrack .promo-slide:nth-child(4) img{object-position:58% center!important;}
-    #promoTrack .promo-slide:nth-child(5) img{object-position:50% center!important;}
-    #promoTrack .promo-slide:nth-child(6) img{object-position:50% center!important;}
-    #promoTrack .promo-slide:nth-child(7) img{object-position:62% center!important;}
-    #promoTrack .promo-slide:nth-child(8) img{object-position:48% center!important;}
-    #promoTrack .promo-slide:nth-child(9) img{object-position:47% center!important;}
     .clean-image-carousel .promo-nav,
     .promo-nav{bottom:22px!important;}
 
@@ -1097,15 +1088,6 @@
         aspect-ratio:auto!important;
         object-fit:cover!important;
       }
-      #promoTrack .promo-slide:nth-child(1) img{object-position:27% center!important;}
-      #promoTrack .promo-slide:nth-child(2) img{object-position:32% center!important;}
-      #promoTrack .promo-slide:nth-child(3) img{object-position:70% center!important;}
-      #promoTrack .promo-slide:nth-child(4) img{object-position:60% center!important;}
-      #promoTrack .promo-slide:nth-child(5) img{object-position:50% center!important;}
-      #promoTrack .promo-slide:nth-child(6) img{object-position:50% center!important;}
-      #promoTrack .promo-slide:nth-child(7) img{object-position:64% center!important;}
-      #promoTrack .promo-slide:nth-child(8) img{object-position:48% center!important;}
-      #promoTrack .promo-slide:nth-child(9) img{object-position:47% center!important;}
     }
 
     @media(max-width:420px){
@@ -1183,15 +1165,6 @@
       object-position:center center!important;
       display:block!important;
     }
-    #promoTrack .promo-slide:nth-child(1) img{object-position:center center!important;}
-    #promoTrack .promo-slide:nth-child(2) img{object-position:center center!important;}
-    #promoTrack .promo-slide:nth-child(3) img{object-position:center center!important;}
-    #promoTrack .promo-slide:nth-child(4) img{object-position:center center!important;}
-    #promoTrack .promo-slide:nth-child(5) img{object-position:center center!important;}
-    #promoTrack .promo-slide:nth-child(6) img{object-position:center center!important;}
-    #promoTrack .promo-slide:nth-child(7) img{object-position:center center!important;}
-    #promoTrack .promo-slide:nth-child(8) img{object-position:center center!important;}
-    #promoTrack .promo-slide:nth-child(9) img{object-position:center center!important;}
     .clean-image-carousel .promo-nav,
     .promo-nav{
       bottom:18px!important;
@@ -1309,66 +1282,6 @@
 
   
 
-    /* v31: Escenarios reemplazados por banners LG enviados.
-       Se muestran completos en formato 16:9 para no cortar textos, iconos ni beneficios. */
-    #promociones .promo-carousel-section,
-    section#promociones{
-      background:#f3f4f6!important;
-    }
-    #promociones .promo-carousel-wrap{
-      width:100%!important;
-      max-width:1600px!important;
-      margin:0 auto!important;
-      padding:0!important;
-    }
-    #promociones .promo-head-clean,
-    #promociones .promo-head{
-      max-width:1240px!important;
-      margin-left:auto!important;
-      margin-right:auto!important;
-    }
-    #promociones .clean-image-carousel,
-    #promociones .promo-carousel{
-      background:#050505!important;
-      border-radius:0!important;
-      overflow:hidden!important;
-    }
-    #promociones .promo-slide img,
-    #promociones .clean-image-carousel .promo-slide img{
-      width:100%!important;
-      height:auto!important;
-      min-height:0!important;
-      max-height:none!important;
-      aspect-ratio:16/9!important;
-      object-fit:contain!important;
-      object-position:center center!important;
-      background:#050505!important;
-      display:block!important;
-    }
-    @media(max-width:768px){
-      #promociones .promo-carousel-wrap{max-width:100%!important;}
-      #promociones .promo-slide img,
-      #promociones .clean-image-carousel .promo-slide img{
-        height:auto!important;
-        aspect-ratio:16/9!important;
-        object-fit:contain!important;
-      }
-    }
-
-  
-
-    /* v32: escenarios de uso en orden estricto enviado: Go 4, Grip, Grab, Flip 7, Bounce, Charge 6, XG8T, Stage 301 y Boombox 4. */
-    #promociones .promo-nav{
-      flex-wrap:wrap!important;
-      max-width:min(92vw,560px)!important;
-      margin:0 auto!important;
-      padding:0 12px!important;
-    }
-    #promociones .promo-slide img{
-      background:#050505!important;
-    }
-  
-
     .catalog-anchor{
       display:block;
       position:relative;
@@ -1384,223 +1297,6 @@
       /* v34: catálogo limpio: solo nombre del modelo debajo de imagen, sin tags ni viñetas; JOR STORE negro; Stage 301 S/ 899. */
 
 
-    /* v35: Sobre JOR STORE premium, confiable y orientado a venta */
-    #sobre-nosotros{
-      max-width:1240px;
-      padding-top:76px;
-      padding-bottom:76px;
-    }
-    #sobre-nosotros .about-premium-grid{
-      display:grid;
-      grid-template-columns:1.02fr .98fr;
-      gap:34px;
-      align-items:center;
-    }
-    #sobre-nosotros .about-premium-copy{
-      background:linear-gradient(180deg,#ffffff 0%,#fbfbfb 100%);
-      border:1px solid rgba(0,0,0,.06);
-      border-radius:30px;
-      padding:38px;
-      box-shadow:0 22px 55px rgba(0,0,0,.08);
-      position:relative;
-      overflow:hidden;
-    }
-    #sobre-nosotros .about-premium-copy::before{
-      content:"";
-      position:absolute;
-      inset:0 auto auto 0;
-      width:130px;
-      height:130px;
-      background:radial-gradient(circle,rgba(8,119,255,.12),transparent 68%);
-      pointer-events:none;
-    }
-    #sobre-nosotros .about-premium-copy .eyebrow{
-      color:#111;
-      letter-spacing:.18em;
-      font-size:12px;
-      margin-bottom:12px;
-      position:relative;
-      z-index:1;
-    }
-    #sobre-nosotros .about-premium-copy h2{
-      margin:0 0 14px;
-      color:#050505;
-      font-size:clamp(30px,3.3vw,48px);
-      line-height:1.02;
-      letter-spacing:-1.35px;
-      max-width:620px;
-      position:relative;
-      z-index:1;
-    }
-    #sobre-nosotros .about-premium-copy > p:not(.eyebrow){
-      margin:0;
-      color:#333;
-      font-size:16px;
-      line-height:1.65;
-      max-width:650px;
-      position:relative;
-      z-index:1;
-    }
-    #sobre-nosotros .about-cta-row{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      flex-wrap:wrap;
-      margin:24px 0 26px;
-      position:relative;
-      z-index:1;
-    }
-    #sobre-nosotros .about-catalog-btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      min-height:52px;
-      padding:15px 22px;
-      border-radius:15px;
-      background:#050505;
-      color:#fff;
-      text-decoration:none;
-      font-weight:950;
-      letter-spacing:.1px;
-      box-shadow:0 14px 26px rgba(0,0,0,.20);
-      transition:transform .22s ease, box-shadow .22s ease, background .22s ease;
-    }
-    #sobre-nosotros .about-catalog-btn:hover{
-      transform:translateY(-2px);
-      background:#111;
-      box-shadow:0 18px 32px rgba(0,0,0,.24);
-    }
-    #sobre-nosotros .about-mini-trust{
-      color:#5a5a5a;
-      font-size:13px;
-      font-weight:800;
-    }
-    #sobre-nosotros .about-trust-grid{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:14px;
-      position:relative;
-      z-index:1;
-    }
-    #sobre-nosotros .about-trust-card{
-      background:#fff;
-      border:1px solid rgba(0,0,0,.075);
-      border-radius:20px;
-      padding:18px;
-      box-shadow:0 12px 26px rgba(0,0,0,.045);
-      transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
-    }
-    #sobre-nosotros .about-trust-card:hover{
-      transform:translateY(-2px);
-      border-color:rgba(8,119,255,.18);
-      box-shadow:0 18px 34px rgba(0,0,0,.075);
-    }
-    #sobre-nosotros .about-icon{
-      width:42px;
-      height:42px;
-      border-radius:14px;
-      display:grid;
-      place-items:center;
-      margin-bottom:12px;
-      color:#111;
-      background:linear-gradient(135deg,#f7f8fb,#eef4ff);
-      border:1px solid rgba(8,119,255,.12);
-    }
-    #sobre-nosotros .about-icon svg{
-      width:22px;
-      height:22px;
-      stroke:currentColor;
-      stroke-width:2.1;
-      fill:none;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-    }
-    #sobre-nosotros .about-trust-card h3{
-      margin:0 0 6px;
-      font-size:17px;
-      line-height:1.15;
-      color:#050505;
-      font-weight:950;
-    }
-    #sobre-nosotros .about-trust-card p{
-      margin:0;
-      color:#555;
-      font-size:14px;
-      line-height:1.48;
-    }
-    #sobre-nosotros .about-premium-visual{
-      position:relative;
-      min-height:470px;
-      border-radius:30px;
-      overflow:hidden;
-      background:#111;
-      box-shadow:0 26px 60px rgba(0,0,0,.15);
-      border:1px solid rgba(0,0,0,.08);
-      isolation:isolate;
-    }
-    #sobre-nosotros .about-premium-visual img{
-      width:100%;
-      height:100%;
-      min-height:470px;
-      object-fit:cover;
-      object-position:center;
-      display:block;
-      filter:saturate(.96) contrast(1.03) brightness(.98);
-      transform:scale(1.01);
-    }
-    #sobre-nosotros .about-premium-visual::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.18));
-      z-index:1;
-      pointer-events:none;
-    }
-    #sobre-nosotros .about-visual-badge{
-      position:absolute;
-      left:18px;
-      bottom:18px;
-      z-index:2;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      padding:12px 14px;
-      border-radius:999px;
-      background:rgba(255,255,255,.92);
-      color:#111;
-      font-size:13px;
-      font-weight:950;
-      box-shadow:0 14px 28px rgba(0,0,0,.18);
-      backdrop-filter:blur(10px);
-    }
-    #sobre-nosotros .about-visual-badge span{
-      width:9px;
-      height:9px;
-      border-radius:50%;
-      background:#20d366;
-      box-shadow:0 0 0 5px rgba(32,211,102,.15);
-    }
-    @media(max-width:980px){
-      #sobre-nosotros{padding-top:54px;padding-bottom:58px;}
-      #sobre-nosotros .about-premium-grid{grid-template-columns:1fr;gap:22px;}
-      #sobre-nosotros .about-premium-copy{padding:28px;}
-      #sobre-nosotros .about-premium-visual{min-height:350px;}
-      #sobre-nosotros .about-premium-visual img{min-height:350px;}
-    }
-    @media(max-width:620px){
-      #sobre-nosotros{padding-left:14px!important;padding-right:14px!important;}
-      #sobre-nosotros .about-premium-copy{padding:22px 18px;border-radius:24px;}
-      #sobre-nosotros .about-premium-copy h2{font-size:29px;line-height:1.06;letter-spacing:-.7px;}
-      #sobre-nosotros .about-premium-copy > p:not(.eyebrow){font-size:15px;line-height:1.55;}
-      #sobre-nosotros .about-catalog-btn{width:100%;min-height:54px;}
-      #sobre-nosotros .about-mini-trust{width:100%;text-align:center;}
-      #sobre-nosotros .about-trust-grid{grid-template-columns:1fr;gap:10px;}
-      #sobre-nosotros .about-trust-card{padding:16px;border-radius:18px;}
-      #sobre-nosotros .about-premium-visual{min-height:300px;border-radius:24px;}
-      #sobre-nosotros .about-premium-visual img{min-height:300px;}
-      #sobre-nosotros .about-visual-badge{left:12px;right:12px;justify-content:center;font-size:12px;}
-    }
     /* Ajuste final catálogo: cards más aireadas y productos completos */
 #productos {
   max-width: 1240px !important;
@@ -6005,7 +5701,7 @@ body.modal-open .floating-wa {
 #codigo-promocional .promo-code-shell {
   background-image:
     linear-gradient(90deg, rgba(255,248,233,.98) 0%, rgba(255,244,228,.97) 39%, rgba(255,244,228,.42) 58%, rgba(20,10,6,.10) 100%),
-    url("assets/images/promos/fiestas-patrias-bg.png") !important;
+    url("assets/images/promos/28PERU.png") !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -6034,7 +5730,7 @@ body.modal-open .floating-wa {
   #codigo-promocional .promo-code-shell {
     background-image:
       linear-gradient(180deg, rgba(255,248,233,.98) 0%, rgba(255,244,228,.96) 55%, rgba(255,244,228,.74) 78%, rgba(101,20,16,.42) 100%),
-      url("assets/images/promos/fiestas-patrias-bg.png") !important;
+    url("assets/images/promos/28PERU.png") !important;
     background-size: auto 100%, auto 100% !important;
     background-position: left center, 61% center !important;
   }
@@ -6466,7 +6162,7 @@ html body div#productModal.modal.open div.modal-card > button#modalClose.close {
   box-shadow: 0 28px 72px rgba(48, 21, 11, .14) !important;
   background-image:
     linear-gradient(90deg, rgba(255, 248, 236, .97) 0%, rgba(255, 248, 236, .91) 42%, rgba(255, 248, 236, .44) 67%, rgba(255, 248, 236, .08) 100%),
-    url("assets/images/promos/fiestas-patrias-bg-clean.png") !important;
+    url("assets/images/promos/28PERU.png") !important;
   background-size: cover !important;
   background-position: center right !important;
   background-repeat: no-repeat !important;
@@ -6652,7 +6348,7 @@ html body div#productModal.modal.open div.modal-card > button#modalClose.close {
     min-height: auto !important;
     background-image:
       linear-gradient(180deg, rgba(255, 248, 236, .99) 0%, rgba(255, 248, 236, .96) 52%, rgba(255, 248, 236, .74) 78%, rgba(255, 248, 236, .28) 100%),
-      url("assets/images/promos/fiestas-patrias-bg-clean.png") !important;
+    url("assets/images/promos/28PERU.png") !important;
     background-position: center right !important;
   }
 
@@ -6677,7 +6373,7 @@ html body div#productModal.modal.open div.modal-card > button#modalClose.close {
     border-radius: 24px !important;
     background-image:
       linear-gradient(180deg, rgba(255, 248, 236, .99) 0%, rgba(255, 248, 236, .96) 62%, rgba(255, 248, 236, .78) 100%),
-      url("assets/images/promos/fiestas-patrias-bg-clean.png") !important;
+    url("assets/images/promos/28PERU.png") !important;
     background-position: 68% center !important;
     background-size: cover !important;
   }
@@ -6719,718 +6415,10 @@ html body div#productModal.modal.open div.modal-card > button#modalClose.close {
   }
 }
 
-/* JORPE: selector accesible y contenido promocional compartido. */
+
+/* El carrusel principal usa el glifo del botón sin iconos duplicados. */
 .promo-next::before { content: none !important; }
 
-#promoProductModal .promo-modal-layout {
-  display: block !important;
-  padding: clamp(18px, 3vw, 34px) !important;
-}
-
-#promoProductModal .promo-product-selector {
-  position: relative;
-  z-index: 3;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-bottom: 22px;
-}
-
-#promoProductModal .promo-product-option {
-  min-width: 0;
-  min-height: 78px;
-  padding: 9px 12px;
-  border: 2px solid rgba(119, 68, 43, .16);
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(255,255,255,.82);
-  color: #321d14;
-  font: inherit;
-  font-weight: 900;
-  text-align: left;
-  cursor: pointer;
-}
-
-#promoProductModal .promo-product-option.active,
-#promoProductModal .promo-product-option[aria-selected="true"] {
-  border-color: #b31c1c;
-  background: rgba(255,244,229,.98);
-  box-shadow: 0 0 0 3px rgba(179,28,28,.1);
-}
-
-#promoProductModal .promo-product-option:focus-visible {
-  outline: 3px solid rgba(8,119,255,.3);
-  outline-offset: 2px;
-}
-
-#promoProductModal .promo-product-option img {
-  flex: 0 0 58px;
-  width: 58px;
-  height: 52px;
-  object-fit: contain;
-}
-
-#promoProductModal .promo-modal-content {
-  display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(340px, .92fr);
-  gap: 28px;
-  min-width: 0;
-}
-
-#promoProductModal .promo-modal-features {
-  margin: 0 0 16px;
-  padding-left: 20px;
-  color: #553927;
-  line-height: 1.55;
-}
-
-#promoProductModal .promo-modal-features li::marker { color: #b31c1c; }
-
-#promoProductModal .promo-price-pending .promo-modal-offer strong,
-#promoProductModal .promo-price-pending #promoModalSavings { color: #805c00 !important; }
-
-@media (max-width: 980px) {
-  #promoProductModal .promo-modal-content { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 640px) {
-  #promoProductModal .promo-product-selector {
-    display: flex;
-    overflow-x: auto;
-    padding-bottom: 4px;
-  }
-
-  #promoProductModal .promo-product-option {
-    flex: 0 0 170px;
-  }
-
-  #promoProductModal .promo-modal-content { gap: 18px; }
-  #promoProductModal .promo-modal-info { padding: 0 4px 8px !important; }
-  #promoProductModal .promo-modal-close { position: fixed !important; top: calc(env(safe-area-inset-top) + 12px) !important; right: 14px !important; z-index: 100000 !important; }
-}
-
-/* Promo JORPE final: section placement, clean background, and exclusive modal. */
-html,
-body {
-  overflow-x: hidden !important;
-}
-
-#codigo-promocional.promo-code-section {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 34px 18px 70px !important;
-  overflow: hidden !important;
-  background: linear-gradient(180deg, #fff 0%, #fff8ec 100%) !important;
-}
-
-#codigo-promocional .promo-code-shell {
-  position: relative !important;
-  isolation: isolate !important;
-  width: min(1240px, 100%) !important;
-  margin: 0 auto !important;
-  display: grid !important;
-  grid-template-columns: minmax(0, .92fr) minmax(300px, 1.08fr) !important;
-  gap: 24px !important;
-  align-items: stretch !important;
-  min-height: 430px !important;
-  padding: clamp(22px, 3vw, 38px) !important;
-  border-radius: 28px !important;
-  overflow: hidden !important;
-  border: 1px solid rgba(126, 43, 25, .14) !important;
-  box-shadow: 0 28px 72px rgba(70, 28, 15, .15) !important;
-  background-color: #fff8ec !important;
-  background-image:
-    linear-gradient(90deg, rgba(255, 249, 238, .98) 0%, rgba(255, 249, 238, .94) 38%, rgba(255, 249, 238, .58) 58%, rgba(255, 249, 238, .08) 100%),
-    url("assets/images/promos/fiestas-patrias-bg-clean.png") !important;
-  background-size: cover, cover !important;
-  background-position: left center, center right !important;
-  background-repeat: no-repeat, no-repeat !important;
-}
-
-#codigo-promocional .promo-code-shell::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -1 !important;
-  display: block !important;
-  pointer-events: none !important;
-  background:
-    linear-gradient(90deg, rgba(255,255,255,.26) 0%, rgba(255,255,255,.12) 42%, transparent 72%),
-    repeating-linear-gradient(135deg, rgba(161, 42, 26, .045) 0 8px, transparent 8px 22px) !important;
-}
-
-#codigo-promocional .promo-code-shell::after,
-#codigo-promocional .promo-code-copy::before,
-#codigo-promocional .promo-unlocked-card {
-  content: none !important;
-  display: none !important;
-}
-
-#codigo-promocional .promo-code-copy {
-  position: relative !important;
-  z-index: 2 !important;
-  max-width: 590px !important;
-  min-height: 350px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  padding: 10px 0 !important;
-}
-
-#codigo-promocional .promo-code-copy .eyebrow {
-  width: fit-content !important;
-  margin: 0 0 11px !important;
-  padding: 7px 10px !important;
-  border-radius: 999px !important;
-  border: 1px solid rgba(179, 28, 28, .18) !important;
-  background: rgba(255, 255, 255, .58) !important;
-  color: #9d1d18 !important;
-  letter-spacing: .12em !important;
-  backdrop-filter: blur(8px) !important;
-}
-
-#codigo-promocional .promo-code-copy h2 {
-  max-width: 620px !important;
-  margin: 0 0 12px !important;
-  color: #170f0a !important;
-  font-size: clamp(32px, 4vw, 54px) !important;
-  line-height: 1 !important;
-  letter-spacing: 0 !important;
-}
-
-#codigo-promocional .promo-code-copy p {
-  max-width: 520px !important;
-  color: #553927 !important;
-  font-size: 16.5px !important;
-  line-height: 1.55 !important;
-}
-
-#codigo-promocional .promo-code-form {
-  position: relative !important;
-  z-index: 3 !important;
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) auto !important;
-  gap: 10px !important;
-  width: min(560px, 100%) !important;
-  margin-top: 24px !important;
-  padding: 8px !important;
-  border-radius: 22px !important;
-  border: 1px solid rgba(255,255,255,.74) !important;
-  background: rgba(255, 255, 255, .72) !important;
-  box-shadow: 0 16px 38px rgba(72, 30, 12, .12) !important;
-  backdrop-filter: blur(10px) !important;
-}
-
-#codigo-promocional .promo-code-form input {
-  min-width: 0 !important;
-  min-height: 58px !important;
-  border-radius: 16px !important;
-  border: 1px solid rgba(97, 46, 25, .16) !important;
-  background: rgba(255,255,255,.96) !important;
-  color: #170f0a !important;
-  font-weight: 950 !important;
-  letter-spacing: .04em !important;
-}
-
-#codigo-promocional .promo-code-form button {
-  min-height: 58px !important;
-  border-radius: 16px !important;
-  background: linear-gradient(135deg, #111 0%, #381413 58%, #c71920 140%) !important;
-  color: #fff !important;
-  box-shadow: 0 14px 30px rgba(112, 25, 18, .24) !important;
-}
-
-#codigo-promocional .promo-code-feedback {
-  min-height: 24px !important;
-  margin-top: 12px !important;
-  color: #513828 !important;
-}
-
-#codigo-promocional .promo-code-feedback.is-error,
-#codigo-promocional .promo-code-feedback.is-expired {
-  color: #9a260f !important;
-}
-
-#codigo-promocional .promo-code-feedback.is-success {
-  color: #10823d !important;
-}
-
-#codigo-promocional .promo-code-stage {
-  min-width: 0 !important;
-  min-height: 350px !important;
-}
-
-#codigo-promocional .promo-code-art {
-  display: block !important;
-  width: 100% !important;
-  min-height: 100% !important;
-  background: transparent !important;
-}
-
-#promoProductModal.modal.open {
-  position: fixed !important;
-  inset: 0 !important;
-  z-index: 99990 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 100% !important;
-  height: 100dvh !important;
-  padding: 18px !important;
-  overflow: hidden !important;
-  background: rgba(45, 18, 12, .58) !important;
-  backdrop-filter: blur(8px) !important;
-}
-
-#promoProductModal .promo-modal-card {
-  position: relative !important;
-  width: min(1120px, calc(100vw - 36px)) !important;
-  max-height: min(92vh, calc(100dvh - 36px)) !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  border-radius: 30px !important;
-  border: 1px solid rgba(177, 39, 30, .18) !important;
-  background-color: #fff8ec !important;
-  background-image:
-    linear-gradient(90deg, rgba(255, 249, 238, .96) 0%, rgba(255, 249, 238, .86) 48%, rgba(255, 249, 238, .56) 100%),
-    url("assets/images/promos/fiestas-patrias-bg-clean.png") !important;
-  background-size: cover, cover !important;
-  background-position: left center, center right !important;
-  background-repeat: no-repeat, no-repeat !important;
-  box-shadow: 0 34px 90px rgba(43, 18, 10, .38) !important;
-}
-
-#promoProductModal .promo-modal-card::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  pointer-events: none !important;
-  background:
-    repeating-linear-gradient(135deg, rgba(164, 38, 27, .04) 0 8px, transparent 8px 22px),
-    radial-gradient(circle at 8% 8%, rgba(199, 25, 32, .12), transparent 24%) !important;
-}
-
-#promoProductModal .promo-modal-close {
-  position: absolute !important;
-  top: 18px !important;
-  right: 18px !important;
-  z-index: 10 !important;
-  width: 46px !important;
-  height: 46px !important;
-  border: 0 !important;
-  border-radius: 999px !important;
-  display: grid !important;
-  place-items: center !important;
-  background: #111 !important;
-  color: #fff !important;
-  font-size: 24px !important;
-  line-height: 1 !important;
-  cursor: pointer !important;
-  box-shadow: 0 14px 30px rgba(0,0,0,.28) !important;
-}
-
-#promoProductModal .promo-modal-layout {
-  position: relative !important;
-  z-index: 2 !important;
-  display: grid !important;
-  grid-template-columns: minmax(0, 1.08fr) minmax(340px, .92fr) !important;
-  gap: 28px !important;
-  align-items: stretch !important;
-  padding: clamp(18px, 3vw, 34px) !important;
-}
-
-#promoProductModal .promo-modal-gallery {
-  display: grid !important;
-  grid-template-rows: minmax(360px, 1fr) auto auto !important;
-  gap: 12px !important;
-  min-width: 0 !important;
-}
-
-#promoProductModal .promo-modal-main-image {
-  position: relative !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  min-height: 390px !important;
-  border-radius: 24px !important;
-  overflow: hidden !important;
-  border: 1px solid rgba(174, 31, 27, .12) !important;
-  background:
-    radial-gradient(circle at 50% 48%, rgba(199, 25, 32, .13), transparent 58%),
-    linear-gradient(180deg, #ffffff 0%, #fff4e5 100%) !important;
-}
-
-#promoProductModal .promo-modal-main-image img {
-  width: 100% !important;
-  height: 100% !important;
-  max-height: 360px !important;
-  object-fit: contain !important;
-  object-position: center !important;
-  padding: 14px !important;
-  filter: drop-shadow(0 24px 26px rgba(84, 27, 18, .22)) !important;
-  transition: opacity .16s ease, transform .16s ease !important;
-}
-
-#promoProductModal .gallery-arrow {
-  position: absolute !important;
-  top: 50% !important;
-  z-index: 5 !important;
-  transform: translateY(-50%) !important;
-}
-
-#promoProductModal .gallery-prev {
-  left: 14px !important;
-}
-
-#promoProductModal .gallery-next {
-  right: 14px !important;
-}
-
-#promoProductModal .modal-gallery-label {
-  width: fit-content !important;
-  margin: 0 !important;
-  padding: 7px 10px !important;
-  border-radius: 999px !important;
-  background: rgba(255,255,255,.74) !important;
-  color: #6a4330 !important;
-  font-size: 12px !important;
-  font-weight: 900 !important;
-}
-
-#promoProductModal .modal-thumbnails {
-  display: flex !important;
-  gap: 10px !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-  padding: 2px 0 8px !important;
-  scrollbar-width: none !important;
-}
-
-#promoProductModal .modal-thumbnails::-webkit-scrollbar {
-  display: none !important;
-}
-
-#promoProductModal .gallery-thumb {
-  flex: 0 0 96px !important;
-  width: 96px !important;
-  border: 1px solid rgba(119, 68, 43, .16) !important;
-  border-radius: 14px !important;
-  padding: 7px !important;
-  background: rgba(255,255,255,.78) !important;
-  color: #5a3927 !important;
-  cursor: pointer !important;
-}
-
-#promoProductModal .gallery-thumb.active {
-  border-color: #b31c1c !important;
-  box-shadow: 0 0 0 3px rgba(179, 28, 28, .12) !important;
-}
-
-#promoProductModal .gallery-thumb img {
-  width: 100% !important;
-  height: 56px !important;
-  object-fit: contain !important;
-  display: block !important;
-}
-
-#promoProductModal .gallery-thumb span {
-  display: block !important;
-  margin-top: 5px !important;
-  overflow: hidden !important;
-  color: inherit !important;
-  font-size: 10px !important;
-  font-weight: 850 !important;
-  line-height: 1.15 !important;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
-}
-
-#promoProductModal .promo-modal-info {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  min-width: 0 !important;
-  padding: 18px 10px 18px 0 !important;
-  color: #170f0a !important;
-}
-
-#promoProductModal .promo-modal-badge {
-  width: fit-content !important;
-  margin: 0 0 12px !important;
-  padding: 8px 11px !important;
-  border-radius: 999px !important;
-  border: 1px solid rgba(179, 28, 28, .18) !important;
-  background: rgba(199, 25, 32, .09) !important;
-  color: #9a1b17 !important;
-  font-size: 12px !important;
-  font-weight: 950 !important;
-  text-transform: uppercase !important;
-}
-
-#promoProductModal h2 {
-  margin: 0 0 10px !important;
-  color: #170f0a !important;
-  font-size: clamp(36px, 4vw, 58px) !important;
-  line-height: .98 !important;
-}
-
-#promoProductModal .promo-modal-copy {
-  margin: 0 0 18px !important;
-  color: #60402d !important;
-  font-size: 16px !important;
-  line-height: 1.5 !important;
-  font-weight: 760 !important;
-}
-
-#promoProductModal .promo-modal-price-box {
-  display: grid !important;
-  grid-template-columns: .86fr 1.14fr !important;
-  gap: 12px !important;
-  margin: 0 0 16px !important;
-}
-
-#promoProductModal .promo-modal-normal,
-#promoProductModal .promo-modal-offer {
-  min-width: 0 !important;
-  border-radius: 18px !important;
-  border: 1px solid rgba(174, 31, 27, .13) !important;
-  background: rgba(255,255,255,.76) !important;
-  padding: 14px !important;
-}
-
-#promoProductModal .promo-modal-price-box span {
-  display: block !important;
-  margin-bottom: 7px !important;
-  color: #7a5540 !important;
-  font-size: 11px !important;
-  font-weight: 900 !important;
-  text-transform: uppercase !important;
-}
-
-#promoProductModal .promo-modal-normal del {
-  color: #896956 !important;
-  font-size: 22px !important;
-  font-weight: 950 !important;
-}
-
-#promoProductModal .promo-modal-offer strong {
-  color: #c71920 !important;
-  font-size: clamp(42px, 5vw, 62px) !important;
-  line-height: .9 !important;
-  font-weight: 950 !important;
-}
-
-#promoProductModal .promo-modal-details {
-  display: grid !important;
-  gap: 7px !important;
-  margin: 0 0 18px !important;
-}
-
-#promoProductModal .promo-modal-details p {
-  margin: 0 !important;
-  color: #553927 !important;
-  font-size: 14.5px !important;
-  font-weight: 850 !important;
-}
-
-#promoProductModal .promo-modal-actions {
-  display: grid !important;
-  grid-template-columns: 1fr auto !important;
-  gap: 10px !important;
-}
-
-#promoProductModal .promo-modal-wa,
-#promoProductModal .promo-modal-back {
-  min-height: 54px !important;
-  border-radius: 16px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 0 18px !important;
-  font-size: 14px !important;
-  font-weight: 950 !important;
-  text-align: center !important;
-  text-decoration: none !important;
-}
-
-#promoProductModal .promo-modal-wa {
-  background: #20d366 !important;
-  color: #fff !important;
-  box-shadow: 0 16px 32px rgba(32, 211, 102, .25) !important;
-}
-
-#promoProductModal .promo-modal-back {
-  border: 0 !important;
-  background: #111 !important;
-  color: #fff !important;
-  cursor: pointer !important;
-}
-
-@media (max-width: 980px) {
-  #codigo-promocional .promo-code-shell {
-    grid-template-columns: 1fr !important;
-    min-height: 390px !important;
-    background-image:
-      linear-gradient(180deg, rgba(255, 249, 238, .99) 0%, rgba(255, 249, 238, .96) 48%, rgba(255, 249, 238, .62) 82%, rgba(255, 249, 238, .28) 100%),
-      url("assets/images/promos/fiestas-patrias-bg-clean.png") !important;
-    background-size: cover, cover !important;
-    background-position: left top, center right !important;
-  }
-
-  #codigo-promocional .promo-code-copy {
-    min-height: auto !important;
-  }
-
-  #codigo-promocional .promo-code-stage {
-    min-height: 210px !important;
-  }
-
-  #promoProductModal.modal.open {
-    align-items: flex-start !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-  }
-
-  #promoProductModal .promo-modal-card {
-    max-height: none !important;
-  }
-
-  #promoProductModal .promo-modal-layout {
-    grid-template-columns: 1fr !important;
-    gap: 18px !important;
-  }
-
-  #promoProductModal .promo-modal-gallery {
-    grid-template-rows: minmax(300px, auto) auto auto !important;
-  }
-
-  #promoProductModal .promo-modal-main-image {
-    min-height: 310px !important;
-  }
-
-  #promoProductModal .promo-modal-info {
-    padding: 0 4px 8px !important;
-  }
-}
-
-@media (max-width: 640px) {
-  #codigo-promocional.promo-code-section {
-    padding: 24px 12px 54px !important;
-  }
-
-  #codigo-promocional .promo-code-shell {
-    grid-template-columns: minmax(0, 1fr) !important;
-    gap: 0 !important;
-    min-height: 0 !important;
-    padding: 20px !important;
-    border-radius: 24px !important;
-    background-image:
-      linear-gradient(180deg, rgba(255, 249, 238, .99) 0%, rgba(255, 249, 238, .98) 58%, rgba(255, 249, 238, .9) 100%),
-      url("assets/images/promos/fiestas-patrias-bg-clean.png") !important;
-    background-size: cover, cover !important;
-    background-position: left top, 70% center !important;
-  }
-
-  #codigo-promocional .promo-code-copy {
-    max-width: 100% !important;
-    padding: 8px 0 !important;
-  }
-
-  #codigo-promocional .promo-code-copy h2 {
-    font-size: clamp(30px, 9vw, 40px) !important;
-  }
-
-  #codigo-promocional .promo-code-copy p {
-    font-size: 15.5px !important;
-  }
-
-  #codigo-promocional .promo-code-form {
-    grid-template-columns: 1fr !important;
-    padding: 7px !important;
-  }
-
-  #codigo-promocional .promo-code-form button {
-    width: 100% !important;
-  }
-
-  #codigo-promocional .promo-code-stage {
-    display: none !important;
-  }
-
-  #promoProductModal.modal.open {
-    height: 100dvh !important;
-    padding: calc(env(safe-area-inset-top) + 8px) 8px calc(env(safe-area-inset-bottom) + 18px) !important;
-  }
-
-  #promoProductModal .promo-modal-card {
-    width: calc(100vw - 16px) !important;
-    max-width: calc(100vw - 16px) !important;
-    border-radius: 24px !important;
-    background-image:
-      linear-gradient(180deg, rgba(255,249,238,.99) 0%, rgba(255,249,238,.95) 100%),
-      url("assets/images/promos/fiestas-patrias-bg-clean.png") !important;
-    background-position: left top, 70% center !important;
-  }
-
-  #promoProductModal .promo-modal-close {
-    position: absolute !important;
-    top: 12px !important;
-    right: 12px !important;
-    width: 44px !important;
-    height: 44px !important;
-  }
-
-  #promoProductModal .promo-modal-layout {
-    padding: 12px !important;
-  }
-
-  #promoProductModal .promo-modal-gallery {
-    grid-template-rows: minmax(240px, auto) auto auto !important;
-    gap: 10px !important;
-  }
-
-  #promoProductModal .promo-modal-main-image {
-    min-height: 250px !important;
-    border-radius: 20px !important;
-  }
-
-  #promoProductModal .promo-modal-main-image img {
-    max-height: 235px !important;
-    padding: 10px !important;
-  }
-
-  #promoProductModal .gallery-thumb {
-    flex-basis: 88px !important;
-    width: 88px !important;
-  }
-
-  #promoProductModal h2 {
-    font-size: 34px !important;
-  }
-
-  #promoProductModal .promo-modal-price-box,
-  #promoProductModal .promo-modal-actions {
-    grid-template-columns: 1fr !important;
-  }
-
-  #promoProductModal .promo-modal-normal,
-  #promoProductModal .promo-modal-offer {
-    padding: 12px !important;
-  }
-
-  #promoProductModal .promo-modal-offer strong {
-    font-size: 46px !important;
-  }
-
-  #promoProductModal .promo-modal-wa,
-  #promoProductModal .promo-modal-back {
-    width: 100% !important;
-  }
-}
 
 /* Fiestas Patrias 2026: ambientación general ligera en rojo y blanco. */
 body {
@@ -7479,8 +6467,6 @@ body {
 }
 
 #productos .product-card,
-#sobre-nosotros .about-premium-copy,
-#sobre-nosotros .about-trust-card,
 #clientes-reales .real-carousel,
 #contacto .contact-card {
   border-color: rgba(173, 20, 29, .1) !important;
@@ -7498,10 +6484,1143 @@ body {
   }
 
   #productos .product-card,
-  #sobre-nosotros .about-premium-copy,
-  #sobre-nosotros .about-trust-card,
   #clientes-reales .real-carousel,
   #contacto .contact-card {
     box-shadow: 0 12px 28px rgba(112, 22, 28, .055) !important;
+  }
+}
+/* Canje JORPE: experiencia premium, precios compactos y doble carrusel. */
+#promociones.promo-carousel-section {
+  padding-top: 0 !important;
+}
+
+/* Ambientación de Fiestas Patrias limitada al encabezado y al contorno del hero. */
+.topbar {
+  background:
+    radial-gradient(circle at 12% 50%, rgba(217, 16, 35, .09), transparent 30%),
+    linear-gradient(90deg, #fff 0%, #fff8f8 50%, #fff 100%) !important;
+}
+
+.header {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(217, 16, 35, .10), transparent 34%),
+    radial-gradient(circle at 90% 10%, rgba(217, 16, 35, .07), transparent 30%),
+    linear-gradient(180deg, #fff 0%, #fffafa 100%) !important;
+  box-shadow: 0 10px 32px rgba(137, 18, 30, .06) !important;
+}
+
+#promociones.promo-carousel-section {
+  background:
+    radial-gradient(circle at 9% 24%, rgba(217, 16, 35, .14), transparent 34%),
+    radial-gradient(circle at 91% 12%, rgba(217, 16, 35, .09), transparent 31%),
+    linear-gradient(180deg, #fff 0%, #fff5f5 100%) !important;
+}
+
+#promociones .promo-carousel-wrap {
+  filter: drop-shadow(0 22px 38px rgba(130, 16, 28, .09));
+}
+
+/* Composición segura del bloque de código promocional. */
+#codigo-promocional.promo-code-section {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: clamp(26px, 3vw, 42px) 18px clamp(54px, 6vw, 78px) !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(217, 16, 35, .07), transparent 28%),
+    linear-gradient(180deg, #fffafa 0%, #fff3f0 100%) !important;
+}
+
+#codigo-promocional .promo-code-shell {
+  position: relative !important;
+  isolation: isolate !important;
+  width: min(1240px, 100%) !important;
+  min-height: clamp(390px, 34vw, 440px) !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, .9fr) minmax(280px, 1.1fr) !important;
+  align-items: stretch !important;
+  gap: clamp(16px, 2vw, 30px) !important;
+  padding: clamp(24px, 3vw, 40px) !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(142, 28, 26, .14) !important;
+  border-radius: 28px !important;
+  background-color: #fff8ee !important;
+  background-image:
+    linear-gradient(90deg, rgba(255, 250, 242, .99) 0%, rgba(255, 250, 242, .95) 39%, rgba(255, 250, 242, .57) 58%, rgba(255, 250, 242, .04) 100%),
+    url("assets/images/promos/28PERU.png") !important;
+  background-size: cover, cover !important;
+  background-position: left center, center right !important;
+  background-repeat: no-repeat !important;
+  box-shadow: 0 26px 66px rgba(81, 25, 18, .14) !important;
+}
+
+#codigo-promocional .promo-code-shell::before,
+#codigo-promocional .promo-code-shell::after,
+#codigo-promocional .promo-code-copy::before,
+#codigo-promocional .promo-unlocked-card {
+  content: none !important;
+  display: none !important;
+}
+
+#codigo-promocional .promo-code-copy {
+  position: relative !important;
+  z-index: 2 !important;
+  width: 100% !important;
+  max-width: 570px !important;
+  min-width: 0 !important;
+  min-height: 310px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding: 8px 0 !important;
+}
+
+#codigo-promocional .promo-code-copy h2 {
+  max-width: 540px !important;
+  margin: 0 0 22px !important;
+  color: #170f0d !important;
+  font-family: Inter, Arial, Helvetica, sans-serif !important;
+  font-size: clamp(34px, 3.5vw, 50px) !important;
+  font-weight: 650 !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.035em !important;
+  text-wrap: balance !important;
+}
+
+#codigo-promocional .promo-code-form {
+  position: relative !important;
+  z-index: 3 !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  align-items: stretch !important;
+  gap: 10px !important;
+  width: min(560px, 100%) !important;
+  margin: 0 !important;
+  padding: 7px !important;
+  border: 1px solid rgba(255, 255, 255, .78) !important;
+  border-radius: 20px !important;
+  background: rgba(255, 255, 255, .78) !important;
+  box-shadow: 0 15px 36px rgba(72, 30, 12, .12) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+#codigo-promocional .promo-code-form input,
+#codigo-promocional .promo-code-form button {
+  min-height: 58px !important;
+  height: 58px !important;
+  box-sizing: border-box !important;
+  border-radius: 14px !important;
+  font-family: Inter, Arial, Helvetica, sans-serif !important;
+}
+
+#codigo-promocional .promo-code-form input {
+  min-width: 0 !important;
+  width: 100% !important;
+  padding: 0 17px !important;
+  border: 1px solid rgba(97, 46, 25, .2) !important;
+  background: rgba(255, 255, 255, .97) !important;
+  color: #17110f !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  letter-spacing: .025em !important;
+}
+
+#codigo-promocional .promo-code-form button {
+  padding: 0 22px !important;
+  border: 0 !important;
+  background: linear-gradient(135deg, #17110f 0%, #4a1718 72%, #8e1720 130%) !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+  box-shadow: 0 12px 26px rgba(82, 20, 19, .2) !important;
+}
+
+#codigo-promocional .promo-code-form input:focus-visible,
+#codigo-promocional .promo-code-form button:focus-visible {
+  outline: 3px solid rgba(217, 16, 35, .35) !important;
+  outline-offset: 2px !important;
+}
+
+#codigo-promocional .promo-code-form button:hover {
+  background: #a31320 !important;
+  transform: translateY(-1px) !important;
+}
+
+#codigo-promocional .promo-code-form button:active {
+  transform: translateY(0) scale(.99) !important;
+}
+
+#codigo-promocional .promo-code-feedback {
+  width: min(560px, 100%) !important;
+  min-height: 24px !important;
+  margin: 10px 0 0 !important;
+  padding-left: 2px !important;
+  color: #563d34 !important;
+  font-family: Inter, Arial, Helvetica, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.45 !important;
+}
+
+#codigo-promocional .promo-code-feedback.is-success {
+  color: #087a36 !important;
+}
+
+#codigo-promocional .promo-code-feedback.is-error,
+#codigo-promocional .promo-code-feedback.is-expired {
+  color: #a11d27 !important;
+}
+
+#codigo-promocional .promo-code-stage {
+  min-width: 0 !important;
+  min-height: 310px !important;
+}
+
+#codigo-promocional .promo-code-art {
+  width: 100% !important;
+  min-height: 100% !important;
+  background: transparent !important;
+}
+
+/* Modal de canje: modelo y galería funcionan como carruseles independientes. */
+#promoProductModal,
+#promoProductModal button,
+#promoProductModal a {
+  font-family: Inter, Arial, Helvetica, sans-serif !important;
+}
+
+#promoProductModal.modal.open {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 99990 !important;
+  width: 100% !important;
+  height: 100dvh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 18px !important;
+  overflow: hidden !important;
+  background: rgba(8, 8, 10, .8) !important;
+  backdrop-filter: blur(13px) saturate(.82) !important;
+  -webkit-backdrop-filter: blur(13px) saturate(.82) !important;
+}
+
+#promoProductModal .promo-modal-card {
+  position: relative !important;
+  width: min(1160px, calc(100vw - 36px)) !important;
+  max-height: calc(100dvh - 36px) !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  overscroll-behavior: contain !important;
+  scrollbar-gutter: stable !important;
+  border: 1px solid rgba(255, 255, 255, .75) !important;
+  border-radius: 28px !important;
+  background: linear-gradient(145deg, #fff 0%, #fffaf7 60%, #f6ede7 100%) !important;
+  box-shadow: 0 40px 110px rgba(0, 0, 0, .5) !important;
+}
+
+#promoProductModal .promo-modal-card::before {
+  content: none !important;
+}
+
+#promoProductModal .promo-modal-layout {
+  position: relative !important;
+  display: block !important;
+  padding: clamp(30px, 3vw, 42px) clamp(62px, 5.7vw, 78px) !important;
+}
+
+#promoProductModal .promo-modal-content {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.07fr) minmax(350px, .93fr) !important;
+  gap: clamp(30px, 4vw, 54px) !important;
+  align-items: center !important;
+  min-width: 0 !important;
+}
+
+#promoProductModal .promo-modal-content.is-entering {
+  animation: promo-product-enter .3s cubic-bezier(.2, .72, .2, 1) both;
+}
+
+@keyframes promo-product-enter {
+  from { opacity: 0; transform: translateX(12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+#promoProductModal .promo-modal-close,
+#promoProductModal .promo-product-nav,
+#promoProductModal .promo-gallery-arrow {
+  display: grid !important;
+  place-items: center !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  border-radius: 999px !important;
+  cursor: pointer !important;
+  touch-action: manipulation !important;
+}
+
+#promoProductModal .promo-modal-close {
+  position: absolute !important;
+  top: 14px !important;
+  right: 14px !important;
+  z-index: 20 !important;
+  width: 48px !important;
+  height: 48px !important;
+  border: 1px solid rgba(255, 255, 255, .18) !important;
+  background: #111 !important;
+  color: #fff !important;
+  font-size: 28px !important;
+  font-weight: 400 !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .28) !important;
+}
+
+#promoProductModal .promo-product-nav {
+  position: absolute !important;
+  top: 50% !important;
+  z-index: 12 !important;
+  width: 50px !important;
+  height: 50px !important;
+  border: 1px solid rgba(0, 0, 0, .08) !important;
+  background: rgba(17, 17, 17, .95) !important;
+  color: #fff !important;
+  font-size: 34px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  transform: translateY(-50%) !important;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .22) !important;
+  transition: transform .2s ease, background .2s ease !important;
+}
+
+#promoProductModal .promo-product-prev { left: 12px !important; }
+#promoProductModal .promo-product-next { right: 12px !important; }
+
+#promoProductModal .promo-product-nav:hover {
+  background: #b81420 !important;
+  transform: translateY(-50%) scale(1.04) !important;
+}
+
+#promoProductModal .promo-modal-close:hover {
+  background: #b81420 !important;
+}
+
+#promoProductModal .promo-modal-close:active,
+#promoProductModal .promo-product-nav:active,
+#promoProductModal .promo-gallery-arrow:active {
+  scale: .96;
+}
+
+#promoProductModal .promo-modal-close:focus-visible,
+#promoProductModal .promo-product-nav:focus-visible,
+#promoProductModal .promo-gallery-arrow:focus-visible,
+#promoProductModal .promo-modal-main-image:focus-visible,
+#promoProductModal .gallery-thumb:focus-visible,
+#promoProductModal .promo-modal-wa:focus-visible {
+  outline: 3px solid #ffadb3 !important;
+  outline-offset: 3px !important;
+}
+
+#promoProductModal .promo-modal-gallery {
+  display: grid !important;
+  grid-template-rows: minmax(390px, 1fr) auto auto !important;
+  gap: 11px !important;
+  min-width: 0 !important;
+}
+
+#promoProductModal .promo-modal-main-image {
+  position: relative !important;
+  min-height: 420px !important;
+  overflow: hidden !important;
+  display: grid !important;
+  place-items: center !important;
+  border: 1px solid rgba(28, 20, 16, .08) !important;
+  border-radius: 24px !important;
+  background: radial-gradient(circle at 50% 42%, #fff 0%, #fbf7f3 68%, #f0e7e0 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .95), 0 20px 44px rgba(60, 34, 24, .1) !important;
+  touch-action: pan-y !important;
+}
+
+#promoProductModal .promo-modal-main-image #promoModalImg {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 395px !important;
+  padding: clamp(28px, 4vw, 48px) !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 24px 26px rgba(28, 20, 16, .18)) !important;
+  transition: opacity .18s ease, transform .18s ease !important;
+}
+
+#promoProductModal .promo-modal-logo {
+  position: absolute !important;
+  top: 10px !important;
+  left: 10px !important;
+  z-index: 4 !important;
+  width: 118px !important;
+  height: 70px !important;
+  padding: 0 !important;
+  object-fit: contain !important;
+  opacity: .78 !important;
+  filter: none !important;
+  pointer-events: none !important;
+}
+
+#promoProductModal .promo-gallery-arrow {
+  position: absolute !important;
+  top: 50% !important;
+  z-index: 8 !important;
+  width: 46px !important;
+  height: 46px !important;
+  border: 1px solid rgba(255, 255, 255, .22) !important;
+  background: rgba(17, 17, 17, .9) !important;
+  color: #fff !important;
+  font-size: 30px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  opacity: 0 !important;
+  transform: translateY(-50%) scale(1) !important;
+  transition: opacity .18s ease, transform .18s ease, background .18s ease !important;
+}
+
+#promoProductModal .promo-gallery-prev { left: 14px !important; }
+#promoProductModal .promo-gallery-next { right: 14px !important; }
+
+#promoProductModal .promo-modal-main-image:hover .promo-gallery-arrow,
+#promoProductModal .promo-modal-main-image:focus-within .promo-gallery-arrow {
+  opacity: 1 !important;
+  transform: translateY(-50%) scale(1) !important;
+}
+
+#promoProductModal .promo-gallery-arrow:hover {
+  background: #b81420 !important;
+}
+
+#promoProductModal .promo-gallery-meta,
+#promoProductModal .promo-modal-kicker-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+}
+
+#promoProductModal .modal-gallery-label,
+#promoProductModal .promo-modal-image-position,
+#promoProductModal .promo-modal-position {
+  margin: 0 !important;
+  color: #66564e !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: .04em !important;
+}
+
+#promoProductModal .promo-modal-image-position,
+#promoProductModal .promo-modal-position {
+  flex: 0 0 auto !important;
+  padding: 6px 10px !important;
+  border: 1px solid rgba(0, 0, 0, .08) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, .78) !important;
+}
+
+#promoProductModal .modal-thumbnails {
+  display: flex !important;
+  gap: 8px !important;
+  max-width: 100% !important;
+  padding: 2px 2px 6px !important;
+  overflow-x: auto !important;
+  scrollbar-width: thin !important;
+}
+
+#promoProductModal .gallery-thumb {
+  flex: 0 0 78px !important;
+  width: 78px !important;
+  min-height: 70px !important;
+  padding: 5px !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, .72) !important;
+}
+
+#promoProductModal .gallery-thumb img {
+  width: 100% !important;
+  height: 44px !important;
+  object-fit: contain !important;
+}
+
+#promoProductModal .gallery-thumb span {
+  display: block !important;
+  color: #51443e !important;
+  font-size: 9px !important;
+  font-weight: 500 !important;
+  line-height: 1.15 !important;
+}
+
+#promoProductModal .gallery-thumb.active {
+  border-color: #c51723 !important;
+  box-shadow: 0 0 0 1px #c51723 !important;
+}
+
+#promoProductModal .promo-modal-info {
+  min-width: 0 !important;
+  padding: 12px 0 !important;
+  color: #211a17 !important;
+}
+
+#promoProductModal .promo-modal-kicker-row {
+  margin-bottom: 10px !important;
+}
+
+#promoProductModal .promo-modal-badge {
+  width: fit-content !important;
+  margin: 0 !important;
+  padding: 7px 10px !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: #171312 !important;
+  color: #fff !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: .11em !important;
+}
+
+#promoProductModal .promo-modal-brand {
+  display: block !important;
+  margin: 0 0 7px !important;
+  color: #a8171d !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: .1em !important;
+  text-transform: uppercase !important;
+}
+
+#promoProductModal h2 {
+  margin: 0 0 10px !important;
+  color: #181210 !important;
+  font-size: clamp(38px, 4.2vw, 56px) !important;
+  font-weight: 600 !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.035em !important;
+}
+
+#promoProductModal .promo-modal-copy {
+  max-width: 470px !important;
+  margin: 0 0 18px !important;
+  color: #51453f !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+
+#promoProductModal .promo-modal-pricing {
+  margin: 0 0 18px !important;
+}
+
+#promoProductModal .promo-modal-price-label {
+  display: block !important;
+  margin-bottom: 4px !important;
+  color: #746762 !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: .09em !important;
+}
+
+#promoProductModal .promo-modal-price-row {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 9px !important;
+  min-width: 0 !important;
+}
+
+#promoProductModal .promo-modal-price-row strong {
+  color: #c91422 !important;
+  font-size: clamp(40px, 4.6vw, 58px) !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  letter-spacing: -.035em !important;
+}
+
+#promoProductModal .promo-modal-discount {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 26px !important;
+  padding: 4px 8px !important;
+  border-radius: 7px !important;
+  background: #d91023 !important;
+  color: #fff !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+}
+
+#promoProductModal .promo-modal-discount[hidden] {
+  display: none !important;
+}
+
+#promoProductModal .promo-modal-pricing del {
+  display: block !important;
+  width: fit-content !important;
+  margin-top: 4px !important;
+  color: #7c7470 !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 1.25 !important;
+  text-decoration-thickness: 1.5px !important;
+}
+
+#promoProductModal .promo-modal-features {
+  display: grid !important;
+  gap: 7px !important;
+  margin: 0 0 20px !important;
+  padding: 0 !important;
+  list-style: none !important;
+  color: #554a45 !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+}
+
+#promoProductModal .promo-modal-features li {
+  position: relative !important;
+  padding-left: 16px !important;
+}
+
+#promoProductModal .promo-modal-features li::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: .58em !important;
+  width: 5px !important;
+  height: 5px !important;
+  border-radius: 50% !important;
+  background: #c91422 !important;
+}
+
+#promoProductModal .promo-modal-actions {
+  display: block !important;
+}
+
+#promoProductModal .promo-modal-wa {
+  width: 100% !important;
+  min-height: 56px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 14px 20px !important;
+  border-radius: 15px !important;
+  background: #171312 !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  box-shadow: 0 15px 32px rgba(23, 19, 18, .18) !important;
+  transition: transform .2s ease, background .2s ease !important;
+}
+
+#promoProductModal .promo-modal-wa:hover {
+  background: #b81420 !important;
+  transform: translateY(-1px) !important;
+}
+
+#promoProductModal .promo-modal-wa:active {
+  transform: translateY(0) scale(.995) !important;
+}
+
+@media (max-width: 1024px) {
+  #codigo-promocional .promo-code-shell {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, .75fr) !important;
+    background-position: left center, 58% center !important;
+  }
+
+  #codigo-promocional .promo-code-copy h2 {
+    font-size: clamp(34px, 4.4vw, 44px) !important;
+  }
+}
+
+@media (max-width: 980px) {
+  #promoProductModal.modal.open {
+    align-items: center !important;
+    padding: 12px !important;
+  }
+
+  #promoProductModal .promo-modal-card {
+    width: min(760px, calc(100vw - 24px)) !important;
+    max-height: calc(100dvh - 24px) !important;
+  }
+
+  #promoProductModal .promo-modal-layout {
+    padding: 70px 24px 28px !important;
+  }
+
+  #promoProductModal .promo-modal-content {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  #promoProductModal .promo-product-nav {
+    top: 15px !important;
+    width: 46px !important;
+    height: 46px !important;
+    transform: none !important;
+  }
+
+  #promoProductModal .promo-product-nav:hover {
+    transform: scale(1.04) !important;
+  }
+
+  #promoProductModal .promo-product-prev { left: 18px !important; }
+  #promoProductModal .promo-product-next { left: 76px !important; right: auto !important; }
+
+  #promoProductModal .promo-modal-gallery {
+    grid-template-rows: minmax(320px, auto) auto auto !important;
+  }
+
+  #promoProductModal .promo-modal-main-image {
+    min-height: 340px !important;
+  }
+
+  #promoProductModal .promo-modal-info {
+    padding: 0 !important;
+  }
+
+  #promoProductModal .promo-modal-copy {
+    max-width: 620px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #codigo-promocional.promo-code-section {
+    padding-inline: 14px !important;
+  }
+
+  #codigo-promocional .promo-code-shell {
+    grid-template-columns: minmax(0, 1fr) minmax(150px, .48fr) !important;
+    min-height: 390px !important;
+    padding: 26px !important;
+    background-image:
+      linear-gradient(90deg, rgba(255, 250, 242, .99) 0%, rgba(255, 250, 242, .96) 52%, rgba(255, 250, 242, .42) 76%, rgba(255, 250, 242, .08) 100%),
+    url("assets/images/promos/28PERU.png") !important;
+    background-position: left center, 60% center !important;
+  }
+
+  #codigo-promocional .promo-code-copy {
+    min-height: 300px !important;
+  }
+
+  #codigo-promocional .promo-code-copy h2 {
+    font-size: clamp(32px, 5.4vw, 41px) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  #codigo-promocional.promo-code-section {
+    padding: 24px 10px 48px !important;
+  }
+
+  #codigo-promocional .promo-code-shell {
+    display: block !important;
+    min-height: 420px !important;
+    padding: 24px 18px !important;
+    border-radius: 22px !important;
+    background-image:
+      linear-gradient(180deg, rgba(255, 250, 242, .98) 0%, rgba(255, 250, 242, .91) 54%, rgba(255, 250, 242, .48) 100%),
+    url("assets/images/promos/28PERU.png") !important;
+    background-position: center, 62% center !important;
+  }
+
+  #codigo-promocional .promo-code-copy {
+    max-width: none !important;
+    min-height: 370px !important;
+    justify-content: flex-start !important;
+    padding-top: 12px !important;
+  }
+
+  #codigo-promocional .promo-code-copy h2 {
+    max-width: 430px !important;
+    margin-bottom: 18px !important;
+    font-size: clamp(30px, 9.4vw, 40px) !important;
+    line-height: 1.04 !important;
+  }
+
+  #codigo-promocional .promo-code-stage {
+    display: none !important;
+  }
+
+  #promoProductModal.modal.open {
+    padding: max(7px, env(safe-area-inset-top)) 7px max(7px, env(safe-area-inset-bottom)) !important;
+  }
+
+  #promoProductModal .promo-modal-card {
+    width: calc(100vw - 14px) !important;
+    max-width: calc(100vw - 14px) !important;
+    max-height: calc(100dvh - 14px) !important;
+    border-radius: 22px !important;
+  }
+
+  #promoProductModal .promo-modal-layout {
+    padding: 68px 12px 18px !important;
+  }
+
+  #promoProductModal .promo-modal-close {
+    top: 11px !important;
+    right: 11px !important;
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  #promoProductModal .promo-product-prev { left: 11px !important; }
+  #promoProductModal .promo-product-next { left: 65px !important; }
+
+  #promoProductModal .promo-modal-gallery {
+    grid-template-rows: minmax(260px, auto) auto auto !important;
+  }
+
+  #promoProductModal .promo-modal-main-image {
+    min-height: 270px !important;
+    border-radius: 18px !important;
+  }
+
+  #promoProductModal .promo-modal-main-image #promoModalImg {
+    max-height: 260px !important;
+    padding: 30px 28px !important;
+  }
+
+  #promoProductModal .promo-modal-logo {
+    top: 7px !important;
+    left: 7px !important;
+    width: 90px !important;
+    height: 54px !important;
+  }
+
+  #promoProductModal .promo-gallery-arrow {
+    opacity: 1 !important;
+    transform: translateY(-50%) scale(1) !important;
+  }
+
+  #promoProductModal .promo-gallery-prev { left: 9px !important; }
+  #promoProductModal .promo-gallery-next { right: 9px !important; }
+
+  #promoProductModal .gallery-thumb {
+    flex-basis: 74px !important;
+    width: 74px !important;
+  }
+
+  #promoProductModal h2 {
+    font-size: clamp(34px, 10vw, 42px) !important;
+  }
+
+  #promoProductModal .promo-modal-price-row strong {
+    font-size: clamp(38px, 12vw, 50px) !important;
+  }
+
+  #promoProductModal .promo-modal-wa {
+    min-height: 54px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  #codigo-promocional .promo-code-form {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  #codigo-promocional .promo-code-form input,
+  #codigo-promocional .promo-code-form button {
+    width: 100% !important;
+  }
+
+  #codigo-promocional .promo-code-feedback {
+    min-height: 40px !important;
+    margin-top: 8px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  #codigo-promocional .promo-code-shell {
+    padding-inline: 14px !important;
+  }
+
+  #codigo-promocional .promo-code-copy h2 {
+    font-size: 29px !important;
+  }
+
+  #promoProductModal .promo-modal-layout {
+    padding-inline: 9px !important;
+  }
+
+  #promoProductModal .promo-modal-main-image {
+    min-height: 240px !important;
+  }
+
+  #promoProductModal .promo-modal-main-image #promoModalImg {
+    max-height: 232px !important;
+    padding-inline: 22px !important;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  #promoProductModal .promo-gallery-arrow {
+    opacity: 1 !important;
+    transform: translateY(-50%) scale(1) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #codigo-promocional .promo-code-form button,
+  #promoProductModal .promo-modal-content.is-entering,
+  #promoProductModal .promo-modal-main-image #promoModalImg,
+  #promoProductModal .promo-product-nav,
+  #promoProductModal .promo-gallery-arrow,
+  #promoProductModal .promo-modal-wa {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Carrusel principal: banner promocional 16:9 y controles solo con varias diapositivas. */
+#promociones.promo-carousel-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+#promociones .promo-carousel-wrap {
+  width: 100% !important;
+  max-width: 1600px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  filter: none !important;
+}
+
+@media (min-width: 900px) {
+  #promociones .promo-carousel-wrap {
+    box-sizing: border-box !important;
+    padding-inline: 72px !important;
+  }
+}
+
+#promociones .promo-carousel.clean-image-carousel {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 1600px !important;
+  aspect-ratio: 16 / 9 !important;
+  margin: 0 auto !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #fff6e8 !important;
+  box-shadow: none !important;
+}
+
+#promociones .promo-track {
+  display: flex !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  transition: transform .45s ease !important;
+  will-change: auto !important;
+}
+
+#promociones .promo-slide,
+#promociones .clean-image-carousel .promo-slide {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  border-radius: 0 !important;
+  background: #fff6e8 !important;
+}
+
+#promociones .promo-slide img,
+#promociones .clean-image-carousel .promo-slide img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: 16 / 9 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+#promociones .promo-slide.has-image-error img {
+  visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #promociones .promo-track {
+    transition: none !important;
+  }
+}
+
+/* Variantes reutilizables y precio premium en las tarjetas del catálogo. */
+#productos .product-color-options {
+  display: grid !important;
+  gap: 7px !important;
+  margin: 7px 0 12px !important;
+}
+
+#productos .product-colors-label {
+  color: #595959 !important;
+  font-size: 11px !important;
+  font-weight: 750 !important;
+  letter-spacing: .075em !important;
+  line-height: 1.25 !important;
+  text-transform: uppercase !important;
+}
+
+#productos .product-colors-label .selected-color-name {
+  color: #1d1d1d !important;
+  font-weight: 850 !important;
+}
+
+#productos .product-color-swatches {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 5px !important;
+  max-width: 100% !important;
+}
+
+#productos .color-swatch {
+  position: relative !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  flex: 0 0 36px !important;
+  width: 36px !important;
+  height: 36px !important;
+  margin: 0 !important;
+  padding: 7px !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: transparent !important;
+  cursor: pointer !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#productos .color-swatch > span {
+  display: block !important;
+  width: 22px !important;
+  height: 22px !important;
+  border: 1px solid rgba(20, 20, 20, .28) !important;
+  border-radius: 999px !important;
+  background: var(--swatch-color, #111) !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .22) !important;
+  transition: transform 180ms ease, box-shadow 180ms ease !important;
+}
+
+#productos .color-swatch:hover > span {
+  transform: scale(1.08) !important;
+}
+
+#productos .color-swatch.active > span {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #b81420, inset 0 0 0 1px rgba(255, 255, 255, .24) !important;
+}
+
+#productos .color-swatch[data-stock="out_of_stock"] > span {
+  opacity: .58 !important;
+}
+
+#productos .color-swatch[data-stock="out_of_stock"]::after {
+  position: absolute !important;
+  width: 25px !important;
+  height: 2px !important;
+  border-radius: 999px !important;
+  background: #8f1820 !important;
+  content: "" !important;
+  transform: rotate(-45deg) !important;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .78) !important;
+  pointer-events: none !important;
+}
+
+#productos .color-swatch:focus-visible {
+  outline: 2px solid #111 !important;
+  outline-offset: 1px !important;
+}
+
+#productos .product-card > img {
+  transition: opacity 180ms ease !important;
+}
+
+#productos .product-card > img.is-changing-variant {
+  opacity: .3 !important;
+}
+
+#productos .price-line {
+  display: grid !important;
+  justify-items: start !important;
+  gap: 5px !important;
+  margin-top: auto !important;
+  transition: opacity 160ms ease, transform 160ms ease !important;
+}
+
+#productos .price-line.is-changing-price {
+  opacity: .55 !important;
+  transform: translateY(2px) !important;
+}
+
+#productos .price-line strong.product-price-card {
+  display: inline-flex !important;
+  align-items: baseline !important;
+  color: #c91422 !important;
+  font-family: Inter, Arial, Helvetica, sans-serif !important;
+  font-size: clamp(1.8rem, 2.5vw, 2.35rem) !important;
+  font-weight: 800 !important;
+  font-variant-numeric: tabular-nums !important;
+  letter-spacing: -.04em !important;
+  line-height: 1 !important;
+}
+
+#productos .product-price__currency {
+  margin-right: .2em !important;
+  font-size: .72em !important;
+  font-weight: 700 !important;
+  letter-spacing: -.02em !important;
+}
+
+#productos .product-price__amount {
+  font: inherit !important;
+}
+
+#productos .product-price__label {
+  color: #6f6f6f !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: .015em !important;
+  line-height: 1.25 !important;
+}
+
+#productos .badge.stock.is-out-of-stock {
+  min-width: 88px !important;
+  border-color: #edc9cc !important;
+  background: #fff0f1 !important;
+  color: #8f1820 !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+}
+
+@media (max-width: 430px) {
+  #productos .color-swatch {
+    flex-basis: 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 9px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #productos .product-card > img,
+  #productos .color-swatch > span,
+  #productos .price-line {
+    transition: none !important;
   }
 }

@@ -3,29 +3,108 @@
   const PROMO_CODE = 'JORPE';
   const PROMOTIONAL_PRICES_JORPE = Object.freeze({
     'jbl-go4': 119,
-    'lg-grab': null,
-    'lg-bounce': null
+    'lg-grab': 249,
+    'lg-bounce': 349
   });
 
-  const promoTrack = document.getElementById('promoTrack');
-  const promoDots = Array.from(document.querySelectorAll('#promoDots .promo-dot'));
-  const promoPrev = document.querySelector('.promo-prev');
-  const promoNext = document.querySelector('.promo-next');
+  const promoCarousel = document.querySelector('[data-promo-carousel]');
+  const promoTrack = promoCarousel?.querySelector('#promoTrack');
   const promoSlides = Array.from(document.querySelectorAll('#promoTrack .promo-slide'));
-  const promoCount = promoDots.length || promoSlides.length;
+  const hasMultipleSlides = promoSlides.length > 1;
   let promoIndex = 0;
+  let promoIntervalId = null;
+
+  promoSlides.forEach(slide => {
+    const image = slide.querySelector('img');
+    if (!image) return;
+
+    const handleLoad = () => slide.classList.add('is-loaded');
+    const handleError = () => {
+      slide.classList.add('has-image-error');
+      console.error(`[JOR STORE] No se pudo cargar el banner del carrusel: ${image.currentSrc || image.src}`);
+    };
+
+    if (image.complete) {
+      if (image.naturalWidth > 0) handleLoad();
+      else handleError();
+      return;
+    }
+
+    image.addEventListener('load', handleLoad, { once: true });
+    image.addEventListener('error', handleError, { once: true });
+  });
 
   function setPromoSlide(i) {
-    if (!promoTrack || !promoCount) return;
-    promoIndex = (i + promoCount) % promoCount;
+    if (!promoTrack || !hasMultipleSlides) return;
+    promoIndex = (i + promoSlides.length) % promoSlides.length;
     promoTrack.style.transform = `translateX(-${promoIndex * 100}%)`;
-    promoDots.forEach((dot, index) => dot.classList.toggle('active', index === promoIndex));
   }
 
-  promoDots.forEach((dot, index) => dot.addEventListener('click', () => setPromoSlide(index)));
-  if (promoPrev) promoPrev.addEventListener('click', () => setPromoSlide(promoIndex - 1));
-  if (promoNext) promoNext.addEventListener('click', () => setPromoSlide(promoIndex + 1));
-  if (promoTrack && promoCount) setInterval(() => setPromoSlide(promoIndex + 1), 6500);
+  function initPromoCarousel() {
+    if (!promoCarousel || !promoTrack || !hasMultipleSlides) return;
+
+    const promoPrev = document.createElement('button');
+    promoPrev.className = 'promo-arrow promo-prev';
+    promoPrev.type = 'button';
+    promoPrev.setAttribute('aria-label', 'Imagen anterior');
+    promoPrev.textContent = '‹';
+
+    const promoNext = document.createElement('button');
+    promoNext.className = 'promo-arrow promo-next';
+    promoNext.type = 'button';
+    promoNext.setAttribute('aria-label', 'Imagen siguiente');
+    promoNext.textContent = '›';
+
+    const promoDots = document.createElement('div');
+    promoDots.className = 'promo-nav';
+    promoDots.setAttribute('role', 'group');
+    promoDots.setAttribute('aria-label', 'Seleccionar banner promocional');
+    promoSlides.forEach((slide, index) => {
+      const dot = document.createElement('button');
+      dot.className = `promo-dot${index === 0 ? ' active' : ''}`;
+      dot.type = 'button';
+      dot.setAttribute('aria-label', `Ver banner ${index + 1}`);
+      dot.addEventListener('click', () => navigateToPromoSlide(index));
+      promoDots.appendChild(dot);
+    });
+
+    const updatePromoControls = () => {
+      promoDots.querySelectorAll('.promo-dot').forEach((dot, index) => {
+        dot.classList.toggle('active', index === promoIndex);
+      });
+    };
+
+    const navigateToPromoSlide = index => {
+      setPromoSlide(index);
+      updatePromoControls();
+    };
+
+    const stopPromoAutoplay = () => {
+      if (promoIntervalId === null) return;
+      window.clearInterval(promoIntervalId);
+      promoIntervalId = null;
+    };
+
+    const startPromoAutoplay = () => {
+      if (!hasMultipleSlides || promoIntervalId !== null) return;
+      promoIntervalId = window.setInterval(() => {
+        navigateToPromoSlide(promoIndex + 1);
+      }, 6500);
+    };
+
+    promoPrev.addEventListener('click', () => navigateToPromoSlide(promoIndex - 1));
+    promoNext.addEventListener('click', () => navigateToPromoSlide(promoIndex + 1));
+    promoCarousel.append(promoPrev, promoNext, promoDots);
+    startPromoAutoplay();
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stopPromoAutoplay();
+      else startPromoAutoplay();
+    });
+    window.addEventListener('pagehide', stopPromoAutoplay, { once: true });
+  }
+
+  initPromoCarousel();
 
   function initRealClientCarousels() {
     document.querySelectorAll('[data-real-carousel]').forEach(carousel => {
@@ -242,6 +321,7 @@
     id: 'rojo',
     label: 'Rojo',
     color: '#e52520',
+    default: true,
     gallery: [
       { src: 'assets/images/productos/lg-xboom-rock/rojo/01-frontal.png', label: 'Vista frontal' },
       { src: 'assets/images/productos/lg-xboom-rock/rojo/02-frontal-detalle.webp', label: 'Detalle frontal' },
@@ -373,7 +453,7 @@
       brand: 'JBL',
       category: 'Portátil',
       name: 'JBL Go 4',
-      price: 'S/ 129',
+      price: 'S/ 159',
       benefits: ['JBL Pro Sound', 'IP67 agua y polvo', 'Hasta 7h de batería'],
       short: 'Compacto, resistente y fácil de llevar. Disponible en colores para elegir el estilo que más va contigo.',
       features: [
@@ -414,7 +494,7 @@
       id: 'jbl-grip',
       brand: 'JBL',
       category: 'Portátil',
-      name: 'JBL GRIP',
+      name: 'JBL Grip',
       price: 'S/ 250',
       benefits: ['16W de potencia', 'Mosquetón integrado', 'IP68 resistente'],
       short: 'Parlante portátil con diseño de agarre, resistente y fácil de llevar para música en viajes, playa, piscina y aventuras.',
@@ -427,13 +507,48 @@
       ],
       best: 'viajes, trekking, playa, piscina, mochilas, bicicleta y actividades al aire libre',
       img: 'assets/images/productos/jbl-grip.webp',
-      gallery: [
-        { src: 'assets/images/productos/jbl-grip/01-frontal.webp', label: 'Vista frontal' },
-        { src: 'assets/images/productos/jbl-grip/02-inferior.webp', label: 'Vista inferior' },
-        { src: 'assets/images/productos/jbl-grip/03-luces-led.webp', label: 'Luces LED' },
-        { src: 'assets/images/productos/jbl-grip/04-superior.webp', label: 'Vista superior' },
-        { src: 'assets/images/productos/jbl-grip/05-trasera.webp', label: 'Vista trasera' },
-        { src: 'assets/images/productos/jbl-grip/06-uso-exterior.webp', label: 'Uso exterior' }
+      variants: [
+        {
+          id: 'negro',
+          label: 'Negro',
+          color: '#111111',
+          gallery: [
+            { src: 'assets/images/productos/jbl-grip/01-frontal.webp', label: 'Vista frontal' },
+            { src: 'assets/images/productos/jbl-grip/02-inferior.webp', label: 'Vista inferior' },
+            { src: 'assets/images/productos/jbl-grip/03-luces-led.webp', label: 'Luces LED' },
+            { src: 'assets/images/productos/jbl-grip/04-superior.webp', label: 'Vista superior' },
+            { src: 'assets/images/productos/jbl-grip/05-trasera.webp', label: 'Vista trasera' },
+            { src: 'assets/images/productos/jbl-grip/06-uso-exterior.webp', label: 'Uso exterior' }
+          ]
+        },
+        {
+          id: 'azul',
+          label: 'Azul',
+          color: '#2f6179',
+          gallery: [
+            { src: 'assets/images/productos/jbl-grip/azul 1.webp', label: 'Vista frontal' },
+            { src: 'assets/images/productos/jbl-grip/azul 2.webp', label: 'Vista superior' },
+            { src: 'assets/images/productos/jbl-grip/azul 3.webp', label: 'Vista trasera' },
+            { src: 'assets/images/productos/jbl-grip/azul 4.webp', label: 'Vista frontal secundaria' },
+            { src: 'assets/images/productos/jbl-grip/azul 5.webp', label: 'Vista frontal alternativa' },
+            { src: 'assets/images/productos/jbl-grip/azul 6.webp', label: 'Vista lateral' },
+            { src: 'assets/images/productos/jbl-grip/azul 7.webp', label: 'Detalle trasero' },
+            { src: 'assets/images/productos/jbl-grip/azul 8.webp', label: 'Luces LED' },
+            { src: 'assets/images/productos/jbl-grip/azul 9.webp', label: 'Detalle superior' }
+          ]
+        },
+        {
+          id: 'camuflado',
+          label: 'Camuflado',
+          color: '#58633b',
+          gallery: [
+            { src: 'assets/images/productos/jbl-grip/camuflado 1.jfif', label: 'Vista frontal' },
+            { src: 'assets/images/productos/jbl-grip/camuflado 2.jfif', label: 'Luces LED' },
+            { src: 'assets/images/productos/jbl-grip/camuflado 3.jfif', label: 'Vista superior' },
+            { src: 'assets/images/productos/jbl-grip/camuflado 4.jfif', label: 'Vista trasera' },
+            { src: 'assets/images/productos/jbl-grip/camuflado 5.jfif', label: 'Vista lateral' }
+          ]
+        }
       ]
     },
     {
@@ -453,13 +568,70 @@
       ],
       best: 'playa, piscina, viajes, reuniones, deportes acuáticos y uso diario',
       img: 'assets/images/productos/jbl-flip-7.webp',
-      gallery: [
-        { src: 'assets/images/productos/jbl-flip-7/01-frontal.webp', label: 'Vista frontal' },
-        { src: 'assets/images/productos/jbl-flip-7/02-lateral.webp', label: 'Vista lateral' },
-        { src: 'assets/images/productos/jbl-flip-7/03-superior.webp', label: 'Vista superior' },
-        { src: 'assets/images/productos/jbl-flip-7/04-trasera.webp', label: 'Vista trasera' },
-        { src: 'assets/images/productos/jbl-flip-7/05-accesorios.webp', label: 'Accesorios' },
-        { src: 'assets/images/productos/jbl-flip-7/06-uso-exterior.webp', label: 'Uso exterior' }
+      variants: [
+        {
+          id: 'negro',
+          label: 'Negro',
+          color: '#111111',
+          gallery: [
+            { src: 'assets/images/productos/jbl-flip-7/01-frontal.webp', label: 'Vista frontal' },
+            { src: 'assets/images/productos/jbl-flip-7/02-lateral.webp', label: 'Vista lateral' },
+            { src: 'assets/images/productos/jbl-flip-7/03-superior.webp', label: 'Vista superior' },
+            { src: 'assets/images/productos/jbl-flip-7/04-trasera.webp', label: 'Vista trasera' },
+            { src: 'assets/images/productos/jbl-flip-7/05-accesorios.webp', label: 'Accesorios' },
+            { src: 'assets/images/productos/jbl-flip-7/06-uso-exterior.webp', label: 'Uso exterior' }
+          ]
+        },
+        {
+          id: 'azul',
+          label: 'Azul',
+          color: '#294d7a',
+          gallery: [
+            { src: 'assets/images/productos/jbl-flip-7/azul 1.webp', label: 'Vista lateral' },
+            { src: 'assets/images/productos/jbl-flip-7/azul 2.webp', label: 'Vista frontal' },
+            { src: 'assets/images/productos/jbl-flip-7/azul 3.webp', label: 'Vista trasera' },
+            { src: 'assets/images/productos/jbl-flip-7/azul 4.webp', label: 'Empaquetado' }
+          ]
+        },
+        {
+          id: 'camuflado',
+          label: 'Camuflado',
+          color: '#58633b',
+          gallery: [
+            { src: 'assets/images/productos/jbl-flip-7/camuflado 1.webp', label: 'Vista frontal' },
+            { src: 'assets/images/productos/jbl-flip-7/camuflado 2.webp', label: 'Vista lateral' },
+            { src: 'assets/images/productos/jbl-flip-7/camuflado 3.webp', label: 'Vista trasera' },
+            { src: 'assets/images/productos/jbl-flip-7/camuflado 4.webp', label: 'Vista angular' },
+            { src: 'assets/images/productos/jbl-flip-7/camuflado 5.webp', label: 'Vista frontal alternativa' },
+            { src: 'assets/images/productos/jbl-flip-7/camuflado 6.webp', label: 'Accesorios' },
+            { src: 'assets/images/productos/jbl-flip-7/camuflado 7.webp', label: 'Empaquetado' }
+          ]
+        },
+        {
+          id: 'morado',
+          label: 'Morado',
+          color: '#6d3bb9',
+          gallery: [
+            { src: 'assets/images/productos/jbl-flip-7/morado 1.webp', label: 'Vista frontal' },
+            { src: 'assets/images/productos/jbl-flip-7/morado 2.webp', label: 'Vista angular' },
+            { src: 'assets/images/productos/jbl-flip-7/morado 4.webp', label: 'Vista lateral' },
+            { src: 'assets/images/productos/jbl-flip-7/morado 5.webp', label: 'Vista trasera' },
+            { src: 'assets/images/productos/jbl-flip-7/morado 6.webp', label: 'Vista superior' },
+            { src: 'assets/images/productos/jbl-flip-7/morado 7.webp', label: 'Detalle de controles' }
+          ]
+        },
+        {
+          id: 'rosado',
+          label: 'Rosado',
+          color: '#dca4a0',
+          gallery: [
+            { src: 'assets/images/productos/jbl-flip-7/rsoa 5.webp', label: 'Vista frontal' },
+            { src: 'assets/images/productos/jbl-flip-7/rosa 1.webp', label: 'Vista con accesorios' },
+            { src: 'assets/images/productos/jbl-flip-7/rosa 3.webp', label: 'Detalle de controles' },
+            { src: 'assets/images/productos/jbl-flip-7/rsoa 2.webp', label: 'Accesorios' },
+            { src: 'assets/images/productos/jbl-flip-7/rsoa 4.webp', label: 'Empaquetado' }
+          ]
+        }
       ]
     },
     {
@@ -479,13 +651,35 @@
       ],
       best: 'viajes largos, reuniones, playa, camping, terrazas y usuarios que buscan autonomía y potencia',
       img: 'assets/images/productos/jbl-charge-6.webp',
-      gallery: [
-        { src: 'assets/images/productos/jbl-charge-6/01-frontal.webp', label: 'Vista frontal' },
-        { src: 'assets/images/productos/jbl-charge-6/02-portatil.webp', label: 'Portabilidad' },
-        { src: 'assets/images/productos/jbl-charge-6/03-superior.webp', label: 'Vista superior' },
-        { src: 'assets/images/productos/jbl-charge-6/04-trasera.webp', label: 'Vista trasera' },
-        { src: 'assets/images/productos/jbl-charge-6/05-accesorio.webp', label: 'Accesorio' },
-        { src: 'assets/images/productos/jbl-charge-6/06-uso-exterior.webp', label: 'Uso exterior' }
+      variants: [
+        {
+          id: 'negro',
+          label: 'Negro',
+          color: '#111111',
+          gallery: [
+            { src: 'assets/images/productos/jbl-charge-6/01-frontal.webp', label: 'Vista frontal' },
+            { src: 'assets/images/productos/jbl-charge-6/02-portatil.webp', label: 'Portabilidad' },
+            { src: 'assets/images/productos/jbl-charge-6/03-superior.webp', label: 'Vista superior' },
+            { src: 'assets/images/productos/jbl-charge-6/04-trasera.webp', label: 'Vista trasera' },
+            { src: 'assets/images/productos/jbl-charge-6/05-accesorio.webp', label: 'Accesorio' },
+            { src: 'assets/images/productos/jbl-charge-6/06-uso-exterior.webp', label: 'Uso exterior' }
+          ]
+        },
+        {
+          id: 'azul',
+          label: 'Azul',
+          color: '#294d7a',
+          gallery: [
+            { src: 'assets/images/productos/jbl-charge-6/azul 1.webp', label: 'Vista frontal' },
+            { src: 'assets/images/productos/jbl-charge-6/azul 2.webp', label: 'Vista trasera' },
+            { src: 'assets/images/productos/jbl-charge-6/azul 3.webp', label: 'Vista lateral' },
+            { src: 'assets/images/productos/jbl-charge-6/azul 4.webp', label: 'Detalle de controles' },
+            { src: 'assets/images/productos/jbl-charge-6/azul 5.webp', label: 'Vista inferior' },
+            { src: 'assets/images/productos/jbl-charge-6/azul 6.webp', label: 'Portabilidad' },
+            { src: 'assets/images/productos/jbl-charge-6/azul 7.webp', label: 'Vista angular izquierda' },
+            { src: 'assets/images/productos/jbl-charge-6/azul 8.webp', label: 'Vista angular derecha' }
+          ]
+        }
       ]
     },
     {
@@ -518,6 +712,7 @@
       id: 'negro',
       label: 'Negro',
       color: '#111111',
+      stockStatus: 'out_of_stock',
       gallery: [
         { src: 'assets/images/productos/jbl-xtreme-5/negro/01-vista-previa-negro.png', label: 'Vista previa' },
         { src: 'assets/images/productos/jbl-xtreme-5/negro/02-frontal-negro.png', label: 'Vista frontal' },
@@ -532,6 +727,7 @@
       id: 'azul',
       label: 'Azul',
       color: '#1f5eff',
+      stockStatus: 'in_stock',
       gallery: [
         { src: 'assets/images/productos/jbl-xtreme-5/azul/01-vista-previa-azul.png', label: 'Vista previa' },
         { src: 'assets/images/productos/jbl-xtreme-5/azul/02-frontal-azul.png', label: 'Vista frontal' },
@@ -546,6 +742,7 @@
       id: 'camuflado',
       label: 'Camuflado',
       color: '#5d6542',
+      stockStatus: 'in_stock',
       gallery: [
         { src: 'assets/images/productos/jbl-xtreme-5/camuflado/01-vista-previa-camuflado.png', label: 'Vista previa' },
         { src: 'assets/images/productos/jbl-xtreme-5/camuflado/02-frontal-camuflado.png', label: 'Vista frontal' },
@@ -577,14 +774,101 @@
   ],
   best: 'fiestas, reuniones grandes, playa, piscina, terrazas, viajes y usuarios que buscan máxima potencia',
   img: 'assets/images/productos/jbl-boombox-4/01-vista-previa.png',
-  gallery: [
-    { src: 'assets/images/productos/jbl-boombox-4/01-vista-previa.png', label: 'Vista previa' },
-    { src: 'assets/images/productos/jbl-boombox-4/01-frontal.png', label: 'Vista frontal' },
-    { src: 'assets/images/productos/jbl-boombox-4/03-lateral.png', label: 'Vista lateral' },
-    { src: 'assets/images/productos/jbl-boombox-4/04-trasera.png', label: 'Vista trasera' },
-    { src: 'assets/images/productos/jbl-boombox-4/05-superior.png', label: 'Vista superior' },
-    { src: 'assets/images/productos/jbl-boombox-4/06-inferior.png', label: 'Vista inferior' },
-    { src: 'assets/images/productos/jbl-boombox-4/07-empaquetado.png', label: 'Empaquetado' }
+  variants: [
+    {
+      id: 'azul',
+      label: 'Azul',
+      color: '#506a82',
+      price: 1499,
+      stockStatus: 'in_stock',
+      gallery: [
+        { src: 'assets/images/productos/jbl-boombox-4/01-vista-previa.png', label: 'Vista previa' },
+        { src: 'assets/images/productos/jbl-boombox-4/01-frontal.png', label: 'Vista frontal' },
+        { src: 'assets/images/productos/jbl-boombox-4/03-lateral.png', label: 'Vista lateral' },
+        { src: 'assets/images/productos/jbl-boombox-4/04-trasera.png', label: 'Vista trasera' },
+        { src: 'assets/images/productos/jbl-boombox-4/05-superior.png', label: 'Vista superior' },
+        { src: 'assets/images/productos/jbl-boombox-4/06-inferior.png', label: 'Vista inferior' },
+        { src: 'assets/images/productos/jbl-boombox-4/07-empaquetado.png', label: 'Empaquetado' }
+      ]
+    },
+    {
+      id: 'blanco',
+      label: 'Blanco',
+      color: '#f2f2f0',
+      price: 1599,
+      stockStatus: 'in_stock',
+      gallery: [
+        { src: 'assets/images/productos/jbl-boombox-4/Blanco 1.webp', label: 'Vista previa' },
+        { src: 'assets/images/productos/jbl-boombox-4/Blanco 2.webp', label: 'Vista frontal' },
+        { src: 'assets/images/productos/jbl-boombox-4/Blanco 3.webp', label: 'Vista lateral' },
+        { src: 'assets/images/productos/jbl-boombox-4/Blanco 4.webp', label: 'Vista trasera' },
+        { src: 'assets/images/productos/jbl-boombox-4/Blanco 5.webp', label: 'Vista superior' },
+        { src: 'assets/images/productos/jbl-boombox-4/Blanco 6.webp', label: 'Vista inferior' },
+        { src: 'assets/images/productos/jbl-boombox-4/Blanco 7.webp', label: 'Empaquetado' }
+      ]
+    },
+    {
+      id: 'verde',
+      label: 'Verde',
+      color: '#58633b',
+      price: 1499,
+      stockStatus: 'in_stock',
+      gallery: [
+        { src: 'assets/images/productos/jbl-boombox-4/camuflado 1.webp', label: 'Vista frontal' },
+        { src: 'assets/images/productos/jbl-boombox-4/camuflado 2.webp', label: 'Vista previa' },
+        { src: 'assets/images/productos/jbl-boombox-4/camuflado 3.webp', label: 'Vista lateral' },
+        { src: 'assets/images/productos/jbl-boombox-4/camuflado 4.webp', label: 'Vista frontal secundaria' },
+        { src: 'assets/images/productos/jbl-boombox-4/camuflado 5.webp', label: 'Vista frontal alternativa' },
+        { src: 'assets/images/productos/jbl-boombox-4/camuflado 6.webp', label: 'Vista trasera' },
+        { src: 'assets/images/productos/jbl-boombox-4/camuflado 7.webp', label: 'Vista superior' },
+        { src: 'assets/images/productos/jbl-boombox-4/camuflado 8.webp', label: 'Detalle lateral' }
+      ]
+    }
+  ]
+},
+{
+  id: 'jbl-partybox720',
+  brand: 'JBL',
+  category: 'PartyBox',
+  name: 'JBL PartyBox 720',
+  price: 'S/ 3169',
+  stockStatus: 'in_stock',
+  benefits: [
+    '800 W RMS con AI Sound Boost',
+    'Espectáculo de luces dinámico',
+    'IPX4 y ruedas reforzadas'
+  ],
+  short: 'Convierte cualquier espacio en una experiencia de alto impacto con 800 W RMS de JBL Pro Sound, graves profundos, AI Sound Boost y un espectáculo de luces que sigue el ritmo de la música.',
+  modalFeatures: [
+    '800 W RMS con graves profundos',
+    'Luces dinámicas sincronizadas',
+    'Diseño IPX4 fácil de transportar'
+  ],
+  best: 'fiestas, eventos, karaoke, presentaciones, terrazas y reuniones grandes',
+  img: 'assets/images/productos/JBL-party-box-720/1.webp',
+  purchaseMessage: 'Hola, quiero comprar la JBL PartyBox 720{color} por {price}.',
+  variants: [
+    {
+      id: 'negro',
+      label: 'Negro',
+      color: '#1c1c1c',
+      price: 3169,
+      stockStatus: 'in_stock',
+      gallery: [
+        { src: 'assets/images/productos/JBL-party-box-720/1.webp', label: 'Vista principal' },
+        { src: 'assets/images/productos/JBL-party-box-720/2.webp', label: 'Vista angular derecha' },
+        { src: 'assets/images/productos/JBL-party-box-720/3.webp', label: 'Vista angular izquierda' },
+        { src: 'assets/images/productos/JBL-party-box-720/4.webp', label: 'Vista frontal' },
+        { src: 'assets/images/productos/JBL-party-box-720/5.jfif', label: 'Vista posterior' },
+        { src: 'assets/images/productos/JBL-party-box-720/6.jfif', label: 'Compartimentos de batería' },
+        { src: 'assets/images/productos/JBL-party-box-720/7.webp', label: 'Base y ruedas' },
+        { src: 'assets/images/productos/JBL-party-box-720/8.webp', label: 'Controles superiores' },
+        { src: 'assets/images/productos/JBL-party-box-720/9.jfif', label: 'Panel de conexiones' },
+        { src: 'assets/images/productos/JBL-party-box-720/10.jfif', label: 'Vista posterior con conexiones' },
+        { src: 'assets/images/productos/JBL-party-box-720/11.jfif', label: 'Vista lateral' },
+        { src: 'assets/images/productos/JBL-party-box-720/12.webp', label: 'Detalle lateral y ruedas' }
+      ]
+    }
   ]
 }
   ];
@@ -600,7 +884,7 @@
         promoPrice: PROMOTIONAL_PRICES_JORPE[id],
         images: getDefaultProductGallery(product),
         description: product.short,
-        features: product.features
+        features: product.benefits.slice(0, 3)
       });
     })
   );
@@ -611,6 +895,7 @@
   const modalImg = document.getElementById('modalImg');
   const modalThumbs = document.getElementById('modalThumbs');
   const modalGalleryLabel = document.getElementById('modalGalleryLabel');
+  const modalImagePosition = document.getElementById('modalImagePosition');
   const modalMainImage = document.getElementById('modalMainImage');
   const modalPrevImage = document.getElementById('modalPrevImage');
   const modalNextImage = document.getElementById('modalNextImage');
@@ -622,15 +907,18 @@
   const promoCodeFeedback = document.getElementById('promoCodeFeedback');
   const promoModal = document.getElementById('promoProductModal');
   const promoModalClose = document.getElementById('promoModalClose');
-  const promoModalBack = document.getElementById('promoModalBack');
+  const promoModalContent = document.getElementById('promoModalContent');
   const promoModalImg = document.getElementById('promoModalImg');
   const promoModalThumbs = document.getElementById('promoModalThumbs');
   const promoModalGalleryLabel = document.getElementById('promoModalGalleryLabel');
+  const promoModalPosition = document.getElementById('promoModalPosition');
+  const promoModalImagePosition = document.getElementById('promoModalImagePosition');
   const promoModalMainImage = document.getElementById('promoModalMainImage');
   const promoModalPrevImage = document.getElementById('promoModalPrevImage');
   const promoModalNextImage = document.getElementById('promoModalNextImage');
+  const promoProductPrev = document.getElementById('promoProductPrev');
+  const promoProductNext = document.getElementById('promoProductNext');
   const promoModalWhatsApp = document.getElementById('promoModalWhatsApp');
-  const promoProductSelector = document.getElementById('promoProductSelector');
 
   let currentGallery = [];
   let currentGalleryIndex = 0;
@@ -640,8 +928,10 @@
   let promoTouchStartX = 0;
   let touchStartX = 0;
   let activeVariantIndex = 0;
+  const selectedVariantByProduct = new Map();
   let activePromoProductId = 'jbl-go4';
   let promoModalTrigger = null;
+  let productModalTrigger = null;
 
   function resetModalScroll() {
     window.requestAnimationFrame(() => {
@@ -658,11 +948,72 @@
     });
   }
 
+  function getDefaultVariantIndex(product) {
+    if (!product || !Array.isArray(product.variants) || !product.variants.length) return -1;
+    const explicitDefaultIndex = product.variants.findIndex(variant => variant.default === true);
+    if (explicitDefaultIndex >= 0) return explicitDefaultIndex;
+    const blackIndex = product.variants.findIndex(variant => (
+      String(variant.id || '').toLowerCase() === 'negro' ||
+      String(variant.label || '').toLowerCase() === 'negro'
+    ));
+    return blackIndex >= 0 ? blackIndex : 0;
+  }
+
+  function getSelectedVariantIndex(product) {
+    if (!product || !Array.isArray(product.variants) || !product.variants.length) return -1;
+    const selectedVariantId = selectedVariantByProduct.get(product.id);
+    const selectedIndex = product.variants.findIndex(variant => variant.id === selectedVariantId);
+    return selectedIndex >= 0 ? selectedIndex : getDefaultVariantIndex(product);
+  }
+
+  function rememberSelectedVariant(product, variantIndex) {
+    const variant = product?.variants?.[variantIndex];
+    if (!variant) return null;
+    selectedVariantByProduct.set(product.id, variant.id);
+    return variant;
+  }
+
   function getActiveVariant(product) {
-    if (product && Array.isArray(product.variants) && product.variants.length) {
-      return product.variants[activeVariantIndex] || product.variants[0];
-    }
-    return null;
+    if (!product || !Array.isArray(product.variants) || !product.variants.length) return null;
+    return product.variants[activeVariantIndex] || product.variants[getDefaultVariantIndex(product)];
+  }
+
+  function getSelectedVariant(product) {
+    const selectedIndex = getSelectedVariantIndex(product);
+    return selectedIndex >= 0 ? product.variants[selectedIndex] : null;
+  }
+
+  function formatProductPrice(value) {
+    if (typeof value === 'number' && Number.isFinite(value)) return `S/ ${Math.round(value)}`;
+    const text = String(value ?? '').trim();
+    if (!text) return '';
+    return /^S\//i.test(text) ? text.replace(/^S\/\s*/i, 'S/ ') : `S/ ${text}`;
+  }
+
+  function getVariantCommerce(product, variant = null) {
+    const price = formatProductPrice(variant?.price ?? product?.price);
+    const stockStatus = variant?.stockStatus ?? product?.stockStatus ?? 'in_stock';
+    return {
+      price,
+      stockStatus,
+      isAvailable: stockStatus !== 'out_of_stock'
+    };
+  }
+
+  function renderStockStatus(target, commerce) {
+    if (!target) return;
+    target.dataset.stock = commerce.stockStatus;
+    target.classList.toggle('is-out-of-stock', !commerce.isAvailable);
+    target.textContent = commerce.isAvailable ? '✓ En stock' : 'Agotado';
+    target.setAttribute('aria-label', commerce.isAvailable ? 'En stock' : 'Agotado');
+  }
+
+  function getVariantPrimaryImage(product, variant) {
+    return variant?.gallery?.[0] || { src: product?.img || '', label: 'Vista principal' };
+  }
+
+  function getVariantProductLabel(product, variant = getActiveVariant(product)) {
+    return variant ? `${product.name} color ${variant.label}` : product.name;
   }
 
   function getActiveGallery(product) {
@@ -673,41 +1024,193 @@
   }
 
   function getDefaultProductGallery(product) {
-    const variant = product?.variants?.[0];
+    const defaultVariantIndex = getDefaultVariantIndex(product);
+    const variant = defaultVariantIndex >= 0 ? product?.variants?.[defaultVariantIndex] : null;
     if (variant && Array.isArray(variant.gallery) && variant.gallery.length) return variant.gallery;
     if (product && Array.isArray(product.gallery) && product.gallery.length) return product.gallery;
     return [{ src: product?.img || '', label: 'Vista principal' }];
   }
 
-  function setGalleryImage(index) {
-    if (!modalImg || !currentGallery.length) return;
-    currentGalleryIndex = (index + currentGallery.length) % currentGallery.length;
-    const item = currentGallery[currentGalleryIndex];
-    modalImg.style.opacity = '0';
-    modalImg.style.transform = 'scale(.985)';
+  function setProductGalleryView({ gallery, index, image, label, position, thumbs, productName }) {
+    if (!image || !gallery.length) return 0;
+    const nextIndex = (index + gallery.length) % gallery.length;
+    const item = gallery[nextIndex];
+    image.style.opacity = '0';
+    image.style.transform = 'scale(.985)';
     window.setTimeout(() => {
-      modalImg.src = item.src;
-      modalImg.alt = `${currentGalleryProductName} - ${item.label}`;
-      if (modalGalleryLabel) modalGalleryLabel.textContent = item.label;
-      if (modalThumbs) {
-        modalThumbs.querySelectorAll('.gallery-thumb').forEach((thumb, thumbIndex) => {
-          const isActive = thumbIndex === currentGalleryIndex;
+      image.src = item.src;
+      image.alt = `${productName}, ${item.label.toLowerCase()}`;
+      if (label) label.textContent = item.label;
+      if (position) position.textContent = `${nextIndex + 1} de ${gallery.length}`;
+      if (thumbs) {
+        thumbs.querySelectorAll('.gallery-thumb').forEach((thumb, thumbIndex) => {
+          const isActive = thumbIndex === nextIndex;
           thumb.classList.toggle('active', isActive);
           thumb.setAttribute('aria-selected', isActive ? 'true' : 'false');
         });
       }
-      modalImg.style.opacity = '1';
-      modalImg.style.transform = 'scale(1)';
+      image.style.opacity = '1';
+      image.style.transform = 'scale(1)';
     }, 90);
+    return nextIndex;
   }
 
-  function updateWhatsAppLink(product) {
-    const wa = document.getElementById('modalWhatsApp');
-    if (!wa || !product) return;
-    const variant = getActiveVariant(product);
+  function renderProductGalleryComponent({ product, gallery, thumbs, onSelect, productLabel = product.name }) {
+    if (!thumbs) return;
+    thumbs.setAttribute('aria-label', `Vistas de ${productLabel}`);
+    thumbs.innerHTML = gallery.map((item, index) => `
+      <button class="gallery-thumb${index === 0 ? ' active' : ''}" type="button" aria-label="Mostrar ${item.label.toLowerCase()} de ${productLabel}" aria-selected="${index === 0 ? 'true' : 'false'}">
+        <img src="${item.src}" alt="${productLabel}, ${item.label.toLowerCase()}" loading="lazy">
+        <span>${item.label}</span>
+      </button>
+    `).join('');
+
+    thumbs.querySelectorAll('.gallery-thumb').forEach((thumb, index) => {
+      thumb.addEventListener('click', event => {
+        event.preventDefault();
+        event.stopPropagation();
+        onSelect(index);
+      });
+    });
+
+    gallery.slice(1).forEach(item => {
+      const preload = new Image();
+      preload.src = item.src;
+    });
+  }
+
+  function renderProductFeatures(target, features) {
+    if (!target) return;
+    target.innerHTML = (features || []).slice(0, 3).map(feature => `<li>${feature}</li>`).join('');
+  }
+
+  function renderProductPrice({ variant, product, selectedVariant = null, target, promoTarget, discountTarget, regularTarget }) {
+    if (variant === 'catalog') {
+      if (target) {
+        const displayedPrice = getVariantCommerce(product, selectedVariant).price;
+        const hasChanged = target.textContent.trim() && target.textContent.trim() !== displayedPrice;
+        if (hasChanged) target.classList.add('is-changing-price');
+        target.textContent = displayedPrice;
+        target.setAttribute('aria-label', displayedPrice);
+        if (hasChanged) window.requestAnimationFrame(() => target.classList.remove('is-changing-price'));
+      }
+      return;
+    }
+
+    if (regularTarget) regularTarget.textContent = `S/ ${product.normalPrice}`;
+    if (promoTarget) promoTarget.textContent = `S/ ${product.promoPrice}`;
+    const percentage = product.normalPrice > product.promoPrice
+      ? Math.round(((product.normalPrice - product.promoPrice) / product.normalPrice) * 100)
+      : null;
+    if (discountTarget) {
+      discountTarget.textContent = percentage ? `-${percentage}%` : '';
+      discountTarget.hidden = !percentage;
+    }
+  }
+
+  function trapModalFocus(event, modalElement) {
+    if (event.key !== 'Tab' || !modalElement) return false;
+    const card = modalElement.querySelector('[role="dialog"]');
+    const focusable = card
+      ? Array.from(card.querySelectorAll('button:not([disabled]), a[href], input:not([disabled]), [tabindex]:not([tabindex="-1"])')).filter(element => !element.hidden && element.offsetParent !== null)
+      : [];
+    if (!focusable.length) return false;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (!card.contains(document.activeElement)) {
+      event.preventDefault();
+      (event.shiftKey ? last : first).focus();
+    } else if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+    return true;
+  }
+
+  function setGalleryImage(index) {
+    if (!modalImg || !currentGallery.length) return;
+    currentGalleryIndex = setProductGalleryView({
+      gallery: currentGallery,
+      index,
+      image: modalImg,
+      label: modalGalleryLabel,
+      position: modalImagePosition,
+      thumbs: modalThumbs,
+      productName: currentGalleryProductName
+    });
+  }
+
+  function getModalStockStatus() {
+    const modalInfo = document.querySelector('#productModal .modal-info');
+    if (!modalInfo) return null;
+    let status = document.getElementById('modalStockStatus');
+    if (!status) {
+      status = document.createElement('span');
+      status.id = 'modalStockStatus';
+      status.className = 'modal-stock-status';
+      const modalPrice = modalInfo.querySelector('.product-price--catalog');
+      if (modalPrice) modalPrice.insertAdjacentElement('beforebegin', status);
+      else modalInfo.appendChild(status);
+    }
+    return status;
+  }
+
+  function replaceModalBuyElement(tagName) {
+    const current = document.getElementById('modalWhatsApp');
+    if (!current || current.tagName === tagName.toUpperCase()) return current;
+    const replacement = document.createElement(tagName);
+    replacement.id = 'modalWhatsApp';
+    replacement.className = current.className;
+    current.replaceWith(replacement);
+    return replacement;
+  }
+
+  function buildCatalogWhatsAppMessage(product, variant, commerce) {
     const colorText = variant ? ` color ${variant.label}` : '';
-    const msg = encodeURIComponent(`Hola JOR STORE, quiero información sobre ${product.name}${colorText} (${product.price})`);
-    wa.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+    if (!product.purchaseMessage) {
+      return `Hola JOR STORE, quiero información sobre ${product.name}${colorText} (${commerce.price})`;
+    }
+
+    return product.purchaseMessage
+      .replace('{color}', variant ? ` color ${variant.label.toLowerCase()}` : '')
+      .replace('{price}', commerce.price);
+  }
+
+  function updateModalCommerce(product) {
+    if (!product) return;
+    const variant = getActiveVariant(product);
+    const commerce = getVariantCommerce(product, variant);
+
+    renderProductPrice({
+      variant: 'catalog',
+      product,
+      selectedVariant: variant,
+      target: document.getElementById('modalPrice')
+    });
+    renderStockStatus(getModalStockStatus(), commerce);
+
+    const buy = replaceModalBuyElement(commerce.isAvailable ? 'a' : 'button');
+    if (!buy) return;
+    buy.dataset.stock = commerce.stockStatus;
+
+    if (!commerce.isAvailable) {
+      buy.type = 'button';
+      buy.disabled = true;
+      buy.setAttribute('aria-disabled', 'true');
+      buy.textContent = 'Color agotado';
+    } else {
+      const msg = encodeURIComponent(buildCatalogWhatsAppMessage(product, variant, commerce));
+      buy.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+      buy.target = '_blank';
+      buy.rel = 'noopener noreferrer';
+      buy.removeAttribute('aria-disabled');
+      buy.textContent = `Comprar ${product.name}`;
+    }
+
+    if (modal) modal.dataset.stock = commerce.stockStatus;
   }
 
   function normalizePromoCode(value) {
@@ -727,103 +1230,81 @@
 
   function setPromoGalleryImage(index) {
     if (!promoModalImg || !promoGallery.length) return;
-    promoGalleryIndex = (index + promoGallery.length) % promoGallery.length;
-    const item = promoGallery[promoGalleryIndex];
-    promoModalImg.style.opacity = '0';
-    promoModalImg.style.transform = 'scale(.985)';
-    window.setTimeout(() => {
-      promoModalImg.src = item.src;
-      const product = promotionalProducts.find(item => item.id === activePromoProductId);
-      promoModalImg.alt = `${product?.name || 'Producto promocional'} - ${item.label}`;
-      if (promoModalGalleryLabel) promoModalGalleryLabel.textContent = item.label;
-      if (promoModalThumbs) {
-        promoModalThumbs.querySelectorAll('.gallery-thumb').forEach((thumb, thumbIndex) => {
-          const isActive = thumbIndex === promoGalleryIndex;
-          thumb.classList.toggle('active', isActive);
-          thumb.setAttribute('aria-selected', isActive ? 'true' : 'false');
-        });
-      }
-      promoModalImg.style.opacity = '1';
-      promoModalImg.style.transform = 'scale(1)';
-    }, 90);
+    const product = promotionalProducts.find(item => item.id === activePromoProductId);
+    promoGalleryIndex = setProductGalleryView({
+      gallery: promoGallery,
+      index,
+      image: promoModalImg,
+      label: promoModalGalleryLabel,
+      position: promoModalImagePosition,
+      thumbs: promoModalThumbs,
+      productName: product?.name || 'Producto promocional'
+    });
   }
 
   function renderPromoGallery(product) {
-    promoGallery = getDefaultProductGallery(product);
+    promoGallery = Array.isArray(product.images) && product.images.length
+      ? product.images
+      : getDefaultProductGallery(product);
     promoGalleryIndex = 0;
 
-    if (promoModalThumbs) {
-      promoModalThumbs.innerHTML = promoGallery.map((item, index) => `
-        <button class="gallery-thumb${index === 0 ? ' active' : ''}" type="button" aria-label="Ver ${item.label}" aria-selected="${index === 0 ? 'true' : 'false'}">
-          <img src="${item.src}" alt="${item.label}" loading="lazy">
-          <span>${item.label}</span>
-        </button>
-      `).join('');
-
-      promoModalThumbs.querySelectorAll('.gallery-thumb').forEach((thumb, index) => {
-        thumb.addEventListener('click', event => {
-          event.preventDefault();
-          event.stopPropagation();
-          setPromoGalleryImage(index);
-        });
-      });
-    }
-
-    promoGallery.slice(1).forEach(item => {
-      const preload = new Image();
-      preload.src = item.src;
+    renderProductGalleryComponent({
+      product,
+      gallery: promoGallery,
+      thumbs: promoModalThumbs,
+      onSelect: setPromoGalleryImage
     });
 
     setPromoGalleryImage(0);
-  }
-
-  function renderPromoSelector() {
-    if (!promoProductSelector) return;
-    promoProductSelector.innerHTML = promotionalProducts.map(product => `
-      <button class="promo-product-option" id="promo-option-${product.id}" type="button" role="tab" data-promo-product="${product.id}" aria-controls="promoModalContent" aria-selected="${product.id === activePromoProductId ? 'true' : 'false'}" tabindex="${product.id === activePromoProductId ? '0' : '-1'}">
-        <img src="${product.images[0].src}" alt="" loading="lazy">
-        <span>${product.name}</span>
-      </button>
-    `).join('');
-  }
-
-  function updatePromoSelectorState() {
-    promoProductSelector?.querySelectorAll('[role="tab"]').forEach(button => {
-      const active = button.dataset.promoProduct === activePromoProductId;
-      button.classList.toggle('active', active);
-      button.setAttribute('aria-selected', active ? 'true' : 'false');
-      button.tabIndex = active ? 0 : -1;
-    });
   }
 
   function renderPromoProduct(productId) {
     const product = promotionalProducts.find(item => item.id === productId);
     if (!product) return;
     activePromoProductId = product.id;
-    updatePromoSelectorState();
+    const productIndex = promotionalProducts.findIndex(item => item.id === product.id);
     renderPromoGallery(product);
+
+    if (promoModalMainImage) promoModalMainImage.setAttribute('aria-label', `Galería de ${product.name}`);
+    if (promoModalPrevImage) promoModalPrevImage.setAttribute('aria-label', `Vista anterior de ${product.name}`);
+    if (promoModalNextImage) promoModalNextImage.setAttribute('aria-label', `Vista siguiente de ${product.name}`);
 
     document.getElementById('promoModalBrand').textContent = product.brand;
     document.getElementById('promoModalTitle').textContent = product.name;
     document.getElementById('promoModalDescription').textContent = product.description;
-    document.getElementById('promoModalFeatures').innerHTML = product.features.map(feature => `<li>${feature}</li>`).join('');
-    document.getElementById('promoModalNormalPrice').textContent = `S/ ${product.normalPrice}`;
+    renderProductFeatures(document.getElementById('promoModalFeatures'), product.features);
+    if (promoModalPosition) promoModalPosition.textContent = `${productIndex + 1} de ${promotionalProducts.length}`;
 
     const hasPromoPrice = product.promoPrice !== null;
-    document.getElementById('promoModalPromoPrice').textContent = hasPromoPrice ? `S/ ${product.promoPrice}` : 'Por confirmar';
-    document.getElementById('promoModalSavings').textContent = hasPromoPrice
-      ? `Ahorro: S/ ${product.normalPrice - product.promoPrice}`
-      : 'El precio promocional todavía requiere confirmación.';
-    document.getElementById('promoModalDetails').classList.toggle('promo-price-pending', !hasPromoPrice);
+    renderProductPrice({
+      variant: 'promotional',
+      product,
+      promoTarget: document.getElementById('promoModalPromoPrice'),
+      discountTarget: document.getElementById('promoModalDiscount'),
+      regularTarget: document.getElementById('promoModalNormalPrice')
+    });
 
     if (promoModalWhatsApp) {
       promoModalWhatsApp.href = buildPromoWhatsAppUrl(product);
       promoModalWhatsApp.textContent = hasPromoPrice ? `Comprar ${product.name} con JORPE` : `Consultar oferta de ${product.name}`;
     }
+
+    if (promoModalContent) {
+      promoModalContent.classList.remove('is-entering');
+      void promoModalContent.offsetWidth;
+      promoModalContent.classList.add('is-entering');
+    }
+  }
+
+  function showPromoProduct(offset) {
+    const currentIndex = promotionalProducts.findIndex(item => item.id === activePromoProductId);
+    const nextIndex = (currentIndex + offset + promotionalProducts.length) % promotionalProducts.length;
+    renderPromoProduct(promotionalProducts[nextIndex].id);
   }
 
   function openPromoModal() {
-    const product = promotionalProducts.find(item => item.id === activePromoProductId);
+    activePromoProductId = promotionalProducts[0].id;
+    const product = promotionalProducts[0];
     if (!promoModal || !product) return;
 
     promoModalTrigger = promoCodeInput;
@@ -850,7 +1331,6 @@
   function initPromoCodeCampaign() {
     if (!promoCodeForm || !promoCodeInput) return;
 
-    renderPromoSelector();
     renderPromoProduct(activePromoProductId);
 
     promoCodeInput.addEventListener('input', () => {
@@ -875,30 +1355,30 @@
   }
 
   function renderProductGallery(product) {
+    const activeVariant = getActiveVariant(product);
     currentGallery = getActiveGallery(product);
     currentGalleryIndex = 0;
-    currentGalleryProductName = product.name;
+    currentGalleryProductName = getVariantProductLabel(product, activeVariant);
+    const hasMultipleImages = currentGallery.length > 1;
 
-    if (modalThumbs) {
-      modalThumbs.innerHTML = currentGallery.map((item, index) => `
-        <button class="gallery-thumb${index === 0 ? ' active' : ''}" type="button" aria-label="Ver ${item.label}" aria-selected="${index === 0 ? 'true' : 'false'}">
-          <img src="${item.src}" alt="${item.label}" loading="lazy">
-          <span>${item.label}</span>
-        </button>
-      `).join('');
-
-      modalThumbs.querySelectorAll('.gallery-thumb').forEach((thumb, index) => {
-        thumb.addEventListener('click', event => {
-          event.preventDefault();
-          event.stopPropagation();
-          setGalleryImage(index);
-        });
-      });
+    if (modalMainImage) modalMainImage.setAttribute('aria-label', `Galería de ${currentGalleryProductName}`);
+    if (modalPrevImage) {
+      modalPrevImage.hidden = !hasMultipleImages;
+      modalPrevImage.setAttribute('aria-label', `Vista anterior de ${currentGalleryProductName}`);
     }
+    if (modalNextImage) {
+      modalNextImage.hidden = !hasMultipleImages;
+      modalNextImage.setAttribute('aria-label', `Vista siguiente de ${currentGalleryProductName}`);
+    }
+    if (modalImagePosition) modalImagePosition.hidden = !hasMultipleImages;
+    if (modalThumbs) modalThumbs.hidden = !hasMultipleImages;
 
-    currentGallery.slice(1).forEach(item => {
-      const preload = new Image();
-      preload.src = item.src;
+    renderProductGalleryComponent({
+      product,
+      gallery: currentGallery,
+      thumbs: modalThumbs,
+      onSelect: setGalleryImage,
+      productLabel: currentGalleryProductName
     });
 
     setGalleryImage(0);
@@ -909,20 +1389,17 @@
     if (!modalInfo) return;
 
     let selector = document.getElementById('modalVariantSelector');
+    if (!selector) {
+      selector = document.createElement('fieldset');
+      selector.id = 'modalVariantSelector';
+      selector.className = 'modal-variant-selector';
+    }
 
-if (!selector) {
-  selector = document.createElement('div');
-  selector.id = 'modalVariantSelector';
-  selector.className = 'modal-variant-selector';
-}
-
-const brand = document.getElementById('modalBrand');
-
-if (brand) {
-  brand.insertAdjacentElement('beforebegin', selector);
-} else {
-  modalInfo.prepend(selector);
-}
+    const modalPrice = modalInfo.querySelector('.product-price--catalog');
+    const modalStock = document.getElementById('modalStockStatus');
+    if (modalStock) modalStock.insertAdjacentElement('beforebegin', selector);
+    else if (modalPrice) modalPrice.insertAdjacentElement('beforebegin', selector);
+    else modalInfo.appendChild(selector);
 
     if (!product.variants || !product.variants.length) {
       selector.innerHTML = '';
@@ -932,47 +1409,73 @@ if (brand) {
 
     selector.hidden = false;
     selector.innerHTML = `
-      <span>Color disponible:</span>
+      <legend>Color disponible:</legend>
       <div class="variant-buttons">
-        ${product.variants.map((variant, index) => `
-          <button type="button" class="variant-btn ${index === activeVariantIndex ? 'active' : ''}" data-variant-index="${index}" style="--variant-color:${variant.color || '#111'}">
-            <i></i>${variant.label}
-          </button>
-        `).join('')}
+        ${product.variants.map((variant, index) => {
+          const commerce = getVariantCommerce(product, variant);
+          const stockText = commerce.isAvailable ? '' : ', agotado';
+          return `
+            <button type="button" class="variant-btn ${index === activeVariantIndex ? 'active' : ''}${commerce.isAvailable ? '' : ' is-out-of-stock'}" data-variant-index="${index}" data-stock="${commerce.stockStatus}" style="--variant-color:${variant.color || '#111'}" aria-label="Seleccionar ${product.name} color ${variant.label}${stockText}" aria-pressed="${index === activeVariantIndex ? 'true' : 'false'}">
+              <i aria-hidden="true"></i><span>${variant.label}</span>${commerce.isAvailable ? '' : '<small>Agotado</small>'}
+            </button>
+          `;
+        }).join('')}
       </div>
     `;
 
     selector.querySelectorAll('.variant-btn').forEach(button => {
-      button.addEventListener('click', () => {
+      const selectModalVariant = event => {
+        event.preventDefault();
+        event.stopPropagation();
+        const restoreKeyboardFocus = event.detail === 0;
         activeVariantIndex = Number(button.dataset.variantIndex || 0);
+        const selectedVariant = rememberSelectedVariant(product, activeVariantIndex);
+        if (modal && selectedVariant) modal.dataset.selectedColor = selectedVariant.label;
         renderVariantSelector(product);
         renderProductGallery(product);
-        updateWhatsAppLink(product);
+        updateProductCardVariant(product, false);
+        updateModalCommerce(product);
         resetThumbnailScroll();
+        if (restoreKeyboardFocus) {
+          selector.querySelector(`[data-variant-index="${activeVariantIndex}"]`)?.focus();
+        }
+      };
+
+      button.addEventListener('click', selectModalVariant);
+      button.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') selectModalVariant(event);
       });
     });
   }
 
-  function openProduct(id) {
+  function openProduct(id, trigger = document.activeElement) {
     const product = PRODUCTS.find(item => item.id === id);
     if (!product || !modal) return;
 
-    activeVariantIndex = 0;
+    productModalTrigger = trigger;
+    activeVariantIndex = getSelectedVariantIndex(product);
+    const selectedVariant = activeVariantIndex >= 0
+      ? rememberSelectedVariant(product, activeVariantIndex)
+      : null;
+    modal.dataset.productId = product.id;
+    modal.dataset.selectedColor = selectedVariant?.label || '';
     renderProductGallery(product);
     renderVariantSelector(product);
 
     document.getElementById('modalBrand').textContent = `${product.brand} · ${product.category}`;
     document.getElementById('modalTitle').textContent = product.name;
     document.getElementById('modalDesc').textContent = product.short;
-    document.getElementById('modalFeatures').innerHTML = product.features.map(feature => `<li>${feature}</li>`).join('');
-    document.getElementById('modalBest').innerHTML = `<strong>Ideal para:</strong> ${product.best}`;
-    document.getElementById('modalPrice').innerHTML = `<strong>${product.price}</strong>`;
-    updateWhatsAppLink(product);
+    renderProductFeatures(document.getElementById('modalFeatures'), product.modalFeatures || product.benefits);
+    updateModalCommerce(product);
 
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
     resetModalScroll();
+    window.requestAnimationFrame(() => {
+      updateModalCommerce(product);
+      modalClose?.focus();
+    });
   }
 
   function closeModal() {
@@ -980,6 +1483,112 @@ if (brand) {
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
     if (!promoModal || !promoModal.classList.contains('open')) document.body.classList.remove('modal-open');
+    productModalTrigger?.focus();
+    window.requestAnimationFrame(() => productModalTrigger?.focus());
+  }
+
+  function updateProductCardVariant(product, animateImage = true) {
+    const card = productCards.find(item => item.dataset.id === product.id);
+    if (!card || !Array.isArray(product.variants) || !product.variants.length) return;
+
+    const selectedIndex = getSelectedVariantIndex(product);
+    const selectedVariant = product.variants[selectedIndex];
+    const commerce = getVariantCommerce(product, selectedVariant);
+    const primaryImage = getVariantPrimaryImage(product, selectedVariant);
+    const cardImage = card.querySelector(':scope > img');
+
+    card.dataset.selectedVariant = selectedVariant.id;
+    if (cardImage) {
+      const applyImage = () => {
+        cardImage.src = primaryImage.src;
+        cardImage.alt = `${product.name} color ${selectedVariant.label}, ${primaryImage.label.toLowerCase()}`;
+        window.requestAnimationFrame(() => cardImage.classList.remove('is-changing-variant'));
+      };
+
+      if (cardImage.getAttribute('src') !== primaryImage.src && animateImage) {
+        cardImage.classList.add('is-changing-variant');
+        const preload = new Image();
+        preload.addEventListener('load', applyImage, { once: true });
+        preload.addEventListener('error', applyImage, { once: true });
+        preload.src = primaryImage.src;
+      } else {
+        applyImage();
+      }
+    }
+
+    const selectedColorName = card.querySelector('.selected-color-name');
+    if (selectedColorName) selectedColorName.textContent = selectedVariant.label;
+    renderStockStatus(card.querySelector('.badge.stock'), commerce);
+    renderCardPrice(card.querySelector('.price-line'), product, selectedVariant);
+    card.dataset.stock = commerce.stockStatus;
+    card.querySelectorAll('.color-swatch').forEach((swatch, index) => {
+      const isSelected = index === selectedIndex;
+      swatch.classList.toggle('active', isSelected);
+      swatch.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+    });
+  }
+
+  function renderCardColorSwatches(card, product, title) {
+    const existing = card.querySelector('.product-color-options');
+    if (!Array.isArray(product.variants) || !product.variants.length) {
+      existing?.remove();
+      return;
+    }
+
+    const selectedIndex = getSelectedVariantIndex(product);
+    const selectedVariant = product.variants[selectedIndex];
+    const colorOptions = existing || document.createElement('div');
+    colorOptions.className = 'product-color-options';
+    colorOptions.innerHTML = `
+      <span class="product-colors-label">Colores disponibles · <strong class="selected-color-name">${selectedVariant.label}</strong></span>
+      <div class="product-color-swatches" role="group" aria-label="Colores disponibles para ${product.name}">
+        ${product.variants.map((variant, index) => {
+          const commerce = getVariantCommerce(product, variant);
+          const stockText = commerce.isAvailable ? '' : ', agotado';
+          return `
+            <button class="color-swatch${index === selectedIndex ? ' active' : ''}${commerce.isAvailable ? '' : ' is-out-of-stock'}" type="button" data-variant-index="${index}" data-stock="${commerce.stockStatus}" style="--swatch-color:${variant.color || '#111'}" aria-label="Seleccionar ${product.name} color ${variant.label}${stockText}" aria-pressed="${index === selectedIndex ? 'true' : 'false'}"${commerce.isAvailable ? '' : ` title="${variant.label} — agotado"`}>
+              <span aria-hidden="true"></span>
+            </button>
+          `;
+        }).join('')}
+      </div>
+    `;
+
+    if (!existing) title.insertAdjacentElement('afterend', colorOptions);
+    colorOptions.querySelectorAll('.color-swatch').forEach(button => {
+      const selectCardVariant = event => {
+        event.preventDefault();
+        event.stopPropagation();
+        const variantIndex = Number(button.dataset.variantIndex || 0);
+        rememberSelectedVariant(product, variantIndex);
+        updateProductCardVariant(product);
+      };
+
+      button.addEventListener('click', selectCardVariant);
+      button.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') selectCardVariant(event);
+      });
+    });
+
+    updateProductCardVariant(product, false);
+  }
+
+  function renderCardPrice(priceLine, product, selectedVariant = null) {
+    if (!priceLine) return;
+    const displayedPrice = getVariantCommerce(product, selectedVariant).price;
+    const [currency = '', ...amountParts] = displayedPrice.split(/\s+/);
+    const amount = amountParts.join(' ');
+    const hasChanged = priceLine.dataset.displayedPrice && priceLine.dataset.displayedPrice !== displayedPrice;
+    if (hasChanged) priceLine.classList.add('is-changing-price');
+    priceLine.dataset.displayedPrice = displayedPrice;
+    priceLine.classList.remove('promo-price-line');
+    priceLine.innerHTML = `
+      <strong class="product-price-card" aria-label="${displayedPrice}">
+        <span class="product-price__currency">${currency}</span> <span class="product-price__amount">${amount}</span>
+      </strong>
+      <span class="product-price__label">Precio JOR STORE</span>
+    `;
+    if (hasChanged) window.requestAnimationFrame(() => priceLine.classList.remove('is-changing-price'));
   }
 
   function updateProductCards() {
@@ -990,23 +1599,24 @@ if (brand) {
       card.querySelector('.offer-ribbon')?.remove();
       card.querySelector('.urgency-line')?.remove();
 
-      const stock = card.querySelector('.badge.stock');
-      if (stock) stock.innerHTML = '✓ En stock';
+      const selectedVariant = getSelectedVariant(product);
+      const commerce = getVariantCommerce(product, selectedVariant);
+      renderStockStatus(card.querySelector('.badge.stock'), commerce);
+      card.dataset.stock = commerce.stockStatus;
 
       const body = card.querySelector('.product-body');
       const title = body?.querySelector('h3');
+      if (body && title) renderCardColorSwatches(card, product, title);
       if (body && title && !body.querySelector('.quick-benefits')) {
         const benefits = document.createElement('ul');
         benefits.className = 'quick-benefits';
         benefits.innerHTML = (product.benefits || []).slice(0, 3).map(item => `<li>✓ ${item}</li>`).join('');
-        title.insertAdjacentElement('afterend', benefits);
+        const colorOptions = body.querySelector('.product-color-options');
+        (colorOptions || title).insertAdjacentElement('afterend', benefits);
       }
 
       const priceLine = card.querySelector('.price-line');
-      if (priceLine) {
-        priceLine.classList.remove('promo-price-line');
-        priceLine.innerHTML = `<strong>${product.price}</strong><span>Precio JOR STORE</span>`;
-      }
+      if (priceLine) renderCardPrice(priceLine, product, selectedVariant);
 
       const button = card.querySelector('.details-btn');
       if (button) button.textContent = 'Ver detalles';
@@ -1049,12 +1659,12 @@ if (brand) {
       event.preventDefault();
       event.stopPropagation();
       const card = button.closest('.product-card');
-      if (card) openProduct(card.dataset.id);
+      if (card) openProduct(card.dataset.id, button);
       return;
     }
 
     const card = event.target.closest('.product-card');
-    if (card) openProduct(card.dataset.id);
+    if (card) openProduct(card.dataset.id, card);
   });
 
   brandFilterButtons.forEach(button => {
@@ -1077,28 +1687,6 @@ if (brand) {
     closeModal();
   });
   if (promoModalClose) promoModalClose.addEventListener('click', closePromoModal);
-  if (promoModalBack) promoModalBack.addEventListener('click', closePromoModal);
-
-  if (promoProductSelector) {
-    promoProductSelector.addEventListener('click', event => {
-      const option = event.target.closest('[data-promo-product]');
-      if (option) renderPromoProduct(option.dataset.promoProduct);
-    });
-
-    promoProductSelector.addEventListener('keydown', event => {
-      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
-      const options = Array.from(promoProductSelector.querySelectorAll('[role="tab"]'));
-      const currentIndex = options.indexOf(document.activeElement);
-      if (currentIndex < 0) return;
-      event.preventDefault();
-      let nextIndex = event.key === 'Home' ? 0 : event.key === 'End' ? options.length - 1 : currentIndex;
-      if (event.key === 'ArrowLeft') nextIndex = (currentIndex - 1 + options.length) % options.length;
-      if (event.key === 'ArrowRight') nextIndex = (currentIndex + 1) % options.length;
-      const option = options[nextIndex];
-      renderPromoProduct(option.dataset.promoProduct);
-      option.focus();
-    });
-  }
 
   if (modalPrevImage) {
     modalPrevImage.addEventListener('click', event => {
@@ -1113,6 +1701,22 @@ if (brand) {
       event.preventDefault();
       event.stopPropagation();
       setGalleryImage(currentGalleryIndex + 1);
+    });
+  }
+
+  if (promoProductPrev) {
+    promoProductPrev.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      showPromoProduct(-1);
+    });
+  }
+
+  if (promoProductNext) {
+    promoProductNext.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      showPromoProduct(1);
     });
   }
 
@@ -1160,9 +1764,10 @@ if (brand) {
 
   productCards.forEach(card => {
     card.addEventListener('keydown', event => {
+      if (event.target.closest('button, a, input, select, textarea')) return;
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        openProduct(card.dataset.id);
+        openProduct(card.dataset.id, card);
       }
     });
   });
@@ -1186,36 +1791,31 @@ if (brand) {
     }
 
     if (isPromoModalOpen) {
-      if (event.key === 'Tab') {
-        const card = promoModal?.querySelector('.promo-modal-card');
-        const focusable = card ? Array.from(card.querySelectorAll('button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])')).filter(element => !element.hidden && element.offsetParent !== null) : [];
-        if (focusable.length) {
-          const first = focusable[0];
-          const last = focusable[focusable.length - 1];
-          if (event.shiftKey && document.activeElement === first) {
-            event.preventDefault();
-            last.focus();
-          } else if (!event.shiftKey && document.activeElement === last) {
-            event.preventDefault();
-            first.focus();
-          }
-        }
-        return;
-      }
+      if (trapModalFocus(event, promoModal)) return;
 
       if (event.key === 'ArrowLeft') {
         event.preventDefault();
-        setPromoGalleryImage(promoGalleryIndex - 1);
+        if (promoModalMainImage?.contains(document.activeElement) || promoModalThumbs?.contains(document.activeElement)) {
+          setPromoGalleryImage(promoGalleryIndex - 1);
+        } else {
+          showPromoProduct(-1);
+        }
       }
 
       if (event.key === 'ArrowRight') {
         event.preventDefault();
-        setPromoGalleryImage(promoGalleryIndex + 1);
+        if (promoModalMainImage?.contains(document.activeElement) || promoModalThumbs?.contains(document.activeElement)) {
+          setPromoGalleryImage(promoGalleryIndex + 1);
+        } else {
+          showPromoProduct(1);
+        }
       }
       return;
     }
 
     if (!modal || !modal.classList.contains('open')) return;
+
+    if (trapModalFocus(event, modal)) return;
 
     if (event.key === 'ArrowLeft') {
       event.preventDefault();
