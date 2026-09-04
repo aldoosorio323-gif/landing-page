@@ -56,7 +56,7 @@ Regla visual actual:
 - Debajo de la imagen del parlante solo aparece el nombre del modelo.
 - El modelo va en negro, moderno y en negrita.
 - No se muestran descripciones largas ni bullets.
-- Se mantiene: EN STOCK, precio, Precio JOR STORE y boton Ver detalles.
+- Se mantiene: EN STOCK o AGOTADO, precio de oferta, precio regular tachado, descuento y botón Ver detalles.
 
 Boton por tarjeta:
 **Ver detalles**
@@ -67,7 +67,8 @@ Boton por tarjeta:
 - Asesoria personalizada
 - Compra segura
 - Entrega coordinada
-- Precio JOR STORE
+- Precio de oferta + descuento
+- Antes: precio regular tachado
 - En stock
 - Modelos revisados y listos para entregar
 - Orientacion antes de comprar

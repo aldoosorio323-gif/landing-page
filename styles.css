@@ -191,7 +191,7 @@
     .contact-icon img{width:100%;height:100%;object-fit:contain;display:block}
     .contact-card h3{margin:0 0 6px;font-size:23px}
     .contact-card p{margin:0;color:#666;line-height:1.45}
-    
+
     .footer{background:#0f0f10;color:#f5f5f5;margin-top:40px;border-top:1px solid rgba(255,255,255,.08)}
     .footer-top{max-width:1240px;margin:auto;padding:28px 18px;display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:center;border-bottom:1px solid rgba(255,255,255,.08)}
     .footer-brand{display:flex;align-items:center;gap:18px}
@@ -211,26 +211,13 @@
     .floating-wa{position:fixed;left:22px;bottom:22px;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:#fff;text-decoration:none;box-shadow:0 14px 34px rgba(32,211,102,.32);z-index:60;overflow:hidden;padding:7px}.floating-wa img{width:100%;height:100%;object-fit:contain;display:block}
     .social-side{position:fixed;right:14px;top:42%;display:flex;flex-direction:column;gap:8px;z-index:55}
     .social-side a{width:46px;height:46px;background:#fff;border-radius:12px;display:grid;place-items:center;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,.12);padding:6px;overflow:hidden}.social-side img{width:100%;height:100%;object-fit:contain;display:block}
-    .modal{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:100;display:none;align-items:center;justify-content:center;padding:18px}
-    .modal.open{display:flex}
-    .modal-card{background:#fff;border-radius:28px;max-width:1080px;width:100%;max-height:92vh;overflow:auto;box-shadow:0 35px 80px rgba(0,0,0,.38)}
-    .modal-layout{display:grid;grid-template-columns:1.02fr .98fr;gap:0}
-    .modal-image{background:#f7f7f7;display:flex;align-items:center;justify-content:center;padding:36px;min-height:520px}
-    .modal-image img{max-width:100%;max-height:520px;object-fit:contain;filter:drop-shadow(0 18px 22px rgba(0,0,0,.13))}
-    .modal-info{padding:34px;position:relative}
-    .close{position:absolute;right:22px;top:18px;border:0;background:#111;color:#fff;width:40px;height:40px;border-radius:50%;font-size:22px;cursor:pointer}
-    .modal-info .brand{display:inline-block;background:#111;color:#fff;padding:8px 11px;border-radius:999px;font-size:12px;font-weight:900;text-transform:uppercase;margin-bottom:12px}
-    .modal-info h2{font-size:36px;margin:0 0 8px;color:#0877ff}
-    .modal-info .desc{font-size:16px;color:#555;line-height:1.6;margin:0 0 18px}
-    .modal-info ul{line-height:1.85;color:#333;margin:0 0 20px;padding-left:20px}
-    .modal-info li::marker{color:var(--orange)}
-    .modal-price{font-size:34px;font-weight:950;color:var(--orange);margin:0 0 18px}
-    .buy-row{display:flex;gap:10px;flex-wrap:wrap}
-    .wa-buy{background:#20d366;color:#fff;text-decoration:none;padding:14px 18px;border-radius:12px;font-weight:900}
-    .back-products{background:#111;color:#fff;text-decoration:none;padding:14px 18px;border-radius:12px;font-weight:900}
+
+
     .bestfor{background:#fff5ef;border:1px solid #ffd7c9;border-radius:16px;padding:14px;margin:18px 0;color:#5e280f}
     @media (max-width:980px){
-      .hero-content,.about-grid,.modal-layout,.brand-showcase{grid-template-columns:1fr}
+      .hero-content,
+.about-grid,
+.brand-showcase{grid-template-columns:1fr}
       .product-grid{grid-template-columns:repeat(2,1fr)}
       .trust-grid{grid-template-columns:repeat(2,1fr)}
       .contact-grid{grid-template-columns:1fr}
@@ -242,10 +229,10 @@
       .trust-grid{grid-template-columns:1fr}
       .hero-content{padding-top:64px}
       .brand-title{font-size:21px}
-      .modal-image{min-height:auto;padding:22px}
+
       .social-side{display:none}
     }
-  
+
     /* Carrusel publicitario estilo retail */
     .promo-carousel-section{background:#f4f4f4;padding:34px 18px 48px;}
     .promo-carousel-wrap{max-width:1240px;margin:0 auto;}
@@ -266,7 +253,7 @@
     .promo-caption strong{display:block;color:#111;font-size:15px}.promo-caption span{color:var(--orange);font-weight:900;font-size:18px}
     @media(max-width:760px){.promo-head{display:block}.promo-head h2{font-size:25px}.promo-slide img{height:290px}.promo-arrow{width:38px;height:38px;font-size:24px}.promo-caption{right:12px;top:12px;padding:8px 12px}.promo-caption strong{font-size:12px}.promo-caption span{font-size:16px}}
 
-  
+
     /* Carrusel v11: banners con escenarios reales por modelo */
     .promo-carousel-section{background:#f3f4f6;padding:42px 18px 58px;}
     .promo-carousel-wrap{max-width:1240px;margin:0 auto;}
@@ -290,7 +277,7 @@
       .promo-arrow{width:38px;height:38px;font-size:24px}
     }
 
-  
+
     /* Carrusel v12: banners con escenarios reales por modelo, incluido LG XBOOM Grab */
     .promo-carousel-section{background:#f3f4f6;padding:42px 18px 58px;}
     .promo-carousel-wrap{max-width:1240px;margin:0 auto;}
@@ -314,7 +301,7 @@
       .promo-arrow{width:38px;height:38px;font-size:24px}
     }
 
-  
+
     /* Hero v13: más simple, con marcas LG y JBL sin exceso de texto */
     .hero-simple-brands{min-height:560px!important;background:#050507!important;}
     .hero-simple-brands::before{
@@ -416,7 +403,7 @@
       .lineup-products img{height:62px}
     }
 
-  
+
     /* v14 Hero: sin mini-productos, más simple y directo */
     .hero-no-products{min-height:560px!important;background:#050507!important;}
     .hero-no-products::before{
@@ -470,7 +457,7 @@
       .clean-image-carousel .promo-slide img{aspect-ratio:4/3;min-height:310px}
     }
 
-  
+
     /* v15 hero final: fondo limpio, letras pequeñas y solo logos de marca */
     .hero-minimal-final{
       position:relative;
@@ -612,7 +599,7 @@
       .mini-spot{font-size:16px!important}
     }
 
-  
+
     /* Fix v16: logo JBL correcto enviado por el usuario */
     .jbl-logo-tile{
       background:#ff6600!important;
@@ -630,7 +617,7 @@
       object-fit:contain!important;
     }
 
-  
+
     /* v17: banners con solo nombre del modelo, imagen más protagonista */
     .promo-carousel-section{background:#f3f4f6;padding:40px 18px 56px}
     .promo-carousel-wrap{max-width:1240px;margin:0 auto}
@@ -652,11 +639,11 @@
       .clean-image-carousel .promo-slide img{aspect-ratio:4/3;min-height:310px}
     }
 
-  
+
     /* v18: Bounce alejado para mostrar el modelo completo */
     .clean-image-carousel .promo-slide img{width:100%;aspect-ratio:16/5.6;height:auto;min-height:345px;object-fit:cover;display:block}
 
-  
+
     /* v19: Bounce y Charge 6 con imágenes nuevas */
     .clean-image-carousel .promo-slide img{
       width:100%;
@@ -667,7 +654,7 @@
       display:block;
     }
 
-  
+
     /* v20: Imagen limpia en Sobre JOR STORE, sin sombreado ni texto encima */
     .about-visual-clean{
       border-radius:24px;
@@ -689,13 +676,7 @@
       .about-visual-clean img{min-height:280px}
     }
 
-  
 
-    /* =========================================================
-       Fix v23 mobile-first: sin barra blanca / sin overflow horizontal
-       Mantiene el diseño v20, pero ajusta anchos, hero, carruseles,
-       cards, modales y botones fijos para celular.
-       ========================================================= */
     html, body{
       width:100%;
       max-width:100%;
@@ -735,10 +716,8 @@
     }
     .category-inner::-webkit-scrollbar{display:none;}
     .hero-actions a,
-    .mini-actions a,
-    .nav-cta,
-    .wa-buy,
-    .back-products{
+.mini-actions a,
+.nav-cta{
       -webkit-tap-highlight-color:transparent;
     }
 
@@ -884,17 +863,7 @@
         z-index:70!important;
       }
 
-      .modal{padding:10px!important;align-items:flex-start!important;overflow-y:auto;}
-      .modal-card{width:100%!important;max-height:calc(100svh - 20px)!important;border-radius:20px!important;}
-      .modal-layout{grid-template-columns:1fr!important;}
-      .modal-image{min-height:auto!important;padding:18px!important;}
-      .modal-image img{max-height:245px!important;}
-      .modal-info{padding:20px 16px 24px!important;}
-      .modal-info h2{font-size:26px!important;line-height:1.06;}
-      .modal-info .desc{font-size:14.5px!important;line-height:1.5;}
-      .modal-price{font-size:28px!important;}
-      .buy-row{display:grid!important;grid-template-columns:1fr!important;}
-      .wa-buy,.back-products{width:100%;text-align:center;}
+
     }
 
     @media(max-width:360px){
@@ -908,10 +877,6 @@
       .brand-mini-trust{grid-template-columns:1fr!important;}
       section{padding-left:12px;padding-right:12px;}
       .promo-carousel-section{padding-left:12px!important;padding-right:12px!important;}
-    }
-
-    @supports (height:100svh){
-      .modal-card{max-height:calc(100svh - 20px);}
     }
 
 
@@ -1058,7 +1023,6 @@
         aspect-ratio:3/4.15!important;
       }
     }
-
 
 
     /* v25: Escenarios más largos en altura y sin nombres visibles de modelos */
@@ -1258,29 +1222,13 @@
       box-shadow:none!important;
       filter:drop-shadow(0 14px 18px rgba(0,0,0,.10))!important;
     }
-    .modal-image{
-      background:transparent!important;
-      border:0!important;
-      box-shadow:none!important;
-      isolation:auto!important;
-    }
-    .modal-image img{
-      background:transparent!important;
-      mix-blend-mode:normal!important;
-      object-fit:contain!important;
-      border:0!important;
-      outline:0!important;
-      border-radius:0!important;
-      box-shadow:none!important;
-      filter:drop-shadow(0 18px 22px rgba(0,0,0,.13))!important;
-    }
+
+
     @media(max-width:620px){
       .product-img-wrap{height:225px!important;padding:22px 14px 8px!important;}
       .product-img-wrap img{max-width:100%!important;max-height:100%!important;}
     }
 
-
-  
 
     .catalog-anchor{
       display:block;
@@ -1293,9 +1241,6 @@
     @media(max-width:760px){
       .catalog-anchor{top:-72px;}
     }
-
-      /* v34: catálogo limpio: solo nombre del modelo debajo de imagen, sin tags ni viñetas; JOR STORE negro; Stage 301 S/ 899. */
-
 
     /* Ajuste final catálogo: cards más aireadas y productos completos */
 #productos {
@@ -1491,10 +1436,7 @@
     height: 30px !important;
   }
 }
-/* ================================
-   PRODUCTOS PREMIUM - JOR STORE
-   Solo catálogo y modal
-================================ */
+
 
 #productos .product-card {
   background: #fff !important;
@@ -1720,54 +1662,6 @@
   text-align: center !important;
 }
 
-/* Modal promo */
-#productModal .modal-promo-price {
-  display: grid !important;
-  gap: 7px !important;
-  background: linear-gradient(180deg,#fff7f3,#fff) !important;
-  border: 1px solid #ffd6c7 !important;
-  border-radius: 18px !important;
-  padding: 16px 18px !important;
-  max-width: 360px !important;
-  box-shadow: 0 16px 32px rgba(255,79,31,.08) !important;
-}
-
-#productModal .modal-promo-price .modal-kicker {
-  font-size: 12px !important;
-  letter-spacing: 1.8px !important;
-  text-transform: uppercase !important;
-  color: #ff4f1f !important;
-  font-weight: 950 !important;
-}
-
-#productModal .modal-promo-price strong {
-  display: block !important;
-  font-size: 46px !important;
-  line-height: .95 !important;
-  color: #ff4f1f !important;
-  font-weight: 950 !important;
-  letter-spacing: -1.5px !important;
-}
-
-#productModal .modal-old-price {
-  font-size: 15px !important;
-  color: #777 !important;
-  font-weight: 850 !important;
-  text-decoration: line-through !important;
-  text-decoration-thickness: 2px !important;
-}
-
-#productModal .modal-promo-price small {
-  display: inline-flex !important;
-  width: max-content !important;
-  background: #e3062b !important;
-  color: #fff !important;
-  border-radius: 999px !important;
-  padding: 8px 12px !important;
-  font-size: 12px !important;
-  font-weight: 950 !important;
-  text-transform: uppercase !important;
-}
 
 /* Mobile */
 @media (max-width: 620px) {
@@ -1792,18 +1686,9 @@
     font-size: 31px !important;
   }
 
-  #productModal .modal-promo-price {
-    max-width: 100% !important;
-  }
 
-  #productModal .modal-promo-price strong {
-    font-size: 38px !important;
-  }
 }
-/* ==================================================
-   JOR STORE - Ajuste premium SOLO catálogo y modal
-   No toca hero, escenarios, sobre nosotros, contacto ni footer
-================================================== */
+
 
 #productos .product-card {
   min-height: 610px !important;
@@ -2003,143 +1888,6 @@
   text-align: center !important;
 }
 
-/* Modal premium */
-#productModal .modal-card {
-  border-radius: 28px !important;
-  overflow: hidden !important;
-}
-
-#productModal .modal-layout {
-  gap: 34px !important;
-  align-items: center !important;
-}
-
-#productModal .modal-image {
-  display: grid !important;
-  place-items: center !important;
-  background: linear-gradient(180deg, #fff, #fafafa) !important;
-  border-radius: 24px !important;
-  min-height: 420px !important;
-}
-
-#productModal .modal-image img {
-  max-height: 320px !important;
-  object-fit: contain !important;
-  filter: drop-shadow(0 20px 24px rgba(0,0,0,.14)) !important;
-}
-
-#productModal #modalBrand {
-  background: #111 !important;
-  color: #fff !important;
-  border-radius: 999px !important;
-  padding: 9px 14px !important;
-  font-size: 12px !important;
-  letter-spacing: .7px !important;
-}
-
-#productModal #modalTitle {
-  color: #111 !important;
-  letter-spacing: -1px !important;
-}
-
-#productModal #modalFeatures {
-  list-style: none !important;
-  padding: 0 !important;
-  display: grid !important;
-  gap: 8px !important;
-}
-
-#productModal #modalFeatures li {
-  position: relative !important;
-  padding-left: 24px !important;
-  line-height: 1.45 !important;
-}
-
-#productModal #modalFeatures li::before {
-  content: "✓" !important;
-  position: absolute !important;
-  left: 0 !important;
-  top: 0 !important;
-  color: #00873c !important;
-  font-weight: 950 !important;
-}
-
-#productModal .modal-promo-price {
-  display: grid !important;
-  gap: 9px !important;
-  background: linear-gradient(180deg, #fff7f3, #fff) !important;
-  border: 1px solid #ffd6c7 !important;
-  border-radius: 18px !important;
-  padding: 16px 18px !important;
-  max-width: 360px !important;
-}
-
-#productModal .modal-kicker {
-  font-size: 12px !important;
-  letter-spacing: 1.6px !important;
-  text-transform: uppercase !important;
-  color: #ff4f1f !important;
-  font-weight: 950 !important;
-}
-
-#productModal .modal-now-row,
-#productModal .modal-old-row {
-  display: flex !important;
-  align-items: baseline !important;
-  gap: 10px !important;
-}
-
-#productModal .modal-now-row span,
-#productModal .modal-old-row span {
-  font-size: 14px !important;
-  color: #555 !important;
-  font-weight: 850 !important;
-  min-width: 52px !important;
-}
-
-#productModal .modal-now-row strong {
-  font-size: 42px !important;
-  line-height: .95 !important;
-  color: #ff4f1f !important;
-  font-weight: 950 !important;
-  letter-spacing: -1px !important;
-}
-
-#productModal .modal-old-row del {
-  font-size: 16px !important;
-  color: #777 !important;
-  font-weight: 850 !important;
-  text-decoration-thickness: 2px !important;
-}
-
-#productModal .modal-promo-price small {
-  width: fit-content !important;
-  background: #e3062b !important;
-  color: #fff !important;
-  border-radius: 999px !important;
-  padding: 8px 12px !important;
-  font-size: 12px !important;
-  font-weight: 950 !important;
-  text-transform: uppercase !important;
-}
-
-#productModal .wa-buy {
-  border-radius: 14px !important;
-  min-height: 52px !important;
-  font-weight: 950 !important;
-}
-
-#productModal .back-products {
-  border-radius: 14px !important;
-  min-height: 52px !important;
-  font-weight: 950 !important;
-}
-
-#productModal .close {
-  width: 44px !important;
-  height: 44px !important;
-  border-radius: 50% !important;
-}
 
 @media (max-width: 720px) {
   #productos .product-card {
@@ -2154,30 +1902,9 @@
     min-height: auto !important;
   }
 
-  #productModal .modal-layout {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-  }
 
-  #productModal .modal-image {
-    min-height: 260px !important;
-  }
-
-  #productModal .modal-image img {
-    max-height: 220px !important;
-  }
-
-  #productModal .modal-now-row strong {
-    font-size: 34px !important;
-  }
-
-  #productModal .modal-promo-price {
-    max-width: 100% !important;
-  }
 }
-/* ==================================================
-   FIX FINAL: filtros clicables y modal móvil scroll
-================================================== */
+
 
 .filters,
 .filter-btn {
@@ -2192,262 +1919,7 @@
   user-select: none !important;
 }
 
-/* Modal: permitir scroll interno real */
-#productModal.modal.open {
-  position: fixed !important;
-  inset: 0 !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  -webkit-overflow-scrolling: touch !important;
-  align-items: flex-start !important;
-  padding: 18px 10px 90px !important;
-}
 
-#productModal.modal.open .modal-card {
-  max-height: none !important;
-  height: auto !important;
-  overflow: visible !important;
-  margin: 0 auto !important;
-}
-
-#productModal.modal.open .modal-layout {
-  max-height: none !important;
-  height: auto !important;
-  overflow: visible !important;
-}
-
-body.modal-open {
-  overflow: hidden !important;
-}
-
-/* En móvil, el modal debe apilar y dejar bajar hasta botones */
-@media (max-width: 720px) {
-  #productModal.modal.open {
-    display: block !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    padding: 14px 8px 110px !important;
-  }
-
-  #productModal.modal.open .modal-card {
-    width: min(96vw, 560px) !important;
-    max-width: 96vw !important;
-    min-height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
-    border-radius: 28px !important;
-  }
-
-  #productModal.modal.open .modal-layout {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 18px !important;
-    max-height: none !important;
-    overflow: visible !important;
-  }
-
-  #productModal .modal-image {
-    min-height: 260px !important;
-    max-height: 320px !important;
-  }
-
-  #productModal .modal-image img {
-    max-height: 230px !important;
-    object-fit: contain !important;
-  }
-
-  #productModal .modal-info {
-    overflow: visible !important;
-    max-height: none !important;
-    padding-bottom: 28px !important;
-  }
-
-  #productModal .buy-row {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 10px !important;
-    padding-bottom: 24px !important;
-  }
-
-  #productModal .wa-buy,
-  #productModal .back-products {
-    width: 100% !important;
-    min-height: 52px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-}
-/* FIX DEFINITIVO MODAL MOVIL */
-@media (max-width: 760px) {
-  #productModal.modal.open {
-    display: block !important;
-    position: fixed !important;
-    inset: 0 !important;
-    width: 100vw !important;
-    height: 100dvh !important;
-    overflow-y: scroll !important;
-    overflow-x: hidden !important;
-    -webkit-overflow-scrolling: touch !important;
-    padding: 12px 8px 120px !important;
-    align-items: unset !important;
-    justify-content: unset !important;
-  }
-
-  #productModal.modal.open .modal-card {
-    width: 96vw !important;
-    max-width: 96vw !important;
-    height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
-    margin: 0 auto 90px !important;
-    border-radius: 28px !important;
-  }
-
-  #productModal.modal.open .modal-layout {
-    display: block !important;
-    height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
-  }
-
-  #productModal.modal.open .modal-image {
-    height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
-    padding: 18px 10px !important;
-  }
-
-  #productModal.modal.open .modal-image img {
-    width: 100% !important;
-    max-height: 210px !important;
-    object-fit: contain !important;
-  }
-
-  #productModal.modal.open .modal-info {
-    height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
-    padding: 22px 24px 36px !important;
-  }
-
-  #productModal.modal.open #modalFeatures {
-    max-height: none !important;
-    overflow: visible !important;
-  }
-
-  #productModal.modal.open .buy-row {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    padding-bottom: 30px !important;
-  }
-
-  #productModal.modal.open .wa-buy,
-  #productModal.modal.open .back-products {
-    width: 100% !important;
-    min-height: 54px !important;
-  }
-}
-/* ==================================================
-   FIX FINAL iPHONE: modal con scroll interno real
-================================================== */
-
-@media (max-width: 760px) {
-  body.modal-open {
-    overflow: hidden !important;
-    position: fixed !important;
-    width: 100% !important;
-  }
-
-  #productModal.modal.open {
-    position: fixed !important;
-    inset: 0 !important;
-    width: 100vw !important;
-    height: 100dvh !important;
-    max-height: 100dvh !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    overflow: hidden !important;
-    padding: 10px !important;
-  }
-
-  #productModal.modal.open .modal-card {
-    width: 96vw !important;
-    max-width: 96vw !important;
-    height: calc(100dvh - 24px) !important;
-    max-height: calc(100dvh - 24px) !important;
-    min-height: 0 !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    -webkit-overflow-scrolling: touch !important;
-    overscroll-behavior: contain !important;
-    margin: 0 auto !important;
-    border-radius: 28px !important;
-  }
-
-  #productModal.modal.open .modal-layout {
-    display: block !important;
-    height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
-  }
-
-  #productModal.modal.open .modal-image {
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    padding: 18px 12px 8px !important;
-    border-radius: 24px 24px 0 0 !important;
-  }
-
-  #productModal.modal.open .modal-image img {
-    width: 100% !important;
-    max-height: 210px !important;
-    object-fit: contain !important;
-  }
-
-  #productModal.modal.open .modal-info {
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    overflow: visible !important;
-    padding: 18px 22px 38px !important;
-  }
-
-  #productModal.modal.open .close {
-    position: sticky !important;
-    top: 10px !important;
-    float: right !important;
-    z-index: 20 !important;
-  }
-
-  #productModal.modal.open #modalFeatures {
-    max-height: none !important;
-    overflow: visible !important;
-  }
-
-  #productModal.modal.open .buy-row {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    padding-bottom: 24px !important;
-  }
-
-  #productModal.modal.open .wa-buy,
-  #productModal.modal.open .back-products {
-    width: 100% !important;
-    min-height: 54px !important;
-  }
-
-  #productModal.modal.open .modal-price {
-    margin-bottom: 16px !important;
-  }
-}
 /* Cinta roja de oferta Día del Padre */
 #productos .product-card {
   position: relative !important;
@@ -2625,16 +2097,6 @@ body.modal-open {
   pointer-events: none !important;
 }
 
-.modal-gift {
-  margin-top: 10px !important;
-  background: #fff7df !important;
-  border: 1px solid #ffe4a3 !important;
-  color: #7a3a00 !important;
-  border-radius: 14px !important;
-  padding: 11px 13px !important;
-  font-size: 13px !important;
-  font-weight: 900 !important;
-}
 
 @media (max-width: 860px) {
   .trust-stats {
@@ -2810,786 +2272,59 @@ body.modal-open {
 
 
 /* v37: Galería premium para ficha de producto LG XBOOM Grab */
-body.modal-open{
-  overflow:hidden;
-}
-
-.modal-image.modal-gallery{
-  display:grid!important;
-  grid-template-rows:minmax(360px,1fr) auto auto auto!important;
-  align-items:stretch!important;
-  justify-content:stretch!important;
-  gap:14px!important;
-  padding:24px!important;
-  min-height:560px!important;
-  background:
-    radial-gradient(circle at 22% 18%,rgba(255,79,31,.12),transparent 32%),
-    radial-gradient(circle at 78% 74%,rgba(8,119,255,.10),transparent 36%),
-    linear-gradient(180deg,#f7f8fb 0%,#ffffff 100%)!important;
-}
-
-.modal-main-image{
-  position:relative;
-  min-height:360px;
-  border-radius:26px;
-  background:#fff;
-  border:1px solid rgba(0,0,0,.07);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.85),0 18px 40px rgba(0,0,0,.07);
-}
-
-.modal-main-image img#modalImg{
-  width:100%!important;
-  height:100%!important;
-  max-width:100%!important;
-  max-height:430px!important;
-  padding:18px!important;
-  object-fit:contain!important;
-  object-position:center!important;
-  display:block!important;
-  background:transparent!important;
-  filter:drop-shadow(0 18px 22px rgba(0,0,0,.14))!important;
-  transition:opacity .18s ease, transform .18s ease;
-}
-
-.gallery-arrow{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  z-index:3;
-  width:42px;
-  height:42px;
-  border:0;
-  border-radius:50%;
-  background:rgba(17,17,17,.88);
-  color:#fff;
-  font-size:30px;
-  line-height:1;
-  cursor:pointer;
-  display:grid;
-  place-items:center;
-  box-shadow:0 12px 24px rgba(0,0,0,.20);
-  transition:transform .2s ease, background .2s ease;
-}
-
-.gallery-arrow:hover{
-  background:var(--orange);
-  transform:translateY(-50%) scale(1.04);
-}
-
-.gallery-prev{left:14px;}
-.gallery-next{right:14px;}
-
-.modal-gallery-label{
-  display:inline-flex;
-  justify-self:flex-start;
-  align-items:center;
-  min-height:32px;
-  padding:7px 12px;
-  border-radius:999px;
-  background:#111;
-  color:#fff;
-  font-size:12px;
-  font-weight:950;
-  letter-spacing:.05em;
-  text-transform:uppercase;
-}
-
-.modal-thumbnails{
-  display:flex;
-  gap:10px;
-  overflow-x:auto;
-  padding:2px 2px 8px;
-  scrollbar-width:thin;
-  -webkit-overflow-scrolling:touch;
-}
-
-.gallery-thumb{
-  flex:0 0 92px;
-  width:92px;
-  border:2px solid transparent;
-  background:#fff;
-  border-radius:16px;
-  padding:7px;
-  cursor:pointer;
-  box-shadow:0 8px 20px rgba(0,0,0,.07);
-  transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
-  text-align:center;
-}
-
-.gallery-thumb:hover{
-  transform:translateY(-2px);
-  border-color:#ffd3c4;
-}
-
-.gallery-thumb.active{
-  border-color:#111;
-  box-shadow:0 10px 24px rgba(0,0,0,.12);
-}
-
-.gallery-thumb img{
-  width:100%!important;
-  height:56px!important;
-  max-height:56px!important;
-  object-fit:cover!important;
-  object-position:center!important;
-  display:block!important;
-  padding:0!important;
-  border-radius:11px!important;
-  filter:none!important;
-  background:#f6f6f6!important;
-}
-
-.gallery-thumb span{
-  display:block;
-  margin-top:6px;
-  color:#333;
-  font-size:10px;
-  line-height:1.15;
-  font-weight:900;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-
-.modal-gallery-hint{
-  margin:0;
-  color:#666;
-  font-size:12px;
-  line-height:1.35;
-  font-weight:700;
-}
-
-@media(max-width:980px){
-  .modal-image.modal-gallery{
-    min-height:auto!important;
-    grid-template-rows:minmax(270px,auto) auto auto auto!important;
-  }
-  .modal-main-image{
-    min-height:300px;
-  }
-  .modal-main-image img#modalImg{
-    max-height:330px!important;
-  }
-}
-
-@media(max-width:620px){
-  .modal-image.modal-gallery{
-    padding:14px!important;
-    gap:10px!important;
-  }
-  .modal-main-image{
-    min-height:250px;
-    border-radius:20px;
-  }
-  .modal-main-image img#modalImg{
-    max-height:265px!important;
-    padding:12px!important;
-  }
-  .gallery-arrow{
-    width:36px;
-    height:36px;
-    font-size:25px;
-  }
-  .gallery-prev{left:8px;}
-  .gallery-next{right:8px;}
-  .gallery-thumb{
-    flex-basis:78px;
-    width:78px;
-    border-radius:14px;
-    padding:6px;
-  }
-  .gallery-thumb img{
-    height:48px!important;
-    max-height:48px!important;
-    border-radius:10px!important;
-  }
-  .gallery-thumb span{
-    font-size:9px;
-  }
-  .modal-gallery-hint{
-    font-size:11px;
-  }
-}
-
 
 
 /* v38: Ajustes finales galería LG XBOOM Grab
    - Más espacio para la imagen principal.
    - Fotos sin cuadro blanco interno gracias a imágenes con fondo transparente.
    - Miniaturas más limpias y profesionales. */
-#productModal .modal-card{
-  max-width:1180px!important;
-}
-
-#productModal .modal-layout{
-  grid-template-columns:minmax(0,1.14fr) minmax(360px,.86fr)!important;
-}
-
-#productModal .modal-image.modal-gallery{
-  grid-template-rows:minmax(430px,1fr) auto auto auto!important;
-  padding:26px 30px!important;
-  gap:14px!important;
-}
-
-#productModal .modal-main-image{
-  min-height:430px!important;
-  border-radius:28px!important;
-  background:
-    radial-gradient(circle at 50% 48%,rgba(0,0,0,.035),transparent 56%),
-    linear-gradient(180deg,#fbfbfc 0%,#f5f6f8 100%)!important;
-  border:1px solid rgba(0,0,0,.055)!important;
-  overflow:hidden!important;
-}
-
-#productModal .modal-main-image img#modalImg{
-  width:100%!important;
-  height:100%!important;
-  max-height:465px!important;
-  padding:10px 16px!important;
-  object-fit:contain!important;
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  filter:drop-shadow(0 22px 26px rgba(0,0,0,.16))!important;
-}
-
-#productModal .modal-thumbnails{
-  gap:12px!important;
-  padding:4px 2px 10px!important;
-}
-
-#productModal .gallery-thumb{
-  flex:0 0 104px!important;
-  width:104px!important;
-  min-height:90px!important;
-  background:linear-gradient(180deg,#ffffff 0%,#f7f8fa 100%)!important;
-  border:2px solid transparent!important;
-  border-radius:17px!important;
-  padding:8px!important;
-  overflow:hidden!important;
-}
-
-#productModal .gallery-thumb.active{
-  border-color:#111!important;
-}
-
-#productModal .gallery-thumb img{
-  width:100%!important;
-  height:60px!important;
-  max-height:60px!important;
-  object-fit:contain!important;
-  object-position:center!important;
-  background:transparent!important;
-  border:0!important;
-  border-radius:0!important;
-  padding:0!important;
-  box-shadow:none!important;
-  filter:drop-shadow(0 6px 8px rgba(0,0,0,.10))!important;
-}
-
-#productModal .gallery-thumb span{
-  margin-top:6px!important;
-  font-size:10px!important;
-  line-height:1.1!important;
-}
-
-@media(max-width:980px){
-  #productModal .modal-card{
-    max-width:calc(100vw - 20px)!important;
-  }
-
-  #productModal .modal-layout{
-    grid-template-columns:1fr!important;
-  }
-
-  #productModal .modal-image.modal-gallery{
-    grid-template-rows:minmax(320px,auto) auto auto auto!important;
-    padding:18px!important;
-  }
-
-  #productModal .modal-main-image{
-    min-height:320px!important;
-  }
-
-  #productModal .modal-main-image img#modalImg{
-    max-height:350px!important;
-  }
-}
-
-@media(max-width:620px){
-  #productModal .modal-image.modal-gallery{
-    grid-template-rows:minmax(270px,auto) auto auto auto!important;
-    padding:14px!important;
-  }
-
-  #productModal .modal-main-image{
-    min-height:270px!important;
-    border-radius:22px!important;
-  }
-
-  #productModal .modal-main-image img#modalImg{
-    max-height:285px!important;
-    padding:8px!important;
-  }
-
-  #productModal .gallery-thumb{
-    flex-basis:88px!important;
-    width:88px!important;
-    min-height:82px!important;
-    padding:7px!important;
-  }
-
-  #productModal .gallery-thumb img{
-    height:52px!important;
-    max-height:52px!important;
-  }
-}
 
 
 /* v39: Ajuste final de miniaturas LG XBOOM Grab
    Evita que la primera vista frontal se salga del recuadro.
    En desktop las 6 miniaturas entran completas; en celular siguen deslizando. */
-@media(min-width:981px){
-  #productModal .modal-thumbnails{
-    display:grid!important;
-    grid-template-columns:repeat(6,minmax(0,1fr))!important;
-    gap:10px!important;
-    width:100%!important;
-    max-width:100%!important;
-    overflow:visible!important;
-    padding:4px 0 10px!important;
-  }
-
-  #productModal .gallery-thumb{
-    width:100%!important;
-    min-width:0!important;
-    max-width:100%!important;
-    flex:none!important;
-    min-height:86px!important;
-    padding:7px!important;
-    box-sizing:border-box!important;
-  }
-
-  #productModal .gallery-thumb img{
-    height:54px!important;
-    max-height:54px!important;
-  }
-
-  #productModal .gallery-thumb span{
-    font-size:9.5px!important;
-  }
-
-  #productModal .modal-main-image img#modalImg{
-    max-width:calc(100% - 34px)!important;
-    max-height:440px!important;
-    padding:6px 14px!important;
-  }
-}
-
-@media(max-width:980px){
-  #productModal .modal-thumbnails{
-    overflow-x:auto!important;
-    padding:4px 2px 10px!important;
-  }
-}
 
 
 /* v40: Galería LG XBOOM Bounce
    Ajuste para modelos horizontales anchos como Bounce. */
-#productModal .modal-main-image img[src*="lg-xboom-bounce"]{
-  max-width:calc(100% - 22px)!important;
-  max-height:420px!important;
-  object-fit:contain!important;
-}
-
-@media(max-width:620px){
-  #productModal .modal-main-image img[src*="lg-xboom-bounce"]{
-    max-height:255px!important;
-  }
-}
-
-
-/* v41: Imágenes de galería sin recuadro blanco interno.
-   Las fotos de producto deben ir con fondo transparente para que solo quede
-   el recuadro del modal y no otro cuadro dentro del modelo. */
-#productModal .modal-main-image,
-#productModal .gallery-stage,
-#productModal .modal-gallery-main{
-  background:
-    radial-gradient(circle at 50% 46%, rgba(0,0,0,.045), transparent 58%),
-    linear-gradient(180deg,#fbfbfb,#f5f6f8)!important;
-}
-
-#productModal .modal-main-image img,
-#productModal #modalImg{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-}
-
-#productModal .gallery-thumb img{
-  background:transparent!important;
-}
 
 
 /* v42: Rebote/Bounce - limpieza fuerte de fondos claros
    Las vistas de producto quedan transparentes para evitar cuadros crema o blancos internos. */
-#productModal .modal-main-image img[src*="lg-xboom-bounce/05-interior"],
-#productModal .gallery-thumb img[src*="lg-xboom-bounce/05-interior"]{
-  background:transparent!important;
-  box-shadow:none!important;
-  border:0!important;
-}
 
 
 /* v43: Galería LG XBOOM XG8T
    Fotos de producto limpias con fondo transparente y ajuste para el asa superior. */
-#productModal .modal-main-image img[src*="lg-xboom-xg8t"],
-#productModal #modalImg[src*="lg-xboom-xg8t"]{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  object-fit:contain!important;
-  max-width:calc(100% - 22px)!important;
-  max-height:430px!important;
-}
-
-#productModal .gallery-thumb img[src*="lg-xboom-xg8t"]{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  object-fit:contain!important;
-}
-
-@media(min-width:981px){
-  #productModal .modal-main-image img[src*="lg-xboom-xg8t/03-lateral"],
-  #productModal .modal-main-image img[src*="lg-xboom-xg8t/04-superior"]{
-    max-height:455px!important;
-  }
-}
-
-@media(max-width:620px){
-  #productModal .modal-main-image img[src*="lg-xboom-xg8t"],
-  #productModal #modalImg[src*="lg-xboom-xg8t"]{
-    max-height:265px!important;
-  }
-}
 
 
 /* v44: LG XBOOM XG8T - vista lateral más cercana */
-#productModal .modal-main-image img[src*="lg-xboom-xg8t/03-lateral"],
-#productModal #modalImg[src*="lg-xboom-xg8t/03-lateral"]{
-  width:100%!important;
-  max-width:calc(100% - 12px)!important;
-  max-height:455px!important;
-  object-fit:contain!important;
-  transform:scale(1.08)!important;
-  transform-origin:center center!important;
-}
-
-@media(max-width:620px){
-  #productModal .modal-main-image img[src*="lg-xboom-xg8t/03-lateral"],
-  #productModal #modalImg[src*="lg-xboom-xg8t/03-lateral"]{
-    max-height:275px!important;
-    transform:scale(1.05)!important;
-  }
-}
 
 
 /* v45: LG XBOOM XG8T - reemplazo de vista lateral vertical */
-#productModal .modal-main-image img[src*="lg-xboom-xg8t/03-lateral"],
-#productModal #modalImg[src*="lg-xboom-xg8t/03-lateral"]{
-  width:100%!important;
-  max-width:calc(100% - 18px)!important;
-  max-height:455px!important;
-  object-fit:contain!important;
-  transform:scale(1.02)!important;
-  transform-origin:center center!important;
-}
-
-@media(max-width:620px){
-  #productModal .modal-main-image img[src*="lg-xboom-xg8t/03-lateral"],
-  #productModal #modalImg[src*="lg-xboom-xg8t/03-lateral"]{
-    max-height:285px!important;
-    transform:scale(1)!important;
-  }
-}
 
 
 /* v46: Galería LG XBOOM Stage 301
    Fotos de producto limpias y centradas para formato cuadrado. */
-#productModal .modal-main-image img[src*="lg-xboom-stage-301"],
-#productModal #modalImg[src*="lg-xboom-stage-301"]{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  object-fit:contain!important;
-  max-width:calc(100% - 18px)!important;
-  max-height:450px!important;
-}
 
-#productModal .gallery-thumb img[src*="lg-xboom-stage-301"]{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  object-fit:contain!important;
-}
 
 /* La vista ambiental se mantiene completa porque contiene fondo real y beneficios. */
-#productModal .modal-main-image img[src*="lg-xboom-stage-301/06-uso-exterior"],
-#productModal #modalImg[src*="lg-xboom-stage-301/06-uso-exterior"]{
-  width:100%!important;
-  max-width:100%!important;
-  max-height:430px!important;
-  border-radius:18px!important;
-  object-fit:contain!important;
-  background:#050505!important;
-}
-
-@media(max-width:620px){
-  #productModal .modal-main-image img[src*="lg-xboom-stage-301"],
-  #productModal #modalImg[src*="lg-xboom-stage-301"]{
-    max-height:280px!important;
-  }
-
-  #productModal .modal-main-image img[src*="lg-xboom-stage-301/06-uso-exterior"],
-  #productModal #modalImg[src*="lg-xboom-stage-301/06-uso-exterior"]{
-    max-height:250px!important;
-  }
-}
 
 
 /* v47: JBL Go 4 con selector de color */
-.modal-variant-selector{
-  margin:0 0 16px;
-  padding:13px 14px;
-  border-radius:16px;
-  background:#f7f8fa;
-  border:1px solid #e7e7e7;
-}
-.modal-variant-selector > span{
-  display:block;
-  margin-bottom:9px;
-  color:#555;
-  font-size:13px;
-  font-weight:900;
-}
-.variant-buttons{
-  display:flex;
-  gap:9px;
-  flex-wrap:wrap;
-}
-.variant-btn{
-  appearance:none;
-  border:1px solid #dedede;
-  background:#fff;
-  color:#111;
-  border-radius:999px;
-  padding:9px 12px;
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  font-size:13px;
-  font-weight:950;
-  cursor:pointer;
-  transition:.2s ease;
-}
-.variant-btn i{
-  width:16px;
-  height:16px;
-  border-radius:50%;
-  background:var(--variant-color,#111);
-  box-shadow:inset 0 0 0 2px rgba(255,255,255,.36),0 0 0 1px rgba(0,0,0,.14);
-}
-.variant-btn.active{
-  background:#111;
-  color:#fff;
-  border-color:#111;
-  box-shadow:0 10px 22px rgba(0,0,0,.14);
-}
-.variant-btn:hover{
-  transform:translateY(-1px);
-}
-#productModal .modal-main-image img[src*="jbl-go-4"],
-#productModal #modalImg[src*="jbl-go-4"]{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  object-fit:contain!important;
-  max-width:calc(100% - 18px)!important;
-  max-height:430px!important;
-}
-#productModal .gallery-thumb img[src*="jbl-go-4"]{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  object-fit:contain!important;
-}
-#productModal .modal-main-image img[src*="jbl-go-4/negro/04-uso-exterior"],
-#productModal .modal-main-image img[src*="jbl-go-4/camuflado/04-uso-exterior"],
-#productModal #modalImg[src*="jbl-go-4/negro/04-uso-exterior"],
-#productModal #modalImg[src*="jbl-go-4/camuflado/04-uso-exterior"]{
-  width:100%!important;
-  max-width:100%!important;
-  max-height:430px!important;
-  border-radius:18px!important;
-  object-fit:contain!important;
-  background:#050505!important;
-}
-@media(max-width:620px){
-  .modal-variant-selector{padding:11px;margin-bottom:12px}
-  .variant-btn{font-size:12px;padding:8px 10px}
-  #productModal .modal-main-image img[src*="jbl-go-4"],
-  #productModal #modalImg[src*="jbl-go-4"]{max-height:265px!important}
-}
 
 
 /* v48: Galería JBL Grip */
-#productModal .modal-main-image img[src*="jbl-grip"],
-#productModal #modalImg[src*="jbl-grip"]{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  object-fit:contain!important;
-  max-width:calc(100% - 18px)!important;
-  max-height:455px!important;
-}
-
-#productModal .gallery-thumb img[src*="jbl-grip"]{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  object-fit:contain!important;
-}
-
-#productModal .modal-main-image img[src*="jbl-grip/06-uso-exterior"],
-#productModal #modalImg[src*="jbl-grip/06-uso-exterior"]{
-  width:100%!important;
-  max-width:100%!important;
-  max-height:430px!important;
-  border-radius:18px!important;
-  object-fit:contain!important;
-  background:#050505!important;
-}
-
-@media(max-width:620px){
-  #productModal .modal-main-image img[src*="jbl-grip"],
-  #productModal #modalImg[src*="jbl-grip"]{
-    max-height:285px!important;
-  }
-}
 
 
 /* v49: Galería JBL Flip 7 */
-#productModal .modal-main-image img[src*="jbl-flip-7"],
-#productModal #modalImg[src*="jbl-flip-7"]{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  object-fit:contain!important;
-  max-width:calc(100% - 18px)!important;
-  max-height:440px!important;
-}
-
-#productModal .gallery-thumb img[src*="jbl-flip-7"]{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  object-fit:contain!important;
-}
-
-#productModal .modal-main-image img[src*="jbl-flip-7/06-uso-exterior"],
-#productModal #modalImg[src*="jbl-flip-7/06-uso-exterior"]{
-  width:100%!important;
-  max-width:100%!important;
-  max-height:430px!important;
-  border-radius:18px!important;
-  object-fit:contain!important;
-  background:#050505!important;
-}
-
-@media(max-width:620px){
-  #productModal .modal-main-image img[src*="jbl-flip-7"],
-  #productModal #modalImg[src*="jbl-flip-7"]{
-    max-height:275px!important;
-  }
-}
 
 
 /* v50: Galería JBL Charge 6 */
-#productModal .modal-main-image img[src*="jbl-charge-6"],
-#productModal #modalImg[src*="jbl-charge-6"]{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  object-fit:contain!important;
-  max-width:calc(100% - 18px)!important;
-  max-height:440px!important;
-}
-
-#productModal .gallery-thumb img[src*="jbl-charge-6"]{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  object-fit:contain!important;
-}
-
-#productModal .modal-main-image img[src*="jbl-charge-6/06-uso-exterior"],
-#productModal #modalImg[src*="jbl-charge-6/06-uso-exterior"]{
-  width:100%!important;
-  max-width:100%!important;
-  max-height:430px!important;
-  border-radius:18px!important;
-  object-fit:contain!important;
-  background:#050505!important;
-}
-
-@media(max-width:620px){
-  #productModal .modal-main-image img[src*="jbl-charge-6"],
-  #productModal #modalImg[src*="jbl-charge-6"]{
-    max-height:275px!important;
-  }
-}
 
 
 /* v51: Galería JBL Boombox 4 */
-#productModal .modal-main-image img[src*="jbl-boombox-4"],
-#productModal #modalImg[src*="jbl-boombox-4"]{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  object-fit:contain!important;
-  max-width:calc(100% - 18px)!important;
-  max-height:440px!important;
-}
 
-#productModal .gallery-thumb img[src*="jbl-boombox-4"]{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-  object-fit:contain!important;
-}
 
-#productModal .modal-main-image img[src*="jbl-boombox-4/06-uso-exterior"],
-#productModal #modalImg[src*="jbl-boombox-4/06-uso-exterior"]{
-  width:100%!important;
-  max-width:100%!important;
-  max-height:430px!important;
-  border-radius:18px!important;
-  object-fit:contain!important;
-  background:#050505!important;
-}
-
-@media(max-width:620px){
-  #productModal .modal-main-image img[src*="jbl-boombox-4"],
-  #productModal #modalImg[src*="jbl-boombox-4"]{
-    max-height:275px!important;
-  }
-}
 /* Botones del carrusel encima del banner, no debajo */
 .scenario-prev,
 .scenario-next,
@@ -3785,181 +2520,17 @@ body {
     font-weight: 900 !important;
   }
 
-  /* Modal en celular */
-  .modal {
-    align-items: flex-start !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
-
-  .modal-card {
-    position: relative !important;
-    width: calc(100% - 22px) !important;
-    max-height: none !important;
-    margin: 12px auto 24px !important;
-    border-radius: 26px !important;
-    overflow: visible !important;
-  }
-
-  /* Barra superior del modal: modelo + X */
-  .modal-card::before {
-    content: attr(data-mobile-title);
-    position: sticky;
-    top: 0;
-    z-index: 10000;
-    display: block;
-    min-height: 62px;
-    padding: 18px 76px 14px 18px;
-    background: rgba(255,255,255,.96);
-    color: #111;
-    font-size: 18px;
-    font-weight: 950;
-    line-height: 1.1;
-    border-radius: 26px 26px 0 0;
-    box-shadow: 0 10px 24px rgba(0,0,0,.08);
-    backdrop-filter: blur(10px);
-  }
-
-  #modalClose,
-  .modal-close,
-  .close-modal {
-    position: sticky !important;
-    top: 10px !important;
-    float: right !important;
-    margin: -56px 14px 8px auto !important;
-    z-index: 10001 !important;
-    width: 50px !important;
-    height: 50px !important;
-    min-width: 50px !important;
-    border-radius: 999px !important;
-    background: #111 !important;
-    color: #fff !important;
-    display: grid !important;
-    place-items: center !important;
-    box-shadow: 0 12px 28px rgba(0,0,0,.28) !important;
-  }
-
-  .modal-layout {
-    padding-top: 0 !important;
-  }
-
-  .modal-info h2,
-  #modalTitle {
-    margin-top: 12px !important;
-  }
-
-
-/* El nombre del producto queda arriba del contenido, sin barra blanca extra */
-  #modalTitle {
-    margin-top: 8px !important;
-    padding-right: 72px !important;
-    font-size: 30px !important;
-    line-height: 1.02 !important;
-  }
-
-  #modalClose,
-  .modal-close,
-  .close-modal {
-    position: absolute !important;
-    right: 18px !important;
-    top: auto !important;
-    transform: none !important;
-    z-index: 10020 !important;
-    width: 52px !important;
-    height: 52px !important;
-    min-width: 52px !important;
-    border-radius: 999px !important;
-    background: #111 !important;
-    color: #fff !important;
-    display: grid !important;
-    place-items: center !important;
-    box-shadow: 0 14px 30px rgba(0,0,0,.28) !important;
-  }
-
-  /* Coloca la X alineada con el nombre del producto */
-  .modal-info #modalClose,
-  .modal-card > #modalClose {
-    bottom: auto !important;
-  }
-
-  .modal-card #modalClose {
-    top: calc(355px + 185px) !important;
-  }
-
-
-@media (max-width: 420px) {
-  .modal-image img,
-  #modalImg {
-    max-height: 330px !important;
-  }
-
-  .modal-card #modalClose {
-    top: calc(330px + 182px) !important;
-  }
-}
 
 /* PC: elimina espacio superior dentro del panel de imagen */
-@media (min-width: 721px) {
-  .modal-image {
-    min-height: 100% !important;
-  }
 
-  .modal-image > img,
-  #modalImg {
-    max-height: 430px !important;
-    object-fit: contain !important;
-    object-position: center center !important;
-  }
-}
 
-/* Celular: imagen más arriba y X junto al contenido, sin barra blanca */
 @media (max-width: 720px) {
-  .modal.open {
-    align-items: flex-start !important;
-    padding: 10px 8px 18px !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
 
-  .modal-card {
-    width: calc(100vw - 16px) !important;
-    max-width: calc(100vw - 16px) !important;
-    margin: 0 auto 18px !important;
-    border-radius: 24px !important;
-    overflow: hidden !important;
-  }
 
-  .modal-layout {
-    display: block !important;
-    padding: 0 !important;
-  }
-
-  .modal-image {
-    padding: 0 !important;
-    margin: 0 !important;
-    justify-content: flex-start !important;
-    background: #fff !important;
-  }
-
-  .modal-image > img,
-  #modalImg {
-    width: 100% !important;
-    height: auto !important;
-    max-height: 330px !important;
-    object-fit: contain !important;
-    object-position: center top !important;
-    margin: 0 auto !important;
-  }
-
-  .gallery-label,
-  #galleryLabel {
+  #galleryLabel{
     margin-top: 8px !important;
   }
 
-  .modal-thumbnails,
-  #modalThumbnails {
-    margin-top: 8px !important;
-  }
 
   .gallery-help {
     margin: 14px 18px 10px !important;
@@ -3967,919 +2538,23 @@ body {
     line-height: 1.25 !important;
   }
 
-  .modal-info {
-    position: relative !important;
-    padding: 12px 20px 24px !important;
-  }
 
-  #modalTitle {
-    margin-top: 8px !important;
-    padding-right: 72px !important;
-    font-size: 30px !important;
-    line-height: 1.02 !important;
-  }
-
-  #modalClose,
-  .modal-close,
-  .close-modal {
-    position: absolute !important;
-    right: 18px !important;
-    top: auto !important;
-    bottom: 92px !important;
-    z-index: 10020 !important;
-    width: 52px !important;
-    height: 52px !important;
-    min-width: 52px !important;
-    border-radius: 999px !important;
-    background: #111 !important;
-    color: #fff !important;
-    display: grid !important;
-    place-items: center !important;
-    box-shadow: 0 14px 30px rgba(0,0,0,.28) !important;
-  }
 }
 
-/* Mobile: mantener la X arriba, sin moverla al centro del modal */
-@media (max-width: 720px) {
-  .modal.open {
-    align-items: flex-start !important;
-    padding: 10px 8px 18px !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
-
-  .modal-card {
-    width: calc(100vw - 16px) !important;
-    max-width: calc(100vw - 16px) !important;
-    margin: 0 auto 18px !important;
-    border-radius: 24px !important;
-    overflow: hidden !important;
-  }
-
-  #modalClose,
-  .modal-close,
-  .close-modal {
-    top: 14px !important;
-    right: 14px !important;
-    width: 48px !important;
-    height: 48px !important;
-    min-width: 48px !important;
-  }
-
-  .modal-layout {
-    display: block !important;
-    padding: 0 !important;
-  }
-
-  .modal-image {
-    padding: 0 !important;
-    margin: 0 !important;
-    background: #fff !important;
-  }
-
-  .modal-image > img,
-  #modalImg {
-    width: 100% !important;
-    height: auto !important;
-    max-height: 350px !important;
-    object-fit: contain !important;
-    object-position: center top !important;
-    display: block !important;
-  }
-
-  .modal-info {
-    padding: 16px 20px 24px !important;
-  }
-}
-
-/* Celular: mantener estructura normal, sin barra blanca artificial */
-@media (max-width: 720px) {
-  .modal.open {
-    align-items: flex-start !important;
-    padding: 10px 8px 18px !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
-
-  .modal-card {
-    width: calc(100vw - 16px) !important;
-    max-width: calc(100vw - 16px) !important;
-    margin: 0 auto 18px !important;
-    border-radius: 24px !important;
-    overflow: hidden !important;
-  }
-
-  .modal-layout {
-    display: block !important;
-    padding: 0 !important;
-  }
-
-  .modal-image {
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  .modal-image > img,
-  #modalImg {
-    width: 100% !important;
-    height: auto !important;
-    max-height: 350px !important;
-    display: block !important;
-  }
-
-  .modal-info {
-    padding: 16px 20px 24px !important;
-  }
-
-  #modalClose,
-  .modal-close,
-  .close-modal {
-    top: 14px !important;
-    right: 14px !important;
-    width: 48px !important;
-    height: 48px !important;
-    min-width: 48px !important;
-  }
-}
 
 /* Mobile */
-@media (max-width: 720px) {
-  .modal.open {
-    padding: 10px 8px 18px !important;
-    align-items: flex-start !important;
-  }
 
-  .modal.open .modal-card {
-    width: calc(100vw - 16px) !important;
-    max-width: calc(100vw - 16px) !important;
-    max-height: none !important;
-    margin: 0 auto 18px !important;
-  }
-
-  .modal.open .modal-layout {
-    display: block !important;
-    padding: 12px 12px 18px !important;
-  }
-
-  .modal.open .modal-image {
-    padding: 0 !important;
-    margin: 0 !important;
-    min-height: 0 !important;
-  }
-
-  .modal.open #modalImg {
-    width: 100% !important;
-    max-height: 330px !important;
-    height: auto !important;
-    object-fit: contain !important;
-    object-position: center center !important;
-  }
-
-  .modal.open .modal-info {
-    position: relative !important;
-    padding: 14px 6px 8px !important;
-  }
-
-  .modal.open #modalClose {
-    top: auto !important;
-    right: 20px !important;
-    bottom: auto !important;
-    transform: translateY(8px) !important;
-  }
-
-  .modal.open #modalBrand {
-    padding-right: 64px !important;
-  }
-}
 /* Mobile */
-@media (max-width: 720px) {
-  body .modal.open {
-    align-items: flex-start !important;
-    padding: 8px !important;
-  }
 
-  body .modal.open .modal-card {
-    width: calc(100vw - 16px) !important;
-    max-width: calc(100vw - 16px) !important;
-    max-height: none !important;
-    margin: 0 auto 18px !important;
-    overflow: hidden !important;
-  }
-
-  body .modal.open .modal-layout {
-    display: block !important;
-    padding: 12px !important;
-  }
-
-  body .modal.open .modal-image {
-    padding: 0 !important;
-    min-height: 0 !important;
-  }
-
-  body .modal.open #modalImg {
-    max-height: 330px !important;
-  }
-
-  body .modal.open .modal-info {
-    padding: 14px 4px 8px !important;
-  }
-
-  body .modal.open #modalClose {
-    top: 14px !important;
-    right: 14px !important;
-    width: 48px !important;
-    height: 48px !important;
-  }
-}
-/* AJUSTE SEGURO: modal más compacto para reducir la franja superior */
-#productModal.modal.open {
-  padding: 10px 18px !important;
-}
-
-#productModal .modal-card {
-  max-height: calc(100vh - 20px) !important;
-  border-radius: 24px !important;
-}
-
-#productModal .modal-layout {
-  padding-top: 0 !important;
-}
-
-#productModal .modal-image {
-  padding-top: 12px !important;
-  padding-bottom: 18px !important;
-}
-
-#productModal .modal-info {
-  padding-top: 18px !important;
-}
-
-#productModal #modalImg {
-  max-height: 390px !important;
-}
-
-#productModal #modalClose {
-  top: 12px !important;
-  right: 16px !important;
-}
-
-#productModal.modal.open {
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 10px 18px !important;
-}
-
-#productModal .modal-card {
-  max-height: calc(100vh - 20px) !important;
-  overflow: hidden !important;
-}
-
-#productModal .modal-layout {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  align-items: stretch !important;
-}
-
-#productModal .modal-image {
-  padding-top: 0 !important;
-  margin-top: -80px !important;
-  min-height: 0 !important;
-}
 
 /* Baja solo la galería interna para compensar el margen negativo */
-#productModal .modal-gallery,
-#productModal .product-gallery,
-#productModal .gallery-main,
-#productModal .gallery-view,
-#productModal .modal-gallery-wrap {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
+
 
 /* Mantiene imagen y miniaturas visibles */
-#productModal #modalImg {
-  max-height: 420px !important;
-  object-fit: contain !important;
-}
 
-#productModal .modal-info {
-  padding-top: 18px !important;
-}
 
 /* X arriba derecha, no sobre el precio */
-#productModal #modalClose {
-  top: 18px !important;
-  right: 18px !important;
-  bottom: auto !important;
-  transform: none !important;
-}
-/* REVERT FIX MOBILE/SCROLL QUE CREO LA FRANJA SUPERIOR */
-@media (min-width: 721px) {
-  #productModal.modal.open {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 18px !important;
-    overflow: hidden !important;
-  }
 
-  #productModal .modal-card {
-    max-height: 92vh !important;
-    overflow: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  #productModal .modal-layout {
-    display: grid !important;
-    grid-template-columns: 1.1fr .9fr !important;
-    gap: 34px !important;
-    align-items: center !important;
-    margin: 0 !important;
-    padding: 0 28px 24px !important;
-  }
-
-  #productModal .modal-image {
-    margin: 0 !important;
-    padding: 0 !important;
-    min-height: 0 !important;
-    height: auto !important;
-  }
-
-  #productModal .modal-info {
-    margin: 0 !important;
-    padding: 0 10px 0 0 !important;
-  }
-
-  #productModal #modalClose {
-    position: absolute !important;
-    top: 18px !important;
-    right: 18px !important;
-    left: auto !important;
-    bottom: auto !important;
-    transform: none !important;
-    z-index: 99999 !important;
-  }
-}
-/* HOTFIX MODAL MOBILE JOR STORE */
-@media (max-width: 720px) {
-  #productModal.modal.open {
-    align-items: flex-start !important;
-    justify-content: center !important;
-    padding: 8px !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
-
-  #productModal .modal-card {
-    width: calc(100vw - 16px) !important;
-    max-width: calc(100vw - 16px) !important;
-    max-height: none !important;
-    overflow: hidden !important;
-    border-radius: 24px !important;
-    margin: 0 auto 18px !important;
-  }
-
-  #productModal .modal-layout {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 0 !important;
-    padding: 0 !important;
-  }
-
-  #productModal .modal-image {
-    order: 1 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow: hidden !important;
-    padding: 0 0 10px !important;
-    margin: 0 !important;
-  }
-
-  #productModal #modalImg {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    max-height: 340px !important;
-    object-fit: contain !important;
-    margin: 0 auto !important;
-  }
-
-  #productModal .gallery-arrow {
-    top: 34% !important;
-    z-index: 30 !important;
-  }
-
-  #productModal .gallery-label {
-    display: block !important;
-    text-align: center !important;
-    font-size: 22px !important;
-    line-height: 1.1 !important;
-    margin: 10px 0 12px !important;
-  }
-
-  #productModal #modalThumbnails,
-  #productModal .modal-thumbnails {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    gap: 10px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    -webkit-overflow-scrolling: touch !important;
-    scroll-snap-type: x proximity !important;
-    padding: 0 12px 12px !important;
-    margin: 0 !important;
-    touch-action: pan-x !important;
-    overscroll-behavior-x: contain !important;
-  }
-
-  #productModal #modalThumbnails::-webkit-scrollbar,
-  #productModal .modal-thumbnails::-webkit-scrollbar {
-    display: none !important;
-  }
-
-  #productModal .gallery-thumb {
-    flex: 0 0 92px !important;
-    width: 92px !important;
-    min-width: 92px !important;
-    max-width: 92px !important;
-    scroll-snap-align: start !important;
-  }
-
-  #productModal .gallery-thumb img {
-    width: 100% !important;
-    height: 58px !important;
-    object-fit: contain !important;
-  }
-
-  #productModal .gallery-thumb span {
-    display: block !important;
-    max-width: 100% !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-  }
-
-  #productModal .modal-info {
-    order: 2 !important;
-    position: relative !important;
-    padding: 16px 12px 18px !important;
-    margin: 0 !important;
-  }
-
-  #productModal #modalBrand {
-    display: inline-flex !important;
-    align-items: center !important;
-    max-width: calc(100% - 58px) !important;
-    margin-right: 58px !important;
-    margin-bottom: 12px !important;
-  }
-
-  #productModal #modalClose,
-  #productModal .close {
-    position: absolute !important;
-    top: 16px !important;
-    right: 12px !important;
-    left: auto !important;
-    bottom: auto !important;
-    transform: none !important;
-    z-index: 99999 !important;
-    width: 44px !important;
-    height: 44px !important;
-    min-width: 44px !important;
-    border-radius: 999px !important;
-  }
-}
-
-/* Fix definitivo: elimina banda/franja superior blanca del modal */
-@media (min-width: 721px) {
-  #productModal .modal-card::before,
-  #productModal .modal-card::after,
-  #productModal .modal-layout::before,
-  #productModal .modal-layout::after {
-    display: none !important;
-    content: none !important;
-  }
-
-  #productModal .modal-card {
-    background: #fff !important;
-    overflow: hidden !important;
-  }
-
-  #productModal .modal-layout {
-    background: #fff !important;
-    transform: translateY(-72px);
-    margin-bottom: -72px !important;
-  }
-
-  #productModal #modalClose {
-    top: 18px !important;
-    right: 22px !important;
-  }
-}
-/* Pulido final modal desktop: bordes redondeados y X alineada */
-@media (min-width: 721px) {
-  #productModal .modal-card {
-    border-radius: 24px !important;
-    overflow: hidden !important;
-    box-shadow: 0 28px 80px rgba(0, 0, 0, .32) !important;
-  }
-
-  #productModal .modal-layout {
-    transform: translateY(-56px) !important;
-    margin-bottom: -56px !important;
-    padding: 32px 30px 30px !important;
-  }
-
-  #productModal #modalClose,
-  #productModal .close {
-    position: absolute !important;
-    top: 18px !important;
-    right: 28px !important;
-    width: 46px !important;
-    height: 46px !important;
-    min-width: 46px !important;
-    border-radius: 999px !important;
-    z-index: 99999 !important;
-  }
-}
-/* Pulido visual final del modal: bordes y botón cerrar */
-@media (min-width: 721px) {
-  #productModal .modal-card {
-    border-radius: 28px !important;
-    overflow: hidden !important;
-  }
-
-  #productModal .modal-layout {
-    border-radius: inherit !important;
-  }
-
-  #productModal #modalClose,
-  #productModal .close {
-    position: absolute !important;
-    top: 24px !important;
-    right: 32px !important;
-    width: 46px !important;
-    height: 46px !important;
-    min-width: 46px !important;
-    border-radius: 999px !important;
-    z-index: 99999 !important;
-    transform: none !important;
-  }
-}
-/* Posición final de la X dentro del borde derecho del modal */
-@media (min-width: 721px) {
-  #productModal .modal-card {
-    position: relative !important;
-    border-radius: 28px !important;
-    overflow: hidden !important;
-  }
-
-  #productModal #modalClose,
-  #productModal .close {
-    position: absolute !important;
-    top: 30px !important;
-    right: 30px !important;
-    width: 46px !important;
-    height: 46px !important;
-    min-width: 46px !important;
-    border-radius: 999px !important;
-    z-index: 999999 !important;
-    transform: none !important;
-  }
-}
-/* Fix final: posicionar X del modal dentro del borde superior derecho */
-body #productModal.modal.open .modal-card #modalClose.close {
-  position: absolute !important;
-  top: 26px !important;
-  right: 26px !important;
-  left: auto !important;
-  bottom: auto !important;
-  transform: none !important;
-  width: 46px !important;
-  height: 46px !important;
-  min-width: 46px !important;
-  border-radius: 999px !important;
-  z-index: 999999 !important;
-}
-/* Fix real: la X no depende de .modal-info */
-@media (min-width: 721px) {
-  body.modal-open #productModal #modalClose.close {
-    position: fixed !important;
-    top: 24px !important;
-    right: 56px !important;
-    left: auto !important;
-    bottom: auto !important;
-    transform: none !important;
-    width: 46px !important;
-    height: 46px !important;
-    min-width: 46px !important;
-    border-radius: 999px !important;
-    z-index: 9999999 !important;
-  }
-}
-/* X del modal alineada al borde visual derecho */
-#productModal .modal-card {
-  position: relative !important;
-}
-
-#productModal .modal-card > #modalClose.close {
-  position: absolute !important;
-  top: 22px !important;
-  left: calc(100% - 72px) !important;
-  right: auto !important;
-  bottom: auto !important;
-  transform: none !important;
-  width: 46px !important;
-  height: 46px !important;
-  min-width: 46px !important;
-  border-radius: 999px !important;
-  z-index: 999999 !important;
-}
-/* ==================================================
-   FIX MODAL MOBILE - JOR STORE
-   Corrige barra blanca superior, botón X y orden visual
-================================================== */
-
-body.modal-open .social-floating,
-body.modal-open .floating-wa {
-  display: none !important;
-}
-
-#productModal .modal-card {
-  position: relative !important;
-}
-
-#productModal .close {
-  position: absolute !important;
-  top: 14px !important;
-  right: 14px !important;
-  z-index: 9999 !important;
-  float: none !important;
-  margin: 0 !important;
-  display: grid !important;
-  place-items: center !important;
-  width: 46px !important;
-  height: 46px !important;
-  border-radius: 50% !important;
-  background: #111 !important;
-  color: #fff !important;
-  box-shadow: 0 14px 30px rgba(0,0,0,.25) !important;
-  cursor: pointer !important;
-  pointer-events: auto !important;
-}
-
-/* Color disponible encima de la marca */
-#productModal .modal-variant-selector {
-  margin: 0 0 14px !important;
-}
-
-@media (max-width: 760px) {
-  body.modal-open {
-    overflow: hidden !important;
-    position: static !important;
-    width: 100% !important;
-  }
-
-  #productModal.modal.open {
-    position: fixed !important;
-    inset: 0 !important;
-    width: 100vw !important;
-    height: 100dvh !important;
-    max-height: 100dvh !important;
-    display: flex !important;
-    align-items: flex-start !important;
-    justify-content: center !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    -webkit-overflow-scrolling: touch !important;
-    padding: 10px 8px 90px !important;
-    background: rgba(0,0,0,.72) !important;
-  }
-
-  #productModal.modal.open .modal-card {
-    position: relative !important;
-    width: 96vw !important;
-    max-width: 96vw !important;
-    height: auto !important;
-    max-height: none !important;
-    min-height: 0 !important;
-    overflow: visible !important;
-    margin: 0 auto 80px !important;
-    border-radius: 26px !important;
-    background: #fff !important;
-  }
-
-  #productModal.modal.open .close {
-    position: absolute !important;
-    top: 12px !important;
-    right: 12px !important;
-    width: 44px !important;
-    height: 44px !important;
-    font-size: 22px !important;
-  }
-
-  #productModal.modal.open .modal-layout {
-    display: block !important;
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    overflow: visible !important;
-  }
-
-  #productModal.modal.open .modal-image {
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    padding: 58px 12px 14px !important;
-    border-radius: 26px 26px 0 0 !important;
-    background: #fff !important;
-  }
-
-  #productModal.modal.open .modal-main-image {
-    border-radius: 22px !important;
-    background: linear-gradient(180deg, #fff, #fafafa) !important;
-  }
-
-  #productModal.modal.open .modal-image img {
-    width: 100% !important;
-    max-height: 300px !important;
-    object-fit: contain !important;
-  }
-
-  #productModal.modal.open .modal-info {
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    overflow: visible !important;
-    padding: 22px 22px 36px !important;
-  }
-
-  #productModal .modal-variant-selector {
-    margin: 0 0 16px !important;
-  }
-
-  #productModal #modalBrand {
-    margin-bottom: 14px !important;
-  }
-
-  #productModal #modalTitle {
-    margin-top: 0 !important;
-    font-size: 34px !important;
-    line-height: 1.04 !important;
-  }
-
-  #productModal.modal.open .buy-row {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    padding-bottom: 24px !important;
-  }
-
-  #productModal.modal.open .wa-buy,
-  #productModal.modal.open .back-products {
-    width: 100% !important;
-    min-height: 54px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-}
-/* ==================================================
-   FIX DEFINITIVO MODAL MOBILE - JOR STORE
-   Quita barra blanca superior y fija la X de cierre
-================================================== */
-
-@media (max-width: 760px) {
-  body.modal-open {
-    overflow: hidden !important;
-    position: static !important;
-    width: 100% !important;
-  }
-
-  body.modal-open .social-floating,
-  body.modal-open .floating-wa {
-    display: none !important;
-  }
-
-  #productModal.modal.open {
-    position: fixed !important;
-    inset: 0 !important;
-    width: 100vw !important;
-    height: 100dvh !important;
-    max-height: 100dvh !important;
-    display: block !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    -webkit-overflow-scrolling: touch !important;
-    padding: 8px 8px 90px !important;
-    background: rgba(0,0,0,.72) !important;
-  }
-
-  #productModal.modal.open .modal-card {
-    position: relative !important;
-    width: 96vw !important;
-    max-width: 96vw !important;
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    overflow: visible !important;
-    margin: 0 auto 80px !important;
-    border-radius: 26px !important;
-    background: #fff !important;
-  }
-
-  #productModal.modal.open .close {
-    position: fixed !important;
-    top: calc(env(safe-area-inset-top) + 12px) !important;
-    right: 16px !important;
-    z-index: 99999 !important;
-    width: 44px !important;
-    height: 44px !important;
-    border-radius: 50% !important;
-    border: 0 !important;
-    background: #111 !important;
-    color: #fff !important;
-    display: grid !important;
-    place-items: center !important;
-    font-size: 22px !important;
-    line-height: 1 !important;
-    box-shadow: 0 14px 30px rgba(0,0,0,.30) !important;
-    float: none !important;
-    margin: 0 !important;
-    pointer-events: auto !important;
-  }
-
-  #productModal.modal.open .modal-layout {
-    display: block !important;
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    overflow: visible !important;
-  }
-
-  #productModal.modal.open .modal-image,
-  #productModal.modal.open .modal-image.modal-gallery {
-    display: block !important;
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    padding: 12px 12px 14px !important;
-    border-radius: 26px 26px 0 0 !important;
-    background: #fff !important;
-  }
-
-  #productModal.modal.open .modal-main-image {
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    aspect-ratio: 1 / 1 !important;
-    border-radius: 22px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    overflow: hidden !important;
-    background: linear-gradient(180deg, #fff, #fafafa) !important;
-  }
-
-  #productModal.modal.open .modal-main-image img#modalImg,
-  #productModal.modal.open #modalImg {
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
-    padding: 10px !important;
-    object-fit: contain !important;
-    object-position: center center !important;
-    display: block !important;
-    background: transparent !important;
-  }
-
-  #productModal.modal.open .modal-gallery-label {
-    margin-top: 12px !important;
-  }
-
-  #productModal.modal.open .modal-thumbnails {
-    margin-top: 12px !important;
-    padding-bottom: 8px !important;
-  }
-
-  #productModal.modal.open .modal-info {
-    padding: 22px 22px 36px !important;
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    overflow: visible !important;
-  }
-
-#productModal .modal-variant-selector {
-    margin: 0 0 16px !important;
-  }
-}
 
 /* Final responsive polish: scenario carousel controls */
 
@@ -5165,28 +2840,6 @@ body.modal-open .floating-wa {
   display: none !important;
 }
 
-body #productModal.modal.open .modal-card {
-  position: relative !important;
-}
-
-body #productModal.modal.open .modal-card > #modalClose.close,
-body.modal-open #productModal.modal.open .modal-card > #modalClose.close {
-  position: absolute !important;
-  top: 16px !important;
-  right: 16px !important;
-  left: auto !important;
-  bottom: auto !important;
-  transform: none !important;
-  z-index: 60 !important;
-  width: 46px !important;
-  height: 46px !important;
-  border-radius: 999px !important;
-  display: grid !important;
-  place-items: center !important;
-  background: #111 !important;
-  color: #fff !important;
-  box-shadow: 0 14px 30px rgba(0,0,0,.28) !important;
-}
 
 @media (max-width: 900px) {
   #clientes-reales.real-clients-section {
@@ -5250,75 +2903,9 @@ body.modal-open #productModal.modal.open .modal-card > #modalClose.close {
     grid-column: 1 / -1 !important;
   }
 
-  body #productModal.modal.open .modal-card > #modalClose.close,
-  body.modal-open #productModal.modal.open .modal-card > #modalClose.close {
-    top: 14px !important;
-    right: 14px !important;
-    position: absolute !important;
-  }
 
-  #productModal.modal.open .modal-image,
-  #productModal.modal.open .modal-image.modal-gallery {
-    padding-top: 58px !important;
-  }
 }
 
-/* Ajuste final: el cierre del modal queda dentro de la tarjeta del producto. */
-body.modal-open #productModal.modal.open .modal-card > button#modalClose.close,
-body #productModal.modal.open .modal-card > button#modalClose.close {
-  position: absolute !important;
-  inset: 16px 16px auto auto !important;
-  left: auto !important;
-  bottom: auto !important;
-  transform: none !important;
-  margin: 0 !important;
-  z-index: 80 !important;
-}
-
-@media (max-width: 620px) {
-  body.modal-open #productModal.modal.open .modal-card > button#modalClose.close,
-  body #productModal.modal.open .modal-card > button#modalClose.close {
-    inset: 14px 14px auto auto !important;
-  }
-}
-
-/* Corrección final v2: X dentro de la tarjeta del modal, incluso con reglas antiguas acumuladas. */
-html body.modal-open div#productModal.modal.open div.modal-card > button#modalClose.close,
-html body div#productModal.modal.open div.modal-card > button#modalClose.close {
-  position: absolute !important;
-  top: 16px !important;
-  right: 16px !important;
-  left: auto !important;
-  bottom: auto !important;
-  inset: auto 16px auto auto !important;
-  transform: none !important;
-  margin: 0 !important;
-  z-index: 99999999 !important;
-}
-
-@media (min-width: 721px) {
-  html body.modal-open div#productModal.modal.open button#modalClose.close {
-    position: fixed !important;
-    top: 52px !important;
-    right: calc((100vw - min(1180px, calc(100vw - 48px))) / 2 + 16px) !important;
-    left: auto !important;
-    bottom: auto !important;
-    inset: 52px calc((100vw - min(1180px, calc(100vw - 48px))) / 2 + 16px) auto auto !important;
-    transform: none !important;
-    margin: 0 !important;
-    z-index: 99999999 !important;
-  }
-}
-
-@media (max-width: 720px) {
-  html body.modal-open div#productModal.modal.open div.modal-card > button#modalClose.close,
-  html body div#productModal.modal.open div.modal-card > button#modalClose.close {
-    position: absolute !important;
-    top: 14px !important;
-    right: 14px !important;
-    inset: auto 14px auto auto !important;
-  }
-}
 
 /* Carrusel principal: banner promocional 16:9 y controles solo con varias diapositivas. */
 #promociones.promo-carousel-section {
@@ -5332,8 +2919,8 @@ html body div#productModal.modal.open div.modal-card > button#modalClose.close {
 
 #promociones .promo-carousel-wrap {
   width: 100% !important;
-  max-width: 1600px !important;
-  margin: 0 auto !important;
+  max-width: none !important;
+  margin: 0 !important;
   padding: 0 !important;
   overflow: hidden !important;
   filter: none !important;
@@ -5342,16 +2929,17 @@ html body div#productModal.modal.open div.modal-card > button#modalClose.close {
 @media (min-width: 900px) {
   #promociones .promo-carousel-wrap {
     box-sizing: border-box !important;
-    padding-inline: 72px !important;
+    padding-inline: 0 !important;
   }
 }
 
 #promociones .promo-carousel.clean-image-carousel {
   position: relative !important;
   width: 100% !important;
-  max-width: 1600px !important;
-  aspect-ratio: 16 / 9 !important;
-  margin: 0 auto !important;
+  max-width: none !important;
+  height: auto !important;
+  aspect-ratio: 1672 / 941 !important;
+  margin: 0 !important;
   overflow: hidden !important;
   border: 0 !important;
   border-radius: 0 !important;
@@ -5567,7 +3155,7 @@ html body div#productModal.modal.open div.modal-card > button#modalClose.close {
   }
 }
 
-/* Campaña de agosto */
+/* Base promocional de campaña */
 html,
 body {
   max-width: 100%;
@@ -5575,16 +3163,16 @@ body {
 }
 
 #promociones.promo-carousel-section {
-  background: #0b0b0b !important;
+  background: transparent !important;
 }
 
 #promociones .promo-carousel-wrap {
-  max-width: 1672px !important;
+  max-width: none !important;
 }
 
 #promociones .promo-carousel.clean-image-carousel {
   aspect-ratio: 1672 / 941 !important;
-  background: #0b0b0b !important;
+  background: transparent !important;
   outline: none;
 }
 
@@ -5592,14 +3180,15 @@ body {
 #promociones .promo-slide picture {
   display: block !important;
   width: 100% !important;
-  height: 100% !important;
-  background: #0b0b0b !important;
+  height: auto !important;
+  aspect-ratio: 1672 / 941 !important;
+  background: transparent !important;
 }
 
 #promociones .promo-slide img,
 #promociones .clean-image-carousel .promo-slide img {
   width: 100% !important;
-  height: 100% !important;
+  height: auto !important;
   aspect-ratio: auto !important;
   object-fit: contain !important;
   object-position: center !important;
@@ -5728,8 +3317,7 @@ body {
 }
 
 .featured-offer-actions button,
-.featured-offer-actions a,
-#productos .card-wa {
+#productos .product-card-actions .details-btn {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
@@ -5746,12 +3334,8 @@ body {
 }
 
 .featured-offer-actions button { background: #111; color: #fff; }
-.featured-offer-actions a,
-#productos .card-wa { background: #1f9d55; color: #fff; }
-
 #productos .product-card { position: relative; }
 #productos .product-card.is-promotional { border-color: rgba(241, 90, 34, .38); }
-#productos .product-card[data-stock="out_of_stock"] { order: 99; }
 #productos .product-card-actions .details-btn { width: 100%; }
 
 @media (max-width: 980px) {
@@ -5772,4 +3356,478 @@ body {
   .featured-offer-body { padding: 16px 14px; }
   .featured-offer-body h3 { font-size: 18px; }
   .featured-offer-body > strong { font-size: 20px; }
+}
+
+/* Ajustes compartidos de la campaña promocional */
+#promociones.promo-carousel-section,
+#promociones .promo-carousel-wrap,
+#promociones .promo-carousel.clean-image-carousel,
+#promociones .promo-slide,
+#promociones .promo-slide picture {
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  margin-inline: 0 !important;
+  padding-inline: 0 !important;
+  aspect-ratio: 1672 / 941 !important;
+  background: transparent !important;
+}
+
+#promociones .promo-carousel.clean-image-carousel {
+  touch-action: pan-y;
+}
+
+#promociones .clean-image-carousel .promo-slide,
+#promociones .clean-image-carousel .promo-slide picture {
+  background: transparent !important;
+}
+
+#promociones .promo-track {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1672 / 941 !important;
+}
+
+#promociones .promo-slide img,
+#promociones .clean-image-carousel .promo-slide img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  user-select: none !important;
+  -webkit-user-drag: none;
+}
+
+.featured-offer-card {
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.featured-offer-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(241, 90, 34, .42);
+  box-shadow: 0 22px 48px rgba(35, 20, 12, .16);
+}
+
+.featured-offer-card:focus-visible {
+  outline: 3px solid #f15a22;
+  outline-offset: 4px;
+}
+
+.featured-offer-actions button,
+#productos .product-card-actions .details-btn {
+  display: inline-flex;
+  width: 100%;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 13px;
+  border: 0;
+  border-radius: 11px;
+  background: #111;
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 850;
+  text-align: center;
+  cursor: pointer;
+}
+
+#productos .product-card.is-sold-out > img,
+.featured-offer-card.is-sold-out > img{
+  opacity: .46 !important;
+  filter: grayscale(.38) saturate(.5) brightness(1.18) !important;
+}
+
+#productos .product-card.is-sold-out,
+.featured-offer-card.is-sold-out {
+  background: linear-gradient(rgba(255, 255, 255, .72), rgba(255, 255, 255, .72)), #fff !important;
+}
+
+
+@media (max-width: 680px) {
+  #promociones.promo-carousel-section,
+  #promociones .promo-carousel-wrap,
+  #promociones .promo-carousel.clean-image-carousel,
+  #promociones .promo-track,
+  #promociones .promo-slide,
+  #promociones .promo-slide picture {
+    aspect-ratio: 1003 / 1568 !important;
+  }
+}
+
+/* Campaña septiembre 2026: reglas canónicas del carrusel. */
+#promociones.promo-carousel-section,
+#promociones .promo-carousel-wrap,
+#promociones .promo-carousel.clean-image-carousel,
+#promociones .promo-track,
+#promociones .promo-slide,
+#promociones .promo-slide picture {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  aspect-ratio: auto !important;
+  background: transparent !important;
+}
+
+#promociones .promo-carousel.clean-image-carousel {
+  width: 100% !important;
+  height: var(--promo-active-height, auto) !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: height .28s ease !important;
+  touch-action: pan-y !important;
+}
+
+#promociones .promo-track {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+#promociones .promo-slide,
+#promociones .clean-image-carousel .promo-slide {
+  display: none !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+#promociones .promo-slide.is-active,
+#promociones .clean-image-carousel .promo-slide.is-active {
+  display: block !important;
+}
+
+#promociones .promo-slide picture {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+#promociones .promo-slide img,
+#promociones .clean-image-carousel .promo-slide img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: transparent !important;
+  user-select: none !important;
+  -webkit-user-drag: none;
+}
+
+.product-price-prefix {
+  font: inherit;
+}
+
+.product-price-note {
+  max-width: 34ch;
+  color: #4b4f58;
+  font-size: .78rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+@media (max-width: 640px) {
+  #promociones .promo-arrow {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  #promociones .promo-nav {
+    bottom: 3px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #promociones .promo-carousel.clean-image-carousel,
+  #promociones .promo-track {
+    transition: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .featured-offer-card,
+#productos .product-card > img,
+.featured-offer-card > img{
+    transition: none !important;
+  }
+
+  .featured-offer-card:hover {
+    transform: none;
+  }
+}
+
+
+#productos .price-line,
+.featured-offer-price{
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  color: inherit !important;
+  font-size: inherit !important;
+  line-height: normal !important;
+  text-align: left !important;
+  text-transform: none !important;
+}
+
+#productos .price-line,
+.featured-offer-price {
+  margin-top: auto !important;
+}
+
+.product-price-display {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.product-price-offer-row {
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.product-offer-price {
+  color: #c91422 !important;
+  font-family: Inter, Arial, Helvetica, sans-serif !important;
+  font-size: clamp(1.7rem, 2.1vw, 2rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -.04em !important;
+  line-height: 1 !important;
+  white-space: nowrap;
+}
+
+.product-discount-badge {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #c91422;
+  color: #fff !important;
+  font-size: .78rem !important;
+  font-weight: 900 !important;
+  letter-spacing: .01em;
+  line-height: 1 !important;
+  white-space: nowrap;
+}
+
+.product-regular-price {
+  color: #737780 !important;
+  font-size: .82rem !important;
+  font-weight: 650 !important;
+  line-height: 1.25 !important;
+  white-space: nowrap;
+}
+
+.product-regular-price del {
+  color: inherit;
+  text-decoration-color: #737780;
+  text-decoration-thickness: 1.5px;
+}
+
+
+/* Estado visible y accesible del flyer agotado, sin modificar la imagen. */
+#promociones .promo-slide--sold-out {
+  position: relative !important;
+  isolation: isolate;
+}
+
+#promociones .promo-slide--sold-out picture {
+  position: relative;
+  z-index: 0;
+}
+
+#promociones .promo-sold-out-label {
+  position: absolute;
+  z-index: 30;
+  top: clamp(16px, 3vw, 44px);
+  right: clamp(24px, 13vw, 280px);
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 18px;
+  border: 2px solid rgba(255, 255, 255, .95);
+  border-radius: 999px;
+  background: #c91422;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .45);
+  color: #fff;
+  font-size: clamp(.86rem, 1.45vw, 1.25rem);
+  font-weight: 950;
+  letter-spacing: .08em;
+  line-height: 1;
+  pointer-events: none;
+  transform: translateZ(0);
+}
+
+@media (max-width: 680px) {
+  .featured-offer-card .product-offer-price {
+    font-size: 1.45rem !important;
+  }
+
+  .featured-offer-card .product-discount-badge {
+    min-height: 25px;
+    padding: 4px 7px;
+    font-size: .7rem !important;
+  }
+
+  #promociones .promo-sold-out-label {
+    top: 14px;
+    right: 12px;
+    min-height: 36px;
+    padding: 7px 13px;
+    font-size: .78rem;
+  }
+}
+
+/* Sustituye visualmente los precios impresos del flyer general con datos del catálogo. */
+#promociones .promo-dynamic-price {
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  box-sizing: border-box;
+  min-height: 0;
+  height: 22%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 14px;
+  background: #050505;
+  box-shadow: 0 0 24px 12px #050505;
+  color: #fff;
+  text-align: center;
+}
+
+#promociones .promo-dynamic-price--go4 {
+  left: 7%;
+  top: auto;
+  bottom: 0;
+  width: 26%;
+}
+
+#promociones .promo-dynamic-price--grip {
+  left: 32%;
+  top: auto;
+  bottom: 0;
+  width: 28%;
+}
+
+#promociones .promo-dynamic-price--bounce {
+  left: 58%;
+  top: auto;
+  bottom: 0;
+  width: 32%;
+}
+
+#promociones .promo-dynamic-product-name {
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: clamp(.72rem, 1.2vw, 1.15rem);
+  font-weight: 900;
+  letter-spacing: .035em;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#promociones .promo-dynamic-price .product-price-display {
+  align-items: center;
+}
+
+#promociones .promo-dynamic-price .product-price-offer-row {
+  justify-content: center;
+}
+
+#promociones .promo-dynamic-price .product-offer-price {
+  color: #fff !important;
+  font-size: clamp(1.45rem, 2.4vw, 2.4rem) !important;
+  letter-spacing: -.025em !important;
+}
+
+#promociones .promo-dynamic-price .product-regular-price {
+  color: #bec2ca !important;
+  font-size: clamp(.65rem, .9vw, .86rem) !important;
+}
+
+@media (max-width: 680px) {
+  #promociones .promo-dynamic-price {
+    min-height: 0;
+    padding: 4px 6px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 8px #050505;
+  }
+
+  #promociones .promo-dynamic-price--bounce {
+    left: 24%;
+    top: 58.5%;
+    bottom: auto;
+    height: 12%;
+    width: 52%;
+  }
+
+  #promociones .promo-dynamic-price--go4 {
+    left: 3%;
+    top: auto;
+    bottom: 0;
+    height: 13%;
+    width: 43%;
+  }
+
+  #promociones .promo-dynamic-price--grip {
+    left: 54%;
+    top: auto;
+    bottom: 0;
+    height: 13%;
+    width: 43%;
+  }
+
+  #promociones .promo-dynamic-price .product-price-display {
+    gap: 2px;
+  }
+
+  #promociones .promo-dynamic-product-name {
+    margin-bottom: 2px;
+    font-size: .62rem;
+  }
+
+  #promociones .promo-dynamic-price .product-price-offer-row {
+    gap: 4px;
+  }
+
+  #promociones .promo-dynamic-price .product-offer-price {
+    font-size: 1.08rem !important;
+  }
+
+  #promociones .promo-dynamic-price .product-discount-badge {
+    min-height: 21px;
+    padding: 3px 5px;
+    font-size: .58rem !important;
+  }
+
+  #promociones .promo-dynamic-price .product-regular-price {
+    font-size: .6rem !important;
+  }
 }
